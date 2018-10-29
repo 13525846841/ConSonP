@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.handmark.pulltorefresh.library.PullToRefreshListView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pull_refresh_listview"
+    android:layout_width="fill_parent"
+    android:background="#FFFFFF"
+    android:layout_marginLeft="13dp"
+    android:layout_marginRight="13dp"
+    android:footerDividersEnabled="true"
+    android:headerDividersEnabled="true"
+    android:listSelector="@android:color/transparent" 
+    android:layout_height="fill_parent"
+    android:scrollbars="none"
+    ptr:ptrMode="both" >
+</org.handmark.pulltorefresh.library.PullToRefreshListView>

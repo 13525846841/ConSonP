@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:paddingLeft="8dp"
+    android:paddingRight="6dp"
+    android:paddingTop="4dp" >
+
+    <com.dmsj.newask.Views.CircleImageView
+        android:id="@+id/expert_assistant_header_image"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/expert_header_image" />
+
+    <LinearLayout
+        android:id="@+id/ll_assitantabout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/find_doctor_list_item_follow"
+        android:layout_toRightOf="@+id/expert_assistant_header_image"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/expert_assistant_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="张医生"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/chat_dandP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/expert_assistant_name"
+                android:src="@drawable/liaotian33" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/expert_assistant_header_duty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:text="主任医师-消化内科"
+            android:textColor="#8E8E8E"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/expert_assistant_header_duty1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:text="中日友好医院"
+            android:textColor="#8E8E8E"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/expert_assistant_header_duty2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="消化道疾病，肝胆胰疾病,消化道疾病"
+            android:textColor="#8E8E8E"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- <CheckBox -->
+    <!-- android:id="@+id/attention_btn" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_alignParentRight="true" -->
+    <!-- android:layout_centerVertical="true" -->
+    <!-- android:button="@drawable/attention_selector" -->
+    <!-- android:checked="false" -->
+    <!-- android:onClick="attention" /> -->
+
+    <ImageView
+        android:id="@+id/find_doctor_list_item_follow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:src="@drawable/relation_drawable_list" />
+
+    <View
+        style="@style/common_split_line"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

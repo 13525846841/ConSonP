@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+    
+    <RelativeLayout
+        android:id="@+id/sort"
+        android:paddingBottom="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cityRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+        
+        <LinearLayout
+            android:id="@+id/province"
+            android:gravity="center"
+            android:layout_below="@+id/cityRecycler"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_width="90dp"
+            android:background="@drawable/btn_green_line_bg"
+            android:layout_height="30dp">
+            <TextView
+                android:id="@+id/tvProvince"
+                android:text="省份"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_marginLeft="6dp"
+                android:src="@drawable/arrows_down_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/city"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/province"
+            android:layout_below="@+id/cityRecycler"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="90dp"
+            android:background="@drawable/btn_green_line_bg"
+            android:layout_height="30dp">
+            <TextView
+                android:text="城市"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_marginLeft="6dp"
+                android:src="@drawable/arrows_down_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <org.handmark.pulltorefresh.library.PullToRefreshListView
+        android:layout_below="@+id/sort"
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/find_friend_pulllist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="2dp"
+        android:divider="@color/color_text_gray"
+        android:dividerHeight="0.5dp"
+        android:scrollbars="none"
+        ptr:ptrMode="both" >
+        
+    </org.handmark.pulltorefresh.library.PullToRefreshListView>
+    <include
+        android:id="@+id/load_faile_layout"
+        android:visibility="gone"
+        layout="@layout/loading_fail_data_null"/>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/otherAreaLinear"
+        android:layout_below="@+id/sort"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="120dp"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:layout_weight="1"
+            android:id="@+id/provinceRecycler"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:background="#eeeeee"
+            android:layout_weight="1"
+            android:id="@+id/childCityRecycler"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/gray_title_layout" />
+
+    <LinearLayout
+        android:id="@+id/setting_my_bindingweibo"
+        style="@style/text_check_Linearlayout"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textview_background_up" >
+
+        <RelativeLayout style="@style/text_check_relativeLayout" >
+
+            <EditText
+                android:maxLength="6"
+                android:singleLine="true"
+                android:id="@+id/old_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="输入当前的支付密码"
+                android:inputType="textPassword"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/setting_my_bindingweibo"
+        style="@style/text_check_Linearlayout"
+        android:background="@drawable/textview_background_up" >
+
+        <RelativeLayout style="@style/text_check_relativeLayout" >
+
+            <EditText
+               android:maxLength="6"
+                android:singleLine="true"
+                android:numeric="integer"
+                android:id="@+id/new_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="输入新的支付密码(6位数字)"
+                 android:password="true"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/setting_my_bindingweibo"
+        style="@style/text_check_Linearlayout"
+        android:background="@drawable/textview_background_down" >
+
+        <RelativeLayout style="@style/text_check_relativeLayout" >
+
+            <EditText
+                android:id="@+id/re_new_pwd"
+                android:maxLength="6"
+                android:singleLine="true"
+                android:numeric="integer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="再次输入支付密码(6位数字)"
+                 android:password="true"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

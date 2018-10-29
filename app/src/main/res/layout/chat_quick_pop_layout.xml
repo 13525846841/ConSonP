@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="300dp"
+    android:padding="10dp"
+    
+    android:background="@drawable/fastreply"
+    android:orientation="vertical" >
+<!--     android:background="@drawable/textview_background_up" -->
+
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="快速回复"
+            android:textColor="#AEAEAE"
+            android:textSize="16sp"
+            />
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/setting"
+             android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ig_chat_quick_reply"
+            />
+    </RelativeLayout>
+    <View style="@style/common_split_line" android:layout_marginTop="2dp" android:layout_marginBottom="2dp"/>
+    <ListView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listview"
+        android:divider="#F1F1F1"
+        android:scrollbarStyle="insideInset"
+        android:dividerHeight="1dp"
+        />
+</LinearLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+
+    <RelativeLayout
+        android:id="@+id/time_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/chat_time"
+            style="@style/chat_time"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="0.5dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toLeftOf="@id/chat_time"
+            android:background="#e2e1dd" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="0.5dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/chat_time"
+            android:background="#e2e1dd" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/time_view"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="@dimen/margin_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+            <com.dmsj.newask.Views.CircleImageView
+                android:id="@+id/chat_head"
+                android:layout_width="50.0dp"
+                android:layout_height="50.0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/content_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center_vertical"
+                android:background="?item_chat_l_light_bg"
+                android:orientation="vertical"
+                android:paddingBottom="0dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="1dp"
+                android:paddingTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/chat_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingRight="@dimen/margin_10"
+                        android:paddingTop="3dp"
+                        android:textColor="?inputColor"
+                        android:textSize="16sp"
+
+                        />
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/chat_diandiandian"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="15dp"
+                android:background="?item_chat_l_light_bg"
+                android:gravity="center"
+                android:paddingBottom="0dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:src="?diandiandian"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

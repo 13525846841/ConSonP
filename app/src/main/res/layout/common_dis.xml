@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/transparent"
+    android:layout_height="match_parent">
+
+    <GridView
+        android:id="@+id/common_dis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:scrollbars="none"
+        android:gravity="center_horizontal"
+        android:listSelector="@color/white"
+        android:numColumns="2">
+    </GridView>
+
+    <include
+        android:id="@+id/empty_view_common"
+        layout="@layout/loading_fail_data_null" />
+
+</LinearLayout>

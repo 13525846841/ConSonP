@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_marginTop="12dp"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:src="@drawable/default_head_patient"
+        android:layout_marginLeft="12dp"
+        android:id="@+id/header"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+    <TextView
+        android:id="@+id/nickName"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:ellipsize="end"
+        android:text="ylsjljlj"
+        android:layout_marginLeft="8dp"
+        android:layout_height="wrap_content" />
+<View
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_weight="1"/>
+    <TextView
+        android:textColor="@color/black"
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:ellipsize="end"
+        android:text="ylsjljlj"
+        android:layout_marginRight="12dp"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="12dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:ellipsize="end"
+        android:text="zheshineirong"
+        android:layout_marginRight="30dp"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

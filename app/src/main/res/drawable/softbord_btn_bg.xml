@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:state_enabled="true"  android:state_checked="true" android:drawable="@drawable/send_btn_pressed_background"></item>
+    <item android:state_enabled="true"  android:state_checked="false" android:drawable="@drawable/softbord_number_background"></item> 
+</selector>

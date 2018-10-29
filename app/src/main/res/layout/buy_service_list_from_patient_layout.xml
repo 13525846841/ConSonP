@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/ll_buy_main"
+    android:orientation="vertical">
+
+    <include layout="@layout/gray_title_layout" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/fragment"
+                class="com.yksj.consultation.caledar.CaledarViewFragment"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:tag="calendar" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/calader_color_service_bookable_normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:text="可约" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/calader_color_service_busy_normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@null"
+                    android:text="约满" />
+            </LinearLayout>
+
+            <View
+                style="@style/common_split_line"
+                android:layout_marginTop="8dp"
+                android:background="#B1B1B1" />
+
+            <TextView
+                android:id="@+id/current_date"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp" />
+
+            <View
+                style="@style/common_split_line"
+                android:layout_marginTop="8dp"
+                android:background="#B1B1B1" />
+
+            <LinearLayout
+                android:id="@+id/group"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/color_split_line"
+                android:dividerHeight="2dp"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@+id/empty"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:gravity="center|center_vertical"
+                android:text="当前日期没有可预约服务,请选择其他日期!"
+                android:textColor="#B5B5B5"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

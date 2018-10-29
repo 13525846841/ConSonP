@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <TextView
+          android:id="@+id/tvIntroduceTitle"
+      android:text="小儿风湿工作站"
+          android:paddingLeft="30dp"
+          android:paddingRight="30dp"
+      android:textColor="@color/color_blue"
+      android:textSize="16sp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+
+      <TextView
+          android:id="@+id/tvIntroduceContent"
+          android:layout_marginTop="4dp"
+          android:paddingLeft="30dp"
+          android:paddingRight="30dp"
+          android:text="小儿风湿工作站小儿风湿工作站小儿风湿工作站小儿风湿工作站小儿风湿工作站小儿风湿工作站小儿风湿工作站小儿风湿工作站小儿风湿工作站小儿风湿工作站小儿风湿工作站小儿风湿工作站小儿风湿工作站"
+          android:ellipsize="end"
+          android:maxLines="3"
+          android:textColor="#6c6d6d"
+          android:textSize="14sp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+
+      <TextView
+          android:id="@+id/tvIntroduceMore"
+          android:textColor="@color/black"
+          android:text="阅读更多"
+          android:textStyle="bold"
+          android:layout_marginTop="6dp"
+          android:layout_gravity="end"
+          android:layout_marginRight="26dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+
+  </LinearLayout>
+</LinearLayout>

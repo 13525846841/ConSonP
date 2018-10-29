@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_item"
+    style="@style/text_check_Linearlayout"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <LinearLayout
+        android:id="@+id/item_lay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <TextView
+                android:id="@+id/att_title"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_marginLeft="7dp"
+                android:textColor="@color/black"
+                android:text="@string/accept"
+                android:textSize="@dimen/searchTextSize" />
+
+            <TextView
+                android:id="@+id/att_content"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="bottom"
+                android:gravity="center_vertical"
+                android:paddingLeft="5.0dip"
+                android:layout_weight="5"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/searchTextSize" />
+        </LinearLayout>
+        <TextView 
+            android:id="@+id/info_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/tag_note"
+            android:layout_gravity="center"
+            android:textSize="@dimen/searchTextSize"
+            />
+
+        <ImageView
+            android:id="@+id/att_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/desc"
+            android:layout_marginRight="7dp"
+            android:src="@drawable/arrows" />
+    </LinearLayout>
+
+</LinearLayout>

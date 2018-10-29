@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/find_doctor_title"
+        layout="@layout/title_double_radiogroup_layout" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/find_doctor_title"
+         >
+
+        <org.handmark.pulltorefresh.library.PullToRefreshListView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/list_search_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="42dp"
+            android:horizontalSpacing="2dp"
+            android:paddingLeft="5dp"
+            android:scrollbarStyle="outsideInset"
+            ptr:ptrMode="both" >
+        </org.handmark.pulltorefresh.library.PullToRefreshListView>
+
+        <include
+            android:id="@+id/load_data_is_null"
+            layout="@layout/loading_fail_data_null"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/navigationbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </FrameLayout>
+
+    <View
+        style="@style/common_split_line"
+        android:layout_below="@id/find_doctor_title" />
+
+</RelativeLayout>

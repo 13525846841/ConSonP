@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/search_history_hot_linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <!-- 全局的搜索布局,有历史搜索和热门搜索布局 -->
+	
+	<RelativeLayout
+	    android:id="@+id/search_history_layout"
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content" 
+    	android:layout_marginTop="6dp"
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginRight="10dp"
+	    >
+	    <TextView 
+	        android:id="@+id/search_history_tv"
+	        android:layout_width="wrap_content"
+    		android:layout_height="wrap_content" 
+    		android:layout_alignParentLeft="true"
+    		android:textColor="@color/gray_text"
+    		android:text="@string/search_doctor_history"
+	        />
+	    <TextView 
+	        android:id="@+id/search_history_clear"
+	        android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:layout_alignParentRight="true" 
+    		android:clickable="true"
+    		android:drawableLeft="@drawable/icon_delete_search_history"
+    		android:textColor="@color/gray_text"
+    		android:text="@string/clear_history"
+	        />
+	    
+	    <GridView 
+	        android:id="@+id/search_history_gridView"
+	        android:layout_width="match_parent"
+    		android:layout_height="wrap_content" 
+    		android:layout_alignParentLeft="true"
+    		android:layout_below="@id/search_history_tv"
+    		android:layout_marginTop="6dp"
+		    android:numColumns="2"  
+		    android:verticalSpacing="5dp"  
+		    android:horizontalSpacing="1dp"  
+		    android:columnWidth="200dp"  
+		    android:stretchMode="columnWidth"  
+		    android:gravity="center"  
+	        >
+	    </GridView>
+	</RelativeLayout>
+	<View style="@style/common_split_line"/>
+	<TextView 
+	    android:id="@+id/search_hot_word"
+        android:layout_width="match_parent"
+   		android:layout_height="wrap_content" 
+   		android:layout_marginTop="6dp"
+   		android:layout_marginLeft="10dp"
+   		android:layout_marginRight="10dp"
+   		android:textColor="@color/gray_text"
+   		android:text="@string/search_doctor_hot_word"
+   		android:visibility="gone"
+	    />
+	<ListView 
+	    android:id="@+id/search_hot_listView"
+        android:layout_width="match_parent"
+   		android:layout_height="wrap_content" 
+   		android:divider="@null"
+   		android:layout_marginTop="6dp"
+   		android:layout_marginLeft="10dp"
+   		android:layout_marginRight="10dp"
+   		android:visibility="gone"
+	    ></ListView>
+</LinearLayout>

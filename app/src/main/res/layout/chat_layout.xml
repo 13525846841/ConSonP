@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/chat_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/gray_title_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/title_heigth" />
+
+            <TextView
+                android:id="@+id/chat_content"
+                style="@style/chat_time"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:id="@+id/chat_member_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/chat_member_doctor_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/chat_member_doctor"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="会诊医生"
+                        android:textColor="@color/color_text_gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/chat_member_doctor_layout"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/chat_member_expert"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="会诊专家"
+                        android:textColor="@color/color_text_gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/chat_member_doctor_layout"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/chat_member_patient"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_marginLeft="10dp" />
+
+                    <TextView
+                        android:id="@+id/chat_member_patient_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/color_text_gray" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View style="@style/common_split_line" />
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.0">
+
+                <org.handmark.pulltorefresh.library.PullToRefreshListView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/pull_refresh_listview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@null"
+                    android:cacheColorHint="#00000000"
+                    android:clickable="false"
+                    android:divider="@null"
+                    android:fadingEdge="none"
+                    android:focusableInTouchMode="false"
+                    android:listSelector="#00000000"
+                    android:longClickable="true"
+                    ptr:ptrMode="pullFromStart"></org.handmark.pulltorefresh.library.PullToRefreshListView>
+
+                <FrameLayout
+                    android:id="@+id/chat_vm_frame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <com.yksj.consultation.son.views.VUMeterView
+                        android:id="@+id/chat_vm"
+                        android:layout_width="372dp"
+                        android:layout_height="372dp"
+                        android:visibility="gone"></com.yksj.consultation.son.views.VUMeterView>
+                </FrameLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom">
+
+                <fragment
+                    android:id="@+id/input_control"
+                    android:name="com.yksj.consultation.comm.ChatInputControlFragment"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>  

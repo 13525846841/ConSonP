@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="10dp"
+    android:orientation="horizontal" >
+
+    <CheckBox
+        android:layout_gravity="center"
+        android:button="@drawable/chat_delete_selector"
+        android:id="@+id/coll_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textSize="17sp"
+            android:id="@+id/col_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#5F5F5F" />
+
+        <TextView
+            android:textSize="15sp"
+            android:id="@+id/col_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:textColor="@android:color/darker_gray"
+            />
+    </LinearLayout>
+
+</LinearLayout>

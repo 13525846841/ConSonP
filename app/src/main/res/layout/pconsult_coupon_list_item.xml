@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/coupon1">
+
+    <TextView
+        android:id="@+id/money_number"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_width="wrap_content"
+        android:text="120"
+        android:textColor="@color/red"
+        android:textSize="40sp" />
+
+    <LinearLayout
+        android:gravity="center_vertical|right|bottom"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="80dp"
+        android:layout_width="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/coupon_place"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="北京地区会诊可用"
+            android:textColor="@color/gray_text"
+            android:textSize="12sp" />
+
+        <TextView
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/coupon_time"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:text="fffffffffffff"
+            android:textColor="@color/gray_text"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <RadioButton
+        android:id="@+id/iv_coupon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:layout_gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/select_coupon"
+        android:button="@null"
+        android:text="" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/coupon_title"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="10dp"-->
+        <!--android:text="@string/discount_coupon"-->
+        <!--android:textSize="18sp"/>-->
+    <!--<TextView-->
+        <!--android:id="@+id/coupon_price"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="10dp"-->
+        <!--android:text="50元"-->
+        <!--android:textColor="@color/red_text"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:textSize="18sp"/>-->
+    <!--<TextView-->
+        <!--android:id="@+id/coupon_effective_date"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:text="有效期至2016-01-03"-->
+        <!--android:layout_below="@id/coupon_title"-->
+        <!--android:textSize="18sp"/>-->
+    <!--<TextView-->
+        <!--android:id="@+id/coupon_status"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_toRightOf="@id/coupon_effective_date"-->
+        <!--android:layout_alignTop="@id/coupon_effective_date"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:paddingRight="10dp"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:textSize="18sp"/>-->
+
+</RelativeLayout>

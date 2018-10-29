@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingTop="10dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/btn_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/green_btn_shape"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:text="去支付"
+        android:textColor="@color/green_txt_color"
+        android:textSize="16sp" />
+</LinearLayout>

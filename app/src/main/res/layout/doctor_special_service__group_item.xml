@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/choice_service_time"
+        style="@style/conditionEdit"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@null" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="选择服务时间"
+                android:textColor="#1d1d1d"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dddd"
+                android:textColor="#907a4c"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/banner_red_selector"
+            android:gravity="center"
+            android:text="成员"
+            android:textColor="@color/text_blue"
+            android:layout_centerVertical="true"
+            android:textSize="15sp" />
+    </RelativeLayout>
+</LinearLayout>

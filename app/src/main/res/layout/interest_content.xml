@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/templayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+        <include
+            android:id="@+id/title"
+	        layout="@layout/title_layout" />
+        <ScrollView android:layout_below="@+id/title" android:background="@color/white" android:fillViewport="true" android:layout_height="fill_parent" android:layout_width="fill_parent">
+            <LinearLayout  android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+            	<LinearLayout android:id="@+id/container" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            	</LinearLayout>
+            	<LinearLayout android:id="@+id/comment" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            	</LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    style="@style/linear_layout_style"
+    android:background="@color/white"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dossier_layout"
+        android:paddingTop="5dp"
+        android:paddingBottom="3dp">
+        <TextView
+            android:id="@+id/Look_name"
+            android:textColor="#4B4B4B"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/Look_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="创建时间："
+                android:textColor="#939393"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/look_history_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#939393"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/calender_right"/>
+    </RelativeLayout>
+</RelativeLayout>

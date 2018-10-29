@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/gray_title_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/patient_header"
+                    android:layout_width="63dp"
+                    android:layout_height="63dp"
+                    android:layout_margin="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="right"
+                    android:text="六一账号:"
+                    android:textColor="#626262"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/duomei_hao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View style="@style/common_split_line_10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/name2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/name2"
+                        android:textColor="#777777"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/name2_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignBaseline="@+id/name2"
+                        android:layout_toRightOf="@id/name2"
+                        android:background="@drawable/gray_edit"
+                        android:maxLength="5"
+                        android:singleLine="true"
+                        android:textColor="#777777"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/age2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/name2"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/age2"
+                        android:textColor="#777777"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/age2_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignBaseline="@+id/age2"
+                        android:layout_toRightOf="@id/age2"
+                        android:background="@drawable/gray_edit"
+                        android:singleLine="true"
+                        android:textColor="#777777"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/sex2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/sex2"
+                        android:textColor="#777777"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/sex2_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignBaseline="@+id/sex2"
+                        android:layout_toRightOf="@id/sex2"
+                        android:background="@drawable/gray_edit"
+                        android:singleLine="true"
+                        android:textColor="#777777"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/phone2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sex2"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/phone_num"
+                        android:textColor="#777777"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/phone2_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignBaseline="@+id/phone2"
+                        android:layout_toRightOf="@id/phone2"
+                        android:background="@drawable/gray_edit"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                        android:textColor="#777777"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/full_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/auth"
+                    android:textColor="#777777"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/full_code_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gray_edit"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:singleLine="true"
+                    android:textColor="#777777"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btn_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/bt_pic_number_bg"
+                    android:paddingBottom="1dp"
+                    android:text="@string/phone_code"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <View style="@style/common_split_line_10dp" />
+
+            <!--<LinearLayout style="@style/linear_layout_style">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:paddingBottom="5dp"-->
+                    <!--android:text="过敏史"-->
+                    <!--android:textSize="14sp" />-->
+
+                <!--<View style="@style/common_split_line" />-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/allergy_state"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@null"-->
+                    <!--android:gravity="left|top"-->
+                    <!--android:hint="请尽可能详细的描述您的过敏史"-->
+                    <!--android:maxLength="1000"-->
+                    <!--android:minHeight="80dp"-->
+                    <!--android:textColor="#b1b0b0"-->
+                    <!--android:textSize="15sp" />-->
+            <!--</LinearLayout>-->
+
+            <LinearLayout style="@style/linear_layout_style">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:text="病情说明"
+                    android:textSize="14sp" />
+
+                <View style="@style/common_split_line" />
+
+                <EditText
+                    android:id="@+id/illness_state"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="left|top"
+                    android:hint="请尽可能详细的描述症状、疾病和目前身体状况"
+                    android:maxLength="1000"
+                    android:minHeight="80dp"
+                    android:textColor="#b1b0b0"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View style="@style/common_split_line_10dp" />
+
+            <LinearLayout style="@style/linear_layout_style">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:text="过敏史"
+                    android:textSize="14sp" />
+
+                <View style="@style/common_split_line" />
+
+                <EditText
+                    android:id="@+id/allergy_state"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="left|top"
+                    android:hint="请尽可能详细的描述您的过敏史"
+                    android:maxLength="1000"
+                    android:minHeight="80dp"
+                    android:textColor="#b1b0b0"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/clinic_layout_item1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/clinic_specialty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="@string/illness_introduction1"
+                    android:textSize="18sp" />
+
+                <View
+                    style="@style/common_split_line"
+                    android:layout_below="@id/clinic_specialty" />
+
+                <TextView
+                    android:id="@+id/clinic_specialty_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/clinic_specialty"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp"
+                    android:textColor="#4b4b4b"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/clinic_specialty_index"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/clinic_specialty_content"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="8dp"
+                    android:src="@drawable/gengduos" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/con_list_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="@string/consult_record"
+                    android:textSize="20sp" />
+
+                <View style="@style/common_split_line_1dp" />
+
+                <com.yksj.consultation.son.views.ScrollListView
+                    android:id="@+id/case_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

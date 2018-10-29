@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        android:layout_marginLeft="12dp">
+        <TextView
+            android:id="@+id/doc_plan_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:textSize="16sp"
+            android:maxEms="12"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="多动症长期治疗观察"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_text"
+                android:text="开始时间："/>
+            <TextView
+                android:id="@+id/doc_plan_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_text"
+                android:text="2016-10-21"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="2dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_text"
+                android:text="计划周期："/>
+            <TextView
+                android:id="@+id/doc_plan_long"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_text"
+                android:text="5周"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        style="@style/text_check_imageview" />
+
+</RelativeLayout>

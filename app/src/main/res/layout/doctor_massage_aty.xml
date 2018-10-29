@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/gray_title_layout" />
+
+    <ScrollView
+        android:id="@+id/scrollview_top1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <include layout="@layout/figure_introduction" />
+
+            <View style="@style/common_split_line_10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="6dp"
+                    android:text="@string/specialty_doctor"
+                    android:textColor="#b1b0b0"
+                    android:textSize="14sp" />
+
+                <View style="@style/common_split_line_1dp" />
+
+                <TextView
+                    android:id="@+id/doctor_special_m"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:padding="12dp"
+                    android:textColor="#4b4b4b"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View style="@style/common_split_line_10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="6dp"
+                    android:text="@string/jianjie"
+                    android:textColor="#b1b0b0"
+                    android:textSize="14sp" />
+
+                <View style="@style/common_split_line_1dp" />
+
+                <TextView
+                    android:id="@+id/doctor_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:padding="12dp"
+                    android:textColor="#4b4b4b"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/evaluate_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/evelate_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:padding="12dp"
+                        android:textColor="@color/gray_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/customer_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/gray_text"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <com.yksj.consultation.son.views.ScrollListView
+                    android:id="@+id/listview_test"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

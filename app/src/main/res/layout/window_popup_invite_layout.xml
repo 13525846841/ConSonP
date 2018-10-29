@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popwindow_bg"
+    android:paddingTop="25dp"
+    android:orientation="vertical" >
+     <Button
+        style="@style/popwindow_white"
+        android:id="@+id/popup_menu4"
+        android:text="邀请已关注的人"/>
+    <Button
+        style="@style/popwindow_white"
+        android:id="@+id/popup_menu5"
+        android:text="按昵称或账号邀请"
+        />
+    <Button
+        style="@style/popwindow_white"
+        android:id="@+id/popup_menu6"
+        android:text="按条件邀请"
+        />
+    <Button
+        style="@style/popwindow_white"
+        android:id="@+id/popup_menu7"
+        android:text="邀请身边的人"
+        />
+    <Button
+        android:id="@+id/popup_menu_cancel"
+        style="@style/popwindow_gray"
+        android:layout_marginBottom="20dp"
+        android:text="@string/cancel" />
+</LinearLayout>

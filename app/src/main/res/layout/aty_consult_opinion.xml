@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/gray_title_layout" />
+
+    <org.handmark.pulltorefresh.library.PullToRefreshScrollView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:background="@color/white"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        ptr:ptrMode="both">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tv_opinion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/view1"
+                style="@style/common_split_line_1dp"
+                android:layout_below="@+id/tv_opinion"
+                android:layout_marginTop="16dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_opinion"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="提出疑问"
+                android:textColor="#ffffff"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_question"
+                android:layout_marginTop="20dp"
+                android:padding="4dp"
+                android:text="您对专家给出的意见有不理解之处,可以在3天之内提出疑问,专家会尽快给您解答"
+                android:textColor="@color/text_gray"
+                android:textSize="13sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view1"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_tip2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/ll_question"
+                android:text="等待专家给出解答"
+                android:textColor="@color/color_blue"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </org.handmark.pulltorefresh.library.PullToRefreshScrollView>
+</RelativeLayout>

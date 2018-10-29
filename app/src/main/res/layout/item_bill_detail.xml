@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="10dp">
+
+       <TextView
+           android:id="@+id/bill_name"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="@color/color_text1"
+           android:text="收入服务费"/>
+
+       <TextView
+           android:id="@+id/bill_number"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="#ff98a2"
+           android:layout_alignParentRight="true"
+           android:layout_marginRight="10dp"/>
+
+   </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/detail_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_text1"
+            android:text="2016-4-20 08:31"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="余额: "
+            android:layout_toLeftOf="@+id/balance_number"
+            android:textColor="@color/color_text1"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/balance_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/color_text1"
+            android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+</LinearLayout>

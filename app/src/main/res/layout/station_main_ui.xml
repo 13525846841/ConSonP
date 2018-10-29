@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include layout="@layout/gray_title_layout" />
+    <TextView
+        android:text="名医名院"
+        android:id="@+id/famous_institute"
+        android:textSize="16sp"
+        android:layout_marginRight="12dp"
+        android:textColor="@color/white"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
+
+    <!--<include-->
+        <!--android:id="@+id/include_search"-->
+        <!--layout="@layout/edit_search_top_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_gray_bg"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/edit_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/shape_edittext_search"
+            android:drawableLeft="@drawable/ig_search_grey"
+            android:drawablePadding="15dp"
+            android:hint="请输入..."
+            android:imeOptions="actionSearch"
+            android:padding="8dp"
+            android:singleLine="true"
+            android:maxEms="1"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tvSearch"
+            android:visibility="gone"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black"
+            android:layout_alignParentRight="true"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:text="搜索"
+            />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="37dp"
+        android:background="#FBFBFB">
+
+        <RadioGroup
+            android:id="@+id/my_doctor_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:background="@color/color_selectorbar_gray_bg"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/my_doctor_rbutton_active"
+                style="@style/common_viewpage_radiobutton"
+                android:checked="true"
+                android:drawablePadding="2dp"
+                android:text="按医院找团队"
+                android:textColor="@color/tab_color_blue"/>
+
+            <RadioButton
+                android:id="@+id/my_doctor_rbutton_special"
+                style="@style/common_viewpage_radiobutton"
+                android:drawablePadding="2dp"
+                android:drawableRight="@color/transparent"
+                android:text="按科室找团队"
+                android:textColor="@color/tab_color_blue"/>
+        </RadioGroup>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/common_line_vertical" />
+    </FrameLayout>
+
+    <View style="@style/common_split_line" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/my_doctor_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></android.support.v4.view.ViewPager>
+
+</LinearLayout>

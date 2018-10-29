@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_color" >
+
+    <org.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/consultation_expert_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:scrollbars="none"
+        android:divider="@null"
+        android:background="#00000000"
+        ptr:ptrMode="both"/>
+
+    <include
+        android:id="@+id/service_null" 
+        layout="@layout/loading_fail_data_null"
+        android:visibility="gone" />
+
+</FrameLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/gray_color"
+    android:layout_height="match_parent">
+
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/coupon_list"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginTop="10dp"/>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/coupon_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:listSelector="#00000000" />
+
+        <include
+            android:id="@+id/empty_view_famous"
+            layout="@layout/loading_fail_data_null" />
+    </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

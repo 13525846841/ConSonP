@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F1F1"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="37dp"
+        android:background="#FBFBFB">
+
+        <RadioGroup
+            android:id="@+id/radio_group1"
+            android:layout_width="fill_parent"
+            android:layout_height="37dp"
+            android:background="@color/radio_group_bg"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/all1"
+                style="@style/common_viewpage_radiobutton"
+                android:checked="true"
+                android:text="已预约" />
+
+            <RadioButton
+                android:id="@+id/pending_pay1"
+                style="@style/common_viewpage_radiobutton"
+                android:text="历史" />
+
+            <!--<RadioButton-->
+            <!--android:id="@+id/service1"-->
+            <!--style="@style/common_viewpage_radiobutton"-->
+            <!--android:text="待服务" />-->
+
+            <!--<RadioButton-->
+            <!--android:id="@+id/serviceing1"-->
+            <!--style="@style/common_viewpage_radiobutton"-->
+            <!--android:text="服务中" />-->
+
+            <!--<RadioButton-->
+            <!--android:id="@+id/pending_refund1"-->
+            <!--style="@style/common_viewpage_radiobutton"-->
+            <!--android:drawableRight="@color/transparent"-->
+            <!--android:text="待退款" />-->
+        </RadioGroup>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/common_line_vertical" />
+    </FrameLayout>
+
+
+    <View style="@style/common_split_line" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+</LinearLayout>

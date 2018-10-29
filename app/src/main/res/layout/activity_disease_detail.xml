@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_gray_bg"
+    android:orientation="vertical"
+    tools:context="com.yksj.consultation.son.consultation.news.DiseaseDetailActivity">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/gray_title_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.yksj.consultation.son.views.MyListView
+                android:id="@+id/disease_detail_lv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:listSelector="#00000000" />
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="推荐医生"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:textColor="@color/tab_txt_gray"
+                android:background="@color/white"
+                android:padding="10dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:visibility="gone"
+                android:background="@color/bg_gray"/>
+
+            <com.yksj.consultation.son.views.MyListView
+                android:id="@+id/disease_detail_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:listSelector="#00000000" />
+
+        </LinearLayout>
+
+    </ScrollView>
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:background="@color/white">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="介绍"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textColor="@color/tab_txt_gray"-->
+            <!--android:padding="10dp"/>-->
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:background="@color/line"/>-->
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="孕吐是早孕反应的一种，在早晚会出现恶心，没有任何原因就发生呕吐，本来正在安稳的吃饭，可一闻到味道就恶心，食欲彻底消失，体重也下降了，大豆油各种类型的"-->
+            <!--android:textColor="@color/tab_txt_gray"-->
+            <!--android:textSize="16sp"-->
+            <!--android:padding="10dp"/>-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:background="@color/white">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="缓解方法"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textColor="@color/tab_txt_gray"-->
+            <!--android:padding="10dp"/>-->
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:background="@color/line"/>-->
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="常用缓解减轻孕吐的方法"-->
+            <!--android:textColor="@color/tab_txt_gray"-->
+            <!--android:textSize="16sp"-->
+            <!--android:padding="10dp"/>-->
+    <!--</LinearLayout>-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:background="@color/white">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="优缺点"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textColor="@color/tab_txt_gray"-->
+            <!--android:padding="10dp"/>-->
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:background="@color/line"/>-->
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="优点是：营养品和维生素比较容易买到"-->
+            <!--android:textColor="@color/tab_txt_gray"-->
+            <!--android:textSize="16sp"-->
+            <!--android:padding="10dp"/>-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/white"-->
+        <!--android:layout_marginTop="10dp">-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="120dp">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/image_head"-->
+                <!--android:src="@drawable/head_img"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:layout_width="84dp"-->
+                <!--android:padding="4dp"-->
+                <!--android:layout_height="84dp"-->
+                <!--android:layout_centerVertical="true"/>-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/ll_laoshi"-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_toRightOf="@id/image_head">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_comment_name"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="王医生"-->
+                    <!--android:textColor="@color/tab_txt_gray"-->
+                    <!--android:textSize="16sp"/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_comment_title"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="主任医生"-->
+                    <!--android:textSize="14sp"-->
+                    <!--android:textColor="@color/tab_txt_gray"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:layout_below="@id/ll_laoshi" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_comment_hospital"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="北京协和医院"-->
+                    <!--android:textSize="14sp"-->
+                    <!--android:textColor="@color/tab_txt_gray"-->
+                    <!--android:layout_marginTop="5dp" />-->
+            <!--</LinearLayout>-->
+
+        <!--</RelativeLayout>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="擅长：爱俄方 i 俄 u 未婚夫"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:textColor="@color/tab_txt_gray"/>-->
+
+    <!--</LinearLayout>-->
+</LinearLayout>

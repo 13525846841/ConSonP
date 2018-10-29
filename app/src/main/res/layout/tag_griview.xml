@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.yksj.consultation.son.smallone.view.MyGridView
+        android:layout_width="match_parent"
+        android:id="@+id/view"
+        android:numColumns="3"
+        android:cacheColorHint="@android:color/transparent"
+        android:background="@android:color/transparent"
+        android:verticalSpacing="5dp"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:id="@+id/tag_default"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/green_btn_lin_color"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</FrameLayout>

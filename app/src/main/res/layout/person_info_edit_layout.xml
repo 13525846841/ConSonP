@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/color_gray_bg"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <include layout="@layout/gray_title_layout"/>
+    <ScrollView   android:layout_width="fill_parent" android:layout_height="fill_parent"  >
+    <LinearLayout   android:layout_width="fill_parent"  android:layout_height="match_parent"  android:orientation="vertical" >
+    <!--头像  -->
+	<RelativeLayout android:id="@+id/head_action" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="8dp">
+	    <TextView android:layout_marginLeft="10dp"  style="@style/info_text_left" android:layout_centerVertical="true" android:text="@string/head_icon" />
+		<LinearLayout 
+		 android:layout_alignParentRight="true" android:layout_centerVertical="true"  android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" >
+	    <com.dmsj.newask.Views.CircleImageView
+            android:layout_marginRight="10dp"   android:id="@+id/head" android:layout_width="50.0dp"  android:layout_height="50.0dp" android:layout_gravity="center_horizontal" />
+		<TextView android:layout_marginRight="7dp"  android:layout_marginLeft="7dp" android:layout_width="wrap_content"  android:layout_height="wrap_content" android:drawableRight="@drawable/arrows"/>
+		</LinearLayout>
+	</RelativeLayout>
+    <View style="@style/common_split_line"/>
+	<!-- 名字 -->
+	<RelativeLayout android:id="@+id/name_action" android:background="@color/white" android:padding="8dp" android:layout_width="fill_parent" android:layout_height="42dp" android:orientation="horizontal" >
+	    <TextView android:layout_marginLeft="10dp" android:layout_centerVertical="true" style="@style/info_text_left" android:text="名字" />
+		<TextView android:id="@+id/username" android:textColor="#4B4B4B" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:drawableRight="@drawable/arrows" android:drawablePadding="8dp" android:layout_marginRight="10dp" />
+	</RelativeLayout>
+	
+	    <View style="@style/common_split_line"/>
+	    <!--账号 -->
+	 <RelativeLayout android:background="@color/white" android:padding="8dp" android:layout_width="fill_parent" android:layout_height="42dp" android:orientation="horizontal" >
+	    <TextView android:layout_marginLeft="10dp" android:layout_centerVertical="true" style="@style/info_text_left"  android:text="账号" />
+		<TextView android:id="@+id/user_number" android:textColor="#4B4B4B" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true"  android:drawablePadding="8dp" android:layout_marginRight="10dp" />
+	</RelativeLayout>
+	
+	    <View style="@style/common_split_line"/>
+	<!-- 性别 -->
+	<RelativeLayout android:id="@+id/sex_action" android:background="@color/white"  android:layout_width="fill_parent" android:layout_height="42dp" android:orientation="horizontal" android:padding="8dp">
+	    <TextView android:layout_marginLeft="10dp" android:layout_centerVertical="true" style="@style/info_text_left" android:text="性别" />
+		<TextView android:textColor="#4B4B4B" android:id="@+id/sex" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true"  android:drawableRight="@drawable/arrows" android:drawablePadding="8dp" android:layout_marginRight="10dp" />
+	</RelativeLayout>
+	
+	   <View style="@style/common_split_line"/>
+	<!-- 生日 -->
+	<RelativeLayout android:id="@+id/birthday_action" android:background="@color/white"  android:layout_width="fill_parent" android:layout_height="42dp" android:orientation="horizontal" android:padding="8dp">
+	    <TextView android:layout_marginLeft="10dp"  android:layout_centerVertical="true" style="@style/info_text_left"  android:text="生日" />
+		<TextView android:id="@+id/birthday" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:drawableRight="@drawable/arrows" android:drawablePadding="8dp" android:layout_marginRight="10dp" />
+	</RelativeLayout>
+	
+	   <View style="@style/common_split_line"/>
+	<!-- 所在地 -->
+	<RelativeLayout android:id="@+id/location_action" android:background="@color/white"  android:layout_width="fill_parent" android:layout_height="42dp" android:orientation="horizontal" android:padding="8dp">
+	    <TextView android:layout_marginLeft="10dp"  android:layout_centerVertical="true" style="@style/info_text_left"  android:text="所在地" />
+		<TextView android:textColor="#4B4B4B" android:id="@+id/location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:drawableRight="@drawable/arrows" android:drawablePadding="8dp" android:layout_marginRight="10dp" />
+	</RelativeLayout>
+	
+	   <View style="@style/common_split_line"/>
+	<!-- 职业-->
+	<RelativeLayout android:id="@+id/occupation_action" android:background="@color/white"  android:layout_width="fill_parent" android:layout_height="42dp" android:orientation="horizontal" android:padding="8dp">
+	    <TextView android:layout_marginLeft="10dp"  android:layout_centerVertical="true" style="@style/info_text_left"  android:text="职业" />
+		<TextView android:textColor="#4B4B4B" android:id="@+id/occupation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true"  android:drawableRight="@drawable/arrows" android:drawablePadding="8dp" android:layout_marginRight="10dp" />
+	</RelativeLayout>
+	
+	 <View style="@style/common_split_line"/>
+	<!-- 介绍 -->
+	<LinearLayout android:id="@+id/desc_action" android:background="@color/white"  android:layout_width="fill_parent" android:layout_height="42dp" android:orientation="horizontal" android:padding="8dp">
+	    <TextView android:layout_marginLeft="10dp"  android:layout_centerVertical="true" style="@style/info_text_left"  android:text="介绍" />
+		<TextView  android:gravity="right" android:textColor="#4B4B4B" android:ellipsize="end" android:singleLine="true" android:layout_marginLeft="10dp" android:id="@+id/desc" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"   android:drawableRight="@drawable/arrows" android:drawablePadding="8dp" android:layout_marginRight="10dp" />
+	</LinearLayout>
+	
+	<LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/style_layout"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="13sp"
+                    android:paddingLeft="5dp"
+                    android:textColor="#939393"
+                    android:text="个性标签" />
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" 
+                    >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/style_empty_view"
+                        android:orientation="vertical" >
+
+                        <View
+                           style="@style/common_split_line"/>
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                             android:layout_height="80dp"
+                            android:gravity="center"
+                            android:textColor="#939393"
+                            android:text="您还没有添加标签" />
+                    </LinearLayout>
+
+                    <com.yksj.consultation.son.views.TagsGridView
+                        android:id="@+id/style_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="80dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10dp"
+                        android:cacheColorHint="#00000000"
+                        android:clickable="false"
+                        android:horizontalSpacing="2dp"
+                        android:listSelector="#00000000"
+                        android:numColumns="4"
+                        android:verticalSpacing="2dp" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/health_layout"
+                android:background="@color/white"
+                android:orientation="vertical" 
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="13sp"
+                    android:paddingLeft="5dp"
+                    android:textColor="#939393"
+                    android:text="健康关注" />
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" 
+                    >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:id="@+id/health_empty_view"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical" >
+
+                        <View
+                           style="@style/common_split_line"/>
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="80dp"
+                            android:gravity="center"
+                            android:textColor="#939393"
+                            android:text="您还没有添加标签" />
+                    </LinearLayout>
+
+                    <com.yksj.consultation.son.views.TagsGridView
+                        android:id="@+id/health_view"
+                        android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                        android:minHeight="80dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="10dp"
+                        android:cacheColorHint="#00000000"
+                        android:clickable="false"
+                        android:horizontalSpacing="2dp"
+                        android:listSelector="#00000000"
+                        android:layout_marginBottom="5dp"
+                        android:numColumns="4"
+                        android:verticalSpacing="2dp" 
+                        />
+                </FrameLayout>
+            </LinearLayout>
+      </LinearLayout>
+      </ScrollView>
+</LinearLayout>

@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/flow_title"
+        layout="@layout/gray_title_layout" />
+
+    <ScrollView
+        android:id="@+id/apply_sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tijiao_btn"
+        android:layout_below="@id/flow_title"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/hint_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/flow_hint"
+                android:textColor="@color/color_text_gray"
+                android:textSize="15sp" />
+            <!--所选专家-->
+            <LinearLayout
+                android:id="@+id/seleted_person_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/seleted_person"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/seleted_person_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/seleted_person_duty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/seleted_person_hospital"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/seleted_person_speciality"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line_doc"
+                style="@style/common_split_line_6dp"
+                android:visibility="gone" />
+            <!--个人信息-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+                <!--姓名-->
+                <LinearLayout
+                    android:id="@+id/layout_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    android:paddingBottom="3dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="2dp">
+
+                    <TextView
+                        android:id="@+id/full_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/name2"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/full_name_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/gray_edit"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <!--性别年龄-->
+                <LinearLayout
+                    android:id="@+id/layout_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@id/layout_1"
+                    android:orientation="horizontal"
+                    android:paddingBottom="3dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="2dp">
+
+                    <TextView
+                        android:id="@+id/full_sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/sex2"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/full_sex_edit"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/gray_edit"
+                        android:singleLine="true"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/full_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/age2"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/full_age_edit"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="3"
+                        android:background="@drawable/gray_edit"
+                        android:singleLine="true"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <!--手机-->
+                <LinearLayout
+                    android:id="@+id/layout_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@id/layout_2"
+                    android:orientation="horizontal"
+                    android:paddingBottom="3dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="2dp">
+
+                    <TextView
+                        android:id="@+id/full_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/phone_num"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/full_phone_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/gray_edit"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <!--验证码-->
+                <LinearLayout
+                    android:id="@+id/layout_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@id/layout_3"
+                    android:orientation="horizontal"
+                    android:paddingBottom="3dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="2dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/full_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/auth"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/full_code_edit"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gray_edit"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/btn_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/bt_pic_number_bg"
+                        android:paddingBottom="1dp"
+                        android:text="@string/phone_code"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/location_action1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@id/layout_4"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingTop="2dp">
+
+                    <TextView
+                        android:id="@+id/add_ress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingBottom="3dp"
+                        android:text="@string/patient_location"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/location1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@id/add_ress"
+                        android:background="@drawable/gray_edit"
+                        android:paddingBottom="3dp"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View style="@style/common_split_line_6dp" />
+
+            <!--主诉-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/tv_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="6dp"
+                    android:paddingTop="6dp"
+                    android:text="主诉"
+                    android:textColor="@color/color_text_gray"
+                    android:textSize="14sp" />
+
+                <View style="@style/common_split_line_1dp" />
+
+                <EditText
+                    android:id="@+id/et_main"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="left|top"
+                    android:hint="请填写"
+                    android:maxLength="1000"
+                    android:minHeight="80dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/color_text_gray"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <!--病情说明-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/illness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="6dp"
+                    android:paddingTop="6dp"
+                    android:text="@string/illness_introduction1"
+                    android:textColor="@color/color_text_gray"
+                    android:textSize="14sp" />
+
+                <View style="@style/common_split_line_1dp" />
+
+                <EditText
+                    android:id="@+id/illness_state"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="left|top"
+                    android:hint="请尽可能详细的描述症状、疾病和目前身体状况"
+                    android:maxLength="1000"
+                    android:minHeight="80dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/color_text_gray"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:visibility="gone"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/allergy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="6dp"
+                    android:paddingTop="6dp"
+                    android:text="过敏史"
+                    android:textColor="@color/color_text_gray"
+                    android:textSize="14sp" />
+
+                <View style="@style/common_split_line_1dp" />
+
+                <EditText
+                    android:id="@+id/allergy_state"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="left|top"
+                    android:maxLength="1000"
+                    android:minHeight="80dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/color_text_gray"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <!--图片资料-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/illness_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="6dp"
+                    android:paddingTop="6dp"
+                    android:text="@string/image_video_audio1"
+                    android:textColor="@color/color_text_gray"
+                    android:textSize="14sp" />
+
+                <View style="@style/common_split_line_1dp" />
+
+                <HorizontalScrollView
+                    android:id="@+id/illness_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp">
+
+                    <LinearLayout
+                        android:id="@+id/item_img_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="82dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/item_images"
+                            android:layout_width="wrap_content"
+                            android:layout_height="2dp"
+                            android:orientation="horizontal"></LinearLayout>
+
+                        <Button
+                            android:id="@+id/item_img_add"
+                            android:layout_width="78dp"
+                            android:layout_height="78dp"
+                            android:layout_marginRight="3dp"
+                            android:background="@drawable/add_image_h" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+            <!--视频资料-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/illness_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="6dp"
+                    android:paddingTop="6dp"
+                    android:text="@string/image_video_audio2"
+                    android:textColor="@color/color_text_gray"
+                    android:textSize="14sp" />
+
+                <View style="@style/common_split_line_1dp" />
+
+                <HorizontalScrollView
+                    android:id="@+id/illness_vdo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp">
+
+                    <LinearLayout
+                        android:id="@+id/item_vdo_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="82dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/item_videos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="2dp"
+                            android:orientation="horizontal"></LinearLayout>
+
+                        <Button
+                            android:id="@+id/item_vdo_add"
+                            android:layout_width="78dp"
+                            android:layout_height="78dp"
+                            android:layout_marginRight="3dp"
+                            android:background="@drawable/add_image_h" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <View style="@style/common_split_line_6dp" />
+
+            <LinearLayout
+                android:id="@+id/select_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/land_doctor"
+                    android:textColor="@color/color_text_gray"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/add_doctor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dp"
+                    android:background="@drawable/land_doctor"
+                    android:button="@null"
+                    android:checked="false" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/select_topline"
+                style="@style/common_split_line_6dp"
+                android:visibility="gone" />
+            <!--所选医生-->
+            <LinearLayout
+                android:id="@+id/seleted_ac_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/seleted_ac"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="3" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/seleted_ac_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/seleted_ac_duty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/seleted_ac_hospital"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/seleted_ac_speciality"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/select_bottomline"
+                style="@style/common_split_line_6dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/tijiao_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bt_short_double_green"
+        android:text="@string/setting_tijiao"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+</RelativeLayout>

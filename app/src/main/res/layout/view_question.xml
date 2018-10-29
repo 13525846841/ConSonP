@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/view1"
+        style="@style/common_split_line_1dp" />
+
+    <TextView
+        android:id="@+id/tv_fromwhere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view1"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/color_blue"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/view1"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/text_gray"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_fromwhere"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp" />
+
+    <HorizontalScrollView
+        android:id="@+id/hs_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_question"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/ll_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+
+</RelativeLayout>

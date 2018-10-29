@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.yksj.consultation.son.home.MyDoctorPlan">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/gray_title_layout" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/account_lv"
+            android:layout_width="match_parent"
+            android:listSelector="#00000000"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+        <RelativeLayout
+            android:id="@+id/load_faile_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/test_tv_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/load_result_is_null_big" />
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

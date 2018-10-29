@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/gray_title_layout" />
+
+    <View
+        android:id="@+id/line1"
+        style="@style/common_split_line"
+        android:layout_below="@id/title" />
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dip"
+        android:layout_below="@+id/line1"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/fl_title"
+            android:layout_width="fill_parent"
+            android:layout_height="49dp"
+            android:background="#FBFBFB">
+
+            <RelativeLayout
+                android:id="@+id/rl_column"
+                android:layout_width="match_parent"
+                android:layout_height="48.0dip">
+            <com.yksj.healthtalk.views.ColumnHorizontalScrollView
+                android:id="@+id/mColumnHorizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/mRadioGroup_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48.0dip"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"/>
+
+            </com.yksj.healthtalk.views.ColumnHorizontalScrollView>
+
+                <ImageView
+                    android:id="@+id/shade_left"
+                    android:layout_width="10.0dip"
+                    android:layout_height="48.0dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/channel_leftblock"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/shade_right"
+                    android:layout_width="10.0dip"
+                    android:layout_height="48.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/channel_rightblock"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_line"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:paddingTop="2.5dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/common_line_vertical" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/common_line_vertical" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:paddingTop="2.5dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_more_columns"
+            android:layout_width="wrap_content"
+            android:layout_height="48.0dip"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/button_more_columns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="8dp"
+                android:src="@drawable/icon_11" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line2"
+        style="@style/common_split_line"
+        android:layout_below="@id/ll_title"/>
+
+        <com.yksj.healthtalk.views.MyViewPager
+            android:id="@+id/mViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/line2" />
+
+
+
+
+</RelativeLayout>

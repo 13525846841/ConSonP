@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/color_gray_bg"
+	android:padding="8dp">
+
+	<EditText
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:id="@+id/edit_search_top"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="8dp"
+		android:layout_marginRight="8dp"
+		android:background="@drawable/shape_edittext_search"
+		android:drawableLeft="@drawable/ig_search_grey"
+		android:drawablePadding="15dp"
+		android:hint="请输入..."
+		android:imeOptions="actionSearch"
+		android:padding="8dp"
+		android:singleLine="true"
+		android:maxEms="1"
+		android:textSize="14sp" />
+
+
+	<TextView
+        android:gravity="center"
+        android:id="@+id/tvSearch"
+        android:visibility="gone"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black"
+        android:layout_alignParentRight="true"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:text="搜索"
+        />
+
+</RelativeLayout>

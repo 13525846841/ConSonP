@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="12dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="12dp" >
+
+        <com.yksj.healthtalk.views.RoundImageView
+            android:id="@+id/dynimic_image_fund"
+            android:layout_width="85dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerCrop" />
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/rl_dynimpic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp" >
+
+            <TextView
+                android:id="@+id/tv_messtitle_fund"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/color_text1"
+                android:ellipsize="end"
+                android:text="标题"
+                android:lines="2"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+           <RelativeLayout
+               android:id="@+id/rl_view"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/tv_messtitle"
+               android:visibility="visible" >
+
+               <TextView
+                   android:id="@+id/tv_time_fund"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true"
+                   android:layout_marginLeft="5dp"
+                   android:textColor="#C4C4C4"
+                   android:text="时间"
+                   android:textSize="14sp" />
+           </RelativeLayout>
+       </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/common_split_line_1dp" />
+
+</LinearLayout>

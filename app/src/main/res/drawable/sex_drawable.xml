@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:drawable="@drawable/sex_unknown"
+        android:maxLevel="0">
+    </item>
+    <item
+        android:drawable="@drawable/sex_man"
+        android:maxLevel="1"/>
+    <item
+        android:drawable="@drawable/sex_women"
+        android:maxLevel="2"/>
+</level-list>

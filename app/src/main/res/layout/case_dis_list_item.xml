@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="7"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/case_name"
+            android:text="病历名称"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/case_keshi"
+            android:text="病历科室"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/case_time"
+            android:text="上传时间"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        </LinearLayout>
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:gravity="center_vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/case_talk_num"
+            android:text="n条评论"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:background="@drawable/pay_index_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"/>
+        </RelativeLayout>
+</LinearLayout>

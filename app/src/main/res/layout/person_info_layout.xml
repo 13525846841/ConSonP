@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray_bg"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/msv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_blue"
+                android:orientation="vertical"
+                android:paddingTop="52dp" >
+
+                <com.dmsj.newask.Views.CircleImageView
+                    android:id="@+id/head"
+                    android:layout_width="80.0dp"
+                    android:layout_height="80.0dp"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/desc_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/person_set_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                android:background="@color/white"
+                android:gravity="center_vertical" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center" >
+
+                    <Button
+                        android:id="@+id/attention"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:drawableLeft="@drawable/clinic_icon_add_follow"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="加关注"
+                        android:textColor="#939393" />
+                </LinearLayout>
+
+                <View
+                    style="@style/common_split_line"
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="3dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center" >
+
+                    <Button
+                        android:id="@+id/talk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:drawableLeft="@drawable/clinic_icon_leave_message"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="对话"
+                        android:textColor="#939393" />
+                </LinearLayout>
+
+                <View
+                    style="@style/common_split_line"
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="3dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:visibility="gone" >
+
+                    <Button
+                        android:id="@+id/black_action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:drawableLeft="@drawable/im_black_normal"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="拉黑"
+                        android:textColor="#939393"
+                         />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:text="基本资料"
+                android:textColor="#939393"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/textview_background_up"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="账号"
+                    android:textColor="#939393" />
+
+                <TextView
+                    android:id="@+id/account"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="4"
+                    android:gravity="right"
+                    android:textColor="#4B4B4B" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/textview_background_middle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="性别"
+                    android:textColor="#939393" />
+
+                <TextView
+                    android:id="@+id/sex"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="4"
+                    android:gravity="right"
+                    android:textColor="#4B4B4B" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/textview_background_middle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="生日"
+                    android:textColor="#939393" />
+
+                <TextView
+                    android:id="@+id/birthday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="4"
+                    android:gravity="right"
+                    android:textColor="#4B4B4B" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/textview_background_middle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="所在地"
+                    android:textColor="#939393" />
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="4"
+                    android:gravity="right"
+                    android:textColor="#4B4B4B" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/textview_background_down"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="职业"
+                    android:textColor="#939393" />
+
+                <TextView
+                    android:id="@+id/occupation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="4"
+                    android:gravity="right"
+                    android:textColor="#4B4B4B" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:paddingLeft="5dp"
+                    android:text="个性标签"
+                    android:textColor="#939393"
+                    android:textSize="13sp" />
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/style_empty_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical" >
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_split_line" />
+
+                        <TextView
+                            android:id="@+id/style_hint"
+                            android:layout_width="fill_parent"
+                            android:layout_height="80dp"
+                            android:gravity="center"
+                            android:text="您还没有添加标签"
+                            android:textColor="#DADADA" />
+                    </LinearLayout>
+
+                    <com.yksj.consultation.son.views.TagsGridView
+                        android:id="@+id/style_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:cacheColorHint="#00000000"
+                        android:clickable="false"
+                        android:horizontalSpacing="2dp"
+                        android:listSelector="#00000000"
+                        android:minHeight="80dp"
+                        android:numColumns="4"
+                        android:verticalSpacing="2dp" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:paddingLeft="5dp"
+                    android:text="健康关注"
+                    android:textColor="#939393"
+                    android:textSize="13sp" />
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/health_empty_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical" >
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/color_split_line" />
+
+                        <TextView
+                            android:id="@+id/health_hint"
+                            android:layout_width="fill_parent"
+                            android:layout_height="80dp"
+                            android:gravity="center"
+                            android:text="您还没有添加标签"
+                            android:textColor="#DADADA" />
+                    </LinearLayout>
+
+                    <com.yksj.consultation.son.views.TagsGridView
+                        android:id="@+id/health_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="10dp"
+                        android:cacheColorHint="#00000000"
+                        android:clickable="false"
+                        android:horizontalSpacing="2dp"
+                        android:listSelector="#00000000"
+                        android:minHeight="80dp"
+                        android:numColumns="4"
+                        android:verticalSpacing="2dp" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        layout="@layout/gray_title_layout"
+        android:background="@color/transparent" />
+
+</RelativeLayout>

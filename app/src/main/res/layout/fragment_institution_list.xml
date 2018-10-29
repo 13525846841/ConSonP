@@ -1,0 +1,33 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.yksj.consultation.son.fragment.InstitutionListFragment">
+
+    <org.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pulllist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="2dp"
+        android:divider="@color/color_text_gray"
+        android:dividerHeight="0.5dp"
+        android:scrollbars="none"
+        ptr:ptrMode="both" >
+
+    </org.handmark.pulltorefresh.library.PullToRefreshListView>
+
+    <include
+        android:id="@+id/load_faile_layout"
+        android:visibility="gone"
+        layout="@layout/loading_fail_data_null"/>
+
+    <TextView
+        android:text="加载中..."
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:id="@+id/tipTv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

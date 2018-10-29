@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.handmark.pulltorefresh.library.PullToRefreshListView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pull_refresh_listview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="none"
+    android:longClickable="true"
+    ptr:ptrMode="pullFromStart" >
+</org.handmark.pulltorefresh.library.PullToRefreshListView>

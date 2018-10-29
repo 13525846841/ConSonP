@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/gray_title_layout" />
+
+    <RadioGroup
+        android:id="@+id/consultation_service_rg1"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/radio_group_bg"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/all11"
+            style="@style/common_viewpage_radiobutton"
+            android:checked="true"
+            android:text="已预约" />
+
+        <RadioButton
+            android:id="@+id/pending_pay12"
+            style="@style/common_viewpage_radiobutton"
+            android:text="历史" />
+
+        <!-- <RadioButton
+             android:id="@+id/service13"
+             style="@style/common_viewpage_radiobutton"
+             android:text="已完成" />-->
+        <!--
+                <RadioButton
+                    android:id="@+id/serviceing14"
+                    style="@style/common_viewpage_radiobutton"
+                    android:text="待付款" />
+
+                <RadioButton
+                    android:id="@+id/pending_refund15"
+                    style="@style/common_viewpage_radiobutton"
+                    android:text="待服务" />
+                <RadioButton
+                    android:id="@+id/pending_refund16"
+                    style="@style/common_viewpage_radiobutton"
+                    android:text="待退款" />
+                <RadioButton
+                    android:id="@+id/pending_refund17"
+                    style="@style/common_viewpage_radiobutton"
+                    android:drawableRight="@color/transparent"
+                    android:text="已完成" />
+                    -->
+    </RadioGroup>
+
+    <View style="@style/common_split_line" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/consultation_service_vp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+</LinearLayout>

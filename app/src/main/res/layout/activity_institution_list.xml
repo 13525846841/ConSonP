@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.yksj.consultation.son.home.InstitutionListActivity">
+    <include layout="@layout/title_layout"/>
+    <android.support.design.widget.TabLayout
+        android:theme="@style/AppTabTheme"
+        app:tabBackground="@color/white"
+        android:id="@+id/insListTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        app:tabIndicatorColor="@color/color_blue"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextColor="@color/text_gray">
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="热门" />
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="新入" />
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="附近" />
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/insListPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    />
+</LinearLayout>

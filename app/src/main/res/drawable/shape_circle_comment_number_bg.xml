@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <corners android:radius="20dp"/>  <!-- 圆角  值越大角越圆 -->
+	<gradient android:startColor="#FE5B60" android:endColor="#FE5B60" android:angle="45"/>
+
+</shape>

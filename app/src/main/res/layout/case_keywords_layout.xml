@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/case_keywords_layout_id"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/create_case_keywords_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:textColor="@color/gray_text"
+        android:text="@string/key_words"
+        />
+    <HorizontalScrollView
+        android:id="@+id/create_case_keywords_horscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_below="@id/create_case_keywords_tv">
+        <LinearLayout
+            android:id="@+id/create_case_keywords_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <LinearLayout
+                android:id="@+id/create_case_keywords"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/create_case_keywords_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:layout_marginLeft="3dp"
+                android:visibility="gone"
+                android:background="@drawable/img_create_topic_add_label"
+                />
+        </LinearLayout>
+    </HorizontalScrollView>
+</RelativeLayout>

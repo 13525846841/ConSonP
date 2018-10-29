@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_color"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/gray_title_layout" />
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_color"
+        android:focusableInTouchMode="true"
+        android:focusable="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:textColor="@color/color_text1"
+                android:text="评价"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/textcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="15.0dp"
+                android:text="0/200"
+                android:textColor="@color/color_text1"
+                android:textSize="@dimen/messageTextSize"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/et_evaluate"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:gravity="top|left"
+            android:hint="@string/evaluate_andsoon"
+            android:maxLength="200"
+            android:paddingLeft="10dp"
+            android:paddingRight="21.5dp"
+            android:paddingTop="19dp"
+            android:textColor="#444444"
+            android:textColorHint="#898989"
+            android:textSize="15sp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.5dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingLeft="20.5dp"
+            android:paddingTop="9.5dp">
+
+            <ImageView
+                android:id="@+id/assistant_head"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/default_head_patient"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21.5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_assisName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#444444"
+                    android:text="王叔叔"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/color_news_title"
+                    android:text="主治医师"
+                    android:textSize="13sp" />
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_hospital"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:textColor="@color/color_news_title"-->
+                    <!--android:text="北京医院"-->
+                    <!--android:textSize="13sp" />-->
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="21.5dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="评价此次服务的医生"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+
+            <RatingBar
+                android:id="@+id/rb_speed"
+                style="@style/MyRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8.5dp"
+                android:numStars="5"
+                android:rating="5">
+
+            </RatingBar>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="10dp"
+            android:visibility="gone"
+            android:paddingLeft="21.5dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/assess_reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="医生回复"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/color_text_gray"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/assess_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_laoshi"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/color_text_gray"
+                android:text="谢谢"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

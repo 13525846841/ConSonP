@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/text_index_linearlayout"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/transparent"
+    android:layout_height="wrap_content" >
+    
+    <LinearLayout 
+        android:id="@+id/navigationbar_radiogroup"
+	    android:layout_width="match_parent"
+	    android:gravity="center_vertical"
+	    android:layout_height="42dp"
+	    android:background="@color/color_selectorbar_gray_bg"
+	    android:orientation="horizontal"
+        >
+		<com.yksj.consultation.son.views.DrawableCenterCheckBox
+		    android:id="@+id/navigationbar_region"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:drawableRight="@drawable/navigationbar_drawable"
+		    android:drawablePadding="8dp"
+		    android:clickable="true"
+		    android:button="@null"
+		    android:textSize="12sp"
+		    android:paddingLeft="15dp"
+		    android:singleLine="true"
+		    android:ellipsize="end"
+		    android:layout_weight="1"
+		    android:textColor="@drawable/selector_find_doctor_text_color"
+		    android:text="@string/address_seach"
+		    />
+		<View style="@style/common_split_vertical_line"/>
+		<com.yksj.consultation.son.views.DrawableCenterCheckBox
+		    android:id="@+id/navigationbar_hospital"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:drawableRight="@drawable/navigationbar_drawable"
+		    android:drawablePadding="8dp"
+		    android:layout_weight="1"
+		    android:textSize="12sp"
+		    android:button="@null"
+		    android:paddingLeft="15dp"
+		    android:singleLine="true"
+		    android:ellipsize="end"
+		    android:textColor="@drawable/selector_find_doctor_text_color"
+		    android:text="@string/hospital"
+		    />
+		<View style="@style/common_split_vertical_line"/>
+		<com.yksj.consultation.son.views.DrawableCenterCheckBox
+		    android:id="@+id/navigationbar_department"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:drawableRight="@drawable/navigationbar_drawable"
+		    android:drawablePadding="8dp"
+		    android:layout_weight="1"
+		    android:textSize="12sp"
+		    android:button="@null"
+		    android:paddingLeft="15dp"
+		    android:singleLine="true"
+		    android:ellipsize="end"
+		    android:textColor="@drawable/selector_find_doctor_text_color"
+		    android:text="@string/office"
+		    />
+		<View style="@style/common_split_vertical_line"/>
+		<com.yksj.consultation.son.views.DrawableCenterCheckBox
+		    android:id="@+id/navigationbar_doctor_title"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:drawableRight="@drawable/navigationbar_drawable"
+		    android:drawablePadding="8dp"
+		    android:layout_weight="1"
+		    android:textSize="12sp"
+		    android:button="@null"
+		    android:paddingLeft="15dp"
+		    android:singleLine="true"
+		    android:ellipsize="end"
+		    android:textColor="@drawable/selector_find_doctor_text_color"
+		    android:text="@string/zhicheng"
+		    />
+    </LinearLayout>
+    <View style="@style/common_split_line"/>
+    <LinearLayout 
+    android:id="@+id/popwindow_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:background="@color/transparent"
+    android:visibility="gone"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:baselineAligned="false"
+	    android:background="@color/transparent"
+	    android:orientation="horizontal" >
+    
+	    <ListView
+	        android:id="@+id/pop_by_service_type"
+		    android:layout_width="0dp"
+		    android:background="@color/white"
+		    android:dividerHeight="1dp"
+		    android:layout_marginBottom="1dp"
+		    android:divider="@color/color_gray_bg"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		     />
+		  
+	    <LinearLayout
+	        android:id="@+id/pop_by_service_price_layout"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:background="@color/color_gray_bg"
+		    android:orientation="vertical" >
+		    <TextView 
+		        android:id="@+id/pop_by_service_price_all"
+		        android:layout_width="match_parent"
+		    	android:layout_height="wrap_content"
+		    	android:background="@color/white"
+		    	android:paddingTop="6dp"
+		    	android:paddingBottom="6dp"
+		    	android:paddingLeft="20dp"
+		    	android:textSize="15sp"
+        		android:textColor="#676767"
+		    	android:text="@string/all"
+		        />
+		    <TextView 
+		        android:id="@+id/pop_by_service_price_free"
+		        android:layout_width="match_parent"
+		    	android:layout_height="wrap_content"
+		    	android:background="@color/white"
+		    	android:layout_marginTop="0.5dp"
+		    	android:paddingTop="6dp"
+		    	android:paddingBottom="6dp"
+		    	android:paddingLeft="20dp"
+		    	android:textSize="15sp"
+		    	android:textColor="#676767"
+		    	android:text="@string/free_of_charge"
+		        />
+		    <TextView 
+		        android:id="@+id/pop_by_service_price_notfree"
+		        android:layout_width="match_parent"
+		    	android:layout_height="wrap_content"
+		    	android:background="@color/white"
+		    	android:layout_marginTop="0.5dp"
+		    	android:layout_marginBottom="1dp"
+		    	android:paddingTop="6dp"
+		    	android:paddingBottom="6dp"
+		    	android:paddingLeft="20dp"
+		    	android:textSize="15sp"
+		    	android:textColor="#676767"
+		    	android:text="@string/not_free"
+		        />
+	    </LinearLayout>
+		</LinearLayout>
+	<View 
+	    android:id="@+id/pop_grey_view"
+	    android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:background="#535353"
+        android:layout_height="wrap_content"/>
+	</LinearLayout>
+    
+</LinearLayout>

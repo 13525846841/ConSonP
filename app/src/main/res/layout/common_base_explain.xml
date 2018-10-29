@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+   android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/set_title"
+        layout="@layout/gray_title_layout" />
+    <ScrollView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >   
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10.0dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15.0dp"
+            android:layout_marginRight="15.0dp"
+            android:id="@+id/layout"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/setting_feedback_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textfield_activated_holo_dark"
+                android:gravity="top|left"
+                android:minLines="7"
+                android:textColor="#000000"
+                android:textColorHint="@color/doctor_info_hint"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <TextView
+                android:id="@+id/textcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:text="0/200"
+                android:layout_marginRight="15.0dp"
+                android:textColor="@color/dark_black"
+                android:textSize="@dimen/messageTextSize" />
+    </LinearLayout>
+ <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15.0dp"
+        android:layout_marginRight="15.0dp"
+        android:id="@+id/message_leave"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="说明:"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textColor="#8c8c8c"
+            android:text="公告板是医生与患者之间简短信息的沟通途径。医生有权利对病理诊疗类留言进行选择性回复。此说明在患者端同样显示。" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0dp"
+            android:layout_marginTop="10dp"
+            android:text="温馨提示:"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0dp"
+            android:id="@+id/msg_txt"
+            android:text="认真填写取消预约原因，有助于得到对方的理解"
+            android:textColor="@color/tab_txt_gray"
+            android:textSize="13sp" />
+    </LinearLayout>
+        </LinearLayout>
+  </ScrollView>
+</LinearLayout>

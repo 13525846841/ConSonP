@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_zhifubao"
+        style="@style/text_check_relativeLayout"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/followup_time"
+                style="@style/info_text_left_sec"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/gray_text"
+                android:text="liming"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/followup_content"
+                style="@style/info_text_left_sec"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#656565"
+                android:text="要去吃饭"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/color_gray_bg"/>
+
+</LinearLayout>

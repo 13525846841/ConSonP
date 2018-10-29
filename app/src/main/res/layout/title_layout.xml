@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/title_root"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/color_blue"
+    android:gravity="center_vertical"
+    android:paddingTop="5dp" >
+
+    <Button
+        android:id="@+id/title_back"
+        style="@style/title_btn_style"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:drawableLeft="@drawable/title_back_selector"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="65dp"
+        android:layout_marginRight="65dp" >
+
+        <TextView
+            android:id="@+id/title_lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLength="13"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal" >
+
+        <com.dmsj.newask.Views.CircleImageView
+            android:id="@+id/title_rigth_pic"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center_vertical|right"
+            android:src="@drawable/default_head_female"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/title_right"
+            style="@style/title_btn_style"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/title_right2"
+            style="@style/title_btn_style"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</RelativeLayout>

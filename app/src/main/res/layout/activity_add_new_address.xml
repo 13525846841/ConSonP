@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray_bg"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/main_title"
+        layout="@layout/gray_title_layout" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/rl_name"
+            style="@style/text_check_relativeLayout"
+            android:layout_height="wrap_content"
+            android:paddingRight="7dp"
+            android:paddingLeft="7dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="#ffffff">
+
+            <TextView
+                style="@style/info_text_left_sec"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:text="收货人姓名"
+                android:layout_gravity="center_vertical"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:hint="未填写"
+                android:textColor="#626262"
+                android:maxLength="6"
+                android:background="@color/white"
+                android:layout_gravity="center_vertical"
+                android:gravity="end"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:singleLine="true"
+                android:drawableRight="@drawable/arrows"
+                android:drawablePadding="10dp"
+                android:imeOptions="actionSearch" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ebeff7" />
+
+        <RelativeLayout
+            style="@style/text_check_relativeLayout"
+            android:layout_height="wrap_content"
+            android:paddingRight="7dp"
+            android:paddingLeft="7dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="#ffffff">
+
+            <TextView
+                style="@style/info_text_left_sec"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:text="收货人手机号"
+                android:layout_gravity="center_vertical"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:hint="未填写"
+                android:textColor="#626262"
+                android:maxLength="16"
+                android:inputType="number"
+                android:background="@color/white"
+                android:layout_gravity="center_vertical"
+                android:gravity="end"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:singleLine="true"
+                android:drawableRight="@drawable/arrows"
+                android:drawablePadding="10dp"
+                android:imeOptions="actionSearch" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ebeff7" />
+        <RelativeLayout
+            android:id="@+id/rl_price"
+            style="@style/text_check_relativeLayout"
+            android:layout_height="wrap_content"
+            android:paddingRight="7dp"
+            android:paddingLeft="7dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="#ffffff">
+
+            <TextView
+                style="@style/info_text_left_sec"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:text="省市"
+                android:layout_gravity="center_vertical"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/pricity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:hint="未填写"
+                android:textColor="#626262"
+                android:maxLength="16"
+                android:background="@color/white"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:gravity="end"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:singleLine="true"
+                android:drawableRight="@drawable/arrows"
+                android:drawablePadding="10dp"
+                android:imeOptions="actionSearch" />
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ebeff7" />
+        <!--<LinearLayout-->
+            <!--style="@style/text_check_relativeLayout"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingRight="7dp"-->
+            <!--android:paddingLeft="7dp"-->
+            <!--android:focusable="true"-->
+            <!--android:focusableInTouchMode="true"-->
+            <!--android:background="#ffffff">-->
+
+            <!--<TextView-->
+                <!--style="@style/info_text_left_sec"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:text="城市"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:textSize="15sp" />-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/edit_phone"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="15sp"-->
+                <!--android:hint="未填写"-->
+                <!--android:textColor="#626262"-->
+                <!--android:maxLength="16"-->
+                <!--android:background="@color/white"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:gravity="end"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:maxEms="11"-->
+                <!--android:layout_marginRight="20dp"-->
+                <!--android:singleLine="true"-->
+                <!--android:drawableRight="@drawable/arrows"-->
+                <!--android:drawablePadding="10dp"-->
+                <!--android:imeOptions="actionSearch" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:background="#ebeff7" />-->
+
+        <!--<LinearLayout-->
+            <!--style="@style/text_check_relativeLayout"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingRight="7dp"-->
+            <!--android:paddingLeft="7dp"-->
+            <!--android:focusable="true"-->
+            <!--android:focusableInTouchMode="true"-->
+            <!--android:background="#ffffff">-->
+
+            <!--<TextView-->
+                <!--style="@style/info_text_left_sec"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:text="区县"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:textSize="15sp" />-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/edit_id"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="15sp"-->
+                <!--android:hint="未填写"-->
+                <!--android:textColor="#626262"-->
+                <!--android:maxLength="16"-->
+                <!--android:background="@color/white"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:gravity="end"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:maxEms="20"-->
+                <!--android:layout_marginRight="20dp"-->
+                <!--android:singleLine="true"-->
+                <!--android:drawableRight="@drawable/arrows"-->
+                <!--android:drawablePadding="10dp"-->
+                <!--android:imeOptions="actionSearch" />-->
+
+        <!--</LinearLayout>-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ebeff7" />
+        <LinearLayout
+            android:id="@+id/rl_allergy"
+            style="@style/text_check_relativeLayout"
+            android:layout_height="wrap_content"
+            android:paddingRight="7dp"
+            android:paddingLeft="7dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="#ffffff">
+
+            <TextView
+                style="@style/info_text_left_sec"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:text="地址信息"
+                android:layout_gravity="center_vertical"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/address_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:hint="未填写"
+                android:textColor="#626262"
+                android:maxLength="16"
+                android:background="@color/white"
+                android:layout_gravity="center_vertical"
+                android:gravity="end"
+                android:layout_centerVertical="true"
+                android:maxEms="20"
+                android:layout_marginRight="20dp"
+                android:singleLine="true"
+                android:drawableRight="@drawable/arrows"
+                android:drawablePadding="10dp"
+                android:imeOptions="actionSearch" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ebeff7" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/add_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/cormer_bg"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="保存"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+</LinearLayout>

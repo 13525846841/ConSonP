@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/gray_title_layout" />
+
+    <LinearLayout
+        style="@style/text_check_Linearlayout"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/textview_background_up"
+        android:onClick="onClickAlipay">
+
+        <RelativeLayout style="@style/text_check_relativeLayout">
+
+            <TextView
+                style="@style/info_text_left"
+                android:layout_centerVertical="true"
+                android:text="支付宝支付" />
+
+            <ImageView
+                android:id="@+id/image_but1"
+                style="@style/text_check_imageview" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/text_check_Linearlayout"
+        android:background="@drawable/textview_background_down"
+        android:onClick="onClickUnionpay">
+
+        <RelativeLayout style="@style/text_check_relativeLayout">
+
+            <TextView
+                style="@style/info_text_left"
+                android:layout_centerVertical="true"
+                android:text="银联支付" />
+
+            <ImageView
+                android:id="@+id/image_but2"
+                style="@style/text_check_imageview" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

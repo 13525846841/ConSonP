@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/service_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+    <ImageView
+        android:id="@+id/clinic_servie_item_icon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+         />
+
+    <LinearLayout 
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+	    android:paddingBottom="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+	    <TextView
+	        android:id="@+id/clinic_servie_item_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:ellipsize="end"
+	        android:textSize="16sp"
+	         />
+	    <TextView
+	        android:id="@+id/clinic_servie_item_desc"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dp"
+	        android:textColor="@color/gray_text"
+	        android:singleLine="true"
+	        android:ellipsize="end"
+	         />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/clinic_servie_item_buyBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:textColor="@color/white"
+        android:background="@drawable/doctor_clinic_go_buy"
+        android:text="@string/go_buy" />
+	</LinearLayout>
+	<View style="@style/common_split_line"/>
+</LinearLayout>

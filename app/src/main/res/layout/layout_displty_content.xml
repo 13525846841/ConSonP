@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/bg"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?titleColor">
+
+
+        <ImageView
+            android:id="@+id/title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#737373"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="8dp"
+            android:paddingBottom="10dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:id="@+id/textview_count"/>
+    </ScrollView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="?input_line_bg">
+
+    </View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="?input_bg"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/play"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/display_content_play"/>
+    </LinearLayout>
+
+</LinearLayout>

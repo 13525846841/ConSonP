@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/gray_title_layout" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="关联已有六一健康账号"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/text_gray"
+        android:textSize="16sp"
+        />
+    <EditText
+        android:id="@+id/phone"
+        style="@style/item_white_bg_style"
+        android:textColorHint="@color/gray_color2"
+        android:hint="请输入手机号码"
+        android:singleLine="true" />
+
+    <LinearLayout style="@style/item_white_bg_style">
+
+        <EditText
+            android:id="@+id/pswd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/bg_gray"
+            android:hint="请输入密码"
+            android:textSize="16sp"
+            android:textColorHint="@color/gray_color2"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/forget_pswd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="忘记密码?"
+            android:textColor="@color/red_text" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/icon_btn_bg_80"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="绑定后,您的QQ账号和六一健康账号都可以登录。"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/text_gray"
+        android:textSize="16sp"
+        />
+
+
+</LinearLayout>

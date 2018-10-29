@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2012 Square, Inc. -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item app:state_range_middle="true">
+        <color android:color="@color/calendar_selected_range_bg" />
+    </item>
+    
+    <item android:state_selected="true" app:state_busy="false" app:state_idle="false">
+        <color android:color="@color/calendar_selected_day_bgc" />
+    </item>
+    
+     <item android:state_pressed="true" app:state_busy="false" app:state_idle="false">
+        <color android:color="@color/calendar_selected_day_bgc" />
+    </item>
+    
+    <!-- <item android:state_selected="true"><color android:color="@color/calendar_selected_day_bg" />
+    </item> -->
+<!--     <item android:state_pressed="true"><color android:color="@color/calendar_selected_day_bg" /> -->
+<!--     </item> -->
+    
+    <item app:state_current_month="false">
+        <color android:color="@color/calendar_inactive_month_bg" />
+    </item>
+    
+    <item app:state_today="true" app:state_busy="false" app:state_idle="false">
+        <color android:color="@color/calendar_text_today" />
+    </item>
+    
+    <item app:state_today="true" app:state_busy="true" app:state_idle="false">
+        <bitmap android:src="@drawable/red_bg_presd" />
+    </item>
+    
+    <item app:state_today="true" app:state_busy="false" app:state_idle="true">
+        <bitmap android:src="@drawable/green_bg_presd" />
+    </item>
+    
+    
+    <item app:state_busy="true" android:state_selected="true">
+        <bitmap android:src="@drawable/red_bg_presd"></bitmap>
+    </item>
+    
+    <item app:state_busy="true" android:state_pressed="true">
+        <bitmap android:src="@drawable/red_bg_presd"></bitmap>
+    </item>
+    
+    <item app:state_busy="true" android:state_selected="false">
+        <bitmap android:src="@drawable/red_bg"></bitmap>
+    </item>
+    
+    
+    <item app:state_idle="true" android:state_selected="true">
+        <bitmap android:src="@drawable/green_bg_presd"></bitmap>
+    </item>
+    
+    <item app:state_idle="true" android:state_pressed="true">
+        <bitmap android:src="@drawable/green_bg_presd"></bitmap>
+    </item>
+    
+    <item app:state_idle="true" android:state_selected="false">
+        <bitmap android:src="@drawable/green_bg"></bitmap>
+    </item>
+    
+    <item>
+        <color android:color="@color/calendar_active_month_bg" />
+    </item>
+
+</selector>

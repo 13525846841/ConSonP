@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:orientation="vertical" >
+		
+		<View style="@style/common_split_line_1dp"/>
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:minHeight="40.0dp"
+        android:background="@drawable/wheel_to_line"
+        >
+
+        <Button
+            android:id="@+id/wheel_cancel_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/cancel"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_blue"
+            android:textSize="17sp"
+            android:background="@null"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/wheel_sure_age"
+             android:textSize="17sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/color_blue"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:text="@string/sure"
+            android:singleLine="true" />
+    </RelativeLayout>
+    
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    <LinearLayout
+        android:id="@+id/wheel_lay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <com.yksj.consultation.son.views.WheelView
+            android:id="@+id/wheel_left"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="13dp"
+            android:layout_weight="1.0" >
+        </com.yksj.consultation.son.views.WheelView>
+         <LinearLayout
+            android:layout_width="0dp" 
+            android:layout_height="fill_parent"
+            android:background="@android:color/white"
+            ></LinearLayout>
+        <com.yksj.consultation.son.views.WheelView
+            android:id="@+id/wheel_middle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="13dp"
+            android:layout_weight="1.0" >
+        </com.yksj.consultation.son.views.WheelView>
+           <LinearLayout
+            android:layout_width="2dp" 
+            android:layout_height="fill_parent"
+            ></LinearLayout>
+        <com.yksj.consultation.son.views.WheelView
+            android:id="@+id/wheel_right1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="13dp"
+            android:layout_weight="1.0" >
+        </com.yksj.consultation.son.views.WheelView>
+        <LinearLayout
+            android:layout_width="6dp" 
+            android:layout_height="fill_parent"
+            android:background="@null"
+            ></LinearLayout>
+    </LinearLayout>
+   		<LinearLayout
+                android:id="@+id/wheel_val"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:orientation="horizontal"
+                android:background="@drawable/wheel_val" >
+      </LinearLayout> 
+             </FrameLayout>
+</LinearLayout>

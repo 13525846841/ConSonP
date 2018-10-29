@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yksj.consultation.son.home.DoctorWorkstationActivity">
+
+    <include
+        android:id="@+id/main_title"
+        layout="@layout/gray_title_layout" />
+
+    <org.handmark.pulltorefresh.library.PullToRefreshListView
+        android:background="@color/white"
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/doctor_workstation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="2dp"
+        android:divider="@color/color_text_gray"
+        android:dividerHeight="0.5dp"
+        android:scrollbars="none"
+        ptr:ptrMode="both" >
+
+    </org.handmark.pulltorefresh.library.PullToRefreshListView>
+
+    <include
+        android:id="@+id/load_faile_layout"
+        android:visibility="gone"
+        layout="@layout/loading_fail_data_null"/>
+
+</LinearLayout>

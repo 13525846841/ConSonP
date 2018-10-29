@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".consultation.member.PlayVideoActiviy">
+
+    <com.yksj.consultation.son.consultation.member.MovieRecorderView
+        android:id="@+id/moive_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+    </com.yksj.consultation.son.consultation.member.MovieRecorderView>
+
+    <ImageView
+        android:id="@+id/preshow_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/preshow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/icon_pre_video"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/fl_mini"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/record_rl"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone">
+
+        <com.yksj.healthtalk.views.RoundImageView
+            android:id="@+id/new_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/playImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="onClick"
+            android:padding="6dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_pre_video" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/record_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#00000000"
+        android:padding="18dp"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/cancel_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="18dp"
+                android:src="@drawable/icon_video_cancel"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/stop_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="18dp"
+                android:src="@drawable/icon_video_stop"
+                android:text="结束"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/start_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="18dp"
+                android:src="@drawable/icon_video_start"
+                android:text="开始"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/confirm_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="18dp"
+                android:src="@drawable/icon_video_sure"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/main_title"
+        layout="@layout/gray_title_layout" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:layout_marginTop="10dp">
+
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_text"
+                        android:text="ejfoijeijfoi"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/gray_text"
+                        android:text="ejfoijeijfoi"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/gray_text"
+                        android:text="ejfoijeijfoi"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray_text"
+                    android:text="ejfoijeijfoi"
+                    android:padding="5dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/id_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray_text"
+                    android:text="ejfoijeijfoi"
+                    android:padding="5dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/allergy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray_text"
+                    android:text="ejfoijeijfoi"
+                    android:padding="5dp"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/color_gray_bg" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_color" />
+
+            <com.yksj.consultation.son.views.MyListView
+                android:id="@+id/personseekdetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:listSelector="@color/white">
+
+            </com.yksj.consultation.son.views.MyListView>
+
+
+            <TextView
+                android:id="@+id/modify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/cormer_bg"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="保存"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

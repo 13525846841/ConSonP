@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="5dp"
+    android:gravity="center_horizontal"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/topImg"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:src="@drawable/waterfall_default" />
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="上海拉什科的减肥拉萨雷锋精神交流地方"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="170dp"
+        android:layout_height="30dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/typeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="康复中心"
+            android:textColor="#f4ba7c"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/addressTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="虹口"
+            android:textColor="@color/text_gray"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

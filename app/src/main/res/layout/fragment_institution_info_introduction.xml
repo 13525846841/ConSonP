@@ -1,0 +1,146 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yksj.consultation.son.fragment.InstitutionInfoIntroductionFragment">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="90dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tvInsName"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:text="；阿里山的减肥啦手机地方了；是"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvInsAddress"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_vertical"
+                        android:drawablePadding="3dp"
+                        android:drawableLeft="@drawable/icon_ins_info_dingwei"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:textColor="@color/text_gray"
+                        android:textSize="14sp"
+                        android:text="；阿里山的减肥啦手机地方了；是"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <View
+                    android:layout_width="16dp"
+                    android:layout_height="0dp"/>
+                <LinearLayout
+                    android:id="@+id/linePhone"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:padding="5dp"
+                        android:src="@drawable/icon_ins_info_phone"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black"
+                        android:text="电话质询"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_marginTop="12dp"
+                android:background="@color/gray7"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+
+            <LinearLayout
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:padding="3dp"
+                    android:src="@drawable/icon_ins_info_jiaotong"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+
+                <TextView
+                    android:textColor="@color/text_gray"
+                    android:text="周边交通"
+                    android:layout_marginLeft="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLuXian"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/text_gray"
+                android:text="sadfasdfasdfsfasdfasfsafsadfsadfsadfas"
+                android:layout_marginLeft="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_marginTop="12dp"
+                android:background="@color/gray7"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+
+            <LinearLayout
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/icon_ins_info_introduction"
+                    android:padding="3dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+
+                <TextView
+                    android:textColor="@color/text_gray"
+                    android:text="机构简介"
+                    android:layout_marginLeft="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvContent"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/text_gray"
+                android:layout_marginLeft="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <include layout="@layout/include_tip_tv"
+             />
+    </FrameLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

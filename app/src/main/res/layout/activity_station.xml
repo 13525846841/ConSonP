@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_studio_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_gray_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/gray_title_layout" />
+
+    <TextView
+        android:id="@+id/text_number_for_consult"
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:background="@color/tab_txt_orange"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/studio_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/det_img_head"
+                        android:layout_width="84dp"
+                        android:layout_height="84dp"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="10dp"
+                        android:padding="4dp"
+                        android:src="@drawable/default_head_doctor" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_laoshi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/det_img_head"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_work_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_doc_pro"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/ll_laoshi"
+                                android:layout_marginTop="5dp"
+                                android:text="站长"
+                                android:textColor="@color/gray_text"
+                                android:textSize="14sp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/tv_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/ll_laoshi"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/gray_text"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_doc_place"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textColor="@color/gray_text"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#ebeff7" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="6dp">
+
+                    <TextView
+                        android:id="@+id/select_expert_list_item_num0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:text="简介:"
+                        android:textColor="@color/gray_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/select_expert_list_item_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="24dp"
+                        android:textColor="@color/gray_text"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+
+
+                <RelativeLayout
+                    android:id="@+id/station_member"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:padding="5dp"
+                        android:text="集团成员"
+                        android:textColor="@color/gray_text"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        style="@style/text_check_imageview"
+                        android:layout_marginRight="10dp" />
+
+                </RelativeLayout>
+
+                <!--<RelativeLayout-->
+                    <!--android:id="@+id/appraise"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:background="@color/white"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:visibility="visible">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/assess"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:padding="5dp"-->
+                        <!--android:text="患者评价"-->
+                        <!--android:textColor="@color/gray_text"-->
+                        <!--android:textSize="14sp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/comment_count"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:layout_toRightOf="@id/assess"-->
+                        <!--android:textColor="@color/gray_text"-->
+                        <!--android:textSize="16sp" />-->
+
+                    <!--<RatingBar-->
+                        <!--android:id="@+id/rb_speed_studio"-->
+                        <!--style="@style/MyRatingBar"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:isIndicator="true"-->
+                        <!--android:numStars="5"-->
+                        <!--android:rating="0">-->
+
+                    <!--</RatingBar>-->
+                <!--</RelativeLayout>-->
+                <RelativeLayout
+                    android:id="@+id/patient_comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:padding="5dp"
+                        android:text="患者评价"
+                        android:textColor="@color/gray_text"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        style="@style/text_check_imageview"
+                        android:layout_marginRight="10dp" />
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:padding="16dp"
+                        android:text="开通服务"
+                        android:textColor="@color/gray_text"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#ebeff7" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_pic_free"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:padding="10dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/free_feel"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/free" />
+
+                        <TextView
+                            style="@style/info_text_left_sec"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="18dp"
+                            android:layout_toRightOf="@+id/free_feel"
+                            android:text="体验咨询"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/free_number"
+                            style="@style/info_text_left_sec"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="26dp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/gray_text"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            style="@style/text_check_imageview"
+                            android:layout_marginRight="10dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/service1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:background="#ffffff"
+                        android:padding="10dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/image_addnum"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/picandcul" />
+
+                        <TextView
+                            style="@style/info_text_left_sec"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="18dp"
+                            android:layout_toRightOf="@+id/image_addnum"
+                            android:text="图文咨询"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="26dp"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/service1_price"
+                                style="@style/info_text_left_sec"
+                                android:textColor="@color/gray_text"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/service1_price2"
+                                style="@style/info_text_left_sec"
+                                android:text="元/次"
+                                android:textColor="@color/gray_text"
+                                android:textSize="16sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+                        <ImageView
+                            style="@style/text_check_imageview"
+                            android:layout_marginRight="10dp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/service2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:background="#ffffff"
+                        android:padding="10dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/image_consul"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/phone" />
+
+                        <TextView
+                            style="@style/info_text_left_sec"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="18dp"
+                            android:layout_toRightOf="@+id/image_consul"
+                            android:text="电话咨询"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/service2_price"
+                            style="@style/info_text_left_sec"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="26dp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/gray_text"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            style="@style/text_check_imageview"
+                            android:layout_marginRight="10dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/service3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:background="#ffffff"
+                        android:padding="10dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/image_consul2"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/consul" />
+
+                        <TextView
+                            style="@style/info_text_left_sec"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="18dp"
+                            android:layout_toRightOf="@+id/image_consul2"
+                            android:text="包月咨询"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/consul_price"
+                            style="@style/info_text_left_sec"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="26dp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/gray_text"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            style="@style/text_check_imageview"
+                            android:layout_marginRight="10dp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/service4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:background="#ffffff"
+                        android:padding="10dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/image_consul3"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/video" />
+
+                        <TextView
+                            style="@style/info_text_left_sec"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="18dp"
+                            android:layout_toRightOf="@+id/image_consul3"
+                            android:text="视频咨询"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/service4_price"
+                            style="@style/info_text_left_sec"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="26dp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/gray_text"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            style="@style/text_check_imageview"
+                            android:layout_marginRight="10dp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_gray_bg" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </FrameLayout>
+    </ScrollView>
+</LinearLayout>
+

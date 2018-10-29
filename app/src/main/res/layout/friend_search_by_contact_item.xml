@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+     >
+     
+    <FrameLayout
+        android:id="@+id/header_fram"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:padding="5dp" >
+
+        <com.dmsj.newask.Views.CircleImageView
+            android:id="@+id/head_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/desc"
+            android:src="@drawable/default_head_mankind" />
+    </FrameLayout>
+
+    <RelativeLayout 
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+        <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_marginTop="5dp"
+        android:text="昵称"
+        android:textColor="#1d1d1d"
+        android:textSize="@dimen/list_name_size" />
+
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/head_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/name"
+        android:src="@drawable/sex_man"
+        android:visibility="visible" />	
+
+   
+
+    <TextView
+        android:id="@+id/note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/name"
+        android:layout_below="@id/name"
+       	android:text="说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明"
+       	android:layout_marginTop="5dp"
+		android:singleLine="true"
+		android:ellipsize="end"
+       	android:gravity="top"
+        android:textColor="@color/color_grey_text"
+        android:textSize="@dimen/list_note_size" />
+
+    </RelativeLayout>
+     <Button
+        android:id="@+id/invite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="5dp"
+        android:background="@drawable/bt_short_double_green"
+        android:textColor="@color/white"
+        android:text="邀请"
+       />
+
+</LinearLayout>

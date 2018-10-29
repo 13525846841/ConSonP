@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray_bg"
+    android:orientation="vertical"
+    tools:context="com.yksj.consultation.son.home.WritePlanActivity">
+
+    <include layout="@layout/gray_title_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="#ffffff"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/addreword"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:background="#ffffff"
+            android:gravity="top|left"
+            android:hint="填写您的关爱记录"
+            android:maxLength="1000"
+            android:padding="15dp"
+            android:textSize="15sp" />
+
+        <!--<ImageView-->
+        <!--android:id="@+id/addpic"-->
+        <!--android:layout_width="82dp"-->
+        <!--android:layout_height="82dp"-->
+        <!--android:src="@drawable/addpic"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:layout_gravity="center_vertical"/>-->
+        <HorizontalScrollView
+            android:id="@+id/illness_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp">
+
+            <LinearLayout
+                android:id="@+id/item_img_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="82dp"
+                android:layout_gravity="left"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/item_images_plan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/addpic"
+                    android:layout_width="78dp"
+                    android:layout_height="78dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/add_image_h" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+
+</LinearLayout>

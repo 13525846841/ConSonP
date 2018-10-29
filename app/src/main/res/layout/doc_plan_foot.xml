@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ebeff7" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:textColor="@color/gray_text"
+        android:textSize="14sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="为您的宝贝制定一个计划，让他在老师，医生，社会和家长的呵护下更加完美"/>
+
+    <TextView
+        android:id="@+id/tianjia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="添加宝贝"
+        android:gravity="center_horizontal"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/cormer_bg"
+        android:layout_gravity="center"
+        android:padding="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="10dp"/>
+</LinearLayout>

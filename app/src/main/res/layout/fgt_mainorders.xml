@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_myorders"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_selector"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="8dp"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="68dp"
+        android:layout_height="78dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/seedoc" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="8dp"
+        android:layout_height="match_parent">
+
+        <View
+            style="@style/common_split_line_vertical"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/gray_dot" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="16dp"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:id="@+id/order_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/color_text1"
+            android:singleLine="true"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/order_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/color_text_gray"
+            android:textSize="15sp" />
+        <!--android:textColor="#FF9F50"-->
+    <!--未登录，无法查看会诊  -->
+        <TextView
+            android:id="@+id/no_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_text_gray"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>
+

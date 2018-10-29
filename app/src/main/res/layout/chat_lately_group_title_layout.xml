@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:id="@android:id/title"
+    android:paddingRight="15dp"
+    android:background="@drawable/salon_location"
+    >
+    <TextView android:id="@+id/group_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true"/>
+    <TextView android:id="@+id/group_msg_number" android:layout_toLeftOf="@+id/group_arrow" android:paddingRight="5dp" android:text="0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true"/>
+    <ImageView android:id="@+id/group_arrow" android:layout_alignParentRight="true"  android:src="@drawable/expand_roat_drawable" android:layout_width="12dp" android:layout_height="12dp" android:layout_centerVertical="true" android:background="@null"/>
+</RelativeLayout>

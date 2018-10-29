@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/subject_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" >
+
+                <com.dmsj.newask.Views.CircleImageView
+                    android:id="@+id/expert_header_image"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/expert_header_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="7dp"
+                    android:textColor="#2D2D2D"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/expert_duty1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="3" >
+
+                <TextView
+                    android:id="@+id/consultation_payment1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF2C2C"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:visibility="gone"/>
+
+                <Button
+                    android:id="@+id/apply_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_below="@id/consultation_payment1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/attentioning"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="@string/apply"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"
+                    android:visibility="invisible"
+                    android:gravity="center" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View style="@style/common_split_line_1dp" />
+
+        <TextView
+            android:id="@+id/expert_speciality1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="15dp"
+            android:textColor="#8E8E8E"
+            android:textSize="15sp"
+            />
+    </LinearLayout>
+
+    <View style="@style/common_split_line_10dp" />
+
+</LinearLayout>

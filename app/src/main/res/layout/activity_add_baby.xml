@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_baby"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray_bg"
+    android:orientation="vertical"
+    tools:context="com.yksj.consultation.son.home.AddBabyActivity">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/gray_title_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/iv_picture"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/addpic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_picture"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:singleLine="true"
+            android:text="添加照片"
+            android:textColor="@color/gray_text"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_name"
+            style="@style/text_check_relativeLayout"
+            android:layout_height="wrap_content"
+            android:paddingRight="7dp"
+            android:paddingLeft="7dp"
+            android:background="#ffffff">
+
+            <TextView
+                style="@style/info_text_left_sec"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:text="宝贝姓名"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/info_text_left_sec"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:maxEms="10"
+                android:layout_marginRight="38dp"
+                android:text="未填写"
+                android:textSize="15sp" />
+
+            <ImageView style="@style/text_check_imageview" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ebeff7" />
+
+        <RelativeLayout
+            android:id="@+id/rl_sex"
+            style="@style/text_check_relativeLayout"
+            android:layout_height="wrap_content"
+            android:paddingRight="7dp"
+            android:paddingLeft="7dp"
+            android:background="#ffffff">
+
+            <TextView
+                style="@style/info_text_left_sec"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:text="性别"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/sex"
+                style="@style/info_text_left_sec"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="38dp"
+                android:gravity="center_vertical"
+                android:text="未填写"
+                android:textSize="15sp" />
+
+            <ImageView style="@style/text_check_imageview" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ebeff7" />
+
+        <RelativeLayout
+            android:id="@+id/rl_time"
+            style="@style/text_check_relativeLayout"
+            android:layout_height="wrap_content"
+            android:paddingRight="7dp"
+            android:paddingLeft="7dp"
+            android:background="#ffffff">
+
+            <TextView
+                style="@style/info_text_left_sec"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:text="出生日期"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/birthday"
+                style="@style/info_text_left_sec"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="38dp"
+                android:text="未填写"
+                android:gravity="center_vertical"
+                android:textSize="15sp" />
+
+            <ImageView style="@style/text_check_imageview" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ebeff7" />
+
+        <RelativeLayout
+            android:id="@+id/rl_height"
+            style="@style/text_check_relativeLayout"
+            android:layout_height="wrap_content"
+            android:paddingRight="7dp"
+            android:paddingLeft="7dp"
+            android:background="#ffffff">
+
+            <TextView
+                style="@style/info_text_left_sec"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:text="身高"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_height"
+                style="@style/info_text_left_sec"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="38dp"
+                android:text="未填写"
+                android:gravity="center_vertical"
+                android:textSize="15sp" />
+
+            <ImageView style="@style/text_check_imageview" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ebeff7" />
+
+        <RelativeLayout
+            android:id="@+id/rl_weight"
+            style="@style/text_check_relativeLayout"
+            android:layout_height="wrap_content"
+            android:paddingRight="7dp"
+            android:paddingLeft="7dp"
+            android:background="#ffffff">
+
+            <TextView
+                style="@style/info_text_left_sec"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:text="体重"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_weight"
+                style="@style/info_text_left_sec"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="38dp"
+                android:text="未填写"
+                android:gravity="center_vertical"
+                android:textSize="15sp" />
+
+            <ImageView style="@style/text_check_imageview" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ebeff7" />
+
+        <RelativeLayout
+            android:id="@+id/rl_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="7dp"
+            android:paddingLeft="7dp"
+            android:background="#ffffff">
+
+            <TextView
+                style="@style/info_text_left_sec"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="30dp"
+                android:text="备注"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#626262"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="38dp"
+                android:text="未填写"
+                android:gravity="center_vertical"
+                android:maxEms="1000"
+                android:textSize="15sp"/>
+
+            <ImageView style="@style/text_check_imageview" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ebeff7" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/modify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/cormer_bg"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="删除宝贝"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:minHeight="40.0dp" >
+
+        <Button
+            android:id="@+id/wheel_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@null"
+            android:singleLine="true"
+            android:text="@string/cancel"
+            android:textColor="@color/color_blue"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/wheel_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@null"
+            android:singleLine="true"
+            android:text="@string/sure"
+            android:textColor="@color/color_blue"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/line" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/wheel_lay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="2dp"
+            android:paddingTop="3dp" >
+
+            <com.yksj.consultation.son.views.WheelView
+                android:id="@+id/wheel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="13dp"
+                android:layout_weight="8.0" >
+            </com.yksj.consultation.son.views.WheelView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white" >
+            </LinearLayout>
+
+            <com.yksj.consultation.son.views.WheelView
+                android:id="@+id/wheel_right"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="13dp"
+                android:layout_marginTop="13dp"
+                android:layout_weight="7.0" >
+            </com.yksj.consultation.son.views.WheelView>
+
+            <LinearLayout
+                android:layout_width="8dp"
+                android:layout_height="fill_parent"
+                android:background="@null" >
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/wheel_val"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/wheel_val"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

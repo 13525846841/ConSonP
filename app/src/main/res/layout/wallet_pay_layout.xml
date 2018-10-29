@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="100dp"
+    android:layout_marginBottom="100dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:gravity="center"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/popwindow_remind_title"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_bk"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/dialog_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:scrollbars="vertical"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/money"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:numeric="integer" 
+                android:password="true"
+                android:maxLength="6"
+                android:focusable="true"  
+				android:focusableInTouchMode="true"
+                android:singleLine="true"
+                android:textSize="15sp" />
+             <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/line"
+        />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/dialog_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="35dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/popwindow_left_selector"
+            android:gravity="center"
+            android:textColor="@color/text_blue"
+            android:text="取消"
+            android:textSize="18dp" />
+        <Button
+            android:id="@+id/dialog_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:minHeight="35dp"
+            android:text="支付"
+            android:background="@drawable/popwindow_right_selector"
+            android:gravity="center"
+            android:textColor="@color/text_blue"
+            android:textSize="18dp" />
+    </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal" >
+    
+     <com.dmsj.newask.Views.CircleImageView
+            android:id="@id/chat_head"
+            android:layout_width="60.0dp"
+            android:layout_height="60.0dp"
+            android:layout_gravity="center"
+            android:paddingBottom="5dp"
+            android:layout_marginRight="14dp"
+            android:paddingTop="5dp" />
+     
+     <RelativeLayout 
+         android:layout_width="0dp"
+         android:layout_weight="1"
+         android:paddingTop="14dp"
+         android:paddingBottom="14dp"
+         android:layout_height="wrap_content"
+         >
+         <TextView 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/my_friend_item_name"
+             android:textSize="16sp"
+             />
+         <ImageView 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_toRightOf="@id/my_friend_item_name"
+             android:layout_marginLeft="10dp"
+             android:src="@drawable/sex_drawable"
+             android:id="@+id/my_friend_item_sex"
+             />
+         <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+             android:layout_below="@id/my_friend_item_name" android:layout_marginTop="8dp" android:textColor="#8E8E8E"
+           android:singleLine="true"  android:text="北京真热北京真热北京真热北京真热北京真热" android:id="@+id/desc"
+             />
+     </RelativeLayout>
+     <ImageView 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/attiention"
+         android:paddingLeft="15dp"
+         android:paddingRight="2dp"
+         android:paddingTop="15dp"
+         android:paddingBottom="15dp"
+         android:src="@drawable/relation_drawable_list"
+         />
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/gray_title_layout" />
+
+    <com.yksj.consultation.son.views.DrawableCenterCheckBox
+        android:id="@+id/navigationbar_placee"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_below="@+id/title"
+        android:background="@color/white"
+        android:button="@null"
+        android:clickable="true"
+        android:drawablePadding="8dp"
+        android:drawableRight="@drawable/navigationbar_drawablee"
+        android:ellipsize="end"
+        android:maxLength="6"
+        android:padding="16dp"
+        android:singleLine="true"
+        android:text="选择地区"
+        android:textColor="@drawable/selector_find_doctor_text_color"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/line"
+        style="@style/common_split_line"
+        android:layout_below="@+id/navigationbar_placee" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line"
+        android:background="@color/transparent"
+        android:orientation="vertical">
+
+        <org.handmark.pulltorefresh.library.PullToRefreshListView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/famous_doc_act_lv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#00000000"
+            android:divider="@color/color_gray_bg"
+            android:gravity="center_horizontal"
+            android:listSelector="#00000000"
+            android:scrollbars="none"
+            ptr:ptrMode="both" />
+
+        <include
+            android:id="@+id/empty_view_pro_fam_doc"
+            layout="@layout/loading_fail_data_null" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/popwindow_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/navigationbar_placee"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View style="@style/common_split_line" />
+
+            <ListView
+                android:id="@+id/pop_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:cacheColorHint="#00000000"
+                android:divider="@color/gray_color"
+                android:dividerHeight="0.6dp"
+                android:fadingEdge="none"
+                android:listSelector="@color/white" />
+
+            <View style="@style/common_split_line" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/pop_grey_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#535353" />
+
+    </LinearLayout>
+
+</RelativeLayout>

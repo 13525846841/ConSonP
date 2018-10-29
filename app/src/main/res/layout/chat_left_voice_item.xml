@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:paddingTop="10dp" >
+    <TextView
+        android:id="@+id/chat_time"
+        style="@style/chat_time"
+        android:layout_centerHorizontal="true" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chat_time"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="horizontal" >
+
+            <com.dmsj.newask.Views.CircleImageView
+                android:id="@id/chat_head"
+                 android:layout_width="52.0dp"
+            android:layout_height="52.0dp"
+                android:layout_gravity="top"
+                android:layout_marginLeft="16.0dp"
+                android:layout_marginRight="8.0dp"
+                android:paddingBottom="2dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="3dp" />
+ 		<LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:background="@drawable/chat_left_item_layout"
+                android:orientation="horizontal" >
+            <FrameLayout
+                android:id="@+id/voice_area"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_gravity="center" >
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                   
+                    android:minHeight="45dp"
+                    android:minWidth="45dp"
+                    android:scaleType="center"
+                    android:src="@drawable/left_gray_horn" />
+
+                <ProgressBar
+                    android:id="@+id/voice_playing_progres"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:clickable="false"
+                    android:max="100"
+                    android:minHeight="45dp"
+                    android:minWidth="45dp"
+                    android:progressDrawable="@drawable/left_voice_progres" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/chat_voice_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:minWidth="35dp"
+                android:singleLine="true" />
+ 		</LinearLayout>
+            <ProgressBar
+                android:id="@+id/chat_progres"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/selected"
+            style="@style/chat_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"
+            android:layout_marginRight="10.0dp"
+            android:focusable="false" />
+    </LinearLayout>
+
+</RelativeLayout>

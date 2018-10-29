@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:layout_height="120dp">
+<ImageView
+    android:src="@drawable/order_detail"
+    android:scaleType="centerCrop"
+    android:layout_marginLeft="12dp"
+    android:id="@+id/imHead"
+    android:layout_width="110dp"
+    android:layout_height="90dp" />
+<LinearLayout
+    android:layout_marginLeft="5dp"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <TextView
+        android:layout_marginRight="12dp"
+        android:id="@+id/title"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/imHead"
+        android:layout_width="wrap_content"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:ellipsize="end"
+        android:text="儿科大讲堂－－小儿冬季腹泻的误区与治疗儿科大讲堂－－小儿冬季腹泻的误区与治疗季腹泻的误区与治疗"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginLeft="8dp"
+        android:id="@+id/docName"
+        android:layout_width="wrap_content"
+        android:text="崔点点"
+        android:textSize="14sp"
+        android:layout_toRightOf="@+id/imHead"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="5dp"
+        android:textColor="#858585"
+        android:layout_height="wrap_content" />
+<LinearLayout
+    android:gravity="center_vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_marginLeft="8dp"
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:text="2018-10-10"
+        android:textSize="14sp"
+        android:layout_toRightOf="@+id/imHead"
+        android:layout_below="@+id/docName"
+        android:layout_marginTop="5dp"
+        android:textColor="#858585"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginLeft="8dp"
+        android:id="@+id/priceStatus"
+        android:layout_width="wrap_content"
+        android:text="付费"
+        android:textSize="14sp"
+        android:layout_toRightOf="@+id/time"
+        android:layout_below="@+id/docName"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/red"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+
+</LinearLayout>
+
+</LinearLayout>

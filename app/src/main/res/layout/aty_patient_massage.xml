@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <include layout="@layout/gray_title_layout"/>
+    <ScrollView
+        android:id="@+id/scrollview_top"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+                <ImageView
+                    android:id="@+id/patient_header"
+                    android:layout_margin="10dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:text="六一账号:"
+                    android:gravity="right"
+                    android:textColor="#777777"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="16sp"
+                    android:id="@+id/duomei_hao"
+                    android:textColor="#565656"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View style="@style/common_split_line_10dp"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/name2"
+                        android:text="@string/name2"
+                        android:textColor="#777777"
+                        android:textSize="16sp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/name2_edit"
+                        android:textSize="16sp"
+                        android:layout_toRightOf="@id/name2"
+                        android:layout_alignBaseline="@+id/name2"
+                        android:singleLine="true"
+                        android:background="@null"
+                        android:textColor="#565656"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/age2"
+                        android:text="@string/age2"
+                        android:layout_below="@id/name2"
+                        android:textSize="16sp"
+                        android:textColor="#777777"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/age2_edit"
+                        android:layout_toRightOf="@id/age2"
+                        android:layout_alignBaseline="@+id/age2"
+                        android:textSize="16sp"
+                        android:textColor="#565656"
+                        android:singleLine="true"
+                        android:background="@null"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/sex2"
+                        android:text="@string/sex2"
+                        android:textColor="#777777"
+                        android:textSize="16sp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/sex2_edit"
+                        android:textSize="16sp"
+                        android:layout_toRightOf="@id/sex2"
+                        android:layout_alignBaseline="@+id/sex2"
+                        android:singleLine="true"
+                        android:background="@null"
+                        android:textColor="#565656"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/phone2"
+                        android:text="@string/phone_num"
+                        android:textColor="#777777"
+                        android:layout_below="@id/sex2"
+                        android:textSize="16sp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/phone2_edit"
+                        android:layout_toRightOf="@id/phone2"
+                        android:layout_alignBaseline="@+id/phone2"
+                        android:textSize="16sp"
+                        android:singleLine="true"
+                        android:textColor="#565656"
+                        android:background="@null"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </LinearLayout>
+            <View style="@style/common_split_line_10dp"/>
+            <RelativeLayout
+                android:id="@+id/clinic_layout_item1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/clinic_specialty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    android:textColor="#777777"
+                    android:text="@string/illness_introduction1" />
+
+                <View
+                    style="@style/common_split_line"
+                    android:layout_below="@id/clinic_specialty" />
+
+                <TextView
+                    android:id="@+id/clinic_specialty_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/clinic_specialty"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="16dp"
+                    android:textColor="#4b4b4b"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/clinic_specialty_index"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/clinic_specialty_content"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="8dp"
+                    android:src="@drawable/gengduos" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/clinic_layout_item2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/clinic_specialty2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    android:textColor="#777777"
+                    android:text="过敏史" />
+
+                <View
+                    style="@style/common_split_line"
+                    android:layout_below="@id/clinic_specialty2" />
+
+                <TextView
+                    android:id="@+id/clinic_specialty_content2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/clinic_specialty2"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="16dp"
+                    android:textColor="#4b4b4b"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/clinic_specialty_index2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/clinic_specialty_content2"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="8dp"
+                    android:src="@drawable/gengduos" />
+            </RelativeLayout>
+            <View style="@style/common_split_line_10dp"/>
+            <LinearLayout
+                android:id="@+id/con_list_ll"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+                <TextView
+                    android:text="@string/consult_record"
+                    android:textSize="16sp"
+                    android:textColor="#777777"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"/>
+                <View style="@style/common_split_line_1dp"/>
+                <com.yksj.consultation.son.views.ScrollListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/case_list"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

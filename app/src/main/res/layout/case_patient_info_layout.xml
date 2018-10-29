@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/case_patient_info_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:textColor="@color/gray_text"
+        android:text="@string/patient_info"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/name2"
+            />
+        <TextView android:id="@+id/create_case_input_name"
+            style="@style/patient_info_right_tv_style"/>
+        <EditText android:id="@+id/create_case_input_edit_name"
+            android:maxLength="10"
+            style="@style/patient_info_right_edit_style"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/sex2"/>
+        <TextView android:id="@+id/create_case_input_sex"
+            style="@style/patient_info_right_tv_style"/>
+        <TextView android:id="@+id/create_case_input_edit_sex"
+            android:maxLength="1"
+            style="@style/patient_info_right_edit_style"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/birthday2"/>
+        <TextView android:id="@+id/create_case_input_birthday"
+            style="@style/patient_info_right_tv_style"/>
+        <EditText android:id="@+id/create_case_input_edit_birthday"
+            android:clickable="false"
+            android:editable="false"
+            style="@style/patient_info_right_edit_style"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/age2"/>
+        <TextView android:id="@+id/create_case_input_age"
+            style="@style/patient_info_right_tv_style"/>
+        <TextView android:id="@+id/create_case_input_edit_age"
+            style="@style/patient_info_right_edit_style"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/zhiye2"/>
+        <TextView android:id="@+id/create_case_input_zhiye"
+            style="@style/patient_info_right_tv_style"/>
+        <EditText android:id="@+id/create_case_input_edit_zhiye"
+            android:maxLength="10"
+            style="@style/patient_info_right_edit_style"/>
+        <TextView
+            android:id="@+id/create_case_tv_phone_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/phone_num"/>
+        <TextView android:id="@+id/create_case_input_address"
+            style="@style/patient_info_right_tv_style"/>
+        <EditText android:id="@+id/create_case_input_edit_address"
+            android:maxLength="11"
+            style="@style/patient_info_right_edit_style"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/id_card_num"
+            />
+        <TextView android:id="@+id/create_case_input_card_num"
+            style="@style/patient_info_right_tv_style"/>
+        <EditText android:id="@+id/create_case_input_edit_code"
+            android:maxLength="18"
+            style="@style/patient_info_right_edit_style"/>
+    </LinearLayout>
+    <View style="@style/common_split_line_10dp" />
+</LinearLayout>

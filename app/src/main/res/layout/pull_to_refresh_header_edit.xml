@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingTop="1dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/refresh_header_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1.0"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/search"
+            android:textColor="@android:color/background_dark"
+            android:singleLine="true"
+            android:clickable="true"
+            android:paddingLeft="40dp"
+        android:textSize="@dimen/messageTextSize"/>
+
+        <Button
+            android:id="@+id/refresh_header_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dip"
+            android:background="@drawable/search_cancle"
+            android:text="@string/cancel"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:visibility="gone" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/fill"
+        android:layout_width="fill_parent"
+        android:layout_height="15dp" 
+        android:orientation="horizontal"
+        android:visibility="gone"
+        ></LinearLayout>
+
+</LinearLayout>

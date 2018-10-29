@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/parentLayout"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_marginRight="12dp"
+    android:id="@+id/line"
+    android:layout_gravity="right"
+    android:background="@drawable/shape_msgbg_zhijiao"
+    android:orientation="vertical"
+    android:layout_width="110dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tvInsTijian"
+        android:text="体检中心"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <View
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/color_blue"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <TextView
+        android:id="@+id/tvInsTuoz"
+        android:text="拓展中心"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <View
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/color_blue"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <TextView
+        android:id="@+id/tvInsKangf"
+        android:text="康复中心"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <View
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/color_blue"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <TextView
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:id="@+id/tvInsXingq"
+        android:text="兴趣中心"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+</LinearLayout>
+</FrameLayout>

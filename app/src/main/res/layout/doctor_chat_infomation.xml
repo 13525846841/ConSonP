@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/gray_title_layout" />
+
+        <View style="@style/common_split_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_age"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:tag="30"
+                android:text="30岁"
+                android:textColor="#666666"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/sex"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="男"
+                android:textColor="#666666"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+        <RadioGroup
+            android:id="@+id/pregnancy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/nofuck"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/check_box_duomei2"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="未孕" />
+
+            <RadioButton
+                android:id="@+id/fuck"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/check_box_duomei4"
+                android:button="@null"
+                android:gravity="center"
+                android:text="已孕" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="怀孕周数"
+            android:textColor="#666666"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/sure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/set_btn_bg"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</ScrollView>

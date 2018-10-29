@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/main_title"
+        layout="@layout/gray_title_layout" />
+
+    <org.handmark.pulltorefresh.library.PullToRefreshScrollView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_gray_bg"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_person"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/image_head"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_toEndOf="@+id/image_head"
+                    android:layout_toRightOf="@+id/image_head"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_black_two"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/tv_name_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="六一账号："
+                        android:textColor="@color/text_black_two"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <ImageView style="@style/text_check_imageview" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#dbe0ea" />
+
+            <View
+                style="@style/common_split_line"
+                android:layout_marginTop="6dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#fff"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/rl_mydoctors"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/icon_mydoctor" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="我的医生"
+                        android:textColor="#9000"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rl_outpatient"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_recommend_sale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/icon_outpatient" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="我的订单"
+                        android:textColor="#9000"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_chat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_recommend_hotel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/d_plan2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="医教计划"
+                        android:textColor="#9000"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rl_accuntinfo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_recommend_travel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/youhui2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="我的优惠"
+                        android:textColor="#9000"
+                        android:textSize="14sp" />
+                </LinearLayout>
+                <!--<LinearLayout-->
+                <!--android:id="@+id/rl_accuntinfo"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="vertical" >-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/iv_recommend_travel"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/icon_account" />-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="3dp"-->
+                <!--android:text="账户管理"-->
+                <!--android:textColor="#9000"-->
+                <!--android:textSize="14sp" />-->
+                <!--</LinearLayout>-->
+
+            </LinearLayout>
+
+            <View
+                style="@style/common_split_line"
+                android:layout_marginTop="6dp" />
+
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/rl_mydoctors_plan"-->
+            <!--style="@style/text_check_relativeLayout"-->
+            <!--android:background="#ffffff"-->
+            <!--android:padding="16dp">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/image1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:src="@drawable/d_plan" />-->
+
+            <!--<TextView-->
+            <!--style="@style/info_text_left_sec"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="18dp"-->
+            <!--android:layout_toRightOf="@+id/image1"-->
+            <!--android:text="医教计划 "-->
+            <!--android:textSize="16sp" />-->
+            <!--<ImageView style="@style/text_check_imageview" />-->
+            <!--</RelativeLayout>-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ebeff7" />
+
+            <RelativeLayout
+                android:id="@+id/rl_coupon"
+                style="@style/text_check_relativeLayout"
+                android:background="#ffffff"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/image2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/youhui" />
+
+                <TextView
+                    style="@style/info_text_left_sec"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_toRightOf="@+id/image2"
+                    android:text="我的优惠"
+                    android:textSize="16sp" />
+
+
+                <ImageView style="@style/text_check_imageview" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ebeff7" />
+
+            <RelativeLayout
+                android:id="@+id/rl_user_WeChat"
+                style="@style/text_check_relativeLayout"
+                android:background="#ffffff"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/image10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/wechat2" />
+
+                <TextView
+                    style="@style/info_text_left_sec"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_toRightOf="@+id/image10"
+                    android:text="绑定微信"
+                    android:textSize="16sp" />
+
+                <ImageView style="@style/text_check_imageview" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ebeff7" />
+
+            <RelativeLayout
+                android:id="@+id/rl_user_scan"
+                style="@style/text_check_relativeLayout"
+                android:background="#ffffff"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/image11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/doc_code2" />
+
+                <TextView
+                    style="@style/info_text_left_sec"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_toRightOf="@+id/image11"
+                    android:text="扫一扫"
+                    android:textSize="16sp" />
+
+                <ImageView style="@style/text_check_imageview" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ebeff7" />
+            <RelativeLayout
+                android:id="@+id/rl_station"
+                style="@style/text_check_relativeLayout"
+                android:background="#ffffff"
+                android:padding="16dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/image_station"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/plan1" />
+
+                <TextView
+                    style="@style/info_text_left_sec"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_toRightOf="@+id/image_station"
+                    android:text="名医联诊"
+                    android:textSize="16sp" />
+                <ImageView style="@style/text_check_imageview" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ebeff7" />
+            <RelativeLayout
+                android:id="@+id/rl_user_random"
+                style="@style/text_check_relativeLayout"
+                android:background="#ffffff"
+                android:padding="16dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/image12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/plan1" />
+
+                <TextView
+                    style="@style/info_text_left_sec"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_toRightOf="@+id/image12"
+                    android:text="随访计划"
+                    android:textSize="16sp" />
+
+                <ImageView style="@style/text_check_imageview" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ebeff7" />
+
+            <RelativeLayout
+                android:id="@+id/rl_user_ins"
+                style="@style/text_check_relativeLayout"
+                android:background="#ffffff"
+                android:padding="16dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/imagins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/plan1" />
+
+                <TextView
+                    style="@style/info_text_left_sec"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_toRightOf="@+id/imagins"
+                    android:text="找机构"
+                    android:textSize="16sp" />
+
+                <ImageView style="@style/text_check_imageview" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ebeff7" />
+            <RelativeLayout
+                android:id="@+id/rl_user_bloc"
+                style="@style/text_check_relativeLayout"
+                android:background="#ffffff"
+                android:padding="16dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/imageBloc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/plan1" />
+
+                <TextView
+                    style="@style/info_text_left_sec"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_toRightOf="@+id/imageBloc"
+                    android:text="医生联盟"
+                    android:textSize="16sp" />
+
+                <ImageView style="@style/text_check_imageview" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ebeff7" />
+            <RelativeLayout
+                android:id="@+id/rl_user_account"
+                style="@style/text_check_relativeLayout"
+                android:background="#ffffff"
+                android:padding="16dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/image13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7.5dp"
+                    android:src="@drawable/icon_account" />
+
+                <TextView
+                    style="@style/info_text_left_sec"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25.5dp"
+                    android:layout_toRightOf="@+id/image13"
+                    android:text="钱包"
+                    android:textSize="16sp" />
+
+                <ImageView style="@style/text_check_imageview" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ebeff7" />
+
+            <RelativeLayout
+                android:id="@+id/rl_user_assis"
+                style="@style/text_check_relativeLayout"
+                android:background="#ffffff"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/image5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/assis2" />
+
+                <TextView
+                    style="@style/info_text_left_sec"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_toRightOf="@+id/image5"
+                    android:text="使用助理"
+                    android:textSize="16sp" />
+
+                <ImageView style="@style/text_check_imageview" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ebeff7" />
+            <!--<View-->
+            <!--style="@style/common_split_line"-->
+            <!--android:layout_marginTop="6dp" />-->
+
+            <RelativeLayout
+                android:id="@+id/rl_publicnumber"
+                style="@style/text_check_relativeLayout"
+                android:background="#ffffff"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/image_publicnumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/public2" />
+
+                <TextView
+                    style="@style/info_text_left_sec"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_toRightOf="@+id/image_publicnumber"
+                    android:text="关注六一微信公众号" />
+
+
+                <ImageView style="@style/text_check_imageview" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#ebeff7" />
+
+            <RelativeLayout
+                android:id="@+id/rl_lianjie"
+                style="@style/text_check_relativeLayout"
+                android:background="#ffffff"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/image3_61"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/lianjie" />
+
+                <TextView
+                    style="@style/info_text_left_sec"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_toRightOf="@+id/image3_61"
+                    android:text="链接到六一健康网" />
+
+
+                <ImageView style="@style/text_check_imageview" />
+            </RelativeLayout>
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:background="#dbe0ea" />-->
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#dbe0ea" />
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/rl_lianjie"-->
+            <!--style="@style/text_check_relativeLayout"-->
+            <!--android:background="#ffffff"-->
+            <!--android:padding="16dp">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/image3"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:paddingLeft="4dp"-->
+            <!--android:src="@drawable/doc_code" />-->
+
+            <!--<TextView-->
+            <!--style="@style/info_text_left_sec"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="18dp"-->
+            <!--android:layout_toRightOf="@+id/image3"-->
+            <!--android:paddingLeft="4dp"-->
+            <!--android:text="链接到61健康网"-->
+            <!--android:textSize="16sp" />-->
+
+
+            <!--<ImageView style="@style/text_check_imageview" />-->
+            <!--</RelativeLayout>-->
+            <!--<View-->
+            <!--style="@style/common_split_line"-->
+            <!--android:layout_marginTop="6dp" />-->
+
+            <RelativeLayout
+                android:id="@+id/rl_settings"
+                style="@style/text_check_relativeLayout"
+                android:background="#ffffff"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/image4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/setting" />
+
+                <TextView
+                    style="@style/info_text_left_sec"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_toRightOf="@+id/image4"
+                    android:text="设置" />
+
+                <ImageView style="@style/text_check_imageview" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#dbe0ea" />
+
+            <RelativeLayout
+                android:id="@+id/rl_jiuzhenren"
+                style="@style/text_check_relativeLayout"
+                android:background="#ffffff"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/image6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/seek" />
+
+                <TextView
+                    style="@style/info_text_left_sec"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_toRightOf="@+id/image6"
+                    android:text="就诊人" />
+
+                <ImageView style="@style/text_check_imageview" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#dbe0ea" />
+
+            <RelativeLayout
+                android:id="@+id/rl_bl"
+                style="@style/text_check_relativeLayout"
+                android:background="#ffffff"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/image_ml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_illness" />
+
+                <TextView
+                    style="@style/info_text_left_sec"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_toRightOf="@+id/image_ml"
+                    android:text="病历管理" />
+
+                <ImageView style="@style/text_check_imageview" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#dbe0ea" />
+
+            <RelativeLayout
+                android:id="@+id/rl_shop"
+                style="@style/text_check_relativeLayout"
+                android:background="#ffffff"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/image7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_shop" />
+
+                <TextView
+                    style="@style/info_text_left_sec"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_toRightOf="@+id/image7"
+                    android:text="商城" />
+
+                <ImageView style="@style/text_check_imageview" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#dbe0ea" />
+
+            <RelativeLayout
+                android:id="@+id/rl_call"
+                style="@style/text_check_relativeLayout"
+                android:background="#ffffff"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/image_call"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/phone" />
+
+                <TextView
+                    style="@style/info_text_left_sec"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_toRightOf="@+id/image_call"
+                    android:text="客服" />
+
+                <ImageView style="@style/text_check_imageview" />
+            </RelativeLayout>
+            <!--<View-->
+            <!--style="@style/common_split_line"-->
+            <!--android:layout_marginTop="6dp" />-->
+
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/rl_publicnumber"-->
+            <!--style="@style/text_check_relativeLayout"-->
+            <!--android:background="#ffffff"-->
+            <!--android:padding="16dp">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/image_publicnumber"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:src="@drawable/icon_publicnumber" />-->
+
+            <!--<TextView-->
+            <!--style="@style/info_text_left_sec"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="18dp"-->
+            <!--android:layout_toRightOf="@+id/image_publicnumber"-->
+            <!--android:text="六一健康公众号" />-->
+
+
+            <!--<ImageView style="@style/text_check_imageview" />-->
+            <!--</RelativeLayout>-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#dbe0ea" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40.0dp"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/basicTextSize">
+
+                <Button
+                    android:id="@+id/logout_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/bt_pic_number_bg"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/changeAccount"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </org.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+</LinearLayout>

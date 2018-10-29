@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/gray_title_layout" />
+
+    <LinearLayout
+        android:id="@+id/service_pay_basic_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <LinearLayout
+            android:id="@+id/name_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:minHeight="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/service_pay_basic_info_name1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textColor="#4B4B4B"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/service_pay_basic_info_name2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/common_edittext_bg"
+                android:hint="@string/please_input_name"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/phone_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:minHeight="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/service_pay_basic_info_phone1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/setting_mobile_number"
+                android:textColor="#4B4B4B"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/service_pay_basic_info_phone2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/common_edittext_bg"
+                android:hint="@string/please_input_phone_number"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:singleLine="true"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/service_pay_basic_info_remark1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/remark"
+                android:textColor="#4B4B4B"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/service_pay_basic_info_remark2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/common_edittext_bg"
+                android:gravity="top"
+                android:hint="@string/please_input_something_to_doctor"
+                android:lines="3"
+                android:maxLength="200"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/chat_action"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:background="@drawable/bt_short_orange"
+            android:text="预约"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

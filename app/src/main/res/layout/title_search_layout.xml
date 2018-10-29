@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:focusable="true"  
+   	android:focusableInTouchMode="true"
+    android:background="@color/color_blue"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="5dp" >
+
+    <EditText 
+        android:id="@+id/title_edit_search"
+        android:layout_width="0dp"
+    	android:layout_height="wrap_content"
+    	android:layout_weight="1"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:hint="@string/input_topicname_or_partname"
+        android:textColorHint="@color/color_hint"
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginRight="10dp"
+    	android:paddingTop="5dp"
+    	android:paddingBottom="5dp"
+    	android:paddingLeft="10dp"
+    	android:paddingRight="10dp"
+    	android:singleLine="true"
+    	android:imeOptions="actionSearch"
+    	android:background="@drawable/shape_edittext_search"
+    	android:drawableLeft="@drawable/ig_search_grey"
+    	android:drawablePadding="6dp"
+        />
+    <Button
+        android:id="@+id/title_right"
+        style="@style/title_btn_style"
+        android:background="@null"
+        android:singleLine="true"
+        android:paddingLeft="3dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

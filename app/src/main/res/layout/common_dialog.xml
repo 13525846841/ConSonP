@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:padding="20dp"
+    android:orientation="vertical" >
+    
+    <TextView 
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/orange"
+        android:text="A"
+        android:singleLine="true"
+        android:textSize="20sp"
+        />
+    <TextView 
+        android:id="@+id/ticket_type"
+        android:layout_toRightOf="@id/name"
+        android:layout_marginLeft="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="@color/orange"
+         android:text="A"
+          android:textSize="20sp"
+        />
+    
+    <TextView 
+        android:id="@+id/buy"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/name"
+        android:layout_alignLeft="@id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="@color/white"
+         android:text="购买时间:"
+        />
+      <TextView 
+          android:id="@+id/sell"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/buy"
+        android:layout_alignLeft="@id/buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="@color/white"
+         android:text="截止时间:"
+        />
+    
+      
+      <TextView 
+          android:id="@+id/buy_time"
+          android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/buy"
+        android:layout_toRightOf="@id/buy"
+         android:textColor="@color/white"
+         android:text="210202110"
+          />
+      
+      <TextView 
+          android:id="@+id/end_time"
+          android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_alignBottom="@id/sell"
+        android:layout_toRightOf="@id/sell"
+         android:textColor="@color/white"
+         android:text="210202110"
+          />
+
+</RelativeLayout>

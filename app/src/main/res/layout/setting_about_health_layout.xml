@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray_bg" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:id="@+id/top_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <include layout="@layout/gray_title_layout" />
+
+                <TextView
+                    android:id="@+id/version_number"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/white"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/ig_about_yjk"
+                    android:gravity="center_horizontal"
+                    android:maxLength="12"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="20dp"
+                    android:textColor="#959595"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical" >
+
+                    <View style="@style/common_split_line" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_version_number"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="当前版本"
+                            android:textColor="#4b4b4b"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_version_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:drawablePadding="3dp"
+                            android:drawableRight="@drawable/arrows"
+                            android:textColor="#4b4b4b"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <View style="@style/common_split_line" />
+
+                    <TextView
+                        android:id="@+id/setting_grade"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:drawableRight="@drawable/arrows"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="10dp"
+                        android:text="评分"
+                        android:textColor="#4b4b4b"
+                        android:textSize="15sp" />
+                    <!-- android:text="@string/setting_grade" -->
+
+                    <View style="@style/common_split_line" />
+
+                    <!-- <TextView -->
+                    <!-- android:id="@+id/setting_update" -->
+                    <!-- android:layout_width="fill_parent" -->
+                    <!-- android:layout_height="40dp" -->
+                    <!-- android:drawableRight="@drawable/arrows" -->
+                    <!-- android:paddingBottom="5dp" -->
+                    <!-- android:paddingLeft="15dp" -->
+                    <!-- android:paddingRight="15dp" -->
+                    <!-- android:paddingTop="10dp" -->
+                    <!-- android:textSize="15sp" -->
+                    <!-- android:text="@string/setting_check_update" -->
+                    <!-- android:textColor="#4b4b4b" /> -->
+
+
+                    <!-- <View style="@style/common_split_line" /> -->
+
+                    <TextView
+                        android:id="@+id/setting_make"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:drawableRight="@drawable/arrows"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="10dp"
+                        android:text="用户协议与隐私条款"
+                        android:textColor="#4b4b4b"
+                        android:textSize="15sp" />
+
+                    <View style="@style/common_split_line" />
+
+                    <TextView
+                        android:id="@+id/setting_jieshao"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:drawableRight="@drawable/arrows"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="10dp"
+                        android:text="版本说明"
+                        android:textColor="#4b4b4b"
+                        android:textSize="15sp" />
+
+                    <View style="@style/common_split_line" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/top_layout"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal|bottom"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/copyright"
+        android:textColor="#8c8c8c"
+        android:textSize="12sp" />
+
+    <FrameLayout
+        android:id="@+id/luncher"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" >
+    </FrameLayout>
+
+</RelativeLayout>

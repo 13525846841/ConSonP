@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.yksj.consultation.son.home.InstitutionJoinActivity">
+
+    <include layout="@layout/title_layout"
+        android:id="@+id/top_layout"/>
+
+    <ScrollView
+        android:layout_below="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="机构名称"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtInsName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shape_ins_edt_bg"
+                android:hint="请输入机构名称"
+                android:padding="5dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="机构背景图"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/imgInsPre"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_ruzhu_img_bg" />
+
+                <TextView
+                    android:id="@+id/tvInsUpload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="10dp"
+                    android:text="点击上传"
+                    android:textColor="@color/calader_color_today" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="机构介绍"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtInsIntroduction"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shape_ins_edt_bg"
+                android:gravity="top"
+                android:hint="请输入机构简介的信息（400字以内）"
+                android:maxLength="400"
+                android:padding="5dp"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="机构类型"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/lineInsType"
+                    android:layout_width="110dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_msgbg_zhijiao"
+                    android:gravity="center_vertical">
+
+                    <Button
+                        android:id="@+id/tvInsType"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"
+                        android:text="体检中心" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/pop_arrows_index_down" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="位置"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/lineSelectCity"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择地区"
+                    android:textColor="@color/color_blue" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/pop_arrows_index_down" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edtInsAddress"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shape_ins_edt_bg"
+                android:hint="请输入机构所在的位置"
+                android:padding="5dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="联系电话"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtInsPhone"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shape_ins_edt_bg"
+                android:hint="请输入联系电话"
+                android:inputType="phone"
+                android:padding="5dp"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnInsJoinSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/color_blue"
+                android:text="提   交"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/tipPro"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_width="100dp"
+            android:layout_height="70dp">
+
+            <ProgressBar
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上传中..."
+                android:textColor="@color/black"
+
+                />
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</RelativeLayout>

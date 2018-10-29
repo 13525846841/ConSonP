@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    android:background="@drawable/listview_item_selector"
+    android:descendantFocusability="blocksDescendants" 
+    android:orientation="horizontal">
+
+    <com.dmsj.newask.Views.CircleImageView
+        android:id="@+id/find_list_item_headicon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="2dp"
+        android:contentDescription="@string/desc" />
+
+    <LinearLayout 
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingTop="14dp"
+        android:paddingLeft="6dp"
+        android:paddingBottom="14dp"
+        android:orientation="vertical"
+        >
+        <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+	        android:id="@+id/find_list_item_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="16sp" />
+        <ImageView
+	        android:id="@+id/find_list_item_sex"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:layout_marginLeft="10dp"
+	        android:src="@drawable/sex_drawable"
+	         />
+            
+        </LinearLayout>
+        
+        <TextView
+	        android:id="@+id/find_list_item_mood"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:ellipsize="end"
+	        android:layout_marginTop="10dp"
+	        android:textColor="@color/gray_text" />
+        
+    </LinearLayout>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/find_list_item_follow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingRight="2dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/relation_drawable_list"
+        />
+
+</LinearLayout>

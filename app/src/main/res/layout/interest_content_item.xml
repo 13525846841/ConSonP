@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/text_layout_background_normal"
+	>
+    <TextView 
+        android:id="@+id/interest_content_text"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:textColor="@color/tab_txt_name"
+    	android:textSize="@dimen/itemTextSize"
+    	android:layout_centerHorizontal="true"
+        />
+    <ImageView 
+        android:id="@+id/interest_content_button"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_below="@+id/interest_content_text"
+    	android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>

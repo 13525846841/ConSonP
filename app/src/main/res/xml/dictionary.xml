@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <menu id="1">
+        <item name="按部位" id="10001"></item>
+        <item name="按系统" id="10002"></item>
+        <item name="按科室" id="10003"></item>
+    </menu>
+    
+    <menu id="2">
+        <item name="按拼音" id="10004"></item>
+        <item name="按疾病" id="10005"></item> 
+        <item name="按用途" id="10006"></item>
+    </menu>
+    
+    
+    <menu id="3">
+        <item name="超声检查" id="10007"></item>
+        <item name="电生理检查" id="10008"></item>
+        <item name="放射检查" id="10009"></item>
+        <item name="核医学检查" id="10010"></item>
+        <item name="检验检查" id="10011"></item>
+        <item name="内镜检查" id="10012"></item>
+    </menu>
+    
+    <menu id="8">
+        <item name="按疾病" id="10013"></item>
+        <item name="按部位" id="10014"></item>
+    </menu>
+    
+    <menu id="9">
+        <item name="附近就医" id="10015"></item>
+        <item name="附近药店" id="10016"></item>
+    </menu>
+    
+    
+    
+</resources>

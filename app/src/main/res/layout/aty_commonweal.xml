@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/gray_title_layout" />
+
+    <!--<ListView-->
+    <!--android:id="@+id/list"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/title"-->
+    <!--android:background="#00000000"-->
+    <!--android:listSelector="#00000000">-->
+
+    <!--</ListView>-->
+
+    <include
+        android:id="@+id/mnullview"
+        layout="@layout/loading_fail_data_null"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_doc"
+            style="@style/text_check_relativeLayout"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="#ffffff"
+            android:visibility="visible"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pubgood2" />
+
+            <TextView
+                style="@style/info_text_left_sec"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/iv1"
+                android:text="名医义诊"
+                android:textSize="15sp" />
+
+
+            <ImageView style="@style/text_check_imageview" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_color" />
+
+        <RelativeLayout
+            android:id="@+id/rl_item"
+            style="@style/text_check_relativeLayout"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="#ffffff"
+            android:visibility="gone"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pubgood4" />
+
+            <TextView
+                style="@style/info_text_left_sec"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/iv2"
+                android:text="项目发布"
+                android:textSize="15sp" />
+
+
+            <ImageView style="@style/text_check_imageview" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_color" />
+
+        <RelativeLayout
+            android:id="@+id/rl_money"
+            style="@style/text_check_relativeLayout"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="#ffffff"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pubgood1" />
+
+            <TextView
+                style="@style/info_text_left_sec"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/iv3"
+                android:text="公益基金"
+                android:textSize="15sp" />
+
+
+            <ImageView style="@style/text_check_imageview" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_color" />
+
+        <RelativeLayout
+            android:id="@+id/rl_give"
+            style="@style/text_check_relativeLayout"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="#ffffff"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pubgood3" />
+
+            <TextView
+                style="@style/info_text_left_sec"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/iv4"
+                android:text="我要捐赠"
+                android:textSize="15sp" />
+
+
+            <ImageView style="@style/text_check_imageview" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_color" />
+
+    </LinearLayout>
+
+</RelativeLayout>

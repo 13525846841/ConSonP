@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<parent id="10000001"  name="求医">
+<child id="10000102">病人求助</child>
+<child id="10000103">医生点评</child>
+<child id="10000104">医院点评</child>
+<child id="10000105">中医点评</child>
+<child id="10000106">治病偏方</child>
+<child id="10000107">疗病经验</child>
+<child id="10000108">医保医助</child>
+</parent>
+<parent id="10000002"  name="问药">
+<child id="10000202">好药晒台</child>
+<child id="10000203">烂药糗场</child>
+<child id="10000204">新药前瞻</child>
+<child id="10000205">百家论药</child>
+<child id="10000206">医药体会</child>
+<child id="10000207">中药心得</child>
+<child id="10000208">药店点评</child>
+<child id="10000209">药厂点评</child>
+<child id="10000210">制药秘籍</child>
+<child id="10000211">售药心经</child>
+</parent>
+<parent id="10000003"  name="疾病">
+<child id="10000302">症状</child>
+<child id="10000303">传染疾病</child>
+<child id="10000304">儿科疾病</child>
+<child id="10000305">耳鼻喉疾病</child>
+<child id="10000306">风湿免疫病</child>
+<child id="10000307">妇产科疾病</child>
+<child id="10000308">肝胆疾病</child>
+<child id="10000309">骨科疾病</child>
+<child id="10000310">呼吸疾病</child>
+<child id="10000311">急诊科疾病</child>
+<child id="10000312">精神科疾病</child>
+<child id="10000313">口腔科疾病</child>
+<child id="10000314">泌尿疾病</child>
+<child id="10000315">内分泌疾病</child>
+<child id="10000316">皮肤科疾病</child>
+<child id="10000317">普外科疾病</child>
+<child id="10000318">神内疾病</child>
+<child id="10000319">神外疾病</child>
+<child id="10000320">肾脏疾病</child>
+<child id="10000321">消化疾病</child>
+<child id="10000322">心内科疾病</child>
+<child id="10000323">心外科疾病</child>
+<child id="10000324">胸外科疾病</child>
+<child id="10000325">血液疾病</child>
+<child id="10000326">眼科疾病</child>
+<child id="10000327">肿瘤疾病</child>
+</parent>
+<parent id="10000004"  name="情感">
+<child id="10000402">圣女之家</child>
+<child id="10000403">单身男女</child>
+<child id="10000404">拍拖秘籍</child>
+<child id="10000405">热恋男女</child>
+<child id="10000406">失恋之痛</child>
+<child id="10000407">婚姻家庭</child>
+<child id="10000408">围城内外</child>
+<child id="10000409">七年之痒</child>
+<child id="10000410">离异之后</child>
+<child id="10000411">单亲家庭</child>
+<child id="10000412">再续前缘</child>
+<child id="10000413">四大皆空</child>
+
+</parent>
+<parent id="10000005"  name="两性">
+<child id="10000502">两性交流</child>
+<child id="10000503">情趣培养</child>
+<child id="10000504">情感保鲜</child>
+<child id="10000505">性技巧</child>
+<child id="10000506">性和谐</child>
+<child id="10000507">性冷淡</child>
+<child id="10000508">无性婚姻</child>
+<child id="10000509">亲情性情</child>
+</parent>
+
+<parent id="10000006"  name="养生">
+<child id="10000602">养生经验</child>
+<child id="10000603">养生方法</child>
+<child id="10000604">养生场所</child>
+<child id="10000605">养生用品</child>
+<child id="10000606">养生食品</child>
+<child id="10000607">养生习惯</child>
+<child id="10000608">养生教训</child>
+</parent>
+<parent id="10000007"  name="美食">
+<child id="10000702">北京菜</child>
+<child id="10000703">江浙菜</child>
+<child id="10000704">粤菜</child>
+<child id="10000705">川菜</child>
+<child id="10000706">湘菜</child>
+<child id="10000707">东北菜</child>
+<child id="10000708">鲁菜</child>
+<child id="10000709">新疆/清真菜</child>
+<child id="10000710">西北菜</child>
+<child id="10000711">贵州菜</child>
+<child id="10000712">火锅</child>
+<child id="10000713">自助餐</child>
+<child id="10000714">小吃快餐</child>
+<child id="10000715">面包甜点</child>
+<child id="10000716">西餐</child>
+<child id="10000717">海鲜</child>
+<child id="10000718">韩国料理</child>
+</parent>
+<parent id="10000008"  name="运动">
+<child id="10000802">游泳</child>
+<child id="10000803">器械</child>
+<child id="10000804">登山</child>
+<child id="10000805">跑步</child>
+<child id="10000806">慢走</child>
+<child id="10000807">穿越</child>
+<child id="10000808">漂流</child>
+<child id="10000809">球类</child>
+<child id="10000810">瑜伽</child>
+<child id="10000811">宾舍</child>
+<child id="10000812">舞蹈</child>
+<child id="10000813">武术</child>
+<child id="10000814">气功</child>
+<child id="10000815">太极</child>
+<child id="10000816">户外</child>
+</parent>
+<parent id="10000009"  name="娱乐">
+<child id="10000902">棋牌</child>
+<child id="10000903">K歌</child>
+<child id="10000904">乐器</child>
+<child id="10000905">上网</child>
+<child id="10000906">游戏</child>
+<child id="10000907">电玩</child>
+<child id="10000908">动漫</child>
+<child id="10000909">电视</child>
+<child id="10000910">电影</child>
+<child id="10000911">宠物</child>
+<child id="10000912">艺术</child>
+<child id="10000913">手工DIY</child>
+<child id="10000914">话剧</child>
+<child id="10000915">音乐会</child>
+<child id="10000916">舞剧</child>
+<child id="10000917">惊悚</child>
+</parent>
+<parent id="10000010"  name="生活点滴">
+<child id="10001002">生活窍门</child>
+<child id="10001003">生活警示</child>
+<child id="10001004">生活提示</child>
+<child id="10001005">生活经验</child>
+<child id="10001006">生活求助</child>
+<child id="10001007">生活糗事</child>
+</parent>
+<parent id="10000011"  name="美容美妆">
+<child id="10001102">美容</child>
+<child id="10001103">护肤</child>
+<child id="10001104">减肥</child>
+<child id="10001105">增肥</child>
+<child id="10001106">整形</child>
+<child id="10001107">瘦脸</child>
+<child id="10001108">双眼皮</child>
+<child id="10001109">祛痘</child>
+<child id="10001110">祛皱</child>
+<child id="10001111">保湿</child>
+<child id="10001112">发型</child>
+<child id="10001113">彩妆</child>
+<child id="10001114">美甲</child>
+<child id="10001115">眼妆</child>
+<child id="10001116">配饰</child>
+</parent>
+<parent id="10000012"  name="心理">
+<child id="10001202">人际交往</child>
+<child id="10001203">职场关系</child>
+<child id="10001204">婚恋心理</child>
+<child id="10001205">青少年心理</child>
+<child id="10001206">儿童心理</child>
+<child id="10001207">叛逆心理</child>
+<child id="10001208">两性心理</child>
+<child id="10001209">另类心理</child>
+<child id="10001210">同性恋</child>
+</parent>
+<parent id="10000013"  name="女人">
+<child id="10001302">闺蜜私话</child>
+<child id="10001303">另一半</child>
+<child id="10001304">婆媳关系</child>
+<child id="10001305">购物控</child>
+<child id="10001306">心情吧</child>
+<child id="10001307">派对秀</child>
+<child id="10001308">结伴游</child>
+</parent>
+<parent id="10000014"  name="摄影">
+<child id="10001402">风景</child>
+<child id="10001403">肖像</child>
+<child id="10001404">人体</child>
+<child id="10001405">静物</child>
+<child id="10001406">游记</child>
+<child id="10001407">现场</child>
+<child id="10001408">纪实</child>
+<child id="10001409">室内</child>
+<child id="10001410">偷拍</child>
+<child id="10001411">猎奇</child>
+</parent>
+<parent id="10000015"  name="绘画">
+<child id="10001502">素描</child>
+<child id="10001503">油画</child>
+<child id="10001504">版画</child>
+<child id="10001505">水彩画</child>
+<child id="10001506">中国画</child>
+<child id="10001507">书法</child>
+<child id="10001508">动漫</child>
+</parent>
+<parent id="10000016"  name="收藏">
+<child id="10001602">古董</child>
+<child id="10001603">字画</child>
+<child id="10001604">邮票</child>
+<child id="10001605">民粹</child>
+<child id="10001606">家具</child>
+<child id="10001607">火花</child>
+<child id="10001608">钱币</child>
+<child id="10001609">币、卡</child>
+<child id="10001610">签字</child>
+<child id="10001611">古书</child>
+<child id="10001612">饰物</child>
+</parent>
+<parent id="10000017"  name="时尚">
+<child id="10001702">时男尚女</child>
+<child id="10001703">梳妆台</child>
+<child id="10001704">非主流</child>
+<child id="10001705">奢侈品</child>
+<child id="10001706">欧美风</child>
+<child id="10001707">复古</child>
+<child id="10001708">男装</child>
+<child id="10001709">女装</child>
+<child id="10001710">鞋类</child>
+<child id="10001711">配饰</child>
+<child id="10001712">内衣</child>
+<child id="10001713">首饰</child>
+<child id="10001714">童装</child>
+</parent>
+<parent id="10000018"  name="旅游">
+<child id="10001802">旅游攻略</child>
+<child id="10001803">旅游景点</child>
+<child id="10001804">旅游线路</child>
+<child id="10001805">团队旅游</child>
+<child id="10001806">自驾游</child>
+<child id="10001807">背包客</child>
+<child id="10001808">驴友客栈</child>
+<child id="10001809">结伴行</child>
+</parent>
+<parent id="10000019"  name="社会">
+<child id="10001902">社会热点</child>
+<child id="10001903">社会杂谈</child>
+<child id="10001904">七嘴八舌</child>
+<child id="10001905">街坊四邻</child>
+<child id="10001906">八方支援</child>
+<child id="10001907">奇闻异事</child>
+<child id="10001908">烂事曝光</child>
+</parent>
+<parent id="10000020"  name="职场">
+<child id="10002002">屌丝心语</child>
+<child id="10002003">职场丽人</child>
+<child id="10002004">升职攻略</child>
+<child id="10002005">同事之间</child>
+<child id="10002006">上下相处</child>
+<child id="10002007">压力机遇</child>
+<child id="10002008">突发萌想</child>
+<child id="10002009">上下班</child>
+<child id="10002010">同事聚会</child>
+</parent>
+<parent id="10000021"  name="居住">
+<child id="10002101">我要买房</child>
+<child id="10002102">我要租房</child>
+<child id="10002103">居室装修</child>
+<child id="10002104">居室装饰</child>
+<child id="10002105">居室植物</child>
+<child id="10002106">居室家具</child>
+<child id="10002107">晒晒我家</child>
+<child id="10002108">居住点滴</child>
+</parent>
+<parent id="10000022"  name="婚庆">
+<child id="10002202">晒晒婚纱</child>
+<child id="10002203">晒晒婚照</child>
+<child id="10002204">结婚方式</child>
+<child id="10002205">简简单单</child>
+<child id="10002206">一生一次</child>
+<child id="10002207">婚礼用品</child>
+</parent>
+<parent id="10000023"  name="购物">
+<child id="10002302">药品</child>
+<child id="10002303">保健品</child>
+<child id="10002304">保健食品</child>
+<child id="10002305">保健用品</child>
+<child id="10002306">保健器械</child>
+<child id="10002307">两性用品</child>
+<child id="10002308">绿色蔬菜</child>
+<child id="10002309">绿色食品</child>
+<child id="10002310">生活用品</child>
+<child id="10002311">女装</child>
+<child id="10002312">男装</child>
+<child id="10002313">鞋子</child>
+<child id="10002314">包包</child>
+<child id="10002315">帽子</child>
+<child id="10002316">配饰</child>
+<child id="10002317">手表</child>
+<child id="10002318">家居</child>
+<child id="10002319">零食</child>
+<child id="10002320">靓货晒台</child>
+<child id="10002321">烂货曝光</child>
+<child id="10002322">打折</child>
+<child id="10002323">购物支招</child>
+</parent>
+<parent id="10000024"  name="汽车">
+<child id="10002401">谈车论道</child>
+<child id="10002402">车型PK</child>
+<child id="10002403">购买经验</child>
+<child id="10002404">驾驶心得</child>
+<child id="10002405">考照培训</child>
+<child id="10002406">学车辅导</child>
+</parent>
+</resources>

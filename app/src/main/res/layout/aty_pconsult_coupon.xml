@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/gray_title_layout" />
+
+    <View style="@style/common_split_line" />
+
+    <org.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/pcousult_coupon_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:choiceMode="singleChoice"
+        android:listSelector="#00000000" />
+
+    <TextView
+        android:id="@+id/coupon_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        android:text="使用规则:\n1.一次会诊中只能使用一张优惠券\n2.优惠券不找零,不兑现\n3.优惠券在有效期内使用"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <!--<ListView-->
+    <!--android:id="@+id/coupon_list"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:listSelector="#00000000" />-->
+
+    <include
+        android:id="@+id/empty_view_famous"
+        layout="@layout/loading_fail_data_null" />
+
+</LinearLayout>

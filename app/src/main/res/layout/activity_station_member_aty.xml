@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray_bg"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/gray_title_layout" />
+
+
+    <org.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/my_station_member__pulllist"
+        android:layout_below="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="2dp"
+        android:listSelector="#00000000"
+        android:scrollbars="none"
+        ptr:ptrMode="both" >
+    </org.handmark.pulltorefresh.library.PullToRefreshListView>
+
+</RelativeLayout>

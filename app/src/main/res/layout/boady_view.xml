@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"   
+                android:paddingBottom="10.0dip"
+                android:paddingTop="10.0dip" >
+                <ImageView
+                    android:id="@+id/boady"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent" android:scaleType="centerInside"
+                    android:src="@drawable/man_front" />
+                <ImageView
+                    android:id="@+id/boady_front_layer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent" android:scaleType="centerInside" />
+        </RelativeLayout>
+        
+          <TextView android:id="@+id/derition" android:textSize="@dimen/boadyTxtSize" android:textColor="@android:color/white" android:text="@string/back_boady" android:layout_marginLeft="10dp" android:layout_marginTop="20dp" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentLeft="true" />
+          <TextView android:visibility="gone" android:id="@+id/ok" android:textSize="@dimen/boadyTxtSize" android:layout_marginRight="20dp" android:layout_marginBottom="20dp"  android:textColor="@color/green"   android:layout_gravity="bottom|right" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_alignParentRight="true" android:layout_width="wrap_content" android:text="确认"/>
+       	  <TextView android:visibility="gone" android:id="@+id/give_up1" android:textSize="@dimen/boadyTxtSize" android:layout_marginLeft="20dp" android:layout_marginBottom="20dp"  android:textColor="@color/red"   android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true" android:layout_width="wrap_content" android:text="放弃"/>
+       	  <TextView android:id="@+id/whole_body" android:textSize="@dimen/boadyTxtSize" android:textColor="@android:color/white" android:layout_marginTop="20dp" android:layout_marginRight="10dp" android:layout_alignParentRight="true" android:singleLine="true"  android:layout_height="wrap_content" android:layout_width="wrap_content"  android:text="全身"></TextView>	
+       	  <TextView android:id="@+id/skin" android:textSize="@dimen/boadyTxtSize" android:textColor="@android:color/white" android:layout_marginTop="70dp" android:layout_marginRight="10dp"  android:layout_alignParentRight="true" android:singleLine="true" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="皮肤"></TextView>	
+   </RelativeLayout>
+</LinearLayout>

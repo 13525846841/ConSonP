@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:orientation="vertical" >
+	
+     <TextView
+        android:id="@+id/chat_time"
+        android:layout_gravity="center_horizontal"
+        style="@style/chat_time"/>
+     
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <com.dmsj.newask.Views.CircleImageView
+            android:id="@+id/chat_head"
+            android:layout_width="52.0dp"
+            android:layout_height="52.0dp"
+            android:layout_gravity="top"
+            android:paddingBottom="2dp"
+            android:paddingLeft="4dp"
+            android:layout_marginLeft="16.0dp"
+            android:layout_marginRight="8.0dp"
+            android:paddingRight="4dp"
+            android:paddingTop="3dp" />
+
+        <ImageView
+            android:id="@+id/chat_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/chat_left_item_layout"
+            android:minHeight="100dp"
+            android:minWidth="100dp" />
+        <FrameLayout android:layout_weight="1.0" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <CheckBox
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:id="@+id/selected"
+		        style="@style/chat_delete"
+		        android:visibility="visible"
+		        android:layout_gravity="center_vertical|right"
+		        android:layout_marginRight="10.0dp"
+		        android:focusable="false" >
+   		 	</CheckBox>
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

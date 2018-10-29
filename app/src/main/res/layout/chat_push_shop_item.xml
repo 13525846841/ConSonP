@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+             />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/image"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green_txt_color"
+                android:text="绿色充电式点播珍重牙刷绿色充电式点播珍重牙刷绿色充电式点播珍重牙刷绿色充电式点播珍重牙刷绿色充电式点播珍重牙刷绿色充电式点播珍重牙刷"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/goodssubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="飞利浦"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="价格: 219.0元"
+                android:textColor="@color/green_txt_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/look_desc_right_bg"
+            >
+            <!--android:background="@drawable/shape_cricle_txt_bg"-->
+        <ImageView
+            android:id="@+id/look_desc_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/right_arrwors"
+            android:textColor="@color/green_txt_color"
+            android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/beizhu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:text="备注备注备注备注备注备注备注"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/look_desc_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/green_btn_shape"
+            android:gravity="center"
+            android:textColor="@color/green_txt_color"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btn1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/green_btn_shape"
+            android:gravity="center"
+            android:textColor="@color/green_txt_color"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btn2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/green_btn_shape"
+            android:gravity="center"
+            android:text="查看商品"
+            android:textColor="@color/green_txt_color"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

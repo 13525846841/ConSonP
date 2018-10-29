@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popwindow_bg"
+    android:orientation="vertical" >
+      <Button
+        android:id="@+id/bendifenjian"
+        style="@style/popwindow_white"
+        android:layout_marginTop="25dp"
+        android:text="@string/bendiwenjian" 
+         />
+
+    <Button
+        android:id="@+id/luzhi"
+        style="@style/popwindow_white"
+        android:text="录制"
+         />
+	<View style="@style/common_split_line"/>
+    <Button
+        android:id="@+id/quxiao"
+        style="@style/popwindow_gray"
+        android:layout_marginTop="10dp"
+        
+        android:layout_marginBottom="25dp"
+        android:text="@string/do_that_later"
+          />  
+
+</LinearLayout>

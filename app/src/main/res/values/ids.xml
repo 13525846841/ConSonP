@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <item type="id" name="gridview" />
+    <item type="id" name="webview" />
+    <item type="id" name="scrollview" />
+    
+     <item name="welcome_logo_img" type="id">false</item>
+    <item name="inputPhoneNum" type="id">false</item>
+    <item name="inputPone" type="id">false</item>
+    <item name="friend_findme" type="id">false</item>
+    <item name="logout_btn" type="id">false</item>
+    <item name="login_btn" type="id">false</item>
+    <item name="login_name_edit" type="id">false</item>
+    <item name="login_pas_edit" type="id">false</item>
+    <item name="login_remnber_chek" type="id">false</item>
+    <item name="login_create_account_txt" type="id">false</item>
+    <item name="login_forget_pas_txt" type="id">false</item>
+    <item name="login_left_page" type="id">false</item>
+    <item name="login_right_page" type="id">false</item>
+    <item name="login_another_account" type="id">false</item>
+    <item name="find_pasd_edit" type="id">false</item>
+    <item name="find_pasd_btn" type="id">false</item>
+    <item name="jurisdiction_clause_chek" type="id">false</item>
+    <item name="jurisdiction_clause_txt" type="id">false</item>
+    <item name="verification_code_img" type="id">false</item>
+    <item name="identify_code_edit" type="id">false</item>
+    <item name="next_step" type="id">false</item>
+    <item name="icn_exclamation_bg" type="id">false</item>
+    <item name="presskey_voice_line" type="id">false</item>
+    <item name="feedback_line" type="id">false</item>
+    <item name="grade_line" type="id">false</item>
+    <item name="update_line" type="id">false</item>
+    
+    <item type="id" name="main_scene">false</item>
+    <item type="id" name="refresh_view" >false</item>
+    <item type="id" name="fragment_tab_root">false</item>
+    <item type="id" name="title_back">false</item>
+    <item type="id" name="title_right">false</item>
+    
+    
+    <item type="id" name="tree_expandable">false</item>
+   <item type="id" name="tree_list">false</item>
+   <item type="id" name="view_pager">false</item>
+   
+   
+   <item type="id" name="chat_head">false</item>
+   <item type="id" name="chat_state">false</item>
+   <item type="id" name="chat_progress">false</item>
+   <item type="id" name="chat_txt_content">false</item>
+   
+   <item name="action_view" type="id"/>
+    <item name="tool_view" type="id"/>
+    <item name="arror" type="id"/>
+
+    <!-- Messages IDs -->
+    <item name="auto_focus" type="id"/>
+    <item name="decode" type="id"/>
+    <item name="decode_failed" type="id"/>
+    <item name="decode_succeeded" type="id"/>
+    <item name="encode_failed" type="id"/>
+    <item name="encode_succeeded" type="id"/>
+    <item name="launch_product_query" type="id"/>
+    <item name="quit" type="id"/>
+    <item name="restart_preview" type="id"/>
+    <item name="return_scan_result" type="id"/>
+    <item name="search_book_contents_failed" type="id"/>
+    <item name="search_book_contents_succeeded" type="id"/>
+</resources>

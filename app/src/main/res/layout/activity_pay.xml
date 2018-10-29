@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_gray"
+    tools:context="com.yksj.consultation.son.consultation.main.PayActivity">>
+
+    <include layout="@layout/gray_title_layout"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_discount_coupon"
+        style="@style/text_check_relativeLayout"
+        android:background="#ffffff"
+        android:padding="16dp">
+
+
+        <TextView
+            style="@style/info_text_left_sec"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:text="优惠券"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_coupon"
+            style="@style/info_text_left_sec"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_alignParentRight="true"
+            android:text="未使用优惠券"
+            android:textColor="@color/color_text_gray"
+            android:layout_marginRight="30dp"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/right"
+            style="@style/text_check_imageview" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/text_check_relativeLayout"
+        android:background="#ffffff"
+        android:padding="16dp">
+
+
+        <TextView
+            style="@style/info_text_left_sec"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:text="需支付"
+            android:textSize="16sp" />
+
+
+        <TextView
+            style="@style/info_text_left_sec"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="200"
+            android:layout_marginRight="30dp"
+            android:textColor="@color/red"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:background="#ffffff"
+        android:padding="16dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            style="@style/info_text_left_sec"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:text="选择支付方式"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_purse"
+        style="@style/text_check_relativeLayout"
+        android:background="#ffffff"
+        android:padding="16dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/image0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/yu_e2" />
+
+        <TextView
+            style="@style/info_text_left_sec"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/image0"
+            android:text="余额支付"
+            android:textSize="16sp" />
+
+
+        <ImageView style="@style/text_check_imageview" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ebeff7" />
+    <RelativeLayout
+        android:id="@+id/rl_zfb"
+        style="@style/text_check_relativeLayout"
+        android:background="#ffffff"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/zhifubao" />
+
+        <TextView
+            style="@style/info_text_left_sec"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/image1"
+            android:text="支付宝支付"
+            android:textSize="16sp" />
+
+
+        <ImageView style="@style/text_check_imageview" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ebeff7" />
+
+    <RelativeLayout
+        android:id="@+id/rl_wx"
+        style="@style/text_check_relativeLayout"
+        android:background="#ffffff"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/weixin" />
+
+        <TextView
+            style="@style/info_text_left_sec"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/image2"
+            android:text="微信支付"
+            android:textSize="16sp" />
+
+
+        <ImageView style="@style/text_check_imageview" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ebeff7" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bank"
+        style="@style/text_check_relativeLayout"
+        android:background="#ffffff"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/image3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back2" />
+
+        <TextView
+            style="@style/info_text_left_sec"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/image3"
+            android:text="银行卡支付"
+            android:textSize="16sp" />
+
+
+        <ImageView style="@style/text_check_imageview" />
+    </RelativeLayout>
+
+</LinearLayout>

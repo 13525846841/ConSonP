@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:background="@drawable/main_tab_menu_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+    <TextView android:layout_marginTop="3dp" android:id="@+id/menu1"  android:text="找医生" android:drawableTop="@drawable/icon_11_selector" android:layout_weight="1.0" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:layout_marginTop="3dp" android:id="@+id/menu2"  android:text="找患者" android:drawableTop="@drawable/icon_22_selector"   android:layout_weight="1.0" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:layout_marginTop="3dp" android:id="@+id/menu5"  android:text="找话题" android:drawableTop="@drawable/icon_55_selector"    android:layout_weight="1.0" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:layout_marginTop="3dp" android:id="@+id/menu6"  android:text="找朋友" android:drawableTop="@drawable/icon_66_selector"   android:layout_weight="1.0" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:layout_marginTop="3dp" android:id="@+id/menu3"  android:text="医注册" android:drawableTop="@drawable/icon_11_selector" android:layout_weight="1.0" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:layout_marginTop="3dp" android:id="@+id/menu7"  android:text="二维码" android:drawableTop="@drawable/icon_77_selector"   android:layout_weight="1.0" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:layout_marginTop="3dp" android:id="@+id/menu8" android:gravity="center"  android:text="设置" android:drawableTop="@drawable/icon_88_selector"   android:layout_weight="1.0" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</LinearLayout>

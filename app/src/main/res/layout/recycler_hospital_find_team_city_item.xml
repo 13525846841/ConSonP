@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/hotArea"
+        android:layout_marginTop="12dp"
+        android:text="杭州"
+        android:layout_height="35dp"
+        android:background="@drawable/btn_green_line_bg"
+        android:layout_width="65dp"/>
+</LinearLayout>

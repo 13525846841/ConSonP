@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:background="@color/white"
+    android:paddingBottom="4dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_marginTop="8dp"
+        android:id="@+id/tvRightTip"
+        android:text="新闻动态"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginLeft="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:layout_marginTop="8dp"
+        android:id="@+id/tvNewsMore"
+        android:background="#00000000"
+        android:text="更多 》"
+        android:textColor="@color/text_gray"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <ImageView
+        android:layout_marginTop="8dp"
+        android:id="@+id/imgNews"
+        android:layout_below="@+id/tvRightTip"
+        android:layout_marginLeft="16dp"
+        android:layout_width="150dp"
+        android:layout_height="80dp" />
+
+    <TextView
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        android:id="@+id/tvNewsTitle"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/imgNews"
+        android:text="龙卷风拉基舍夫理解啊说了；的飞机啦涉及到"
+        android:layout_below="@+id/tvRightTip"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvNewsTime"
+        android:layout_marginRight="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imgNews"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/imgNews"
+        android:text="TextView" />
+
+</RelativeLayout>

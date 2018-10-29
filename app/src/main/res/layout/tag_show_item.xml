@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+   >
+
+    <TextView
+        android:id="@+id/tag_show_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="snvhsajdv[]"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:background="@drawable/icn_tag_chooiceed"
+        />
+
+    <ImageView
+        android:id="@+id/tag_cancel_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/x_icon_black" />
+</RelativeLayout>

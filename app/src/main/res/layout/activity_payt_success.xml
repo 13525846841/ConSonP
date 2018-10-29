@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_gray_bg"
+    android:orientation="vertical"
+    tools:context="com.yksj.consultation.son.consultation.PAytSuccess">
+
+    <include
+        android:id="@+id/main_title"
+        layout="@layout/gray_title_layout" />
+
+
+        <ImageView
+            android:id="@+id/iv_ad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:layout_marginBottom="20dp"
+            android:scaleType="center"
+            android:src="@drawable/paysuccess" />
+        <TextView
+            android:id="@+id/pay_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textColor="@color/color_blue"
+            android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/consulting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_selector"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:visibility="gone"
+            android:paddingBottom="10dp"
+            android:text="立即咨询"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/checkOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_selector"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="查看订单"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

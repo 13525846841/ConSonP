@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/editTextBodyLl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f6f6f6"
+    android:gravity="center"
+    android:padding="8dp"
+    android:visibility="gone">
+
+    <EditText
+        android:id="@+id/circleEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/sendIv"
+        android:background="@null"
+        android:hint="说点什么..." />
+
+    <ImageView
+        android:id="@+id/sendIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"
+        android:src="@drawable/selector_send" />
+</RelativeLayout>

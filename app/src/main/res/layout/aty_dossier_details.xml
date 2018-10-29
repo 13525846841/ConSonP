@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <include layout="@layout/gray_title_layout"
+        android:id="@+id/dossier_details_title"/>
+
+    <ScrollView
+        android:id="@+id/dynamic_case_template_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="48dp"
+        android:layout_below="@id/dossier_details_title"
+        >
+
+        <LinearLayout
+            android:id="@+id/dynamic_case_template_scrolllayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dp"
+            android:orientation="vertical"
+            >
+            <include layout="@layout/case_keywords_layout"/>
+            <include layout="@layout/case_patient_info_layout"/>
+            <LinearLayout
+                android:id="@+id/dynamic_case_template_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:textColor="@color/gray_text"
+                android:text="@string/image_video_audio"/>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="false">
+                <LinearLayout
+                    android:id="@+id/dynamic_case_img_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/declare"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bt_short_blue"
+        android:textColor="@color/white"
+        android:text="进入讨论区"/>
+</RelativeLayout>

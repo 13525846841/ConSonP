@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/symptom_bg_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_marginTop="45dp" 
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:cacheColorHint="#00000000">
+            </ListView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical" >
+                <LinearLayout
+                    android:id="@+id/symptom_choice_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" >
+
+                    <Button
+                        android:id="@+id/symptom_choice_agin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/info_btn_left"
+                        android:clickable="false"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"
+                        android:singleLine="true"
+                        android:text="重选"
+                        android:textSize="@dimen/boadyTxtSize"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/symptom_complete_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="gone" >
+
+                    <Button
+                        android:id="@+id/symptom_giveup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/info_btn_left"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"
+                        android:singleLine="true"
+                        android:text="取消"
+                        android:textSize="@dimen/boadyTxtSize"/>
+
+                    <Button
+                        android:id="@+id/symptom_submit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/info_btn_right_red"
+                        android:gravity="center"
+                        android:minWidth="100dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"
+                        android:singleLine="true"
+                        android:text="已完成"
+                        android:textSize="@dimen/boadyTxtSize"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/symptom_title_bg"
+                android:orientation="horizontal"
+                android:paddingBottom="17dp"
+                android:paddingTop="5dp">
+			        <TextView
+		                android:id="@+id/symptom_choice_submit"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_gravity="left"
+		                android:textSize="15sp"
+		                android:paddingBottom="3dp"
+		                android:paddingLeft="5dp"
+		                android:paddingRight="5dp"
+		                android:paddingTop="3dp"
+		                android:singleLine="true"
+		                android:text="返回"
+		                android:textColor="@android:color/black"/>
+	            	<TextView
+		                android:id="@+id/title_txt"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:layout_gravity="center"
+		                android:gravity="center"
+		                android:textColor="@android:color/black"
+		                android:text="32322332"
+		                android:textSize="19sp"/>
+		</LinearLayout>
+
+</RelativeLayout>

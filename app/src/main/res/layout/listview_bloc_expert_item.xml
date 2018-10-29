@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_marginLeft="12dp"
+      android:layout_marginRight="12dp"
+      android:layout_marginTop="5dp"
+      android:background="@color/gray7"
+      android:layout_width="match_parent"
+      android:layout_height="150dp">
+
+          <TextView
+              android:layout_marginTop="12dp"
+              android:layout_marginRight="10dp"
+              android:layout_gravity="right"
+              android:id="@+id/tvHospital"
+              android:text="北京第一人民医院"
+              android:textSize="14sp"
+              android:textColor="@color/white"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" />
+
+
+      <View
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:layout_weight="1"/>
+<RelativeLayout
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+    
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgHeader"
+        android:layout_centerVertical="true"
+        android:src="@drawable/default_head_doctor"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+    
+    <TextView
+        android:layout_toRightOf="@+id/imgHeader"
+        android:layout_above="@+id/tv"
+        android:id="@+id/tvTitle"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textSize="16sp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="4dp"
+        android:textColor="@color/white"
+        android:text="宋红梅小儿类风湿科"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/imgHeader"
+        android:id="@+id/tv"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textSize="16sp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginBottom="4dp"
+        android:textColor="@color/white"
+        android:text="名医联诊工作站"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/tv"
+        android:layout_alignParentBottom="true"
+        android:textSize="12sp"
+        android:id="@+id/expertAtt"
+        android:text="关注 55555"
+        android:gravity="center"
+        android:textColor="@color/text_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv" />
+
+    <TextView
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/expertAtt"
+        android:layout_alignParentBottom="true"
+        android:textSize="12sp"
+        android:id="@+id/expertLook"
+        android:text="浏览 55555"
+        android:gravity="center"
+        android:textColor="@color/text_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv" />
+
+</RelativeLayout>
+    
+      
+
+  </LinearLayout>
+</LinearLayout>

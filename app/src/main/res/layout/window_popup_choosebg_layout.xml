@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popwindow_bg"
+    android:orientation="vertical" >
+     <Button
+        android:id="@+id/popup_menu1"
+        style="@style/popwindow_white"
+        android:layout_marginTop="25dp"
+        android:text="从相册获取"/>
+    <Button
+        style="@style/popwindow_white"
+        android:id="@+id/popup_menu2"
+        android:text="相机"
+        />
+    <Button
+        style="@style/popwindow_white"
+        android:id="@+id/popup_menu3"
+        android:text="使用默认图片"
+       />
+    <Button
+        android:id="@+id/popup_menu_cancel"
+        style="@style/popwindow_gray"
+        android:layout_marginBottom="20dp"
+        android:text="@string/cancel" />
+</LinearLayout>

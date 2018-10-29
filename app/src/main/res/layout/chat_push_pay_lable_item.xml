@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="5dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/chat_default_bg" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/image"
+            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@+id/look_desc_right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="绿色充电式点播珍重牙刷"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="飞利浦"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="价格: 219.0元"
+                android:textColor="#FF0033"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="备注备注备注备注备注备注备注"
+        android:textSize="12sp"
+        android:id="@+id/beizhu"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/btn_pay"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="15dp"
+        android:text="去支付"
+        android:background="@drawable/green_btn_shape"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="8dp"
+        android:textColor="@color/green_txt_color"
+        android:textSize="16sp" />
+</LinearLayout>

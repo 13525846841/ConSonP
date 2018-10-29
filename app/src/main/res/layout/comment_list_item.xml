@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="3dp"
+        android:paddingTop="12dp">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/time"
+            android:text="医生：张某某    患者：王某某"
+            android:textColor="@color/common_color_gray_max"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="2017-7-12"
+            android:textColor="@color/common_color_gray_mid"
+            android:textSize="14sp" />
+        <!--<RatingBar-->
+        <!--android:id="@+id/evaluate_star"-->
+        <!--style="@style/MyRatingBar"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="8.5dp"-->
+        <!--android:isIndicator="true"-->
+        <!--android:numStars="5"-->
+        <!--android:rating="5"/>-->
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/service_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/color_blue"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/evaluate_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/common_color_gray_max"
+        android:textSize="16sp" />
+</LinearLayout>

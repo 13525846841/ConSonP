@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray_bg"
+    android:orientation="vertical"
+    tools:context="com.yksj.consultation.son.home.MyDoctorPlan">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/gray_title_layout" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="可提现金额为"
+            android:textSize="14sp"
+            android:textColor="@color/gray_text"
+            android:layout_centerVertical="true"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1000.00"
+            android:textColor="#FBAAB2"
+            android:layout_centerVertical="true"
+            android:padding="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"
+            android:textColor="@color/gray_text"
+            android:textSize="14sp"
+            android:layout_centerVertical="true"
+            android:padding="5dp"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ffffff"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="金额"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:padding="5dp"/>
+
+        <EditText
+            android:id="@+id/et_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv1"
+            android:layout_marginLeft="5dp"
+            android:hint="提现金额不能小于五元"
+            android:singleLine="true"
+            android:background="#ffffff"
+            android:textColor="@color/color_text_gray"
+            android:textSize="16sp"
+            android:imeOptions="actionSearch"
+            android:layout_centerVertical="true"
+            android:inputType="number"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="您输入的金额需要小于可提现金额"
+            android:textColor="#FBAAB2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="提现成功需要3-5个工作日"
+            android:textColor="#FBAAB2"/>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/getmon_next"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="下一步"
+        android:textColor="@color/white"
+        android:layout_marginTop="40dp"
+        android:padding="10dp"
+        android:background="@drawable/icon_btn_bg_80"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>

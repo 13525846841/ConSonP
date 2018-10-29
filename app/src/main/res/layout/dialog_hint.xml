@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main_bg" >
+
+    <TextView
+        android:id="@+id/hint_tv"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/hint_kbtn"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/icn_fail_dialog" />
+
+    <View
+        android:id="@+id/hint_line"
+        style="@style/common_split_line_2dp"
+        android:layout_below="@id/hint_tv" />
+
+    <TextView
+        android:id="@+id/hint_tv2"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_below="@id/hint_line"
+        android:gravity="center_vertical"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/ensure_hint"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@id/hint_tv2"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_below="@id/hint_tv2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/positive1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/negative1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_button"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:descendantFocusability="blocksDescendants"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingBottom="14dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="15dp"
+            android:paddingTop="13dp">
+
+
+            <com.dmsj.newask.Views.CircleImageView
+                android:id="@+id/patient_head"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/expert_header_image"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/patient_head"
+                android:orientation="vertical"
+                android:paddingBottom="8dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="18dp"
+                android:paddingTop="13dp">
+
+                <TextView
+                    android:id="@+id/tv_consultCenter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="李医生"
+                    android:textColor="#444444"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_patientName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="李医生"
+                    android:textColor="@color/color_news_title" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_receive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/color_news_title" />
+
+                    <TextView
+                        android:id="@+id/tv_applyTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_receive"
+                        android:textColor="#444444"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_talk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/chatting_mark" />
+
+                    <ImageView
+                        android:id="@+id/iv_talkbg"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="#00000000" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View style="@style/common_split_line" />
+
+        <RelativeLayout
+            android:id="@+id/bottom_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/service_status_list"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/right_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:textColor="#989898"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <View style="@style/common_split_line_10dp" />
+    </LinearLayout>
+
+</FrameLayout>

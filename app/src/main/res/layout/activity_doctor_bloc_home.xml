@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.yksj.consultation.son.home.DoctorBlocHomeActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/title_layout"/>
+        <ImageView
+            android:id="@+id/collection"
+            android:layout_width="40dp"
+            android:padding="10dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/works_shoucang"
+            android:layout_height="40dp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tipTv"
+        android:text="加载中..."
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/docBlocRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

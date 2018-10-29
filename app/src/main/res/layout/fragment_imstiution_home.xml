@@ -1,0 +1,29 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+        android:id="@+id/refresh"
+        app:tr_enable_refresh="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/insHomeRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.yksj.consultation.son.fragment.InstitutionHomeFragment" />
+</com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:visibility="gone"
+        android:id="@+id/load_faile_nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/load_faile_layout"
+            layout="@layout/loading_fail_data_null"/>
+    </android.support.v4.widget.NestedScrollView>
+
+    <include layout="@layout/include_tip_tv" />
+</FrameLayout>

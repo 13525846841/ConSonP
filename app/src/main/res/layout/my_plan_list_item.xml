@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="20dp">
+
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="58dp"
+        android:layout_centerVertical="true"
+        android:layout_height="58dp"
+        android:src="@drawable/head_img"/>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_centerVertical="true"
+    android:layout_marginLeft="20dp"
+    android:layout_toRightOf="@+id/icon">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/icon"
+        android:singleLine="true"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_plansnames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_text"
+            android:textSize="16sp"
+            android:maxEms="12"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="小明"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/modify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="@color/gray_text"
+        android:textSize="12sp"
+        android:layout_marginTop="10dp"
+        android:padding="7dp"
+        android:background="@drawable/cormers_bg"
+        android:text="修改宝贝信息"/>
+</LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/arrows" />
+
+</RelativeLayout>
+

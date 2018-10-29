@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray_bg"
+    android:orientation="vertical"
+    tools:context="com.yksj.consultation.son.home.PlanListActivity">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/gray_title_layout" />
+
+    <RelativeLayout
+        android:layout_height="120dp"
+        style="@style/text_check_relativeLayout"
+        android:background="#ffffff"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/head_img" />
+        <LinearLayout
+            android:id="@+id/ll_laoshi"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/image">
+
+            <TextView
+                android:id="@+id/tv_plan_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/tv_plan_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_text"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/ll_laoshi" />
+
+            <TextView
+                android:id="@+id/tv_plan_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_text"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/add_new_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="添加新计划"
+            android:padding="10dp"
+            android:layout_marginRight="6dp"
+            android:textColor="@color/color_blue"
+            android:background="@drawable/cormers_bg"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <FrameLayout
+            android:id="@+id/fl_title"
+            android:layout_width="fill_parent"
+            android:layout_height="37dp"
+            android:background="#FBFBFB">
+
+            <RadioGroup
+                android:id="@+id/my_plan"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:background="@color/color_selectorbar_gray_bg"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/my_planing"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawablePadding="2dp"
+                    android:textColor="@color/tab_color_blue"
+                    android:text="进行中的计划" />
+
+                <RadioButton
+                    android:id="@+id/my_planed"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:button="@null"
+                    android:drawablePadding="2dp"
+                    android:drawableRight="@color/transparent"
+                    android:textColor="@color/tab_color_blue"
+                    android:text="已完成的计划" />
+
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/common_line_vertical" />
+        </FrameLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/my_plan_frag"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"></android.support.v4.view.ViewPager>
+    </LinearLayout>
+
+</LinearLayout>

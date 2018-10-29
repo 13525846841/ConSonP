@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 当天 -->
+    <item
+        android:drawable="@drawable/calader_color_service_today_selector"
+        android:maxLevel="1"/>
+    <!-- 当天 and 约满 -->
+    <item
+        android:drawable="@drawable/calader_color_service_today_busy_selector"
+        android:maxLevel="2"/>
+    <!-- 当天 and 可约 -->
+    <item
+        android:drawable="@drawable/calader_color_service_today_bookable_selector"
+        android:maxLevel="3"/>
+    <!-- 普通 -->
+    <item
+        android:drawable="@drawable/calader_color_service_common_selector"
+        android:maxLevel="4"/>
+    <!-- 约满 -->
+    <item
+        android:drawable="@drawable/calader_color_service_busy_selector"
+        android:maxLevel="5"/>
+    <!-- 可约 -->
+    <item
+        android:drawable="@drawable/calader_color_service_bookable_selector"
+        android:maxLevel="6"/>
+
+</level-list>

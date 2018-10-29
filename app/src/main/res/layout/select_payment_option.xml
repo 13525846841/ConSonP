@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/gray_title_layout" />
+
+    <LinearLayout
+        style="@style/text_check_Linearlayout"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/textview_background_up"
+        android:id="@+id/onclick_alipay"
+         >
+
+        <RelativeLayout style="@style/text_check_relativeLayout" >
+
+            <TextView
+                style="@style/info_text_left"
+                android:layout_centerVertical="true"
+                android:text="支付宝支付" />
+
+            <ImageView
+                android:id="@+id/image_but1"
+                style="@style/text_check_imageview" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/text_check_Linearlayout"
+        android:background="@drawable/textview_background_down"
+         android:id="@+id/onclick_unionpay"
+       >
+
+        <RelativeLayout style="@style/text_check_relativeLayout" >
+
+            <TextView
+                style="@style/info_text_left"
+                android:layout_centerVertical="true"
+                android:text="银联支付" />
+
+            <ImageView
+                android:id="@+id/image_but2"
+                style="@style/text_check_imageview" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wallet_lin"
+        style="@style/text_check_Linearlayout"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/text_background_single"
+        android:onClick="onClickWallet"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+         >
+
+        <RelativeLayout style="@style/text_check_relativeLayout" >
+
+            <TextView
+                android:id="@+id/wallet"
+                style="@style/info_text_left"
+                android:layout_centerVertical="true"
+                android:text="钱包支付" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_alignParentRight="true" 
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/wallet_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/wallet"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/tab_txt_gray"
+                    android:textSize="15sp"
+                     />
+
+                <ImageView
+                    style="@style/text_check_imageview"
+                    
+                     />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

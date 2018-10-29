@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/gray_title_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FBFBFB"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <EditText
+                    android:id="@+id/edit_search_topp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/shape_edittext_search"
+                    android:drawableLeft="@drawable/ig_search_grey"
+                    android:drawablePadding="15dp"
+                    android:imeOptions="actionSearch"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/gray_text"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ListView
+                    android:id="@+id/search_room"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:listSelector="@color/white"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/ll_main_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_gray"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:padding="10dp"
+                            android:text="按科室找专家"
+                            android:textColor="@color/gray_text" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:background="#FFFFFF">
+
+                            <android.support.v4.view.ViewPager
+                                android:id="@+id/viewpager"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_dot"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="8dp"
+                                android:gravity="center"
+                                android:orientation="horizontal" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="#ffffff"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:padding="10dp"
+                            android:text="热门疾病"
+                            android:textColor="@color/gray_text" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="#ebeff7" />
+
+                        <com.yksj.consultation.son.views.MyListView
+                            android:id="@+id/remen"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:listSelector="@color/white">
+
+                        </com.yksj.consultation.son.views.MyListView>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <!--<org.handmark.pulltorefresh.library.PullToRefreshListView-->
+        <!--xmlns:ptr="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/consultation_pulltorefresh_listview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:scrollbars="none"-->
+        <!--android:divider="@null"-->
+        <!--ptr:ptrMode="both" />-->
+
+    <!--<include layout="@layout/loading_fail_data_null"-->
+        <!--android:id="@+id/nullview"/>-->
+
+</LinearLayout>

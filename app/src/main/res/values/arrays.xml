@@ -1,0 +1,1253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+	
+    <string-array name="news_titles">
+        <item>@string/news_health</item>
+        <item>@string/news_note</item>
+        <item>@string/news_ill</item>
+        <item>@string/news_heart</item>
+        <item>@string/news_mouth</item>
+        <item>@string/news_sport</item>
+        <item>@string/news_hairdressig</item>
+        <item>@string/news_food</item>
+        <item>@string/news_regimen</item>
+    </string-array>
+    
+    <string-array name="news_types">
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+    </string-array>
+    
+  
+    <string-array name="smailey_txt">
+        <item>[爱死你啦]</item>
+        <item>[悲伤]</item>
+        <item>[被吓到]</item>
+        <item>[别说话]</item>
+        <item>[不会吧]</item>
+        <item>[不爽]</item>
+        <item>[不赞同]</item>
+        <item>[惭愧]</item>
+        <item>[呆]</item>
+        <item>[得瑟]</item>
+        <item>[叼烟]</item>
+        <item>[屌丝笑]</item>
+        <item>[饿啦]</item>
+        <item>[嗯哼]</item>
+        <item>[翻白眼]</item>
+        <item>[愤怒]</item>
+        <item>[哈哈]</item>
+        <item>[好！]</item>
+        <item>[好困啊]</item>
+        <item>[好无聊啊]</item>
+        <item>[挥挥]</item>
+        <item>[挤眉弄眼]</item>
+        <item>[骷髅头]</item>
+        <item>[雷人]</item>
+        <item>[流泪了]</item>
+        <item>[卖萌]</item>
+        <item>[美梦中]</item>
+        <item>[你好]</item>
+        <item>[努力ing]</item>
+        <item>[求解释]</item>
+        <item>[傻笑]</item>
+        <item>[伤心了]</item>
+        <item>[失望]</item>
+        <item>[受不鸟啦]</item>
+        <item>[太委屈]</item>
+        <item>[讨厌啦]</item>
+        <item>[哇哦]</item>
+        <item>[我勒个去]</item>
+        <item>[我呕]</item>
+        <item>[无语]</item>
+        <item>[捂嘴笑]</item>
+        <item>[眼馋]</item>
+        <item>[要疯了]</item>
+        <item>[阴笑]</item>
+        <item>[右不屑]</item>
+        <item>[晕了]</item>
+        <item>[找打]</item>
+        <item>[找骂啊]</item>
+        <item>[真尴尬]</item>
+        <item>[真糗]</item>
+        <item>[中指]</item>
+        <item>[住嘴]</item>
+        <item>[装可爱]</item>
+        <item>[装酷]</item>
+        <item>[左不屑]</item>
+        <item>[爱你]</item>
+        <item>[棒]</item>
+        <item>[不]</item>
+        <item>[好的]</item>
+        <item>[弱]</item>
+    </string-array>
+
+    <integer-array name="smiley_drawable_ids">
+
+        <!-- <item >@drawable/emo0</item> -->
+        <!-- <item >@drawable/emo1</item> -->
+        <!-- <item >@drawable/emo2</item> -->
+        <!-- <item >@drawable/emo3</item> -->
+        <!-- <item >@drawable/emo4</item> -->
+        <!-- <item >@drawable/emo5</item> -->
+        <!-- <item >@drawable/emo6</item> -->
+        <!-- <item >@drawable/emo7</item> -->
+        <!-- <item >@drawable/emo8</item> -->
+        <!-- <item >@drawable/emo9</item> -->
+        <!-- <item >@drawable/emo10</item> -->
+        <!-- <item >@drawable/emo11</item> -->
+        <!-- <item >@drawable/emo12</item> -->
+        <!-- <item >@drawable/emo13</item> -->
+        <!-- <item >@drawable/emo14</item> -->
+        <!-- <item >@drawable/emo15</item> -->
+        <!-- <item >@drawable/emo16</item> -->
+        <!-- <item >@drawable/emo17</item> -->
+        <!-- <item >@drawable/emo18</item> -->
+        <!-- <item >@drawable/emo19</item> -->
+        <!-- <item >@drawable/emo20</item> -->
+        <!-- <item >@drawable/emo21</item> -->
+        <!-- <item >@drawable/emo22</item> -->
+        <!-- <item >@drawable/emo23</item> -->
+        <!-- <item >@drawable/emo24</item> -->
+        <!-- <item >@drawable/emo25</item> -->
+        <!-- <item >@drawable/emo26</item> -->
+        <!-- <item >@drawable/emo27</item> -->
+        <!-- <item >@drawable/emo28</item> -->
+        <!-- <item >@drawable/emo29</item> -->
+        <!-- <item >@drawable/emo30</item> -->
+        <!-- <item >@drawable/emo31</item> -->
+        <!-- <item >@drawable/emo32</item> -->
+        <!-- <item >@drawable/emo33</item> -->
+        <!-- <item >@drawable/emo34</item> -->
+        <!-- <item >@drawable/emo35</item> -->
+        <!-- <item >@drawable/emo36</item> -->
+        <!-- <item >@drawable/emo37</item> -->
+        <!-- <item >@drawable/emo38</item> -->
+        <!-- <item >@drawable/emo39</item> -->
+        <!-- <item >@drawable/emo40</item> -->
+        <!-- <item >@drawable/emo41</item> -->
+        <!-- <item >@drawable/emo42</item> -->
+        <!-- <item >@drawable/emo43</item> -->
+        <!-- <item >@drawable/emo44</item> -->
+        <!-- <item >@drawable/emo45</item> -->
+        <!-- <item >@drawable/emo46</item> -->
+        <!-- <item >@drawable/emo47</item> -->
+        <!-- <item >@drawable/emo48</item> -->
+        <!-- <item >@drawable/emo49</item> -->
+        <!-- <item >@drawable/emo50</item> -->
+        <!-- <item >@drawable/emo51</item> -->
+        <!-- <item >@drawable/emo52</item> -->
+        <!-- <item >@drawable/emo53</item> -->
+        <!-- <item >@drawable/emo54</item> -->
+        <item>@drawable/emo55</item>
+        <item>@drawable/emo56</item>
+        <item>@drawable/emo57</item>
+        <item>@drawable/emo58</item>
+        <item>@drawable/emo59</item>
+        <item>@drawable/emo60</item>
+        <item>@drawable/emo61</item>
+        <item>@drawable/emo62</item>
+        <item>@drawable/emo63</item>
+        <item>@drawable/emo64</item>
+        <item>@drawable/emo65</item>
+        <item>@drawable/emo66</item>
+        <item>@drawable/emo67</item>
+        <item>@drawable/emo68</item>
+        <item>@drawable/emo69</item>
+        <item>@drawable/emo70</item>
+        <item>@drawable/emo71</item>
+        <item>@drawable/emo72</item>
+        <item>@drawable/emo73</item>
+        <item>@drawable/emo74</item>
+        <item>@drawable/emo75</item>
+        <item>@drawable/emo76</item>
+        <item>@drawable/emo77</item>
+        <item>@drawable/emo78</item>
+        <item>@drawable/emo79</item>
+        <item>@drawable/emo80</item>
+        <item>@drawable/emo81</item>
+        <item>@drawable/emo82</item>
+        <item>@drawable/emo83</item>
+        <item>@drawable/emo84</item>
+        <item>@drawable/emo85</item>
+        <item>@drawable/emo86</item>
+        <item>@drawable/emo87</item>
+        <item>@drawable/emo88</item>
+        <item>@drawable/emo89</item>
+        <item>@drawable/emo90</item>
+        <item>@drawable/emo91</item>
+        <item>@drawable/emo92</item>
+        <item>@drawable/emo93</item>
+        <item>@drawable/emo94</item>
+        <item>@drawable/emo95</item>
+        <item>@drawable/emo96</item>
+        <item>@drawable/emo97</item>
+        <item>@drawable/emo98</item>
+        <item>@drawable/emo99</item>
+        <item>@drawable/emo100</item>
+        <item>@drawable/emo101</item>
+        <item>@drawable/emo102</item>
+        <item>@drawable/emo103</item>
+        <item>@drawable/emo104</item>
+        <item>@drawable/emo105</item>
+        <item>@drawable/emo106</item>
+        <item>@drawable/emo107</item>
+        <item>@drawable/emo108</item>
+        <item>@drawable/emo109</item>
+        <item>@drawable/emo110</item>
+        <item>@drawable/emo111</item>
+        <item>@drawable/emo112</item>
+        <item>@drawable/emo113</item>
+        <item>@drawable/emo114</item>
+    </integer-array>
+
+    <string-array name="xueli">
+        <item>小学</item>
+        <item>初中</item>
+        <item>高中</item>
+        <item>大专</item>
+        <item>本科</item>
+        <item>硕士</item>
+        <item>博士</item>
+        <item>博士后</item>
+    </string-array>
+    
+    <string-array name="zhiye">
+        <item>求职</item>
+        <item>政府公务员</item>
+        <item>IT行业</item>
+        <item>自由职业</item>
+        <item>市场营销</item>
+        <item>个人和家庭用品</item>
+        <item>广告行业</item>
+        <item>服务行业</item>
+        <item>教育</item>
+        <item>法律</item>
+        <item>媒体行业</item>
+        <item>医疗医药 </item>
+        <item>学生</item>
+        <item>航天航空</item>
+        <item>退休</item>
+        <item>餐饮旅游</item>
+        <item>打工族</item>
+        <item>能源矿业</item>
+        <item>制造行业</item>
+        <item>零售贸易</item>
+        <item>财务</item>
+        <item>房产建筑</item>
+        <item>艺术设计</item>
+    </string-array>
+    <string-array name="hunyin">
+        <item>未婚</item>
+        <item>已婚</item>
+        <item>离异</item>
+        <item>丧偶</item>
+    </string-array>
+    <string-array name="sex">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+    <string-array name="family_title">
+        <item>幸福家庭</item>
+        <item>体检中心</item>
+        <item>家庭VIP服务中心</item>
+        <item>家庭健康监测室</item>
+        <item>心理健康咨询师</item>
+        <item>公共服务中心</item>
+    </string-array>
+    <string-array name="myzone">
+        <item>医生</item>
+        <item>助理</item>
+        <item>社交</item>
+        <item>话题</item>
+        <item>日记</item>
+        <item>医典</item>
+        <item>摄影</item>
+        <item>收藏</item>
+        <item>我买</item>
+        <item>我卖</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="interest_im">
+        <item>屌丝派</item>
+        <item>有为青年</item>
+        <item>文艺范</item>
+        <item>白领族</item>
+        <item>学生族</item>
+        <item>IT民工</item>
+        <item>设计师</item>
+        <item>宅男女</item>
+        <item>月光族</item>
+        <item>创业者</item>
+        <item>自由者</item>
+        <item>小正太</item>
+        <item>小萝莉</item>
+        <item>小清新</item>
+        <item>音乐达人</item>
+        <item>美食控</item>
+        <item>乐天派</item>
+        <item>爱八卦</item>
+        <item>欧美控</item>
+        <item>韩流族</item>
+        <item>爱养生</item>
+        <item>游戏控</item>
+        <item>电影控</item>
+        <item>运动控</item>
+        <item>手机控</item>
+        <item>汽车控</item>
+        <item>爱宠物</item>
+        <item>小说控</item>
+        <item>爱购物</item>
+        <item>旅游控</item>
+        <item>时尚达人</item>
+        <item>爱收藏</item>
+        <item>爱绘画</item>
+        <item>摄影控</item>
+        <item>美容控</item>
+        <item>文艺范</item>
+        <item>电视控</item>
+        <item>爱运动</item>
+        <item>棋牌控</item>
+        <item>玩乐器</item>
+        <item>爱上网</item>
+        <item>游戏控</item>
+        <item>动漫控</item>
+    </string-array>
+    <string-array name="menulevel">
+        <item>全部</item>
+        <item>医疗</item>
+        <item>社会</item>
+        <item>生活</item>
+        <item>购物</item>
+        <item>健康健美</item>
+        <item>心理</item>
+        <item>情感</item>
+        <item>两性</item>
+        <item>职场</item>
+        <item>理财</item>
+        <item>时尚</item>
+        <item>旅游</item>
+        <item>创业</item>
+        <item>兴趣</item>
+    </string-array>
+    <string-array name="medicallevel">
+        <item>全部</item>
+        <item>症状</item>
+        <item>疾病</item>
+        <item>检查</item>
+        <item>药品</item>
+        <item>手术</item>
+        <item>医生</item>
+        <item>医院</item>
+        <item>科室</item>
+        <item>药店</item>
+        <item>心理</item>
+        <item>中医</item>
+        <item>医保</item>
+        <item>养生保健</item>
+    </string-array>
+    <string-array name="sociologylevel">
+        <item>全部</item>
+        <item>社会热点</item>
+        <item>社会杂谈</item>
+        <item>百姓声音</item>
+        <item>奇闻怪事</item>
+        <item>社会曝光</item>
+    </string-array>
+    <string-array name="lifelevel">
+        <item>全部</item>
+        <item>美食</item>
+        <item>娱乐</item>
+        <item>汽车</item>
+        <item>房产</item>
+        <item>户外</item>
+        <item>生活窍门</item>
+        <item>生活警示</item>
+    </string-array>
+    <string-array name="shoplevel">
+        <item>全部</item>
+        <item>我爱购物</item>
+        <item>晒晒靓货</item>
+        <item>烂货曝光</item>
+        <item>好货推荐</item>
+        <item>消费折扣</item>
+        <item>淘货攻略</item>
+        <item>二手货</item>
+    </string-array>
+    <string-array name="cosmetologylevel">
+        <item>全部</item>
+        <item>美容</item>
+        <item>减肥</item>
+        <item>整形</item>
+        <item>护肤</item>
+        <item>瘦脸</item>
+    </string-array>
+    <string-array name="bisexuallevel">
+        <item>全部</item>
+        <item>两性生活</item>
+        <item>两性健康</item>
+    </string-array>
+    <string-array name="workplacelevel">
+        <item>全部</item>
+        <item>屌丝心语</item>
+        <item>职场丽人</item>
+        <item>升职攻略</item>
+        <item>职场交际</item>
+    </string-array>
+    <string-array name="licailevel">
+        <item>全部</item>
+        <item>股票</item>
+        <item>证券</item>
+        <item>期货</item>
+        <item>理财产品</item>
+    </string-array>
+    <string-array name="travelinglevel">
+        <item>全部</item>
+        <item>旅游攻略</item>
+        <item>风光摄影</item>
+        <item>旅游景点</item>
+        <item>旅游线路</item>
+        <item>团队旅游</item>
+        <item>自驾游</item>
+        <item>背包客</item>
+        <item>驴友客栈</item>
+    </string-array>
+    <string-array name="chuangyelevel">
+        <item>全部</item>
+        <item>创业商机</item>
+        <item>头脑风暴</item>
+        <item>意见领袖</item>
+        <item>投资者论坛</item>
+        <item>创业生涯</item>
+    </string-array>
+    <string-array name="interestlevel">
+        <item>全部</item>
+        <item>音乐</item>
+        <item>电影</item>
+        <item>戏剧</item>
+        <item>棋牌</item>
+        <item>美术</item>
+        <item>摄影</item>
+        <item>看书</item>
+        <item>游戏</item>
+        <item>运动</item>
+        <item>电玩</item>
+        <item>上网</item>
+        <item>惊悚</item>
+        <item>穿越</item>
+        <item>漂流</item>
+        <item>球类</item>
+        <item>健身</item>
+        <item>舞蹈</item>
+        <item>武术</item>
+        <item>民粹</item>
+    </string-array>
+    
+    <!-- 求医 -->
+    <string-array name="seedoctorlevel">
+        <item>全部</item>
+        <item>病人求助</item>
+        <item>医生点评</item>
+        <item>医院点评</item>
+        <item>医院点评</item>
+        <item>治病偏方</item>
+        <item>疗病经验</item>
+        <item>医保医助</item>
+        
+    </string-array>
+    <string-array name="seedoctorlevelID">
+        <item>0</item>
+    <item>10000102</item>
+<item>10000103</item>
+<item>10000104</item>
+<item>10000105</item>
+<item>10000106</item>
+<item>10000107</item>
+<item>10000108</item>
+<item>10000109</item>
+    </string-array>
+    <!-- 问药 -->
+    <string-array name="medicinelevel">
+        <item>全部</item>
+        <item>好药晒台</item>
+        <item>烂药糗场</item>
+        <item>新药前瞻</item>
+        <item>百家论药</item>
+        <item>医药体会</item>
+        <item>中药心得</item>
+        <item>药店点评</item>
+        <item>药厂点评</item>
+        <item>制药秘籍</item>
+        <item>售药心经</item>
+        
+    </string-array>
+    <string-array name="medicinelevelID">
+
+<item>0</item>
+<item>10000202</item>
+<item>10000203</item>
+<item>10000204</item>
+<item>10000205</item>
+<item>10000206</item>
+<item>10000207</item>
+<item>10000208</item>
+<item>10000209</item>
+<item>10000210</item>
+<item>10000211</item>
+<item>10000212</item>
+    </string-array>
+
+    <!-- 疾病 -->
+    <string-array name="diseaselevel">
+        <item>全部</item>
+        <item>症状</item>
+        <item>传染疾病</item>
+        <item>儿科疾病</item>
+        <item>耳鼻喉科疾病</item>
+        <item>风湿免疫疾病</item>
+        <item>妇产科疾病</item>
+        <item>肝胆外科疾病</item>
+        <item>骨科疾病</item>
+        <item>呼吸系统疾病</item>
+        <item>急诊科疾病</item>
+        <item>精神科疾病</item>
+        <item>口腔科疾病</item>
+        <item>泌尿系统疾病</item>
+        <item>内分泌疾病</item>
+        <item>皮肤科疾病</item>
+        <item>普外科疾病</item>
+        <item>神经内科疾病</item>
+        <item>神经外科疾病</item>
+        <item>肾脏疾病</item>
+        <item>消化系统疾病</item>
+        <item>心血管内科</item>
+        <item>心血管外科</item>
+        <item>胸外科疾病</item>
+        <item>血液疾病</item>
+        <item>眼科疾病</item>
+        <item>肿瘤疾病</item>
+        
+    </string-array>
+    <string-array name="diseaselevelID">
+<item>0</item>
+<item>10000302</item>
+<item>10000303</item>
+<item>10000304</item>
+<item>10000305</item>
+<item>10000306</item>
+<item>10000307</item>
+<item>10000308</item>
+<item>10000309</item>
+<item>10000310</item>
+<item>10000311</item>
+<item>10000312</item>
+<item>10000313</item>
+<item>10000314</item>
+<item>10000315</item>
+<item>10000316</item>
+<item>10000317</item>
+<item>10000318</item>
+<item>10000319</item>
+<item>10000320</item>
+<item>10000321</item>
+<item>10000322</item>
+<item>10000323</item>
+<item>10000324</item>
+<item>10000325</item>
+<item>10000326</item>
+<item>10000327</item>
+<item>10000328</item>
+    </string-array>
+
+    <!-- 情感 -->
+    <string-array name="emotionlevel">
+        <item>全部</item>
+        <item>圣女之家</item>
+        <item>单身男女</item>
+        <item>拍拖秘籍</item>
+        <item>热恋男女</item>
+        <item>失恋之痛</item>
+        <item>婚姻家庭</item>
+        <item>围城内外</item>
+        <item>七年之痒</item>
+        <item>离异之后</item>
+        <item>单亲家庭</item>
+        <item>再续前缘</item>
+        <item>四大皆空</item>
+        
+    </string-array>
+    <string-array name="emotionlevelID">
+ <item>0</item>
+<item>10000402</item>
+<item>10000403</item>
+<item>10000404</item>
+<item>10000405</item>
+<item>10000406</item>
+<item>10000407</item>
+<item>10000408</item>
+<item>10000409</item>
+<item>10000410</item>
+<item>10000411</item>
+<item>10000412</item>
+<item>10000413</item>
+<item>10000414</item>
+    </string-array>
+
+    <!-- 两性 -->
+    <string-array name="amphigonylevel">
+        <item>全部</item>
+        <item>两性交流</item>
+        <item>情趣培养</item>
+        <item>情感保鲜</item>
+        <item>性技巧</item>
+        <item>性和谐</item>
+        <item>性冷淡</item>
+        <item>无性婚姻</item>
+        <item>亲情性情</item>
+        
+    </string-array>
+    <string-array name="amphigonylevelID">
+
+<item>0</item>
+<item>10000502</item>
+<item>10000503</item>
+<item>10000504</item>
+<item>10000505</item>
+<item>10000506</item>
+<item>10000507</item>
+<item>10000508</item>
+<item>10000509</item>
+<item>10000510</item>
+    </string-array>
+
+    <!-- 养生 -->
+    <string-array name="healthcarelevel">
+        <item>全部</item>
+        <item>养生经验</item>
+        <item>养生方法</item>
+        <item>养生场所</item>
+        <item>养生用品</item>
+        <item>养生食品</item>
+        <item>养生习惯</item>
+        <item>养生教训</item>
+        
+    </string-array>
+    <string-array name="healthcarelevelID">
+<item>0</item>
+<item>10000602</item>
+<item>10000603</item>
+<item>10000604</item>
+<item>10000605</item>
+<item>10000606</item>
+<item>10000607</item>
+<item>10000608</item>
+<item>10000609</item>
+    </string-array>
+
+    <!-- 美食 -->
+    <string-array name="cookinglevel">
+        <item>全部</item>
+        <item>北京菜</item>
+        <item>江浙菜</item>
+        <item>粤菜</item>
+        <item>川菜</item>
+        <item>湘菜</item>
+        <item>东北菜</item>
+        <item>鲁菜</item>
+        <item>新疆/清真菜</item>
+        <item>西北菜</item>
+        <item>贵州菜</item>
+        <item>火锅</item>
+        <item>自助餐</item>
+        <item>小吃快餐</item>
+        <item>面包甜点</item>
+        <item>西餐</item>
+        <item>海鲜</item>
+        <item>韩国料理</item>
+        
+    </string-array>
+    <string-array name="cookinglevelID">
+
+<item>0</item>
+<item>10000702</item>
+<item>10000703</item>
+<item>10000704</item>
+<item>10000705</item>
+<item>10000706</item>
+<item>10000707</item>
+<item>10000708</item>
+<item>10000709</item>
+<item>10000710</item>
+<item>10000711</item>
+<item>10000712</item>
+<item>10000713</item>
+<item>10000714</item>
+<item>10000715</item>
+<item>10000716</item>
+<item>10000717</item>
+<item>10000718</item>
+<item>10000719</item>
+    </string-array>
+
+    <!-- 运动 -->
+    <string-array name="sportlevel">
+        <item>全部</item>
+        <item>游泳</item>
+        <item>器械</item>
+        <item>登山</item>
+        <item>跑步</item>
+        <item>慢走</item>
+        <item>穿越</item>
+        <item>漂流</item>
+        <item>球类</item>
+        <item>瑜伽</item>
+        <item>宾舍</item>
+        <item>舞蹈</item>
+        <item>武术</item>
+        <item>气功</item>
+        <item>太极</item>
+        <item>户外</item>
+        
+    </string-array>
+    <string-array name="sportlevelID">
+<item>0</item>
+<item>10000802</item>
+<item>10000803</item>
+<item>10000804</item>
+<item>10000805</item>
+<item>10000806</item>
+<item>10000807</item>
+<item>10000808</item>
+<item>10000809</item>
+<item>10000810</item>
+<item>10000811</item>
+<item>10000812</item>
+<item>10000813</item>
+<item>10000814</item>
+<item>10000815</item>
+<item>10000816</item>
+<item>10000817</item>
+    </string-array>
+
+    <!-- 娱乐 -->
+    <string-array name="entertainmentlevel">
+        <item>全部</item>
+        <item>棋牌</item>
+        <item>K歌</item>
+        <item>乐器</item>
+        <item>上网</item>
+        <item>游戏</item>
+        <item>电玩</item>
+        <item>动漫</item>
+        <item>电视</item>
+        <item>电影</item>
+        <item>宠物</item>
+        <item>艺术</item>
+        <item>手工DIY</item>
+        <item>话剧</item>
+        <item>音乐会</item>
+        <item>舞剧</item>
+        <item>惊悚</item>
+        
+    </string-array>
+    <string-array name="entertainmentlevelID">
+<item>0</item>
+<item>10000902</item>
+<item>10000903</item>
+<item>10000904</item>
+<item>10000905</item>
+<item>10000906</item>
+<item>10000907</item>
+<item>10000908</item>
+<item>10000909</item>
+<item>10000910</item>
+<item>10000911</item>
+<item>10000912</item>
+<item>10000913</item>
+<item>10000914</item>
+<item>10000915</item>
+<item>10000916</item>
+<item>10000917</item>
+<item>10000918</item>
+    </string-array>
+
+    <!-- 生活点滴 -->
+    <string-array name="lifestylelevel">
+        <item>全部</item>
+        <item>生活窍门</item>
+        <item>生活警示</item>
+        <item>生活提示</item>
+        <item>生活经验</item>
+        <item>生活求助</item>
+        <item>生活糗事</item>
+        
+    </string-array>
+    <string-array name="lifestylelevelID">
+ 
+<item>0</item>
+<item>10001002</item>
+<item>10001003</item>
+<item>10001004</item>
+<item>10001005</item>
+<item>10001006</item>
+<item>10001007</item>
+<item>10001008</item>
+    </string-array>
+
+    <!-- 美容美妆 -->
+    <string-array name="cosmeticlevel">
+        <item>全部</item>
+        <item>美容</item>
+        <item>护肤</item>
+        <item>减肥</item>
+        <item>增肥</item>
+        <item>整形</item>
+        <item>瘦脸</item>
+        <item>双眼皮</item>
+        <item>祛痘</item>
+        <item>祛皱</item>
+        <item>保湿</item>
+        <item>发型</item>
+        <item>彩妆</item>
+        <item>美甲</item>
+        <item>眼妆</item>
+        <item>配饰</item>
+        
+    </string-array>
+    <string-array name="cosmeticlevelID">
+<item>0</item>
+<item>10001102</item>
+<item>10001103</item>
+<item>10001104</item>
+<item>10001105</item>
+<item>10001106</item>
+<item>10001107</item>
+<item>10001108</item>
+<item>10001109</item>
+<item>10001110</item>
+<item>10001111</item>
+<item>10001112</item>
+<item>10001113</item>
+<item>10001114</item>
+<item>10001115</item>
+<item>10001116</item>
+<item>10001117</item>
+    </string-array>
+    <!-- 心理 -->
+    <string-array name="psychologylevel">
+        <item>全部</item>
+        <item>人际交往</item>
+        <item>职场关系</item>
+        <item>婚恋心理</item>
+        <item>青少年心理</item>
+        <item>儿童心理</item>
+        <item>叛逆心理</item>
+        <item>两性心理</item>
+        <item>另类心理</item>
+        <item>同性恋</item>
+        
+    </string-array>
+    <string-array name="psychologylevelID">
+ 
+<item>0</item>
+<item>10001202</item>
+<item>10001203</item>
+<item>10001204</item>
+<item>10001205</item>
+<item>10001206</item>
+<item>10001207</item>
+<item>10001208</item>
+<item>10001209</item>
+<item>10001210</item>
+<item>10001211</item>
+    </string-array>
+    <!-- 女人 -->
+    <string-array name="womanlevel">
+        <item>全部</item>
+        <item>闺蜜私话</item>
+        <item>另一半</item>
+        <item>婆媳关系</item>
+        <item>购物控</item>
+        <item>心情吧</item>
+        <item>派对秀</item>
+        <item>结伴游</item>
+        
+    </string-array>
+    <string-array name="womanlevelID">
+<item>0</item>
+<item>10001302</item>
+<item>10001303</item>
+<item>10001304</item>
+<item>10001305</item>
+<item>10001306</item>
+<item>10001307</item>
+<item>10001308</item>
+<item>10001309</item>
+    </string-array>
+    <!-- 摄影 -->
+    <string-array name="photographylevel">
+        <item>全部</item>
+      <item>风景</item>
+<item>肖像</item>
+<item>人体</item>
+<item>静物</item>
+<item>游记</item>
+<item>现场</item>
+<item>纪实</item>
+<item>室内</item>
+<item>偷拍</item>
+<item>猎奇</item>
+
+    </string-array>
+    <string-array name="photographylevelID">
+<item>0</item>
+<item>10001402</item>
+<item>10001403</item>
+<item>10001404</item>
+<item>10001405</item>
+<item>10001406</item>
+<item>10001407</item>
+<item>10001408</item>
+<item>10001409</item>
+<item>10001410</item>
+<item>10001411</item>
+<item>10001412</item>
+
+    </string-array>
+    <!-- 绘画 -->
+    <string-array name="drawinglevel">
+        <item>全部</item>
+        <item>素描</item>
+        <item>油画</item>
+        <item>版画</item>
+        <item>水彩画</item>
+        <item>书画</item>
+        <item>Q版</item>
+        <item>动漫</item>
+        
+    </string-array>
+    <string-array name="drawinglevelID">
+
+<item>0</item>
+<item>10001502</item>
+<item>10001503</item>
+<item>10001504</item>
+<item>10001505</item>
+<item>10001506</item>
+<item>10001507</item>
+<item>10001508</item>
+<item>10001509</item>
+    </string-array>
+    <!-- 收藏 -->
+    <string-array name="collectlevel">
+        <item>全部</item>
+        <item>古董</item>
+        <item>字画</item>
+        <item>邮票</item>
+        <item>民粹</item>
+        <item>家具</item>
+        <item>火花</item>
+        <item>钱币</item>
+        <item>币、卡</item>
+        <item>签字</item>
+        <item>古书</item>
+        <item>饰物</item>
+        
+    </string-array>
+    <string-array name="collectlevelID">
+<item>0</item>
+<item>10001602</item>
+<item>10001603</item>
+<item>10001604</item>
+<item>10001605</item>
+<item>10001606</item>
+<item>10001607</item>
+<item>10001608</item>
+<item>10001609</item>
+<item>10001610</item>
+<item>10001611</item>
+<item>10001612</item>
+<item>10001613</item>
+    </string-array>
+    <!-- 时尚 -->
+    <string-array name="fashionlevel">
+        <item>全部</item>
+        <item>时男尚女</item>
+        <item>梳妆台</item>
+        <item>非主流</item>
+        <item>奢侈品</item>
+        <item>欧美风</item>
+        <item>复古</item>
+        <item>男装</item>
+        <item>女装</item>
+        <item>鞋类</item>
+        <item>配饰</item>
+        <item>内衣</item>
+        <item>首饰</item>
+        <item>童装</item>
+        
+    </string-array>
+    <string-array name="fashionlevelID">
+<item>0</item>
+<item>10001702</item>
+<item>10001703</item>
+<item>10001704</item>
+<item>10001705</item>
+<item>10001706</item>
+<item>10001707</item>
+<item>10001708</item>
+<item>10001709</item>
+<item>10001710</item>
+<item>10001711</item>
+<item>10001712</item>
+<item>10001713</item>
+<item>10001714</item>
+<item>10001715</item>
+    </string-array>
+    <!-- 旅游 -->
+    <string-array name="travellevel">
+        <item>全部</item>
+        <item>旅游攻略</item>
+        <item>旅游景点</item>
+        <item>旅游线路</item>
+        <item>团队旅游</item>
+        <item>自驾游</item>
+        <item>背包客</item>
+        <item>驴友客栈</item>
+        <item>结伴行</item>
+        
+    </string-array>
+    <string-array name="travellevelID">
+<item>0</item>
+<item>10001802</item>
+<item>10001803</item>
+<item>10001804</item>
+<item>10001805</item>
+<item>10001806</item>
+<item>10001807</item>
+<item>10001808</item>
+<item>10001809</item>
+<item>10001810</item>
+    </string-array>
+    <!-- 社会 -->
+    <string-array name="societylevel">
+        <item>全部</item>
+        <item>社会热点</item>
+        <item>社会杂谈</item>
+        <item>七嘴八舌</item>
+        <item>街坊四邻</item>
+        <item>八方支援</item>
+        <item>奇闻异事</item>
+        <item>烂事曝光</item>
+        
+    </string-array>
+    <string-array name="societylevelID">
+<item>0</item>
+<item>10001902</item>
+<item>10001903</item>
+<item>10001904</item>
+<item>10001905</item>
+<item>10001906</item>
+<item>10001907</item>
+<item>10001908</item>
+<item>10001909</item>
+    </string-array>
+    <!-- 职场 -->
+    <string-array name="professionallevel">
+        <item>全部</item>
+        <item>屌丝心语</item>
+        <item>职场丽人</item>
+        <item>升职攻略</item>
+        <item>同事之间</item>
+        <item>上下相处</item>
+        <item>压力机遇</item>
+        <item>突发萌想</item>
+        <item>上下班</item>
+        <item>同事聚会</item>
+        
+    </string-array>
+    <string-array name="professionallevelID">
+<item>0</item>
+<item>10002002</item>
+<item>10002003</item>
+<item>10002004</item>
+<item>10002005</item>
+<item>10002006</item>
+<item>10002007</item>
+<item>10002008</item>
+<item>10002009</item>
+<item>10002010</item>
+<item>10002011</item>
+
+    </string-array>
+    <!-- 居住 -->
+    <string-array name="livelevel">
+        <item>我要买房</item>
+        <item>我要租房</item>
+        <item>居室装修</item>
+        <item>居室装饰</item>
+        <item>居室植物</item>
+        <item>居室家具</item>
+        <item>晒晒我家</item>
+        <item>居住点滴</item>
+        
+    </string-array>
+    <string-array name="livelevelID">
+ 
+<item>10002101</item>
+<item>10002102</item>
+<item>10002103</item>
+<item>10002104</item>
+<item>10002105</item>
+<item>10002106</item>
+<item>10002107</item>
+<item>10002108</item>
+<item>10002109</item>
+    </string-array>
+    <!-- 婚庆 -->
+    <string-array name="weddinglevel">
+        <item>全部</item>
+        <item>晒晒婚纱</item>
+        <item>晒晒婚照</item>
+        <item>结婚方式</item>
+        <item>简简单单</item>
+        <item>一生一次</item>
+        <item>婚礼用品</item>
+        
+    </string-array>
+    <string-array name="weddinglevelID">
+<item>0</item>
+<item>10002202</item>
+<item>10002203</item>
+<item>10002204</item>
+<item>10002205</item>
+<item>10002206</item>
+<item>10002207</item>
+<item>10002208</item>
+    </string-array>
+    <!-- 购物 -->
+    <string-array name="shoppinglevel">
+        <item>全部</item>
+        <item>药品</item>
+        <item>保健品</item>
+        <item>保健食品</item>
+        <item>保健用品</item>
+        <item>保健器械</item>
+        <item>两性用品</item>
+        <item>绿色蔬菜</item>
+        <item>绿色食品</item>
+        <item>生活用品</item>
+        <item>女装</item>
+        <item>男装</item>
+        <item>鞋子</item>
+        <item>包包</item>
+        <item>帽子</item>
+        <item>配饰</item>
+        <item>手表</item>
+        <item>家居</item>
+        <item>零食</item>
+        <item>靓货晒台</item>
+        <item>烂货曝光</item>
+        <item>打折</item>
+        <item>购物支招</item>
+        
+    </string-array>
+    <string-array name="shoppinglevelID">
+<item>0</item>
+<item>10002302</item>
+<item>10002303</item>
+<item>10002304</item>
+<item>10002305</item>
+<item>10002306</item>
+<item>10002307</item>
+<item>10002308</item>
+<item>10002309</item>
+<item>10002310</item>
+<item>10002311</item>
+<item>10002312</item>
+<item>10002313</item>
+<item>10002314</item>
+<item>10002315</item>
+<item>10002316</item>
+<item>10002317</item>
+<item>10002318</item>
+<item>10002319</item>
+<item>10002320</item>
+<item>10002321</item>
+<item>10002322</item>
+<item>10002323</item>
+<item>10002324</item>
+    </string-array>
+    <!-- 汽车 -->
+    <string-array name="carlevel">
+        <item>谈车论道</item>
+        <item>车型PK</item>
+        <item>购买经验</item>
+        <item>驾驶心得</item>
+        <item>考照培训</item>
+        <item>学车辅导</item>
+        
+    </string-array>
+    <string-array name="carlevelID">
+<item>10002401</item>
+<item>10002402</item>
+<item>10002403</item>
+<item>10002404</item>
+<item>10002405</item>
+<item>10002406</item>
+<item>10002407</item>
+    </string-array>
+    <string-array name="myzone_additem_text">
+        <item>藏宝</item>
+        <item>画廊</item>
+    </string-array>
+
+    <string-array name="myzone_allfunction_text">
+        <item>医生</item>
+        <item>助理</item>
+        <item>社交</item>
+        <item>话题</item>
+        <item>日记</item>
+        <item>医书</item>
+        <item>摄影</item>
+        <item>收藏</item>
+        <item>我买</item>
+        <item>我卖</item>
+        <item>藏宝</item>
+        <item>画廊</item>
+        <item>  </item>
+    </string-array>
+    <string-array name="permissions">
+        <item>@string/permission_recode_audio_hint</item>
+        <item>@string/permission_get_accounts_hint</item>
+        <item>@string/permission_read_phone_hint</item>
+        <item>@string/permission_call_phone_hint</item>
+        <item>@string/permission_camera_hint</item>
+        <item>@string/permission_access_fine_location_hint</item>
+        <item>@string/permission_access_coarse_location_hint</item>
+        <item>@string/permission_read_external_hint</item>
+        <item>@string/permission_white_external_hint</item>
+    </string-array>
+
+
+    <string name="permission_get_accounts_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_GET_ACCOUNTS</string>
+    <string name="permission_read_phone_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_READ_PHONE_STATE</string>
+    <string name="permission_call_phone_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_CALL_PHONE</string>
+    <string name="permission_camera_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_CAMERA</string>
+    <string name="permission_access_fine_location_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_ACCESS_FINE_LOCATION</string>
+    <string name="permission_access_coarse_location_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_ACCESS_COARSE_LOCATION</string>
+    <string name="permission_read_external_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_READ_EXTERNAL_STORAGE</string>
+    <string name="permission_white_external_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_WRITE_EXTERNAL_STORAGE</string>
+    <string name="permission_recode_audio_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_RECORD_AUDIO</string>
+</resources>

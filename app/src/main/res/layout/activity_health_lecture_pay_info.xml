@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.yksj.consultation.son.home.HealthLecturePayInfoActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topBar">
+        <include layout="@layout/title_layout"
+            />
+
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_gravity="center_vertical|end"
+            android:id="@+id/share"
+            android:padding="6dp"
+            android:layout_marginRight="8dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/share2"/>
+
+    </FrameLayout>
+
+<ScrollView
+    android:layout_below="@+id/topBar"
+    android:layout_above="@+id/pay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:id="@+id/goDocInfo"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="12dp"
+                android:text="焦虑，一场精神科的感冒"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/docName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTitle"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="15dp"
+                android:text="蒋艳清"
+                android:textColor="@color/color_blue"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginRight="27dp"
+                android:text="前往医生主页"
+                android:textColor="@color/txt_gary"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imgRight"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/right_arrwors" />
+
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/gray_color2" />
+
+        <TextView
+            android:text="文章介绍"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="@color/text_gray"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_color2"/>
+
+        <TextView
+            android:id="@+id/wenZJS"
+            android:padding="12sp"
+            android:ellipsize="end"
+            android:maxLines="6"
+            android:textColor="@color/text_gray"
+            android:textSize="14sp"
+            android:text="快乐就萨的肌肤垃圾似的；飞机；啊啦手机地方；垃圾似的；法律精神；来到房间里；啊睡觉的；立法；快乐就啊烦；了；将啊；来到克己复礼卡手机地方；将啊；拉萨的肌肤垃圾似的；飞机；啊啦手机地方；垃圾似的；法律精神；来到房间里；啊睡觉的；立法；善良的肌肤快乐就啊烦；了；将啊；来到克己复礼卡手机地方；将啊；拉萨的肌肤垃圾似的；飞机；啊啦手机地方；垃圾似的；法律精神；来到房间里；啊睡觉的；立法；善良的肌肤快乐就啊烦；了；将啊；来到克己复礼卡手机地方；将啊；拉萨的肌肤垃圾似的；飞机；啊啦手机地方；垃圾似的；法律精神；来到房间里；啊睡觉的；立法；善良的肌肤善良的肌肤"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/gray_color2" />
+
+        <LinearLayout
+            android:id="@+id/healthPingJia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:text="#44.33"
+                android:textColor="@color/red"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgHeader1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/default_head_doctor" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgHeader2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/default_head_doctor" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgHeader3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="40dp"
+                    android:src="@drawable/default_head_doctor" />
+
+                <TextView
+                    android:id="@+id/joinNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="75dp"
+                    android:text="小辣椒等998人参与"
+                    android:textColor="@color/text_gray" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/starNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.5"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    android:rating="3"
+                    android:id="@+id/ratingBar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:theme="@style/RatingBar"
+                    android:layout_marginLeft="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/goEvaluation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/EvaluationNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="44条评价"
+                    android:textColor="@color/text_gray"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/right_arrwors" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="100dp"/>
+    </LinearLayout>
+</ScrollView>
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:id="@+id/pay"
+        android:text="付款"
+        android:background="#f27e8c"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+<TextView
+    android:id="@+id/tipTv"
+    android:text="加载中..."
+    android:textColor="@color/black"
+    android:textSize="16sp"
+    android:gravity="center"
+    android:layout_below="@+id/topBar"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/payLoad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:layout_gravity="center"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="6dp"
+                android:maxLines="1"
+                android:maxLength="15"
+                android:text="小丽"
+                android:textColor="@color/text_black_two"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_name_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:drawablePadding="6dp"
+                android:text="1378888888888："
+                android:textColor="@color/text_black_two"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/list_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:text="北京市丰台区关安街道15号"
+            android:textColor="@color/text_black_two"
+            android:paddingLeft="10dp"
+            android:paddingBottom="5dp"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="#ebeff7" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:padding="6dp">
+            <LinearLayout
+                android:id="@+id/ll_icon_address"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/icon_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/trueadd"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="选择当前地址"
+
+                    android:textColor="@color/text_black_two"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/delete_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="删除"
+                android:drawableLeft="@drawable/delete_add"
+                android:drawablePadding="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="24dp"
+                android:textColor="@color/text_black_two"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/editor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="编辑"
+                android:drawableLeft="@drawable/editer"
+                android:drawablePadding="5dp"
+                android:layout_toLeftOf="@id/delete_address"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="90dp"
+                android:textColor="@color/text_black_two"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

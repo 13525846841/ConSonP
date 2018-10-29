@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+       <Button 
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:id="@+id/text"
+        android:text="大河网id我"
+        android:focusable="false"
+        android:clickable="false"
+        android:gravity="center"
+        android:background="@drawable/calader_status_list"
+        /> 
+</LinearLayout>

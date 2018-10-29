@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray_bg"
+    android:orientation="vertical"
+    tools:context="com.yksj.consultation.son.consultation.main.ConsultActivity">
+    <include
+        android:id="@+id/main_title"
+        layout="@layout/gray_title_layout" />
+
+
+    <org.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#00000000"
+        android:divider="@color/color_gray_bg"
+        android:gravity="center_horizontal"
+        android:scrollbars="none"
+        ptr:ptrMode="both">
+
+    </org.handmark.pulltorefresh.library.PullToRefreshListView>
+
+    <include
+        layout="@layout/loading_fail_data_null"
+        android:visibility="gone" />
+
+</LinearLayout>

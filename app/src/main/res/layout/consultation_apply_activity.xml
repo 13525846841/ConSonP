@@ -1,0 +1,584 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/apply_header"
+        layout="@layout/gray_title_layout" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/apply_header">
+
+        <LinearLayout
+            android:id="@+id/show_apply"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="24dp">
+                <TextView
+                    android:text="@string/consultmaney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="#7C7C7C"/>
+                <TextView
+                    android:id="@+id/expense_flow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FADD67"
+                    android:textSize="20sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="@string/yuan"
+                    android:textColor="#7C7C7C"/>
+            </LinearLayout>
+            <View style="@style/common_split_line_1dp"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="会诊流程"/>
+            <LinearLayout
+                style="@style/apply_flow">
+                <RelativeLayout
+                    style="@style/apply_flow1">
+                    <com.dmsj.newask.Views.CircleImageView
+                        android:id="@+id/apply_chage1"
+                        style="@style/apply_flow2" />
+                    <TextView
+                        style="@style/apply_flow3"
+                        android:text="1"/>
+                </RelativeLayout>
+                <TextView
+                    style="@style/apply_flow4"
+                    android:text="提交会诊申请"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                style="@style/apply_flow">
+                <RelativeLayout
+                    style="@style/apply_flow1"
+                    >
+                    <com.dmsj.newask.Views.CircleImageView
+                        android:id="@+id/apply_chage2"
+                        style="@style/apply_flow2" />
+                    <TextView
+                        style="@style/apply_flow3"
+                        android:text="2"/>
+                </RelativeLayout>
+                <TextView
+                    style="@style/apply_flow4"
+                    android:text="@string/consultation_flow_text2"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                style="@style/apply_flow">
+                <RelativeLayout
+                    style="@style/apply_flow1"
+                    >
+                    <com.dmsj.newask.Views.CircleImageView
+                        android:id="@+id/apply_chage3"
+                        style="@style/apply_flow2" />
+                    <TextView
+                        style="@style/apply_flow3"
+                        android:text="3"/>
+                </RelativeLayout>
+                <TextView
+                    style="@style/apply_flow4"
+                    android:text="@string/consultation_flow_text3"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                style="@style/apply_flow">
+                <RelativeLayout
+                    style="@style/apply_flow1"
+                    >
+                    <com.dmsj.newask.Views.CircleImageView
+                        android:id="@+id/apply_chage4"
+                        style="@style/apply_flow2" />
+                    <TextView
+                        style="@style/apply_flow3"
+                        android:text="4"/>
+                </RelativeLayout>
+                <TextView
+                    style="@style/apply_flow4"
+                    android:text="会诊专家接诊"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                style="@style/apply_flow">
+                <RelativeLayout
+                    style="@style/apply_flow1"
+                    >
+                    <com.dmsj.newask.Views.CircleImageView
+                        android:id="@+id/apply_chage5"
+                        style="@style/apply_flow2" />
+                    <TextView
+                        style="@style/apply_flow3"
+                        android:text="5"/>
+                </RelativeLayout>
+                <TextView
+                    style="@style/apply_flow4"
+                    android:text="支付会诊费用"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                style="@style/apply_flow">
+                <RelativeLayout
+                    style="@style/apply_flow1">
+                    <com.dmsj.newask.Views.CircleImageView
+                        android:id="@+id/apply_chage6"
+                        style="@style/apply_flow2" />
+                    <TextView
+                        style="@style/apply_flow3"
+                        android:text="6"/>
+                </RelativeLayout>
+                <TextView
+                    style="@style/apply_flow4"
+                    android:text="会诊专家给出意见"
+                    />
+            </LinearLayout>
+            <View style="@style/common_split_line_1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:text="@string/consultation_flow_hine"/>
+
+            <Button
+                android:id="@+id/consultation_apply"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/color_blue"
+                android:layout_marginTop="20dp"
+                android:text="下一步"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/apply_flow1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/apply_header"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0px"
+            android:background="@color/white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:id="@+id/gray_line1"
+                android:layout_width="2dp"
+                android:layout_height="75dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/consultation_gray_line" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="9dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/gray11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/consultation_flow_gray" />
+
+                <ImageView
+                    android:id="@+id/gray1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/apply_flow_animation"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/gray_line1"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:gravity="right" >
+
+                <TextView
+                    android:id="@+id/text61"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/consultation_flow_omit"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/consultation_flow_text1"
+                    android:textColor="#B9B9B9"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/time71"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/text61"
+                    android:layout_marginRight="20dp"
+                    android:gravity="right|center_vertical"
+                    android:textColor="#B9B9B9"
+                    android:textSize="14sp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:id="@+id/gray_line2"
+                android:layout_width="2dp"
+                android:layout_height="75dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/consultation_gray_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/gray21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/consultation_flow_gray" />
+
+                <ImageView
+                    android:id="@+id/gray2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/apply_flow_animation"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/gray_line2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:id="@+id/text62"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:drawableLeft="@drawable/consultation_flow_omit"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/consultation_flow_text2"
+                    android:textColor="#B9B9B9"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/time72"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/text62"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#B9B9B9"
+                    android:textSize="14sp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:id="@+id/gray_line3"
+                android:layout_width="2dp"
+                android:layout_height="75dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/consultation_gray_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/gray31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/consultation_flow_gray" />
+
+                <ImageView
+                    android:id="@+id/gray3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/apply_flow_animation"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/gray_line3"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:gravity="right" >
+
+                <TextView
+                    android:id="@+id/text63"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/consultation_flow_omit"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/consultation_flow_text3"
+                    android:textColor="#B9B9B9"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/time73"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/text63"
+                    android:layout_marginRight="20dp"
+                    android:gravity="right|center_vertical"
+                    android:textColor="#B9B9B9"
+                    android:textSize="14sp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:id="@+id/gray_line4"
+                android:layout_width="2dp"
+                android:layout_height="75dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/consultation_gray_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/gray41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/consultation_flow_gray" />
+
+                <ImageView
+                    android:id="@+id/gray4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/apply_flow_animation"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/gray_line4"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:id="@+id/text64"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:drawableLeft="@drawable/consultation_flow_omit"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/consultation_flow_text4"
+                    android:textColor="#B9B9B9"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/time74"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/text64"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#B9B9B9"
+                    android:textSize="14sp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:id="@+id/gray_line5"
+                android:layout_width="2dp"
+                android:layout_height="75dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/consultation_gray_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/gray51"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/consultation_flow_gray" />
+
+                <ImageView
+                    android:id="@+id/gray5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/apply_flow_animation"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/gray_line5"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:gravity="right" >
+
+                <TextView
+                    android:id="@+id/text65"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/consultation_flow_omit"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/consultation_flow_text5"
+                    android:textColor="#B9B9B9"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/time75"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/text65"
+                    android:layout_marginRight="20dp"
+                    android:gravity="right|center_vertical"
+                    android:textColor="#B9B9B9"
+                    android:textSize="14sp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp" >
+
+            <View
+                android:id="@+id/gray_line6"
+                android:layout_width="2dp"
+                android:layout_height="75dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/consultation_gray_line" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="66dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/gray61"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/consultation_flow_gray" />
+
+                <ImageView
+                    android:id="@+id/gray6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/apply_flow_animation"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/gray_line6"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:id="@+id/text66"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:drawableLeft="@drawable/consultation_flow_omit"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/consultation_flow_text6"
+                    android:textColor="#B9B9B9"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/time76"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/text66"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#B9B9B9"
+                    android:textSize="14sp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0px"
+            android:background="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

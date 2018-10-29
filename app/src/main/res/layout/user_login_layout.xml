@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/gray_title_layout" />
+
+    <EditText
+        android:id="@+id/phone"
+        style="@style/item_white_bg_style"
+        android:hint="请输入手机号码"
+        android:inputType="number"
+        android:textColorHint="@color/common_color_gray_mid" />
+
+    <LinearLayout style="@style/item_white_bg_style">
+
+        <EditText
+            android:id="@+id/pswd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:singleLine="true"
+            android:textColorHint="@color/common_color_gray_mid"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/forget_pswd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="忘记密码?"
+            android:textColor="@color/red_text" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/icon_btn_bg_80"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/registe"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/green_frame_bg"
+        android:gravity="center"
+        android:padding="6dp"
+        android:text="注册"
+        android:textColor="@color/color_blue"
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="使用第三方账号登录"
+        android:textColor="@color/text_gray"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_weixin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image_weixin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/icon_weixin" />
+
+            <TextView
+                style="@style/icon_down"
+                android:layout_below="@+id/image_weixin"
+                android:text="微信登录" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_qq"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image_qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/icon_qq" />
+
+            <TextView
+                style="@style/icon_down"
+                android:layout_below="@+id/image_qq"
+                android:text="QQ登录" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_sina"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image_sina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/icon_sina" />
+
+            <TextView
+                style="@style/icon_down"
+                android:layout_below="@+id/image_sina"
+                android:text="新浪微博" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

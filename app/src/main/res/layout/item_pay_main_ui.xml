@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/service_pay_method_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pay_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="余额支付"
+            android:textColor="#4B4B4B"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/service_pay_method_wallet_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/pay_index_icon"
+            android:gravity="right" />
+    </LinearLayout>
+
+</LinearLayout>

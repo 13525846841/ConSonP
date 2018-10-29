@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray_bg"
+    android:orientation="vertical"
+    tools:context="com.yksj.consultation.son.consultation.main.preferActivity">
+
+    <include
+        android:id="@+id/main_title"
+        layout="@layout/gray_title_layout" />
+
+    <TextView
+        android:id="@+id/coupon"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        android:divider="@drawable/divider_line"
+        android:dividerPadding="16dp"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/coupons"
+        android:drawableRight="@drawable/arrows"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:showDividers="middle"
+        android:text="优惠劵"
+        android:padding="12dp"
+        android:textColor="@color/color_text1"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/native_activity"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        android:divider="@drawable/divider_line"
+        android:dividerPadding="16dp"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/nativeatv"
+        android:drawableRight="@drawable/arrows"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:showDividers="middle"
+        android:layout_marginTop="1dp"
+        android:text="本地活动"
+        android:padding="12dp"
+        android:textColor="@color/color_text1"
+        android:textSize="16sp" />
+</LinearLayout>

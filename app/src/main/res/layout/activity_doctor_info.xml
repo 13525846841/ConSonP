@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.yksj.consultation.son.home.DoctorInfoActivity">
+<RelativeLayout
+    android:background="@color/color_blue"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+    <ImageView
+        android:id="@+id/title_back"
+        style="@style/title_btn_style"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp"
+        android:singleLine="true"
+        android:src="@drawable/icon_back"
+        android:textColor="#136dd7"
+        android:textSize="16sp" />
+
+    <TextView
+        android:text="xxx医生主页"
+        android:id="@+id/homeTitle"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <ImageView
+        android:layout_centerVertical="true"
+        android:padding="5dp"
+        android:layout_toLeftOf="@+id/docShare"
+        android:src="@drawable/sel_care"
+        android:id="@+id/docAttention"
+        android:layout_marginRight="5dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+    <ImageView
+        android:layout_centerVertical="true"
+        android:padding="5dp"
+        android:layout_marginRight="12dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/share2"
+        android:id="@+id/docShare"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+</RelativeLayout>
+
+    <TextView
+        android:id="@+id/tipTv"
+        android:text="加载中..."
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <View
+                    android:background="@color/color_blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"/>
+                <View
+                    android:layout_marginTop="75dp"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="73dp"/>
+                <View
+                    android:layout_marginTop="148dp"
+                    android:background="@color/color_blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"/>
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <FrameLayout
+                        android:id="@+id/avatarFrame"
+                        android:background="@drawable/shape_doctor_info_avatar"
+                        android:layout_width="78dp"
+                        android:layout_height="78dp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/doctorAvatar"
+                            android:layout_gravity="center"
+                            android:layout_width="74dp"
+                            android:layout_height="74dp"
+                            app:civ_border_color="@color/color_blue"
+                            app:civ_border_width="2dp"
+                            android:src="@drawable/ic_launcher"/>
+                    </FrameLayout>
+
+                    <LinearLayout
+
+                        android:orientation="vertical"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:layout_marginTop="7dp"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:text="某某某"
+                            android:id="@+id/doctorName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/doctorAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="上海虹口"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_marginTop="1dp"
+                            android:textColor="@color/color_blue"
+                            android:textSize="12sp"
+                            android:text="主任医师"
+                            android:id="@+id/chiefDoctor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:textColor="@color/color_blue"
+                            android:textSize="12sp"
+                            android:text="儿童发育行为科"
+                            android:id="@+id/hospital_department"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textColor="@color/color_blue"
+                            android:textSize="12sp"
+                            android:text="上海六一儿童医院"
+                            android:id="@+id/doctor_info_hospital"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <LinearLayout
+                    android:id="@+id/QRLine"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/doctor_info_qrcode"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" />
+
+                    <TextView
+                        android:text="二维码"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/shareLine"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/doctor_info_share"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" />
+
+                    <TextView
+                        android:text="名医分享"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/LectureHallLine"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/doctor_info_gerenjiangtang"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" />
+
+                    <TextView
+                        android:text="个人讲堂"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/wordLinear"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/doctor_gongzongzhan"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" />
+
+                    <TextView
+                        android:text="工作站"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#e5e5e7"
+                android:layout_height="5dp"/>
+
+            <LinearLayout
+                android:id="@+id/lineWork"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/work_xing" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="工作站介绍"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/worksRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/work_xing" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="医生介绍"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/doctorIntroduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="1.5dp"
+                    android:maxLines="3"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:text="上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/doctorIntroductionMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="12dp"
+                        android:text="阅读更多"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d5d7db" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/work_xing" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="用户评价"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:textSize="12sp"
+                    android:id="@+id/userEvaluateName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:text="王奶奶:"
+                    android:textColor="@color/txt_gary" />
+
+                <TextView
+                    android:id="@+id/userEvaluateContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="1.5dp"
+                    android:maxLines="3"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:text="上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/moreEvaluate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="12dp"
+                        android:text="查看更多"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d5d7db" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/work_xing" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="医生服务"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/worksServiceRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d5d7db" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/doctorServiceRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d5d7db" />
+            <LinearLayout
+                android:id="@+id/homeTools"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <ImageView
+                    android:src="@drawable/tools_box"
+                    android:layout_marginLeft="12dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="工具箱"
+                    />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/calender_right" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/toolsRecycler"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#e5e5e7"
+                android:layout_height="5dp"/>
+
+            <Button
+                android:id="@+id/menzenyuyueBtn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/shape_workstation_btn_bg"
+                android:text="门诊预约"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

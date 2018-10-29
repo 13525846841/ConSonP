@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/gray_title_layout" />
+
+    <LinearLayout
+        android:id="@+id/input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            style="@style/text_check_Linearlayout"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/textview_background_up" >
+
+            <RelativeLayout style="@style/text_check_relativeLayout" >
+
+                <EditText
+                    android:id="@+id/pwd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:numeric="integer"
+                    android:singleLine="true"
+                    android:maxLength="6"
+                    android:layout_centerInParent="true"
+                    android:background="@null"
+                    android:password="true"
+                    android:hint="输入新的支付密码(6位数字)" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/text_check_Linearlayout"
+            android:background="@drawable/textview_background_down" >
+
+            <RelativeLayout style="@style/text_check_relativeLayout" >
+
+                <EditText
+                    android:id="@+id/re_pwd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                     android:numeric="integer"
+                     android:singleLine="true"
+                    android:password="true"
+                    android:layout_centerInParent="true"
+                     android:maxLength="6"
+                    android:background="@null"
+                    android:hint="再次输入支付密码(6位数字)" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/change"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            style="@style/text_check_Linearlayout"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_background_single"
+            android:onClick="onClickChangePwd" >
+
+            <RelativeLayout style="@style/text_check_relativeLayout" >
+
+                <TextView
+                    style="@style/info_text_left"
+                    android:layout_centerVertical="true"
+                    android:text="修改支付密码" />
+
+                <ImageView
+                    android:id="@+id/image_but1"
+                    style="@style/text_check_imageview" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/text_check_Linearlayout"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/text_background_single"
+            android:onClick="onClickforgetPassword" >
+
+            <RelativeLayout style="@style/text_check_relativeLayout" >
+
+                <TextView
+                    android:id="@+id/suozaidi"
+                    style="@style/info_text_left"
+                    android:layout_centerVertical="true"
+                    android:text="忘记支付密码" />
+
+                <ImageView
+                    android:id="@+id/image_but2"
+                    style="@style/text_check_imageview" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

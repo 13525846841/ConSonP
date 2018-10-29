@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/linear_layout_style1" >
+
+    <!-- 第一个人 -->
+
+    <RelativeLayout
+        android:id="@+id/frist_person"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <com.dmsj.newask.Views.CircleImageView
+            android:id="@+id/frist_person_head"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/expert_header_image" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/frist_person_head" >
+
+            <TextView
+                android:id="@+id/frist_person_name"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/frist_person_name"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/frist_Look_message"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/bt_short_double_green"
+                    android:text="看资料"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/frist_click_chat"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bt_short_double_orange"
+                    android:text="对话"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_line"
+        style="@style/common_split_line_1dp"
+        android:layout_marginTop="10dp" />
+    <!-- 第二个人 -->
+
+    <RelativeLayout
+        android:id="@+id/second_person"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <com.dmsj.newask.Views.CircleImageView
+            android:id="@+id/second_person_head"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/expert_header_image" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/second_person_head" >
+
+            <TextView
+                android:id="@+id/second_person_name"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/second_person_name"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/second_Look_message"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/bt_short_double_green"
+                    android:text="看资料"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+                <Button
+                    android:id="@+id/second_click_chat"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bt_short_double_orange"
+                    android:text="对话"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

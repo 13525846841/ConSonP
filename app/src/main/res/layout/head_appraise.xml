@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_color"
+    android:focusableInTouchMode="true"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="15.0dp"
+            android:text="会诊评价(可空)"
+            android:textColor="@color/color_text1"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="15.0dp"
+            android:text="0/200"
+            android:textColor="@color/color_text1"
+            android:textSize="@dimen/messageTextSize"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/et_evaluate"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:gravity="top|left"
+        android:hint="@string/evaluate_andsoon"
+        android:maxLength="200"
+        android:paddingLeft="10dp"
+        android:paddingRight="21.5dp"
+        android:paddingTop="19dp"
+        android:textColor="#444444"
+        android:textColorHint="#898989"
+        android:textSize="15sp"
+        android:visibility="visible" />
+
+</LinearLayout>

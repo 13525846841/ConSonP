@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:drawable="@drawable/icon_relation_attention" android:maxLevel="0"/>
+    <item
+        android:drawable="@drawable/icon_relation_cancel_attention" android:maxLevel="1"/>
+    <item
+        android:drawable="@drawable/icon_relation_cancel_lahei" android:maxLevel="2"/>
+    <item
+        android:drawable="@drawable/icon_relation_mutual_attention" android:maxLevel="3"/>
+</level-list>

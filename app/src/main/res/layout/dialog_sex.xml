@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginBottom="10.0dip"
+        android:layout_gravity="center_horizontal"
+        android:text="性别"
+        android:textSize="17sp"/>
+    <View
+        android:background="#ffdcdcdc"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip" />
+
+    <!--<com.yksj.consultation.son.views.LoopView-->
+        <!--android:id="@+id/lv_loop1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="center_horizontal"/>-->
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/wheel_lay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="2dp"
+            android:paddingTop="3dp" >
+
+            <com.yksj.consultation.son.views.WheelView
+                android:id="@+id/wheel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="13dp"
+                android:layout_weight="8.0" >
+            </com.yksj.consultation.son.views.WheelView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white" >
+            </LinearLayout>
+
+            <com.yksj.consultation.son.views.WheelView
+                android:id="@+id/wheel_right"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="13dp"
+                android:layout_marginTop="13dp"
+                android:layout_weight="7.0" >
+            </com.yksj.consultation.son.views.WheelView>
+
+            <LinearLayout
+                android:layout_width="8dp"
+                android:layout_height="fill_parent"
+                android:background="@null" >
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/wheel_val"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/wheel_val"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </FrameLayout>
+
+
+
+
+    <Button
+        android:id="@+id/finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="完成"
+        android:textSize="17sp"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:background="@color/color_blue"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>

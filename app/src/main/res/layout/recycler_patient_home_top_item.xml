@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+    <com.stx.xhb.xbanner.XBanner
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/xbanner"
+        app:isAutoPlay="true"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:AutoPlayTime="2000"
+        app:pointNormal="@drawable/shape_patient_home_indicator_unselect"
+        app:pointSelect="@drawable/shape_patient_home_indicator_select"
+        app:tipTextSize="12sp"
+        app:pointsPosition="CENTER"
+        app:pageChangeDuration="1000"/>
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="16dp"
+    android:background="@color/patient_home_bg_gray"/>
+<LinearLayout
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+   <TextView
+       android:text="特色服务"
+       android:textStyle="bold"
+       android:textSize="16sp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginLeft="12dp"
+        android:text="六一健康提供"
+        android:textColor="@color/text_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+    <TableLayout
+        android:paddingBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_marginTop="6dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp">
+            <ImageView
+                android:id="@+id/imgZhaoyisheng"
+                android:layout_weight="1"
+                android:src="@drawable/icon_zhaoyisheng"
+                android:scaleType="centerCrop"
+                android:layout_width="0dp"
+                android:layout_height="50dp"/>
+            <ImageView
+                android:scaleType="centerCrop"
+                android:id="@+id/imgDocTeam"
+                android:src="@drawable/icon_doctor_team"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="50dp"/>
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="6dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            >
+            <ImageView
+                android:scaleType="centerCrop"
+                android:id="@+id/imgZhaojigou"
+                android:src="@drawable/icon_zhaojigou"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="50dp"/>
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:id="@+id/imgLiuyiboshi"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/icon_liuyiboshi" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="6dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp">
+            <ImageView
+                android:scaleType="centerCrop"
+                android:id="@+id/imgDocShare"
+                android:src="@drawable/icon_doctor_share"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="50dp"/>
+            <ImageView
+                android:scaleType="centerCrop"
+                android:id="@+id/imgJiankangjiangtang"
+                android:src="@drawable/icon_jiankangjiangtang"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="50dp"/>
+        </TableRow>
+    </TableLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:background="@color/patient_home_bg_gray"/>
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/gray_title_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_opinion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/et_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="@null"
+                    android:gravity="left|top"
+                    android:hint="@string/input_consult_opinions"
+                    android:maxLength="1000"
+                    android:padding="10dp"
+                    android:textColorHint="#898989"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+
+            <View style="@style/common_split_line" />
+
+
+            <TextView
+                android:id="@+id/tv_addpic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/click_and_addpic"
+                android:textColor="#898989"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <com.yksj.consultation.son.views.TagsGridView
+                android:id="@+id/gv_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:horizontalSpacing="5dp"
+                android:gravity="center"
+                android:listSelector="@color/transparent"
+                android:numColumns="3"
+                android:verticalSpacing="5dp"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btn_savesubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bt_regist_sure"
+                android:gravity="center"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:scaleType="centerCrop"
+                android:text="@string/save_and_submit"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

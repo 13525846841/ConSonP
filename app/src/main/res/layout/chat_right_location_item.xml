@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:paddingLeft="50dp"
+    android:orientation="vertical" >
+    <TextView
+        android:id="@+id/chat_time"
+        android:layout_gravity="center_horizontal"
+        style="@style/chat_time"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+                <CheckBox
+            android:id="@+id/selected"
+             style="@style/chat_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10.0dp"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"
+            android:focusable="false"/>
+                
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right" >
+               <CheckBox
+            android:id="@+id/msg_state"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:paddingRight="3dp"
+            style="@style/sendStateStyle"/>
+           
+           <LinearLayout android:background="@drawable/chat_right_item_layout" android:layout_marginRight="5dp" android:orientation="vertical"  android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+	             <ImageView
+	                 	android:layout_gravity="center_horizontal"
+	                 	android:id="@+id/chat_content"
+	                    android:layout_width="150dp"
+	                    android:layout_height="150dp" />
+	             <TextView android:id="@+id/chat_location_txt" android:layout_height="match_parent" android:layout_width="match_parent"   style="@style/chatLocationTxt"/>
+	       </LinearLayout>
+
+        </LinearLayout>
+        	               <com.dmsj.newask.Views.CircleImageView
+            android:id="@+id/chat_head"
+             android:paddingTop="3dp"
+             android:paddingRight="4dp"
+             android:paddingLeft="4dp"
+             android:paddingBottom="2dp"
+             android:layout_gravity="top"
+             android:background="@drawable/default_head_female"
+             android:layout_marginLeft="8.0dp"
+                android:layout_marginRight="16.0dp"
+             android:layout_width="52.0dp"
+             android:layout_height="52.0dp"/>
+        
+    </LinearLayout>
+</LinearLayout>

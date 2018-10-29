@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBEFF7"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/main_title"
+        layout="@layout/commn_input_search3" />
+
+    <LinearLayout
+        android:id="@+id/goods_detail_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/color_selectorbar_gray_bg"
+        android:gravity="center_vertical"
+        android:layout_below="@id/main_title"
+        android:orientation="horizontal">
+
+        <com.yksj.consultation.son.views.DrawableCenterCheckBox
+            android:id="@+id/room_region"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:clickable="true"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/navigationbar_drawable"
+            android:ellipsize="end"
+            android:maxLength="6"
+            android:paddingLeft="15dp"
+            android:singleLine="true"
+            android:text="综合"
+            android:textColor="@drawable/selector_find_doctor_text_color"
+            android:textSize="12sp" />
+
+        <View style="@style/common_split_vertical_line" />
+
+        <com.yksj.consultation.son.views.DrawableCenterCheckBox
+            android:id="@+id/intelligent_sorting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/navigationbar_drawable"
+            android:ellipsize="end"
+            android:maxLength="6"
+            android:paddingLeft="15dp"
+            android:singleLine="true"
+            android:text="热销"
+            android:textColor="@drawable/selector_find_doctor_text_color"
+            android:textSize="12sp" />
+
+        <View style="@style/common_split_vertical_line" />
+        <com.yksj.consultation.son.views.DrawableCenterCheckBox
+            android:id="@+id/intelligent_sorting2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/navigationbar_drawable"
+            android:ellipsize="end"
+            android:maxLength="6"
+            android:paddingLeft="15dp"
+            android:singleLine="true"
+            android:text="价格"
+            android:textColor="@drawable/selector_find_doctor_text_color"
+            android:textSize="12sp" />
+
+        <View style="@style/common_split_vertical_line" />
+
+    </LinearLayout>
+
+        <!--<org.handmark.pulltorefresh.library.PullToRefreshListView-->
+            <!--xmlns:ptr="http://schemas.android.com/apk/res-auto"-->
+            <!--android:id="@+id/search_goods"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_above="@+id/ll_done"-->
+            <!--android:layout_below="@id/goods_detail_radiogroup"-->
+            <!--android:background="@null"-->
+            <!--android:divider="@color/color_gray_bg"-->
+            <!--android:gravity="center"-->
+            <!--android:scrollbars="none"-->
+            <!--ptr:ptrMode="both">-->
+
+        <!--</org.handmark.pulltorefresh.library.PullToRefreshListView>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_done"
+        android:layout_below="@id/goods_detail_radiogroup">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <org.handmark.pulltorefresh.library.PullToRefreshListView
+                xmlns:ptr="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/search_goods"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/ll_done"
+                android:background="@null"
+                android:divider="@color/color_gray_bg"
+                android:gravity="center"
+                android:listSelector="#00000000"
+                android:scrollbars="none"
+                ptr:ptrMode="both">
+
+            </org.handmark.pulltorefresh.library.PullToRefreshListView>
+
+            <include
+                android:id="@+id/empty_view_famous"
+                layout="@layout/loading_fail_data_null" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/main_shop" />
+
+
+        <ImageView
+            android:id="@+id/order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/order_shop" />
+    </LinearLayout>
+
+
+</RelativeLayout>

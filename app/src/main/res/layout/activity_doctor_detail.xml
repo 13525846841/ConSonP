@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:id="@+id/ll_main_doc_detail"
+    tools:context="com.yksj.consultation.son.home.MyDoctorPlan">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/gray_title_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/headerTxt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#2C2C2C"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/new_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#898989"
+                    android:textSize="15sp"/>
+
+                <LinearLayout
+                    android:id="@+id/news_count_images"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/contentTxt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="@color/color_text1"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_prase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:background="@drawable/ig_good_bg"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/good_action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/new_good_selector"
+                    android:drawablePadding="25dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/new_good_number_selector" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/gray_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <com.yksj.consultation.son.views.MyListView
+                    android:id="@+id/doctor_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@color/color_split_line"
+                    android:dividerHeight="0.5dp"
+                    android:listSelector="#00000000"
+                    android:scrollbars="none">
+
+                </com.yksj.consultation.son.views.MyListView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/gray_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="@string/pingl"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/totalCommentTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/shape_circle_comment_number_bg"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <com.yksj.consultation.son.views.MyListView
+                android:id="@+id/comment_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:divider="@color/color_split_line"
+                android:dividerHeight="0.5dp"
+                android:listSelector="#00000000"
+                android:scrollbars="none">
+
+            </com.yksj.consultation.son.views.MyListView>
+
+
+            <EditText
+                android:id="@+id/edit_commont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:padding="8dp"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:imeOptions="actionSearch"
+                android:background="@drawable/shape_edittext_search"
+                android:drawablePadding="15dp"
+                android:focusableInTouchMode="false"
+                android:hint="评论"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

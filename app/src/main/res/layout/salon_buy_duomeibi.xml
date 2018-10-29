@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/login_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/popwindow_top_bg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:text="六一健康"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/contentText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/buy_salon_ticket"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:id="@+id/rp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:id="@+id/day_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/login_et"
+                    android:layout_marginTop="24dp"
+                    android:button="@drawable/login_checkbox_choice"
+                    android:checked="true"
+                    android:singleLine="true"
+                    android:textColor="@color/tab_txt_gray"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/month_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:button="@drawable/login_checkbox_choice"
+                    android:singleLine="true"
+                    android:textColor="@color/tab_txt_gray"
+                    android:textSize="18sp" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+            <View 
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#cdcdcd"
+        />
+		         <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/cancelButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/popwindow_left_selector"
+                    android:gravity="center"
+                    android:minHeight="35dp"
+                    android:text="@string/cancel"
+                    android:textColor="@color/tab_txt_gray"
+                    android:textSize="18dp" />
+            <View 
+        android:layout_width="1px"
+        android:layout_height="fill_parent"
+        android:background="#cdcdcd"
+        />
+                <Button
+                    android:id="@+id/buyButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/popwindow_right_selector"
+                    android:gravity="center"
+                    android:minHeight="35dp"
+                    android:text="支付"
+                    android:textColor="@color/color_green_blue_bg"
+                    android:textSize="18dp" />
+            </LinearLayout>
+</LinearLayout>

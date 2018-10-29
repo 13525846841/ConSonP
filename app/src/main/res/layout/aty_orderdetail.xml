@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBEFF7"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/gray_title_layout" />
+
+    <org.handmark.pulltorefresh.library.PullToRefreshScrollView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_done"
+        android:layout_below="@+id/title"
+        android:background="@color/color_gray_bg"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        ptr:ptrMode="both">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_price"
+                style="@style/linear_hor_padding_16"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/textView_gray_16"
+                    android:text="会诊费用:" />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    style="@style/textView_gray_16"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    style="@style/textView_gray_16"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginStart="2dp"
+                    android:text="元" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line_view1"
+                style="@style/common_split_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_process"
+                style="@style/linear_hor_padding_16"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_process1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_gray"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_process1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:src="@drawable/arrow_gray" />
+
+                    <TextView
+                        android:id="@+id/tv_process2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_gray"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_process2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:src="@drawable/arrow_gray" />
+
+                    <TextView
+                        android:id="@+id/tv_process3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_gray"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_process3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:src="@drawable/arrow_gray" />
+
+                    <TextView
+                        android:id="@+id/tv_process4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_gray"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_consul"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="@color/color_blue"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/textView_gray_16"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp"
+                    android:text="会诊成员" />
+
+                <View style="@style/common_split_line" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="6dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_head_e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:padding="6dp">
+
+                        <ImageView
+                            android:id="@+id/image_head_e"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_head_none" />
+
+                        <TextView
+                            android:id="@+id/tv_expertName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/image_head_e"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="4dp"
+                            android:text="会诊专家"
+                            android:textColor="@color/text_gray" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_head_d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/rl_head_e"
+                        android:padding="6dp">
+
+                        <ImageView
+                            android:id="@+id/image_head_d"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_head_none" />
+
+                        <TextView
+                            android:id="@+id/tv_docName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/image_head_d"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="4dp"
+                            android:text="会诊医生"
+                            android:textColor="@color/text_gray" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_head_p"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/rl_head_d"
+                        android:padding="6dp">
+
+                        <ImageView
+                            android:id="@+id/image_head_p"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_head_none" />
+
+                        <TextView
+                            android:id="@+id/tv_patientname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/image_head_p"
+                            android:layout_centerHorizontal="true"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:layout_marginTop="4dp"
+                            android:textColor="@color/text_gray" />
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/btn_talk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16sp"
+                        android:background="@drawable/btn_selector"
+                        android:text="对话"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_casesupply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_tip"
+                    style="@style/application_title_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="left"
+                    android:text="病历补充要求"
+                    android:textColor="@color/red_text" />
+
+                <View
+                    android:id="@+id/view"
+                    style="@style/common_split_line"
+                    android:layout_below="@id/tv_tip" />
+
+                <TextView
+                    android:id="@+id/tv_casesupply"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/red_text"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_case"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <!-- <fragment
+                     android:id="@+id/fg_case"
+                     android:name="com.yksj.consultation.doc.casehistory.CaseShowFragment"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"/>-->
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </org.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/opinion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:textSize="16sp"
+            android:background="@drawable/btn_selector"
+            android:textColor="#ffffff"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/outpatient"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:textSize="16sp"
+            android:background="@drawable/btn_selector"
+            android:textColor="#ffffff"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/evaluate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:textSize="16sp"
+            android:background="@drawable/btn_selector"
+            android:textColor="#ffffff"
+            android:visibility="gone" />
+    </LinearLayout>
+</RelativeLayout>

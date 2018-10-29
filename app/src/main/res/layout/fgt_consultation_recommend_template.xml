@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView 
+        android:id="@+id/single_choise_tip"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:padding="10dp"
+    	android:textSize="17sp"
+    	android:text="您还没有接诊，接诊后可以为患者创建病历！"
+        />
+   <ScrollView 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+       >
+    <LinearLayout 
+        android:id="@+id/single_choise_layout"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical"
+    	android:visibility="gone"
+        >
+    
+    <TextView 
+        android:id="@+id/single_choise_name"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:padding="10dp"
+    	android:textSize="17sp"
+        />
+    <View style="@style/common_split_line"/>
+    <com.yksj.consultation.son.views.ScrollListView
+        android:id="@+id/single_choise_listview"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:paddingLeft="10dp"
+    	android:paddingRight="10dp"
+    	android:scrollbars="none"
+        >
+        
+    </com.yksj.consultation.son.views.ScrollListView>
+    <View style="@style/common_split_line"/>
+    <Button
+        android:id="@+id/single_choise_sure"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bt_regist_sure"
+        android:text="@string/sure"
+        android:textColor="@color/white" />
+    </LinearLayout>
+ </ScrollView>
+</LinearLayout>

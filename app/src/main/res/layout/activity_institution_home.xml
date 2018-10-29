@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/parentLayout"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_blue"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/title_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:drawableLeft="@drawable/title_back_selector"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/insHomeCitySelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvHomeAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="北京"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:padding="5dp"
+                android:src="@drawable/chensi_xiala"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+        </LinearLayout>
+
+
+        <EditText
+            android:padding="5dp"
+            android:id="@+id/insHomeSearchEdt"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/main_seach_icon"
+            android:enabled="true"
+            android:hint="输入查找工作站或医生的名字／疾病"
+            android:singleLine="true"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:padding="12dp"
+            android:src="@drawable/icon_more"
+            android:id="@+id/insHomeMore"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+    </LinearLayout>
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_below="@+id/topBar"
+        android:theme="@style/AppTabTheme"
+        android:layout_width="match_parent"
+        tools:context="com.yksj.consultation.son.home.InstitutionHomeActivity"
+        android:layout_height="match_parent">
+
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed|snap">
+                <LinearLayout
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/insHomeImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                       />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:id="@+id/insHomeTijian"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/icon_tianjia" />
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="体检中心" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/insHomeTuozhan"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/icon_tuozhan" />
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="拓展中心" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/insHomeKangfu"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/icon_kangfu" />
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="康复中心" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/insHomeXingque"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/icon_xingqu" />
+
+                            <TextView
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="兴趣中心" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    　
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="#e2e4e7"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="15dp"
+                        android:text="机构推荐"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+
+            <android.support.design.widget.TabLayout
+                app:tabBackground="@color/white"
+                android:id="@+id/insHomeTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:elevation="1dp"
+                app:layout_collapseMode="pin"
+                app:tabIndicatorColor="@color/color_blue"
+                app:tabSelectedTextColor="@color/black"
+                app:tabTextColor="@color/text_gray"
+                >
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="热门" />
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="新入" />
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="附近" />
+            </android.support.design.widget.TabLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/insHomePager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:id="@+id/otherAreaLinear"
+        android:visibility="gone"
+        android:layout_below="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="120dp"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:layout_weight="1"
+            android:id="@+id/provinceRecycler"
+            android:layout_width="0dp"
+            android:layout_height="200dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:background="#eeeeee"
+            android:layout_weight="1"
+            android:id="@+id/childCityRecycler"
+            android:layout_width="0dp"
+            android:layout_height="200dp"/>
+    </LinearLayout>
+</RelativeLayout>
+
+

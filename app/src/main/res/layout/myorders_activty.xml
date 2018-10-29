@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/gray_title_layout" />
+
+    <LinearLayout
+        android:id="@+id/ll_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+    <!-- <RadioGroup -->
+    <!-- android:id="@+id/myorders_radiogroup" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:background="@color/radiogroup_bg_gray" -->
+    <!-- android:orientation="horizontal" -->
+    <!-- > -->
+    <!-- <RadioButton -->
+    <!-- android:id="@+id/myorders_rbutton_all" -->
+    <!-- style="@style/find_friend_radiobutton" -->
+    <!-- android:checked="true" -->
+    <!-- android:text="@string/all" -->
+    <!-- /> -->
+    <!-- <RadioButton -->
+    <!-- android:id="@+id/myorders_rbutton_notserve" -->
+    <!-- style="@style/find_friend_radiobutton" -->
+    <!-- android:text="@string/orders_str_notserve" -->
+    <!-- /> -->
+    <!-- <RadioButton -->
+    <!-- android:id="@+id/myorders_rbutton_serving" -->
+    <!-- style="@style/find_friend_radiobutton" -->
+    <!-- android:layout_marginRight="1dp" -->
+    <!-- android:text="@string/orders_str_serving" -->
+    <!-- /> -->
+    <!-- </RadioGroup> -->
+
+
+    <!-- <android.support.v4.view.ViewPager -->
+    <!-- android:id="@+id/myorders_viewpager" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="0dp" -->
+    <!-- android:layout_weight="1" -->
+    <!-- > -->
+    <!-- </android.support.v4.view.ViewPager> -->
+
+</LinearLayout>

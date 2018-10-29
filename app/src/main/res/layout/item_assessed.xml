@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_head"
+                android:layout_width="@dimen/headView_w_l"
+                android:layout_height="@dimen/headView_h_l"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/default_head_mankind" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/image_head"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/assess_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="回复"
+                    android:textColor="@color/color_text_gray"
+                    android:textSize="14sp" />
+
+                <RatingBar
+                    android:id="@+id/rb_speed_assess"
+                    style="@style/MyRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="0" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="4dp"
+            android:layout_toRightOf="@id/image_head"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/assess_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="2016-1-13"
+                android:textColor="@color/color_text_gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_laoshi"
+                android:layout_marginTop="5dp"
+                android:text="这个医生非常不错哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈"
+                android:textColor="@color/color_text_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_reply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="4dp"
+            android:layout_toRightOf="@id/image_head"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/assess_reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="医生回复"
+                android:textColor="@color/color_text_gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/assess_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_laoshi"
+                android:layout_marginTop="5dp"
+                android:text="谢谢"
+                android:textColor="@color/color_text_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yksj.consultation.son.fragment.InstitutionInfoEvaluationFragment">
+
+    <include
+        android:id="@+id/load_faile_layout"
+        layout="@layout/loading_fail_data_null"/>
+
+</android.support.v4.widget.NestedScrollView>

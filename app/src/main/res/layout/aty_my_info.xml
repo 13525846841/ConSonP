@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/gray_title_layout"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="14dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="账号:"/>
+        <TextView
+            android:id="@+id/my_info_duomei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+        <View style="@style/common_split_line"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="14dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="姓名:"/>
+        <TextView
+            android:id="@+id/my_info_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="14dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="医院:"/>
+        <TextView
+            android:id="@+id/my_info_hospital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="14dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="所在地:"/>
+        <TextView
+            android:id="@+id/my_info_addr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="14dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="科室:"/>
+        <TextView
+            android:id="@+id/my_info_office"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="14dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="职称:"/>
+        <TextView
+            android:id="@+id/my_info_doc_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:id="@+id/my_info_specialty"
+            style="@style/clinic_layout_title_style"
+            android:text="医生专长" />
+
+        <View
+            style="@style/common_split_line"
+            android:layout_below="@id/my_info_specialty" />
+
+        <TextView
+            android:id="@+id/my_info_specialty_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/my_info_specialty"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingLeft="16dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:textColor="#4b4b4b"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/my_info_specialty_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/my_info_specialty_content"
+            android:paddingBottom="5dp"
+            android:paddingRight="15dp"
+            android:paddingTop="8dp"
+            android:src="@drawable/gengduos" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:id="@+id/my_info_resume"
+            style="@style/clinic_layout_title_style"
+            android:text="@string/jianjie" />
+
+        <View
+            style="@style/common_split_line"
+            android:layout_below="@id/my_info_resume" />
+
+        <TextView
+            android:id="@+id/my_info_resume_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/my_info_resume"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingLeft="16dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:textColor="#4b4b4b"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/my_info_resume_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/my_info_resume_content"
+            android:paddingBottom="5dp"
+            android:paddingRight="15dp"
+            android:paddingTop="8dp"
+            android:src="@drawable/gengduos" />
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@color/white">
+            <View
+                android:id="@+id/my_info_img_center_view"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"/>
+            <ImageView
+                android:id="@+id/my_info_img_real"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginRight="16dp"
+                android:layout_toLeftOf="@id/my_info_img_center_view"
+                android:src="@drawable/icon_upload_doc_head"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/my_info_img_real"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:textColor="@color/gray_text"
+                android:layout_toLeftOf="@id/my_info_img_center_view"
+                android:text="真实照片"/>
+            <ImageView
+                android:id="@+id/my_info_img_qualification"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@id/my_info_img_center_view"
+                android:src="@drawable/icon_upload_doc_paper"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:textColor="@color/gray_text"
+                android:layout_below="@id/my_info_img_qualification"
+                android:layout_toRightOf="@id/my_info_img_center_view"
+                android:text="医师证照片"/>
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/my_info_comment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:background="@color/white"
+        android:layout_marginTop="12dp">
+        <TextView
+            android:id="@+id/my_info_comment_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="14dp"
+            android:text="评价"
+            />
+        <TextView
+            android:id="@+id/my_info_comment_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/TextColorRed"
+            android:layout_toRightOf="@id/my_info_comment_tv"
+            android:text="(48)"
+            />
+        <TextView
+            android:id="@+id/my_info_comment_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dp"
+            android:paddingRight="14dp"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@drawable/pay_index_icon"
+            android:drawablePadding="3dp"
+            android:text="更多"
+            />
+
+
+    </RelativeLayout>
+        <com.yksj.consultation.son.views.ScrollListView
+            android:id="@+id/my_info_comment_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="14dp"
+            android:paddingLeft="14dp">
+
+        </com.yksj.consultation.son.views.ScrollListView>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

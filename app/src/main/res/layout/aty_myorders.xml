@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/gray_title_layout" />
+
+    <FrameLayout
+        android:id="@+id/fl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="37dp"
+        android:layout_below="@+id/include"
+        android:background="#FBFBFB"
+        android:paddingTop="2.5dp">
+
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="fill_parent"
+            android:layout_height="37dp"
+            android:orientation="horizontal"
+            android:paddingBottom="2.5dp">
+
+            <RadioButton
+                android:id="@+id/waitforhandle"
+                style="@style/common_viewpage_radiobutton"
+                android:checked="true"
+                android:text="待处理" />
+
+
+            <RadioButton
+                android:id="@+id/havedone"
+                style="@style/common_viewpage_radiobutton"
+                android:drawableEnd="@null"
+                android:drawableRight="@null"
+                android:text="已完成" />
+        </RadioGroup>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/common_line_vertical" />
+
+    </FrameLayout>
+
+
+    <include
+        layout="@layout/loading_fail_data_null"
+        android:visibility="gone" />
+
+    <View
+        style="@style/common_split_line"
+        android:layout_above="@+id/viewpager" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/fl_title" />
+
+</RelativeLayout>

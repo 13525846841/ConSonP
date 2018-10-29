@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/gray_title_layout"/>
+     <LinearLayout
+        android:layout_marginTop="10dp"
+                    android:id="@+id/setting_my_bindingweibo"
+                    style="@style/text_check_Linearlayout"
+                    android:background="@drawable/textview_background_up" >
+
+                    	<RelativeLayout style="@style/text_check_relativeLayout" >
+               <TextView
+                    style="@style/info_text_left"
+                    android:layout_centerVertical="true"
+                    android:text="@string/setting_mobile_number" />
+
+                <TextView
+                    android:id="@+id/phone_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#907a4c"
+                    android:textSize="15sp"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:singleLine="true" />
+            </RelativeLayout>
+            </LinearLayout>
+            
+      <LinearLayout
+                    android:id="@+id/setting_my_bindingweibo"
+                    style="@style/text_check_Linearlayout"
+                    android:background="@drawable/textview_background_middle" >
+
+                    	<RelativeLayout style="@style/text_check_relativeLayout" >
+
+                <TextView
+                    android:id="@+id/t"
+                   style="@style/info_text_left"
+                    android:layout_centerVertical="true"
+                    android:text="@string/auth" />
+
+                <Button
+                    android:onClick="onClickCode"
+                    android:id="@+id/code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:background="@drawable/yanzheng_code"
+                    android:text="@string/setting_huoqu_yanzhengma"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/setting_safe_yanzhengma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/code"
+                    android:layout_toRightOf="@id/t"
+                    android:background="@null"
+                    android:textSize="13sp"
+                    android:textColorHint="#b3b3b3"
+                    android:gravity="right"
+                    android:numeric="integer"
+                    android:singleLine="true" />
+            </RelativeLayout>
+            </LinearLayout>
+            
+      
+      <LinearLayout
+                    android:id="@+id/setting_my_bindingweibo"
+                    style="@style/text_check_Linearlayout"
+                    android:background="@drawable/textview_background_middle" >
+
+                    	<RelativeLayout style="@style/text_check_relativeLayout" >
+
+                <TextView
+                    android:id="@+id/t"
+                   style="@style/info_text_left"
+                    android:layout_centerVertical="true"
+                    android:text="新密码" />
+
+                <EditText 
+                    android:id="@+id/pwd"
+                    android:gravity="right"
+                    android:layout_toRightOf="@id/t"
+                    android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入新的支付密码"
+            android:textSize="15sp"
+            android:password="true"
+            android:numeric="integer"
+            android:maxLength="6"
+            android:background="@null"
+                    />
+            </RelativeLayout>
+            </LinearLayout>
+            
+      
+       <LinearLayout
+                    android:id="@+id/setting_my_bindingweibo"
+                    style="@style/text_check_Linearlayout"
+                    android:background="@drawable/textview_background_middle" >
+
+                    	<RelativeLayout style="@style/text_check_relativeLayout" >
+
+                <TextView
+                    android:id="@+id/t"
+                   style="@style/info_text_left"
+                    android:layout_centerVertical="true"
+                    android:text="确认密码" />
+
+                <EditText 
+                    android:id="@+id/re_pwd"
+                    android:gravity="right"
+                    android:layout_toRightOf="@id/t"
+                    android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="再次输入支付密码"
+            android:textSize="15sp"
+            android:background="@null"
+            android:password="true"
+            android:numeric="integer"
+            android:maxLength="6"
+                    />
+            </RelativeLayout>
+            </LinearLayout>
+
+</LinearLayout>

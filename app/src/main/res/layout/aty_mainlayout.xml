@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/main_title"
+        layout="@layout/gray_title_layout" />
+
+
+    <org.handmark.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fl_bottom"
+        android:layout_below="@id/main_title"
+        android:background="@color/color_gray_bg"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:scrollbars="none"
+        ptr:focusable="false"
+        ptr:ptrMode="both">
+        <!-- ptr:ptrAnimationStyle=""-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/fgt_myorders"
+                android:name="com.yksj.consultation.son.consultation.main.FgtMainOrders"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                tools:layout="@layout/fgt_mainorders" />
+
+            <View style="@style/common_split_line" />
+
+            <fragment
+                android:id="@+id/fgt_mymsg"
+                android:name="com.yksj.consultation.son.consultation.main.FgtMainMsg"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                tools:layout="@layout/fgt_mainmsg" />
+
+            <View style="@style/common_split_line" />
+            <!--<fragment-->
+                <!--android:id="@+id/fgt_myhot"-->
+                <!--android:name="com.yksj.consultation.son.consultation.main.FgtMainHot"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="72dp"-->
+                <!--tools:layout="@layout/fgt_mainmsg" />-->
+
+            <RelativeLayout
+                android:id="@+id/rl_consultation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/main_back" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/imge_consult"
+                        android:layout_width="132dp"
+                        android:layout_height="132dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/consult_selector" />
+
+                    <Button
+                        android:id="@+id/imge_smallone"
+                        android:layout_width="132dp"
+                        android:layout_height="132dp"
+                        android:layout_marginTop="24dp"
+                        android:background="@drawable/smallone_selector" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </org.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+
+    <FrameLayout
+        android:id="@+id/fl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_news"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/icon_newce"
+                    android:text=" 新闻中心"
+                    android:textColor="#7D7D7D" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_donate"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_donate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/icon_pubdon"
+                    android:gravity="center"
+                    android:text=" 公益活动"
+                    android:textColor="#7D7D7D" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_know"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_know"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/icon_heal"
+                    android:gravity="center"
+                    android:text=" 六一百科"
+                    android:textColor="#7D7D7D" />
+
+            </RelativeLayout>
+
+
+            <!--<Button-->
+            <!--android:id="@+id/btn_news"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/btn_green_consultation"-->
+            <!--android:text="新闻中心"-->
+            <!--android:textColor="@color/white" />-->
+
+            <!--<Button-->
+            <!--android:id="@+id/btn_donate"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/btn_green_consultation"-->
+            <!--android:text="公益援助"-->
+            <!--android:textColor="@color/white" />-->
+
+            <!--<Button-->
+            <!--android:id="@+id/btn_know"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/btn_green_consultation"-->
+            <!--android:text="健康百科"-->
+            <!--android:textColor="@color/white" />-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <View
+                    style="@style/common_split_line_vertical"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <View
+                    style="@style/common_split_line_vertical"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+
+</RelativeLayout>

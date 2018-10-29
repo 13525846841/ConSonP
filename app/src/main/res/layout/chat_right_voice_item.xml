@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="50dp"
+    android:paddingTop="10dp" >
+
+    <TextView
+        android:id="@+id/chat_time"
+        style="@style/chat_time"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chat_time"
+        android:descendantFocusability="blocksDescendants"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+            <CheckBox
+                android:id="@+id/selected"
+                style="@style/chat_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:focusable="false"
+                android:visibility="gone" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/msg_state"
+                style="@style/sendStateStyle"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="3dp"
+                android:singleLine="true"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/chat_progres"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_right_item_layout"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/chat_voice_length"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:maxLength="4"
+                    android:minWidth="35dp"
+                    android:singleLine="true"
+                    android:textColor="#2D2D2D" />
+
+                <FrameLayout
+                    android:id="@+id/voice_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:minWidth="45dp" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:minHeight="45dp"
+                        android:minWidth="45dp"
+                        android:scaleType="center"
+                        android:src="@drawable/right_gray_horn" />
+
+                    <ProgressBar
+                        android:id="@+id/voice_playing_progres"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="false"
+                        android:max="100"
+                        android:progressDrawable="@drawable/right_voice_progres" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <com.dmsj.newask.Views.CircleImageView
+                android:id="@id/chat_head"
+                android:layout_width="52.0dp"
+                android:layout_height="52.0dp"
+                android:layout_gravity="top"
+                android:layout_marginLeft="8.0dp"
+                android:layout_marginRight="16.0dp"
+                android:paddingBottom="2dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="3dp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

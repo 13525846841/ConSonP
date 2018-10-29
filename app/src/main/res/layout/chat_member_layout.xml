@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    android:orientation="vertical">
+
+    <include layout="@layout/gray_title_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:paddingBottom="8dp"
+        android:paddingLeft="26dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="会诊专家"
+            android:textColor="#C4C4C4" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="18dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="18dp">
+
+        <com.dmsj.newask.Views.CircleImageView
+            android:id="@+id/iv_expert"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/default_head_female" />
+
+        <TextView
+            android:id="@+id/tv_expert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_expert"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="6dp"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:paddingBottom="8dp"
+        android:paddingLeft="26dp"
+        android:paddingTop="8dp">
+        T
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="会诊医生"
+            android:textColor="#C4C4C4" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="18dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="18dp">
+
+        <com.dmsj.newask.Views.CircleImageView
+            android:id="@+id/iv_doctor"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/default_head_female" />
+
+        <TextView
+            android:id="@+id/tv_doctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_doctor"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="6dp"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:paddingBottom="8dp"
+        android:paddingLeft="26dp"
+        android:paddingTop="8dp">
+        T
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="患者"
+            android:textColor="#C4C4C4" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="18dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="18dp">
+
+        <com.dmsj.newask.Views.CircleImageView
+            android:id="@+id/iv_patient"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/default_head_female" />
+
+        <TextView
+            android:id="@+id/tv_patient"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/iv_patient"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="6dp"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</LinearLayout>

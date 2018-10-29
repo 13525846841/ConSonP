@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.yksj.consultation.son.home.EvaluationActivity">
+<include layout="@layout/title_layout"/>
+    <org.handmark.pulltorefresh.library.PullToRefreshListView
+        android:background="@color/white"
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/evaluationListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="2dp"
+        android:divider="@color/color_text_gray"
+        android:dividerHeight="0.5dp"
+        android:scrollbars="none"
+        ptr:ptrMode="both" />
+    <include
+        android:id="@+id/load_faile_layout"
+        android:visibility="gone"
+        layout="@layout/loading_fail_data_null"/>
+</LinearLayout>

@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yksj.consultation.son.fragment.InstitutionInfoActFragment">
+    <include layout="@layout/include_tip_tv" />
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/actRecycler"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    />
+
+    <android.support.v4.widget.NestedScrollView
+        android:visibility="gone"
+        android:id="@+id/load_faile_nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <include
+            android:id="@+id/load_faile_layout"
+            layout="@layout/loading_fail_data_null"/>
+    </android.support.v4.widget.NestedScrollView>
+
+    <Button
+        android:visibility="gone"
+        android:layout_gravity="bottom"
+        android:id="@+id/addAct"
+        android:text="添     加"
+        android:textSize="16sp"
+        android:background="@color/color_blue"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+</LinearLayout>

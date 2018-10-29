@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <LinearLayout
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+                <TextView
+                    android:id="@+id/selete_way_ke"
+                    android:textSize="20sp"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/gray_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/selete_way_num"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/gray_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:background="@color/gray_color">
+                <Button
+                    android:id="@+id/selete_way_one"
+                    android:text="自己找专家"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/bt_short_green"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:id="@+id/selete_way_two"
+                    android:text="帮我找专家"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bt_short_green"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        </LinearLayout>
+    <Button
+        android:id="@+id/close_way"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/close"
+        android:layout_width="48dp"
+        android:layout_height="48dp" />
+</RelativeLayout>
