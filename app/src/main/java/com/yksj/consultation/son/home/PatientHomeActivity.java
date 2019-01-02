@@ -74,7 +74,7 @@ public class PatientHomeActivity extends FragmentActivity implements OnRecyclerC
     private List<PatientHomeEntity.AllNewsBean> newsUrl;
     private PatientHomeAdapter patientHomeAdapter;
     private RecyclerView homeRecycler;
-//        private SwipeRefreshLayout swipeRefresh;
+    private SwipeRefreshLayout swipeRefresh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,11 +93,11 @@ public class PatientHomeActivity extends FragmentActivity implements OnRecyclerC
         findViewById(R.id.homeBaiKe).setOnClickListener(this);
         findViewById(R.id.homeMy).setOnClickListener(this);
         findViewById(R.id.homeHuiZhen).setOnClickListener(this);
-//        swipeRefresh = (SwipeRefreshLayout) findViewById(R.id.swipeRefresh);
-//        swipeRefresh.setOnRefreshListener(this);
-//        swipeRefresh.setProgressViewEndTarget(true,400);
-//        swipeRefresh.setColorSchemeColors(Color.parseColor("#37a6a2"));
-//        swipeRefresh.setRefreshing(true);
+        swipeRefresh = (SwipeRefreshLayout) findViewById(R.id.swipeRefresh);
+        swipeRefresh.setOnRefreshListener(this);
+        swipeRefresh.setProgressViewEndTarget(true,400);
+        swipeRefresh.setColorSchemeColors(Color.parseColor("#37a6a2"));
+        swipeRefresh.setRefreshing(true);
         imgUrl=new ArrayList<>();
         newsUrl=new ArrayList<>();
         homeRecycler = (RecyclerView) findViewById(R.id.homeRecycler);
@@ -125,7 +125,8 @@ public class PatientHomeActivity extends FragmentActivity implements OnRecyclerC
             @Override
             public void onError(Request request, Exception e) {
                 ToastUtil.onShow(PatientHomeActivity.this,"网络开小差啦",1000);
-//                swipeRefresh.setRefreshing(false);
+                swipeRefresh.setRefreshing(false);
+                homeRecycler.setEnabled(true);
             }
 
             @Override
@@ -135,8 +136,9 @@ public class PatientHomeActivity extends FragmentActivity implements OnRecyclerC
                 newsUrl.addAll(patientHomeEntity.getAllNews());
                 imgUrl.addAll(patientHomeEntity.getSowingList());
 //                patientHomeAdapter.notifyDataSetChanged();
-//                swipeRefresh.setRefreshing(false);
+                swipeRefresh.setRefreshing(false);
                 homeRecycler.setAdapter(patientHomeAdapter);
+                homeRecycler.setEnabled(true);
             }
         }, this);
     }
@@ -322,6 +324,7 @@ public class PatientHomeActivity extends FragmentActivity implements OnRecyclerC
 
     @Override
     public void onRefresh() {
+        homeRecycler.setEnabled(false);
         imgUrl.clear();
         newsUrl.clear();
         getData();

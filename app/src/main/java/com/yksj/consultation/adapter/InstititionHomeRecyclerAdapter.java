@@ -35,7 +35,8 @@ public class InstititionHomeRecyclerAdapter extends BaseRecyclerAdapter<Institut
         TextView typeTv = (TextView) holder.itemView.findViewById(R.id.typeTv);
         TextView addressTv = (TextView) holder.itemView.findViewById(R.id.addressTv);
         InstitutionHomeEntity.ResultBean resultBean = list.get(position);
-        Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(resultBean.getUNIT_PIC1())).error(R.drawable.waterfall_default).placeholder(R.drawable.waterfall_default).into(topImg);
+        Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(resultBean.getUNIT_PIC1())).error(R.drawable.waterfall_default).placeholder(R.drawable.waterfall_default)
+                .dontAnimate().into(topImg);
         titleTv.setText(resultBean.getUNIT_NAME());
         switch (resultBean.getCLASS_TYPE()) {
             case "1":

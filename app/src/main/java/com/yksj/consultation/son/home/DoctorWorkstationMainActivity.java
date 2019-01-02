@@ -173,7 +173,8 @@ public class DoctorWorkstationMainActivity extends Activity implements View.OnCl
     private void loadVpBanner(ViewPager workBannerVp, LinearLayout vpDotLinear) {
         for (int i=0;i<=0;i++){
             ImageView imageView = new ImageView(this);
-            Glide.with(DoctorWorkstationMainActivity.this).load(ImageLoader.getInstance().getDownPathUri(resultBean.getSiteInfo().getSITE_BIG_PIC())).centerCrop().placeholder(R.drawable.top_image).error(R.drawable.top_image).into(imageView);
+            Glide.with(DoctorWorkstationMainActivity.this).load(ImageLoader.getInstance().getDownPathUri(resultBean.getSiteInfo().getSITE_BIG_PIC())).centerCrop().placeholder(R.drawable.top_image)
+                    .dontAnimate().error(R.drawable.top_image).into(imageView);
             mBannerList.add(imageView);
         }
         workBannerVp.addOnPageChangeListener(this);

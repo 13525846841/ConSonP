@@ -184,7 +184,7 @@ public class HealthLectureHomeActivity extends Activity implements View.OnClickL
                     TextView tvDate = (TextView) inflate.findViewById(R.id.tvDate);
                     final HealthLectureRecEntity.ResultBean resultBean = result.get(i);
                     Glide.with(HealthLectureHomeActivity.this).load(ImageLoader.getInstance().getDownPathUri(resultBean.getSMALL_PIC()))
-                            .error(R.drawable.waterfall_default).placeholder(R.drawable.waterfall_default).into(img);
+                            .error(R.drawable.waterfall_default).placeholder(R.drawable.waterfall_default).dontAnimate().into(img);
                     title.setText(resultBean.getCOURSE_NAME());
                     name.setText(resultBean.getCOURSE_UP_NAME());
                     tvDate.setText(TimeUtil.getTimeStr8(resultBean.getCOURSE_UP_TIME()));

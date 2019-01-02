@@ -443,6 +443,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".login.WelcomeActivity"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name=".consultation.CommonwealAidAty"
@@ -865,7 +866,8 @@
             android:name=".home.InstitutionDoingActivity"
             android:windowSoftInputMode="stateVisible|adjustResize" />
         <activity android:name=".home.InstitutionInfoMainActivity" />
-        <activity android:name=".home.PatientHomeActivity"></activity>
+        <activity android:name=".home.PatientHomeActivity"
+            android:launchMode="singleTask"/>
     </application>
 
 </manifest>

@@ -2,6 +2,7 @@ package com.yksj.healthtalk.net.http;
 
 import android.content.Context;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
@@ -65,6 +66,7 @@ public class HttpRestClient {
         requestParams.put("version", version);
         requestParams.put("iostype", "1");
         mAsyncHttpClient.post(mHttpUrls.URL_APP_VERSIONCHECK, requestParams, handler);
+        Log.i("kkk", "doHttpCheckAppVersion: "+mHttpUrls.URL_APP_VERSIONCHECK+"?version="+version+"&iostype=1");
     }
 
     /**

@@ -74,7 +74,7 @@ public class QRcodeDoctorActivity extends FragmentActivity implements View.OnCli
         imQRcode.setOnClickListener(this);
         findViewById(R.id.QRShare).setOnClickListener(this);
         if (imgHeader!=null){
-            Glide.with(this).load(ImageLoader.getInstance().getDownPathUri(imgHeader)).placeholder(R.drawable.default_head_doctor)
+            Glide.with(this).load(ImageLoader.getInstance().getDownPathUri(imgHeader)).placeholder(R.drawable.default_head_doctor).dontAnimate()
                     .error(R.drawable.default_head_doctor).into(doctorHeader);
         }else {
             doctorHeader.setVisibility(View.GONE);
@@ -87,7 +87,7 @@ public class QRcodeDoctorActivity extends FragmentActivity implements View.OnCli
         findViewById(R.id.title_back).setOnClickListener(this);
         TextView title= (TextView) findViewById(R.id.title_lable);
         title.setText("二维码");
-        Glide.with(this).load(qrCodeUrl).error(R.drawable.waterfall_default).placeholder(R.drawable.waterfall_default).into(imQRcode);
+        Glide.with(this).load(qrCodeUrl).error(R.drawable.waterfall_default).placeholder(R.drawable.waterfall_default).dontAnimate().into(imQRcode);
 //        if (doctor_Id!=-1){
 //            loadQR();
 //        }

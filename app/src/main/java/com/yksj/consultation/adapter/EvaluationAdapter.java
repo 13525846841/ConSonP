@@ -37,7 +37,7 @@ public class EvaluationAdapter extends SimpleBaseAdapter<EvaluationEntity.Result
         TextView content= (TextView) convertView.findViewById(R.id.content);
         EvaluationEntity.ResultBean resultBean = datas.get(position);
         Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(resultBean.getBIG_ICON_BACKGROUND()))
-                .error(R.drawable.default_head_patient).placeholder(R.drawable.default_head_patient)
+                .error(R.drawable.default_head_patient).placeholder(R.drawable.default_head_patient).dontAnimate()
                 .into(header);
         nickName.setText(resultBean.getCUSTOMER_NAME());
         time.setText(TimeUtil.getFormatDate(resultBean.getEVALUATE_TIME()));

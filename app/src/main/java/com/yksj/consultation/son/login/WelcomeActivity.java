@@ -73,7 +73,7 @@ public class WelcomeActivity extends BaseFragmentActivity {
 	private void onHandleLogin() {
 		Intent intent = new Intent(WelcomeActivity.this, PatientHomeActivity.class);
 		startActivity(intent);
-		finish();
+		this.finish();
 	}
 
 	/**
@@ -100,7 +100,7 @@ public class WelcomeActivity extends BaseFragmentActivity {
 //			CoreService.actionLogin(this);
 			Intent intent = new Intent(WelcomeActivity.this, PatientHomeActivity.class);
 			startActivity(intent);
-			finish();
+			this.finish();
 		} catch (Exception e) {
 			SharePreUtils.updateLoginState(false);
 			onHandleLogin();

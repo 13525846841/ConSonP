@@ -39,7 +39,7 @@ public class DoctorTeamGridAdapter extends SimpleBaseAdapter<DoctorworksTeamEnti
         TextView doctorDepartment= (TextView) convertView.findViewById(R.id.doctorDepartment);
         DoctorworksTeamEntity.ResultBean resultBean = datas.get(position);
         Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(resultBean.getBIG_ICON_BACKGROUND()))
-                .placeholder(R.drawable.default_head_doctor).error(R.drawable.default_head_doctor).into(imHeader);
+                .placeholder(R.drawable.default_head_doctor).dontAnimate().error(R.drawable.default_head_doctor).into(imHeader);
         doctorName.setText(resultBean.getDOCTOR_REAL_NAME());
         doctorAddress.setText(resultBean.getWORK_LOCATION_DESC());
         doctorJobTitle.setText(resultBean.getTITLE_NAME());

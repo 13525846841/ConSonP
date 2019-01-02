@@ -36,7 +36,9 @@ public class HospitalFindTeamAdapter extends SimpleBaseAdapter<HospitaFindTeamEn
         TextView tvLook = (TextView) convertView.findViewById(R.id.tvLook);
         TextView doctorCount = (TextView) convertView.findViewById(R.id.doctorCount);
         HospitaFindTeamEntity.ResultBean.ListBean listBean = datas.get(position);
-        Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(listBean.getSITE_BIG_PIC())).error(R.drawable.default_head_doctor).placeholder(R.drawable.default_head_doctor).into(imDoctorHeader);
+        Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(listBean.getSITE_BIG_PIC()))
+                .error(R.drawable.default_head_doctor).placeholder(R.drawable.default_head_doctor)
+                .dontAnimate().into(imDoctorHeader);
         Log.i("hhh", "getItemView: " + ImageLoader.getInstance().getDownPathUri(listBean.getSITE_BIG_PIC()));
         doctorName.setText(listBean.getDOCTOR_NAME());
         department.setText(listBean.getOFFICE_NAME());

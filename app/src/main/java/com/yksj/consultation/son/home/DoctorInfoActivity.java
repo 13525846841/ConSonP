@@ -295,7 +295,7 @@ public class DoctorInfoActivity extends Activity implements View.OnClickListener
                 qrCodeUrl=result.getQrCodeUrl();
                 homeTitle.setText(result.getDOCTOR_REAL_NAME()+"医生主页");
                 Glide.with(DoctorInfoActivity.this).load(ImageLoader.getInstance().getDownPathUri(result.getICON_DOCTOR_PICTURE()))
-                        .placeholder(R.drawable.default_head_doctor).error(R.drawable.default_head_doctor).into(doctorAvatar);
+                        .placeholder(R.drawable.default_head_doctor).dontAnimate().error(R.drawable.default_head_doctor).into(doctorAvatar);
                 doctorName.setText(result.getDOCTOR_REAL_NAME());
                 doctorAddress.setText(result.getWORK_LOCATION_DESC());
                 chiefDoctor.setText(result.getTITLE_NAME());

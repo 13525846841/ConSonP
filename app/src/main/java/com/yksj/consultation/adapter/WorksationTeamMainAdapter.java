@@ -43,7 +43,8 @@ public class WorksationTeamMainAdapter extends RecyclerView.Adapter<WorksationTe
     @Override
     public void onBindViewHolder(WorksationHolder holder, int position) {
         DoctorWorkstationMainEntity.ResultBean.SiteMemberBean model = list.get(position);
-        Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(model.getICON_DOCTOR_PICTURE())).placeholder(R.drawable.default_head_doctor)
+        Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(model.getICON_DOCTOR_PICTURE()))
+                .placeholder(R.drawable.default_head_doctor).dontAnimate()
                 .error(R.drawable.default_head_doctor).into(holder.imgHeader);
         holder.doctorName.setText(model.getDOCTOR_REAL_NAME());
         holder.doctorAddress.setText(model.getWORK_LOCATION_DESC());

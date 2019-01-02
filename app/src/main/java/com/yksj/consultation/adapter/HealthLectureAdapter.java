@@ -2,6 +2,7 @@ package com.yksj.consultation.adapter;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -38,9 +39,10 @@ public class HealthLectureAdapter extends SimpleBaseAdapter<HealthLectureWorksEn
         TextView time= (TextView) convertView.findViewById(R.id.time);
         TextView priceStatus= (TextView) convertView.findViewById(R.id.priceStatus);
         HealthLectureWorksEntity.ResultBean resultBean = datas.get(position);
+        Log.i("kkk", "getItemView: "+ImageLoader.getInstance().getDownPathUri(resultBean.getSMALL_PIC()));
         Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(resultBean.getSMALL_PIC()))
                 .error(R.drawable.waterfall_default)
-                .placeholder(R.drawable.waterfall_default)
+                .placeholder(R.drawable.waterfall_default).dontAnimate()
                 .into(imHead);
         docName.setText(resultBean.getCOURSE_UP_NAME());
         title.setText(resultBean.getCOURSE_NAME());

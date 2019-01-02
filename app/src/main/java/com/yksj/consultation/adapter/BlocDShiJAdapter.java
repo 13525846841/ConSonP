@@ -52,7 +52,8 @@ public class BlocDShiJAdapter extends RecyclerView.Adapter<BlocDShiJAdapter.DsjV
             holder.viewRight.setVisibility(View.VISIBLE);
             holder.dsjTime1.setText(TimeUtil.getTimeStr8(listBean.getEVENT_TIME()));
             holder.tvDsjTitle1.setText(listBean.getEVENT_TITLE());
-            Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(imgUrl)).error(R.drawable.waterfall_default).placeholder(R.drawable.waterfall_default).into(holder.imgDsj1);
+            Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(imgUrl)).error(R.drawable.waterfall_default).placeholder(R.drawable.waterfall_default).dontAnimate()
+                    .into(holder.imgDsj1);
         }else {
             if (position%2!=0) {
                 holder.viewLeft.setVisibility(View.VISIBLE);
@@ -61,7 +62,7 @@ public class BlocDShiJAdapter extends RecyclerView.Adapter<BlocDShiJAdapter.DsjV
                 holder.lineBlocRight.setVisibility(View.INVISIBLE);
                 holder.dsjTime.setText(TimeUtil.getTimeStr8(listBean.getEVENT_TIME()));
                 holder.tvDsjTitle.setText(listBean.getEVENT_TITLE());
-                Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(imgUrl)).error(R.drawable.waterfall_default).placeholder(R.drawable.waterfall_default).into(holder.imgDsj);
+                Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(imgUrl)).error(R.drawable.waterfall_default).placeholder(R.drawable.waterfall_default).dontAnimate().into(holder.imgDsj);
             }else {
                 holder.viewLeft.setVisibility(View.INVISIBLE);
                 holder.viewRight.setVisibility(View.VISIBLE);
@@ -69,7 +70,7 @@ public class BlocDShiJAdapter extends RecyclerView.Adapter<BlocDShiJAdapter.DsjV
                 holder.lineBlocRight.setVisibility(View.VISIBLE);
                 holder.dsjTime1.setText(TimeUtil.getTimeStr8(listBean.getEVENT_TIME()));
                 holder.tvDsjTitle1.setText(listBean.getEVENT_TITLE());
-                Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(imgUrl)).error(R.drawable.waterfall_default).placeholder(R.drawable.waterfall_default).into(holder.imgDsj1);
+                Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(imgUrl)).error(R.drawable.waterfall_default).placeholder(R.drawable.waterfall_default).dontAnimate().into(holder.imgDsj1);
             }
             holder.imgTopJianTou.setVisibility(View.GONE);
         }

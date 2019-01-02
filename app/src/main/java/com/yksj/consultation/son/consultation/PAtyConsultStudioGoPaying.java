@@ -835,7 +835,6 @@ public class PAtyConsultStudioGoPaying extends BaseFragmentActivity implements
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
         if (requestCode == 1 && resultCode == RESULT_OK) {
             isSetPsw = true;
         } else if (requestCode == 2 && resultCode == RESULT_OK) {
@@ -1292,7 +1291,8 @@ public class PAtyConsultStudioGoPaying extends BaseFragmentActivity implements
             valuePairs.add(new BasicNameValuePair("op", "buyCourse"));
         }else {
             valuePairs.add(new BasicNameValuePair("op", "Reward"));
-        }     valuePairs.add(new BasicNameValuePair("course_id", course_id));
+        }
+        valuePairs.add(new BasicNameValuePair("course_id", course_id));
      valuePairs.add(new BasicNameValuePair("type", "2"));
      valuePairs.add(new BasicNameValuePair("course_price", price));
      valuePairs.add(new BasicNameValuePair("customer_id", LoginServiceManeger.instance().getLoginUserId()));

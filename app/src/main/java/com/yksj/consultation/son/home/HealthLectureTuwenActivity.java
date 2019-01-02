@@ -42,7 +42,7 @@ public class HealthLectureTuwenActivity extends Activity implements View.OnClick
         TextView time= (TextView) findViewById(R.id.time);
         time.setText(TimeUtil.getTimeStr8(tuwenTime));
         ImageView img= (ImageView) findViewById(R.id.img);
-        Glide.with(this).load(ImageLoader.getInstance().getDownPathUri(pic)).error(R.drawable.waterfall_default).placeholder(R.drawable.waterfall_default).into(img);
+        Glide.with(this).load(ImageLoader.getInstance().getDownPathUri(pic)).error(R.drawable.waterfall_default).placeholder(R.drawable.waterfall_default).dontAnimate().into(img);
         TextView content= (TextView) findViewById(R.id.content);
         content.setText(content1);
     }

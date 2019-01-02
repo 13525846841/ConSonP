@@ -60,4 +60,12 @@
         android:layout_toEndOf="@+id/imgNews"
         android:text="TextView" />
 
+    <View
+        android:layout_below="@+id/imgNews"
+        android:id="@+id/bottomV"
+        android:layout_width="match_parent"
+        android:background="@color/patient_home_bg_gray"
+        android:layout_marginTop="5dp"
+        android:layout_height="15dp"/>
+
 </RelativeLayout>

@@ -7,10 +7,10 @@
     android:orientation="vertical"
     android:clipChildren="false"
     tools:context="com.yksj.consultation.son.home.PatientHomeActivity">
-<!--<android.support.v4.widget.SwipeRefreshLayout-->
-    <!--android:id="@+id/swipeRefresh"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content">-->
+<android.support.v4.widget.SwipeRefreshLayout
+    android:id="@+id/swipeRefresh"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
     <android.support.v7.widget.RecyclerView
         android:paddingTop="50dp"
         android:paddingBottom="50dp"
@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
-<!--</android.support.v4.widget.SwipeRefreshLayout>-->
+</android.support.v4.widget.SwipeRefreshLayout>
 
 
     <LinearLayout

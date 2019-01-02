@@ -71,6 +71,7 @@ public class HomeBannerView extends FrameLayout implements ViewPager.OnPageChang
             public Object instantiateItem(ViewGroup container, int position) {
                 ImageView imageView = new ImageView(context);
                 Glide.with(context).load(list.get(position)).centerCrop().placeholder(R.drawable.waterfall_default)
+                        .dontAnimate()
                         .error(R.drawable.waterfall_default).into(imageView);
                 container.addView(imageView);
                 return imageView;

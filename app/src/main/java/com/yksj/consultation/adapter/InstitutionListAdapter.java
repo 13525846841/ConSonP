@@ -39,7 +39,7 @@ public class InstitutionListAdapter extends SimpleBaseAdapter<InstitutionHomeEnt
         TextView typeTv = (TextView) convertView.findViewById(R.id.typeTv);
         TextView addressTv = (TextView) convertView.findViewById(R.id.addressTv);
         InstitutionHomeEntity.ResultBean resultBean = datas.get(position);
-        Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(resultBean.getUNIT_PIC1())).error(R.drawable.waterfall_default).placeholder(R.drawable.waterfall_default).into(leftImg);
+        Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(resultBean.getUNIT_PIC1())).error(R.drawable.waterfall_default).placeholder(R.drawable.waterfall_default).dontAnimate().into(leftImg);
         titleTv.setText(resultBean.getUNIT_NAME());
         switch (resultBean.getCLASS_TYPE()) {
             case "1":

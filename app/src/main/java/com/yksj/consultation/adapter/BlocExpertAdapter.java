@@ -51,7 +51,8 @@ public class BlocExpertAdapter extends SimpleBaseAdapter<BlocExpertEntity.Result
             hospotal=site_hospotal.toString();
         }
         tvHospital.setText(hospotal);
-        Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(listBean.getICON_DOCTOR_PICTURE())).error(R.drawable.default_head_doctor).placeholder(R.drawable.default_head_doctor).into(imgHeader);
+        Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(listBean.getICON_DOCTOR_PICTURE())).error(R.drawable.default_head_doctor).placeholder(R.drawable.default_head_doctor)
+                .dontAnimate().into(imgHeader);
         SpannableString spTextAtt = new SpannableString(textAtt);
         ForegroundColorSpan foregroundColorSpan = new ForegroundColorSpan(Color.parseColor("#41b8b6"));
         spTextAtt.setSpan(foregroundColorSpan,2,textAtt.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);

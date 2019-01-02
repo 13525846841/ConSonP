@@ -2,6 +2,7 @@ package com.yksj.consultation.son.app;
 
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.View;
 
 import com.alibaba.fastjson.JSONObject;
@@ -34,6 +35,9 @@ public class AppUpdateManager {
             @Override
             public void onSuccess(int statusCode, final JSONObject response) {
                 super.onSuccess(statusCode, response);
+
+                Log.i("kkk", "onSuccess: "+response);
+
                 if (mActivity.isFinishing()) {
                     mActivity = null;
                     return;

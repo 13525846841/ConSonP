@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -58,7 +59,7 @@ public class PatientHomeAdapter extends RecyclerView.Adapter<PatientHomeAdapter.
         if (viewType==1){
             return new PatientViewHolder(View.inflate(context, R.layout.recycler_patient_home_top_item,null));
         }else {
-            return new PatientViewHolder(View.inflate(context, R.layout.recycler_patient_home_bottom_item,null));
+            return new PatientViewHolder(LayoutInflater.from(context).inflate( R.layout.recycler_patient_home_bottom_item,parent,false));
         }
     }
 
@@ -75,7 +76,7 @@ public class PatientHomeAdapter extends RecyclerView.Adapter<PatientHomeAdapter.
                 @Override
                 public void loadBanner(XBanner banner, Object model, View view, int position) {
                     PatientHomeEntity.SowingListBean sowingListBean = (PatientHomeEntity.SowingListBean) imgUrlList.get(position);
-                    Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(sowingListBean.getSowingMap())).placeholder(R.drawable.waterfall_default).error(R.drawable.waterfall_default).into((ImageView) view);
+                    Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(sowingListBean.getSowingMap())).placeholder(R.drawable.waterfall_default).dontAnimate().error(R.drawable.waterfall_default).into((ImageView) view);
                 }
             });
             holder.imgZhaoyisheng.setOnClickListener(this);
@@ -85,10 +86,12 @@ public class PatientHomeAdapter extends RecyclerView.Adapter<PatientHomeAdapter.
             holder.imgDocShare.setOnClickListener(this);
             holder.imgJiankangjiangtang.setOnClickListener(this);
         }else {
-            if (dataList.get(1).size()==0)return;
-            PatientHomeEntity.AllNewsBean allNewsBean= (PatientHomeEntity.AllNewsBean)dataList.get(1).get(position-1);
+            List newsList = dataList.get(1);
+            if (newsList.size()==0)return;
+            PatientHomeEntity.AllNewsBean allNewsBean= (PatientHomeEntity.AllNewsBean) newsList.get(position-1);
             Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(allNewsBean.getINFO_PICTURE()))
-                    .placeholder(R.drawable.waterfall_default).error(R.drawable.waterfall_default)
+                    .placeholder(R.drawable.waterfall_default).dontAnimate()
+                    .error(R.drawable.waterfall_default)
                     .centerCrop().into(holder.imgNews);
             holder.tvNewsTitle.setText(allNewsBean.getINFO_NAME());
             holder.tvNewsTime.setText(TimeUtil.getTimeStr8(allNewsBean.getPUBLISH_TIME()));
@@ -104,6 +107,11 @@ public class PatientHomeAdapter extends RecyclerView.Adapter<PatientHomeAdapter.
             }else {
                 holder.tvRightTip.setVisibility(View.GONE);
                 holder.tvNewsMore.setVisibility(View.GONE);
+            }
+            if (newsList.size()==position){
+                holder.bottomV.setVisibility(View.VISIBLE);
+            }else {
+                holder.bottomV.setVisibility(View.GONE);
             }
         }
     }
@@ -156,8 +164,7 @@ public class PatientHomeAdapter extends RecyclerView.Adapter<PatientHomeAdapter.
                break;
            case R.id.imgJiankangjiangtang:
                Intent intent4 = new Intent(context, HealthLectureActivity.class);
-               intent4.putExtra("lectureType","works");
-//               intent4.putExtra("site_id",site_id);
+               intent4.putExtra("lectureType","all");
                context.startActivity(intent4);
                break;
            case R.id.tvNewsMore:
@@ -173,6 +180,7 @@ public class PatientHomeAdapter extends RecyclerView.Adapter<PatientHomeAdapter.
         private TextView tvRightTip,tvNewsMore,tvNewsTitle,tvNewsTime;
         private ImageView imgNews;
         private XBanner homeBanner;
+        private View bottomV;
         public PatientViewHolder(View itemView) {
             super(itemView);
             homeBanner= (XBanner) itemView.findViewById(R.id.xbanner);
@@ -187,6 +195,7 @@ public class PatientHomeAdapter extends RecyclerView.Adapter<PatientHomeAdapter.
             tvNewsMore= (TextView) itemView.findViewById(R.id.tvNewsMore);
             tvNewsTitle= (TextView) itemView.findViewById(R.id.tvNewsTitle);
             tvNewsTime= (TextView) itemView.findViewById(R.id.tvNewsTime);
+            bottomV=itemView.findViewById(R.id.bottomV);
         }
     }
 }

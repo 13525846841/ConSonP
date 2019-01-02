@@ -34,7 +34,7 @@ public class HealthLectureActivity extends Activity implements AdapterView.OnIte
     private List<HealthLectureWorksEntity.ResultBean> mList = new ArrayList<>();
     private HealthLectureAdapter mAdapter;
     private Button sortAll, sortNew, sortHot, sortKepu, sortXueshu, sortRenwen, zansortAll, sortZannei, sortZanwai, priceSortAll, sortFufei, sortMianfei;
-    private String lectureType;//doctor 医生主页点击进来  works  工作站点击进来
+    private String lectureType;//doctor 医生主页点击进来  works  工作站点击进来  all首页点进来
     private LinearLayout lineZan, linePrice,lineAll;
     private String site_id,customer_id;
     private int pageNum=1;
@@ -105,7 +105,10 @@ public class HealthLectureActivity extends Activity implements AdapterView.OnIte
         if (lectureType.equals("works")){
             pairs.add(new BasicNameValuePair("type", sortType));
             pairs.add(new BasicNameValuePair("site_id", site_id));
-        }else {
+        }else if (lectureType.equals("all")){
+            pairs.add(new BasicNameValuePair("op", "AllCourse"));
+            pairs.add(new BasicNameValuePair("type", sortType));
+        } else {
             pairs.add(new BasicNameValuePair("op", "queryPersonClassroom"));
             pairs.add(new BasicNameValuePair("customer_id", customer_id));
         }
@@ -136,18 +139,11 @@ public class HealthLectureActivity extends Activity implements AdapterView.OnIte
                     List<HealthLectureWorksEntity.ResultBean> result = healthLectureWorksEntity.getResult();
                     mList.addAll(result);
                     mAdapter.onBoundData(mList);
-                    if (mList.size()==0){
-                        mEmptyView.setVisibility(View.VISIBLE);
-                        pullListView.setVisibility(View.GONE);
-                    }else {
-                        mEmptyView.setVisibility(View.GONE);
-                        pullListView.setVisibility(View.VISIBLE);
-                    }
+                    emptyView(response);
                 }
             },this);
         }else {
             HttpRestClient.doGetPersonClassroom(pairs, new OkHttpClientManager.ResultCallback<String>() {
-
                 @Override
                 public void onError(Request request, Exception e) {
                 }
@@ -166,20 +162,28 @@ public class HealthLectureActivity extends Activity implements AdapterView.OnIte
 
                 @Override
                 public void onResponse(String response) {
+                    if (response.equals("")){
+                        emptyView(response);
+                        return;
+                    }
                     Gson gson = new Gson();
                     HealthLectureWorksEntity healthLectureWorksEntity = gson.fromJson(response, HealthLectureWorksEntity.class);
                     List<HealthLectureWorksEntity.ResultBean> result = healthLectureWorksEntity.getResult();
                     mList.addAll(result);
                     mAdapter.onBoundData(mList);
-                    if (mList.size()==0){
-                        mEmptyView.setVisibility(View.VISIBLE);
-                        pullListView.setVisibility(View.GONE);
-                    }else {
-                        mEmptyView.setVisibility(View.GONE);
-                        pullListView.setVisibility(View.VISIBLE);
-                    }
+                    emptyView(response);
                 }
             },this);
+        }
+    }
+
+    private void emptyView(String s) {
+        if (mList.size()==0||s==null){
+            mEmptyView.setVisibility(View.VISIBLE);
+            pullListView.setVisibility(View.GONE);
+        }else {
+            mEmptyView.setVisibility(View.GONE);
+            pullListView.setVisibility(View.VISIBLE);
         }
     }
 

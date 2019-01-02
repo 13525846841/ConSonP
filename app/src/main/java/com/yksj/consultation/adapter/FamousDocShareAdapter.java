@@ -97,7 +97,7 @@ public class FamousDocShareAdapter extends SimpleBaseAdapter<ShareEntity.ResultB
         imgRecyclerView.setAdapter(famousShareImg);
 
         Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(resultBean.getCLIENT_ICON_BACKGROUP())).error(R.drawable.default_head_doctor)
-                .placeholder(R.drawable.default_head_doctor).into(share_doctor_head);
+                .placeholder(R.drawable.default_head_doctor).dontAnimate().into(share_doctor_head);
 //        Log.i("fff", "getItemView: "+ImageLoader.getInstance().getDownPathUri(resultBean.getCLIENT_ICON_BACKGROUP()));
         share_doctor_head.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -205,7 +205,7 @@ public class FamousDocShareAdapter extends SimpleBaseAdapter<ShareEntity.ResultB
         public void onBaseBindViewHolder(ViewHolder holder, int position) {
             ImageView docShareImg= (ImageView) holder.itemView.findViewById(R.id.docShareImg);
             Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(list.get(position).getPICTURE_PATH())).centerCrop().error(R.drawable.plugin_camera_no_pictures)
-                    .placeholder(R.drawable.plugin_camera_no_pictures).into(docShareImg);
+                    .placeholder(R.drawable.plugin_camera_no_pictures).dontAnimate().into(docShareImg);
         }
     }
 

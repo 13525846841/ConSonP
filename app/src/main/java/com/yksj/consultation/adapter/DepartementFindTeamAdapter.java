@@ -46,7 +46,8 @@ public class DepartementFindTeamAdapter extends RecyclerView.Adapter<Departement
         holder.sortTitle.setText(resultBean.getOFFICE_NAME());
         holder.teamNum.setText(""+resultBean.getSITE_COUNT());
         holder.doctorNum.setText(""+resultBean.getDOCTOR_COUNT());
-        Glide.with(context).load(ImageLoader.getInstance().getDownPathUri("/CusZiYuan/resources/office_icon/"+resultBean.getOFFICE_ID()+".png")).error(R.drawable.icon_departement_find_team_icon).placeholder(R.drawable.icon_departement_find_team_icon).into(holder.headerImg);
+        Glide.with(context).load(ImageLoader.getInstance().getDownPathUri("/CusZiYuan/resources/office_icon/"+resultBean.getOFFICE_ID()+".png")).error(R.drawable.icon_departement_find_team_icon)
+                .placeholder(R.drawable.icon_departement_find_team_icon).dontAnimate().into(holder.headerImg);
 
     }
 

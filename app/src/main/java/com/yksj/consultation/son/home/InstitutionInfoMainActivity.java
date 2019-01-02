@@ -73,7 +73,7 @@ public class InstitutionInfoMainActivity extends FragmentActivity implements Vie
     public void onEvent(MyEvent event) {
         if (event.code== InstitutionInfoIntroductionFragment.EVENT_MSG) {
             Glide.with(this).load(ImageLoader.getInstance().getDownPathUri(event.what)).error(R.drawable.waterfall_default)
-                    .placeholder(R.drawable.waterfall_default).into(insInfoImg);
+                    .placeholder(R.drawable.waterfall_default).dontAnimate().into(insInfoImg);
             Log.i("lll", "onEvent: "+ImageLoader.getInstance().getDownPathUri(event.what));
         }
     }
