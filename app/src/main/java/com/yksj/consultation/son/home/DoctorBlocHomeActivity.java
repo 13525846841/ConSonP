@@ -135,7 +135,6 @@ public class DoctorBlocHomeActivity extends Activity implements View.OnClickList
     }
     //添加关注
     private void loadCollection() {
-
         List<BasicNameValuePair> pairs = new ArrayList<>();
         pairs.add(new BasicNameValuePair("Type", "followUnion"));
         pairs.add(new BasicNameValuePair("customer_id", LoginServiceManeger.instance().getLoginUserId()));

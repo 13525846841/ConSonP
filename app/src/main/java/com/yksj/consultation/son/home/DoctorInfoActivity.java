@@ -38,6 +38,7 @@ import com.yksj.consultation.son.consultation.PAtyConsultStudioGoPaying;
 import com.yksj.consultation.son.consultation.bean.ServiceType;
 import com.yksj.consultation.son.friend.BuyServiceListFromPatientActivity;
 import com.yksj.consultation.son.listener.OnRecyclerClickListener;
+import com.yksj.consultation.son.smallone.bean.Configs;
 import com.yksj.healthtalk.entity.DoctorInfoEntity;
 import com.yksj.healthtalk.entity.DoctorworksTeamEntity;
 import com.yksj.healthtalk.net.http.HttpRestClient;
@@ -75,9 +76,9 @@ public class DoctorInfoActivity extends Activity implements View.OnClickListener
     private TextView hospitalDepartment;
     private TextView doctorInfoHospital;
     private List<DoctorInfoEntity.ResultBean.SiteDescBean> siteDescList=new ArrayList<>();
-    private List<DoctorInfoEntity.ResultBean.SiteServiceBean> siteServiceList=new ArrayList<>();
-    private List<DoctorInfoEntity.ResultBean.DoctorServiceBean> doctorServiceList=new ArrayList<>();
-    private List<DoctorInfoEntity.ResultBean.ToolsBean> toolsList=new ArrayList<>();
+    private List<DoctorInfoEntity.ResultBean.SiteServiceBean> siteServiceList=new ArrayList<>();//工作站服务
+    private List<DoctorInfoEntity.ResultBean.DoctorServiceBean> doctorServiceList=new ArrayList<>();//医生服务
+    private List<DoctorInfoEntity.ResultBean.ToolsBean> toolsList=new ArrayList<>();//工具
     private WorkstationIntroduceAdapter introduceAdapter;
     private TextView doctorIntroduction;
     private TextView doctorIntroductionMore;
@@ -87,7 +88,7 @@ public class DoctorInfoActivity extends Activity implements View.OnClickListener
     private DoctorInfoServiceAdapter doctorInfoServiceAdapter;
     private DoctorInfoEntity.ResultBean result;
     private int customer_id=-1;
-    private boolean isAttention = true;
+    private boolean isAttention = true;//是否收藏
     public static final String SITE_ID="site_id";
     //弹出分享窗口
     PopupWindow mPopupWindow;
@@ -233,7 +234,10 @@ public class DoctorInfoActivity extends Activity implements View.OnClickListener
                     startActivity(intent);
                 }
                 break;
-            case R.id.doctorIntroductionMore:break;
+            case R.id.doctorIntroductionMore:
+                doctorIntroduction.setMaxLines(Integer.MAX_VALUE);
+                doctorIntroductionMore.setVisibility(View.GONE);
+                break;
             case R.id.moreEvaluate:
                Intent intent = new Intent(this, EvaluationActivity.class);
 //                intent = new Intent(this, SiteCommentListActivity.class);
@@ -477,7 +481,7 @@ public class DoctorInfoActivity extends Activity implements View.OnClickListener
         sp.setText(getString(R.string.string_share_content)); //分享文本
 //        sp.setImageUrl("http://7sby7r.com1.z0.glb.clouddn.com/CYSJ_02.jpg");//网络图片rul
 //        sp.setImageData(getBitmapFromUri(uri));
-        sp.setUrl("https://www.61120.cn/DuoMeiHealth/DO.action?op=doctor&Doctor_ID=" + result.getCUSTOMER_ID()+"&Site_ID="+site_id);   //网友点进链接后，可以看到分享的详情
+        sp.setUrl(Configs.WEB_IP+"/DuoMeiHealth/DO.action?op=doctor&Doctor_ID=" + result.getCUSTOMER_ID()+"&Site_ID="+site_id);   //网友点进链接后，可以看到分享的详情
         //  sp.setUrl(HTalkApplication.getHttpUrls().HTML + "/shopstroe.html?" + "doctor_id=" + doctor_id + "?customer_id=" + customer_id);   //网友点进链接后，可以看到分享的详情
         //3、非常重要：获取平台对象
         Platform wechat = ShareSDK.getPlatform(WechatMoments.NAME);
@@ -497,7 +501,7 @@ public class DoctorInfoActivity extends Activity implements View.OnClickListener
         sp.setText(getString(R.string.string_share_content)); //分享文本
 //        sp.setImageData(getBitmapFromUri(uri));
         // sp.setUrl(HTalkApplication.getHttpUrls().HTML + "/shopstroe.html?" + "doctor_id=" + doctor_id + "?customer_id=" + customer_id);   //网友点进链接后，可以看到分享的详情
-        sp.setUrl("https://www.61120.cn/DuoMeiHealth/DO.action?op=doctor&Doctor_ID=" + result.getCUSTOMER_ID()+"&Site_ID="+site_id);   //网友点进链接后，可以看到分享的详情
+        sp.setUrl(Configs.WEB_IP+"/DuoMeiHealth/DO.action?op=doctor&Doctor_ID=" + result.getCUSTOMER_ID()+"&Site_ID="+site_id);   //网友点进链接后，可以看到分享的详情
 //        Log.i("kkk", "https://www.61120.cn/DuoMeiHealth/DO.action?op=doctor&Doctor_ID=" + result.getCUSTOMER_ID()+"&Site_ID="+site_id);
         //3、非常重要：获取平台对象
         Platform wechatms = ShareSDK.getPlatform(Wechat.NAME);

@@ -47,7 +47,7 @@ public class DoctorBlocActivity extends Activity implements PullToRefreshBase.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_bloc);
         initView();
-        loadDataWss();
+        loadDataWss();//加载网络数据适配ui
     }
 
     private void initView() {

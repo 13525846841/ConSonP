@@ -26,7 +26,7 @@ import org.handmark.pulltorefresh.library.PullToRefreshGridView;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//医生工作站成员界面
 public class DoctorTeamMemberActivity extends Activity implements View.OnClickListener, AdapterView.OnItemClickListener {
 
     private List<DoctorworksTeamEntity.ResultBean> teamList=new ArrayList<>();

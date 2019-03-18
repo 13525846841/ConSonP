@@ -1182,7 +1182,7 @@
     <string name="strings_61web">"http://www.61120.net/"</string>
 
     <string name="string_share_title">六一健康快车</string>
-    <string name="string_share_content">我正在六一健康App，浏览新闻、探讨学术、为儿童患者会诊、义诊，邀请你一起来参加：＋网址。。。</string>
+    <string name="string_share_content">我正在六一健康App，浏览新闻、探讨学术、为儿童患者会诊、义诊，邀请你一起来参加。</string>
 
     <string name="string_share_website">http://www.baidu.com</string>
     <string name="title_activity_prefer">preferActivity</string>

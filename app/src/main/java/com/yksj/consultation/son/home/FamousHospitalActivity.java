@@ -48,6 +48,7 @@ public class FamousHospitalActivity extends Activity implements View.OnClickList
         hospitalAdapter = new FamousHospitalAdapter(mList, this);
         hospitalAdapter.setmOnRecyclerClickListener(this);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
+        //根据返回数据中的字母改变RecyclerView中item的布局方式
         gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {

@@ -103,7 +103,7 @@ public class ConsultActivity extends BaseFragmentActivity implements View.OnClic
             @Override
             public void onResponse(String response) {
                 super.onResponse(response);
-                Log.i("kkk", "onResponse: "+LoginServiceManeger.instance().getLoginUserId());
+                Log.i("kkk", "onResponse: "+LoginServiceManeger.instance().getLoginUserId()+"       "+service_type_id+"     "+response);
                 if (!HStringUtil.isEmpty(response)) {
                     try {
                         JSONObject obj = new JSONObject(response);
