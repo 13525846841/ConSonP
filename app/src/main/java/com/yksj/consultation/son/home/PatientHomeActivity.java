@@ -19,6 +19,8 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import com.netease.nimlib.sdk.AbortableFuture;
 import com.netease.nimlib.sdk.RequestCallback;
 import com.netease.nimlib.sdk.auth.LoginInfo;
@@ -45,6 +47,7 @@ import com.yksj.consultation.son.listener.OnRecyclerClickListener;
 import com.yksj.consultation.son.login.UserLoginActivity;
 import com.yksj.consultation.son.message.MessageNotifyActivity;
 import com.yksj.consultation.son.setting.SettingPhoneBound;
+import com.yksj.healthtalk.entity.DynamicMessageListEntity;
 import com.yksj.healthtalk.entity.PatientHomeEntity;
 import com.yksj.healthtalk.net.http.HResultCallback;
 import com.yksj.healthtalk.net.http.HttpRestClient;
@@ -52,12 +55,14 @@ import com.yksj.healthtalk.net.http.OkHttpClientManager;
 import com.yksj.healthtalk.net.socket.LoginServiceManeger;
 import com.yksj.healthtalk.services.CoreService;
 import com.yksj.healthtalk.utils.SharePreUtils;
+import com.yksj.healthtalk.utils.TimeUtil;
 import com.yksj.healthtalk.utils.ToastUtil;
 
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.universalimageloader.utils.L;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -72,9 +77,11 @@ import de.greenrobot.event.EventBus;
 public class PatientHomeActivity extends FragmentActivity implements OnRecyclerClickListener, View.OnClickListener, SwipeRefreshLayout.OnRefreshListener {
     private List<PatientHomeEntity.SowingListBean> imgUrl;
     private List<PatientHomeEntity.AllNewsBean> newsUrl;
+    private List<PatientHomeEntity.AllNewsBean> newUrl;
     private PatientHomeAdapter patientHomeAdapter;
     private RecyclerView homeRecycler;
     private SwipeRefreshLayout swipeRefresh;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +105,7 @@ public class PatientHomeActivity extends FragmentActivity implements OnRecyclerC
         swipeRefresh.setProgressViewEndTarget(true,400);
         swipeRefresh.setColorSchemeColors(Color.parseColor("#37a6a2"));
         swipeRefresh.setRefreshing(true);
+        newUrl=new ArrayList<>();
         imgUrl=new ArrayList<>();
         newsUrl=new ArrayList<>();
         homeRecycler = (RecyclerView) findViewById(R.id.homeRecycler);
@@ -109,6 +117,7 @@ public class PatientHomeActivity extends FragmentActivity implements OnRecyclerC
         patientHomeAdapter.setmOnRecyclerClickListener(this);
 
     }
+
 
     @Override
     public void onRecyclerItemClickListener(int position, View itemView, int type) {
@@ -131,9 +140,11 @@ public class PatientHomeActivity extends FragmentActivity implements OnRecyclerC
 
             @Override
             public void onResponse(String response) {
-                Log.i("ggg", "onResponse: "+response);
-                PatientHomeEntity patientHomeEntity = new Gson().fromJson(response, PatientHomeEntity.class);
-                newsUrl.addAll(patientHomeEntity.getAllNews());
+                PatientHomeEntity patientHomeEntity = new Gson().fromJson(response,PatientHomeEntity.class);
+//                for (int i = 0; i <3; i++) {
+//                    newUrl.add(patientHomeEntity.getAllNews().get(i));
+//                }
+//                newsUrl.addAll(newUrl);
                 imgUrl.addAll(patientHomeEntity.getSowingList());
 //                patientHomeAdapter.notifyDataSetChanged();
                 swipeRefresh.setRefreshing(false);
@@ -141,7 +152,34 @@ public class PatientHomeActivity extends FragmentActivity implements OnRecyclerC
                 homeRecycler.setEnabled(true);
             }
         }, this);
+        Map<String,String> map=new HashMap<>();
+        map.put("consultation_center_id",HTalkApplication.APP_CONSULTATION_CENTERID);
+        map.put("info_class_id",101+"");//101 热点新闻
+        HttpRestClient.OKHttpNewsCenter(map, new OkHttpClientManager.ResultCallback<String>() {
+            @Override
+            public void onError(Request request, Exception e) {
+
+            }
+
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    String string = jsonObject.optString("news");
+                    JSONObject obj = new JSONObject(string);
+                    JSONArray array = obj.getJSONArray("artList");
+                   Log.e("qqqqqqqqqqqq", "onResponse: "+array.length() );
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Log.e("qqqqqqqqqqqq", "onResponse: "+e.toString() );
+                }
+            }
+
+
+        },this);
+
     }
+
 
     @Override
     public void onClick(View v) {
