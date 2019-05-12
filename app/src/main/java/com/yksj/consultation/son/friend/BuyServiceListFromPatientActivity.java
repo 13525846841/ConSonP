@@ -11,6 +11,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -101,7 +102,7 @@ public class BuyServiceListFromPatientActivity extends BaseFragmentActivity impl
 
     public static final String DOCTOR_ID = "doctor_id";
     public static final String DOCTOR_NAME = "doctor_name";
-    private String doctorId = "";
+    private int doctorId;
     private String doctorName = "";
 
     @Override
@@ -109,13 +110,14 @@ public class BuyServiceListFromPatientActivity extends BaseFragmentActivity impl
         super.onCreate(arg0);
         setContentView(R.layout.buy_service_list_from_patient_layout);
         consultId = getIntent().getStringExtra("consultId");
+
         initView();
         if (arg0 != null) {
             mData = arg0.getString("mData");
 //            mCustomerInfoEntity = (CustomerInfoEntity) arg0.getSerializable("mCustomerInfoEntity");
         } else {
             if (getIntent().hasExtra(DOCTOR_ID)) {
-                doctorId = getIntent().getStringExtra(DOCTOR_ID);
+                doctorId = getIntent().getIntExtra(DOCTOR_ID,0);
             }
             if (getIntent().hasExtra(DOCTOR_NAME)) {
                 doctorName = getIntent().getStringExtra(DOCTOR_NAME);
@@ -163,11 +165,10 @@ public class BuyServiceListFromPatientActivity extends BaseFragmentActivity impl
         }
         List<BasicNameValuePair> valuePairs = new ArrayList<>();
         valuePairs.add(new BasicNameValuePair("Type", "IsCanTalk"));
-        valuePairs.add(new BasicNameValuePair("DOCTORID", doctorId));
-        valuePairs.add(new BasicNameValuePair("CONSULTATIONID", consultId));
-        valuePairs.add(new BasicNameValuePair("CUSTOMER_ID", LoginServiceManeger.instance().getLoginEntity().getId()));
+        valuePairs.add(new BasicNameValuePair("DOCTORID", getIntent().getIntExtra("doctor_id",0)+""));
         valuePairs.add(new BasicNameValuePair("SERVICE_TYPE_ID", String.valueOf(SERVICE_TYPE)));
-
+        valuePairs.add(new BasicNameValuePair("CUSTOMER_ID", LoginServiceManeger.instance().getLoginEntity().getId()));
+        valuePairs.add(new BasicNameValuePair("CONSULTATIONID", consultId));
         HttpRestClient.doGetServicePatientServlet(valuePairs, new OkHttpClientManager.ResultCallback<String>() {
             @Override
             public void onError(Request request, Exception e) {
@@ -201,7 +202,7 @@ public class BuyServiceListFromPatientActivity extends BaseFragmentActivity impl
     public synchronized void initParseView() {
         JSONObject jsondata = JSON.parseObject(mData);// TickMesg
         final JSONObject jsonObject = jsondata.getJSONObject("result");// TickMesg
-        CONSERVICETYPE = jsonObject.getIntValue("CONSERVICETYPE");
+        CONSERVICETYPE = jsonObject.getInteger("CONSERVICETYPE");
         docName = jsonObject.getString("DOCTORNAME");
         if (jsonObject.getIntValue("witchPage") == 1 || jsonObject.getIntValue("witchPage") == 2 || jsonObject.getIntValue("witchPage") == 3) {
             new AsyncTask<Void, Void, Map<Calendar, String>>() {
@@ -398,7 +399,7 @@ public class BuyServiceListFromPatientActivity extends BaseFragmentActivity impl
                         }
                         switch ((Integer) v.getTag()) {
                             case 1:////支付已完成,去留言
-                                FriendHttpUtil.chatFromPerson(BuyServiceListFromPatientActivity.this, doctorId, doctorName);
+                                FriendHttpUtil.chatFromPerson(BuyServiceListFromPatientActivity.this, doctorId+"", doctorName);
                                 break;
                             case 2://订单以生成,去支付
                                 actionBuy(jsonObject.getString("data"));
@@ -616,7 +617,7 @@ public class BuyServiceListFromPatientActivity extends BaseFragmentActivity impl
         // CONSULTATIONID=225539
         List<BasicNameValuePair> valuePairs = new ArrayList<>();
         valuePairs.add(new BasicNameValuePair("Type", "MedicallyRegistered330"));
-        valuePairs.add(new BasicNameValuePair("DOCTORID", doctorId));
+        valuePairs.add(new BasicNameValuePair("DOCTORID", doctorId+""));
         valuePairs.add(new BasicNameValuePair("PATIENT_PHONE", ""));
         valuePairs.add(new BasicNameValuePair("SERVICE_ITEM_ID", jsonObject.getString("SERVICE_ITEM_ID")));
         valuePairs.add(new BasicNameValuePair("SELECTDATE", jsonObject.getString("SELECTDATE")));

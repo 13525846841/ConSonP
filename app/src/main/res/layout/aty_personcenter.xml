@@ -9,7 +9,8 @@
         android:id="@+id/main_title"
         layout="@layout/gray_title_layout" />
 
-    <org.handmark.pulltorefresh.library.PullToRefreshScrollView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    <org.handmark.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/color_gray_bg"
@@ -321,6 +322,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:background="#ebeff7" />
+
             <RelativeLayout
                 android:id="@+id/rl_station"
                 style="@style/text_check_relativeLayout"
@@ -342,6 +344,7 @@
                     android:layout_toRightOf="@+id/image_station"
                     android:text="名医联诊"
                     android:textSize="16sp" />
+
                 <ImageView style="@style/text_check_imageview" />
             </RelativeLayout>
 
@@ -349,6 +352,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:background="#ebeff7" />
+
             <RelativeLayout
                 android:id="@+id/rl_user_random"
                 style="@style/text_check_relativeLayout"
@@ -408,6 +412,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:background="#ebeff7" />
+
             <RelativeLayout
                 android:id="@+id/rl_user_bloc"
                 style="@style/text_check_relativeLayout"
@@ -437,12 +442,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:background="#ebeff7" />
+
             <RelativeLayout
                 android:id="@+id/rl_user_account"
                 style="@style/text_check_relativeLayout"
                 android:background="#ffffff"
                 android:padding="16dp"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <ImageView
                     android:id="@+id/image13"

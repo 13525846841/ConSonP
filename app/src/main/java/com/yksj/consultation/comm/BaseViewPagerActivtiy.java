@@ -1,5 +1,7 @@
 package com.yksj.consultation.comm;
 
+import android.view.View;
+
 import java.util.HashMap;
 
 import com.yksj.healthtalk.entity.BaseInfoEntity;
@@ -12,4 +14,5 @@ public class BaseViewPagerActivtiy extends BaseFragmentActivity {
 	 * 当其他的Fragment变得可见是将之对比这里的数据,存在这些数据则将之改变
 	 */
 	public HashMap<String, BaseInfoEntity> cacheKeys=new HashMap<String,BaseInfoEntity>();
+
 }

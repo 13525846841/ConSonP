@@ -24,15 +24,15 @@
                 android:layout_height="10dp" />
 
             <RelativeLayout
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="8dp"
                 android:paddingLeft="8dp">
             <ImageView
                 android:id="@+id/select_expert_list_item_headicon"
-                android:layout_width="70dp"
-                android:layout_height="70dp"/>
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
 
              <ImageView
                  android:id="@+id/recommend"
@@ -65,19 +65,20 @@
                 <TextView
                     android:id="@+id/select_expert_list_item_name"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="27dp"
                     android:layout_marginTop="2dp"
                     android:ellipsize="end"
                     android:singleLine="true"
+                    android:textColor="#333333"
                     android:text="TextView"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/select_expert_list_item_office"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:textColor="@color/gray_text"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#333333"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -85,8 +86,8 @@
                 android:id="@+id/select_expert_list_item_doctitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/gray_text"
                 android:text="主治医生"
+                android:textColor="#8e8e8e"
                 android:textSize="14sp" />
 
 
@@ -97,7 +98,16 @@
                 android:ellipsize="end"
                 android:singleLine="true"
                 android:text="deeeeeeeeeeeeee"
-                android:textColor="@color/gray_text"
+                android:textColor="#8e8e8e"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/select_expert_list_item_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#8e8e8e"
                 android:textSize="14sp" />
 
             <TextView
@@ -130,36 +140,26 @@
         android:layout_height="0.5dp"
         android:background="#ebeff7" />
 
-    <LinearLayout
-        android:visibility="invisible"
-        android:id="@+id/select_expert_list_item_price_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="6dp">
+    <!--<LinearLayout-->
+        <!--android:id="@+id/select_expert_list_item_price_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:padding="6dp">-->
 
-        <TextView
-            android:id="@+id/select_expert_list_item_num"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="1"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:textColor="@color/gray_text"
-            android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/select_expert_list_item_price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:text=""
-            android:textColor="@color/red_text"
-            android:textSize="14sp" />
-    </LinearLayout>
+
+        <!--<TextView-->
+            <!--android:id="@+id/select_expert_list_item_price"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:ellipsize="end"-->
+            <!--android:singleLine="true"-->
+            <!--android:text=""-->
+            <!--android:textColor="@color/red_text"-->
+            <!--android:textSize="14sp" />-->
+    <!--</LinearLayout>-->
 
     <View
         style="@style/common_split_line_10dp"

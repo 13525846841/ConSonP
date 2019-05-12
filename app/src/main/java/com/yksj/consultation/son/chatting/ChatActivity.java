@@ -21,6 +21,7 @@ import android.os.Message;
 import android.support.v4.app.DialogFragment;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.GestureDetector;
@@ -557,6 +558,7 @@ public class ChatActivity extends BaseFragmentActivity implements OnClickListene
                 break;
             case R.id.popup_menu_cancel://退出
                 mPopupWindow.dismiss();
+
                 break;
             case R.id.popup_menu4://关注的人
                 mPopupWindow.dismiss();
@@ -666,6 +668,7 @@ public class ChatActivity extends BaseFragmentActivity implements OnClickListene
 
     @Override
     public void onSendLocationMesg(String longitude, String latitude, String address) {
+        Log.i(TAG, "onSendLocationMesg: "+address);
         MessageEntity messageEntity = new MessageEntity();
         messageEntity.setSenderId(mUserId);
         messageEntity.setReceiverId(mChatId);
@@ -676,6 +679,7 @@ public class ChatActivity extends BaseFragmentActivity implements OnClickListene
         messageEntity.setConsultationId(consultationId);
         messageEntity.setContent(latitude + "&" + longitude);
         messageEntity.setAddress(address);
+        messageEntity.setLocationMsg(address);
         if (!HStringUtil.isEmpty(consultationId)) {
             messageEntity.setOrderId(consultationId);
         } else {
@@ -819,6 +823,7 @@ public class ChatActivity extends BaseFragmentActivity implements OnClickListene
         intent.putExtra("la", str[1]);
         startActivity(intent);
     }
+
 
 
     /**
@@ -1669,17 +1674,17 @@ public class ChatActivity extends BaseFragmentActivity implements OnClickListene
             try {
                 JSONObject obj = new JSONObject(event.what);
 //                if (mChatId.equals(obj.optString("sms_target_id"))) {
-                    if (!HStringUtil.isEmpty(obj.optString("sms_req_content"))) {
-                        SingleBtnFragmentDialog.showDefaultNot(getSupportFragmentManager(), obj.optString("sms_req_content"), new SingleBtnFragmentDialog.OnClickSureBtnListener() {
-                            @Override
-                            public void onClickSureHander() {
-                                if (isRemoved) {
-                                    mChatAdapter.removeLast();
-                                }
-                                isRemoved = true;
+                if (!HStringUtil.isEmpty(obj.optString("sms_req_content"))) {
+                    SingleBtnFragmentDialog.showDefaultNot(getSupportFragmentManager(), obj.optString("sms_req_content"), new SingleBtnFragmentDialog.OnClickSureBtnListener() {
+                        @Override
+                        public void onClickSureHander() {
+                            if (isRemoved) {
+                                mChatAdapter.removeLast();
                             }
-                        });
-                    }
+                            isRemoved = true;
+                        }
+                    });
+                }
 //                }
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -1910,7 +1915,7 @@ public class ChatActivity extends BaseFragmentActivity implements OnClickListene
         super.onPause();
         if (isGroupChat) {
             NIMClient.getService(MsgService.class).setChattingAccount(MsgService.MSG_CHATTING_ACCOUNT_NONE,
-                    SessionTypeEnum.None);
+                                                                      SessionTypeEnum.None);
         }
 
     }

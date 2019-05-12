@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.view.View;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -55,7 +56,7 @@ public class WelcomeActivity extends BaseFragmentActivity {
 					onHandleLogin();
 				}
 			}
-		}, 2000);
+		}, 4000);
 	}
 	/**
 	 * 是否是wifi网络
@@ -113,5 +114,7 @@ public class WelcomeActivity extends BaseFragmentActivity {
 		super.onDestroy();
 		mHandler.removeCallbacksAndMessages(null);
 	}
+
+
 
 }

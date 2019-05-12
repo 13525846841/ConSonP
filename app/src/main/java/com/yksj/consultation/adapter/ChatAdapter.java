@@ -19,6 +19,7 @@ import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.text.style.ImageSpan;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -689,6 +690,9 @@ public class ChatAdapter extends BaseAdapter {
         });
     }
 
+    public interface onLocationMesgClick{
+        void onClick(MessageEntity entity);
+    }
     /**
      * 绑定地图
      *
@@ -707,6 +711,7 @@ public class ChatAdapter extends BaseAdapter {
             // entity.setContent(content);
         }
         holder.contentTextV.setText(entity.getAddress());
+
         holder.contentImageV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -92,7 +92,7 @@ public class SettingWebUIActivity extends BaseFragmentActivity {
 		mWebView.removeAllViews();
 		mWebView.destroy();
 	}
-	
+
 	private void initTextSize(int textSize) {
 		// TODO Auto-generated method stub
 		Object[] objs = TextSize.class.getEnumConstants();

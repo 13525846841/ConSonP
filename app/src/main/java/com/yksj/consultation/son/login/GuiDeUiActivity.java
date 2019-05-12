@@ -3,6 +3,7 @@ package com.yksj.consultation.son.login;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 
 import com.yksj.consultation.comm.BaseFragmentActivity;
 
@@ -33,4 +34,6 @@ public class GuiDeUiActivity extends BaseFragmentActivity {
             finish();
         }
     }
+
+
 }

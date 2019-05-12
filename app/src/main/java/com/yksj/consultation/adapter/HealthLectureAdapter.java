@@ -39,7 +39,6 @@ public class HealthLectureAdapter extends SimpleBaseAdapter<HealthLectureWorksEn
         TextView time= (TextView) convertView.findViewById(R.id.time);
         TextView priceStatus= (TextView) convertView.findViewById(R.id.priceStatus);
         HealthLectureWorksEntity.ResultBean resultBean = datas.get(position);
-        Log.i("kkk", "getItemView: "+ImageLoader.getInstance().getDownPathUri(resultBean.getSMALL_PIC()));
         Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(resultBean.getSMALL_PIC()))
                 .error(R.drawable.waterfall_default)
                 .placeholder(R.drawable.waterfall_default).dontAnimate()
@@ -49,10 +48,10 @@ public class HealthLectureAdapter extends SimpleBaseAdapter<HealthLectureWorksEn
         time.setText(TimeUtil.getTimeStr8(resultBean.getCOURSE_UP_TIME()));
         if (resultBean.getCOURSE_PAY().equals("1")){
            priceStatus.setText("付费");
-            priceStatus.setTextColor(Color.RED);
+            priceStatus.setTextColor(Color.parseColor("#ee5450"));
         }else {
             priceStatus.setText("免费");
-            priceStatus.setTextColor(Color.GRAY );
+            priceStatus.setTextColor(Color.parseColor("#8e8e8e") );
         }
         return convertView;
     }

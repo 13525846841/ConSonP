@@ -80,10 +80,13 @@ public class DocTeach extends RootFragment implements AdapterView.OnItemClickLis
                     if (HttpResult.SUCCESS.equals(obj.optString("code"))){
                         JSONArray array = obj.optJSONArray("forum");
                         mList = new ArrayList<>();
-                        for (int i = 0; i < array.length(); i++) {
-                            JSONObject jsonobject = array.getJSONObject(i);
-                            mList.add(jsonobject);
+                        if (array!=null){
+                            for (int i = 0; i < array.length(); i++) {
+                                JSONObject jsonobject = array.getJSONObject(i);
+                                mList.add(jsonobject);
+                            }
                         }
+
                         adapter.onBoundData(mList);
                         if (mList.size()==0){
                             mEmptyView.setVisibility(View.VISIBLE);

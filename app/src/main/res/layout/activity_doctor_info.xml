@@ -33,9 +33,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="xxx医生主页"
             android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:textSize="17sp" />
 
 
         <ImageView
@@ -46,6 +45,7 @@
             android:layout_marginRight="5dp"
             android:layout_toLeftOf="@+id/docShare"
             android:padding="5dp"
+            android:visibility="gone"
             android:src="@drawable/sel_care" />
 
         <ImageView
@@ -56,6 +56,7 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="12dp"
             android:padding="5dp"
+            android:visibility="gone"
             android:src="@drawable/share2" />
     </RelativeLayout>
 
@@ -98,10 +99,12 @@
                     android:background="@color/color_blue" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:background="@color/color_blue"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center">
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
 
                     <FrameLayout
                         android:id="@+id/avatarFrame"
@@ -112,7 +115,7 @@
                         <de.hdodenhof.circleimageview.CircleImageView
                             android:id="@+id/doctorAvatar"
                             android:layout_width="74dp"
-                            android:layout_height="74dp"
+                            android:layout_height="73dp"
                             android:layout_gravity="center"
                             android:src="@drawable/ic_launcher"
                             app:civ_border_color="@color/color_blue"
@@ -120,10 +123,10 @@
                     </FrameLayout>
 
                     <LinearLayout
-
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginLeft="30dp"
+
                         android:orientation="vertical">
 
                         <View
@@ -138,7 +141,7 @@
                             android:layout_marginTop="7dp"
                             android:text="某某某"
                             android:textColor="@color/white"
-                            android:textSize="16sp" />
+                            android:textSize="14sp" />
 
                         <TextView
                             android:id="@+id/doctorAddress"
@@ -154,7 +157,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="1dp"
                             android:text="主任医师"
-                            android:textColor="@color/color_blue"
+                            android:textColor="@color/white"
                             android:textSize="12sp" />
 
                         <TextView
@@ -162,7 +165,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="儿童发育行为科"
-                            android:textColor="@color/color_blue"
+                            android:textColor="@color/white"
                             android:textSize="12sp" />
 
                         <TextView
@@ -170,7 +173,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="上海六一儿童医院"
-                            android:textColor="@color/color_blue"
+                            android:textColor="@color/white"
                             android:textSize="12sp" />
 
                         <View
@@ -209,7 +212,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="二维码"
-                        android:textColor="@color/black" />
+                        android:textSize="@dimen/sp_12"
+                        android:textColor="#333333" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -230,7 +234,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="名医分享"
-                        android:textColor="@color/black" />
+                        android:textSize="@dimen/sp_12"
+                        android:textColor="#333333" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -251,7 +256,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="个人讲堂"
-                        android:textColor="@color/black" />
+                        android:textSize="@dimen/sp_12"
+                        android:textColor="#333333" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -272,7 +278,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="工作站"
-                        android:textColor="@color/black" />
+                        android:textSize="@dimen/sp_12"
+                        android:textColor="#333333" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -300,7 +307,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:text="工作站介绍"
-                    android:textColor="@color/black"
+                    android:textColor="#333333"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -339,7 +346,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:text="医生介绍"
-                        android:textColor="@color/black"
+                        android:textColor="#333333"
                         android:textSize="16sp" />
                 </LinearLayout>
 
@@ -354,7 +361,50 @@
                     android:paddingLeft="12dp"
                     android:paddingRight="12dp"
                     android:text="上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一"
-                    android:textColor="@color/black" />
+                    android:textColor="#666666"
+                    android:textSize="14sp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="#d5d7db" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/work_xing" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="医生擅长"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/doctorGood"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="1.5dp"
+                    android:maxLines="3"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:text="上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一"
+                    android:textColor="#666666"
+                    android:textSize="14sp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -372,9 +422,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:layout_marginRight="12dp"
-                        android:text="阅读更多"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
+                        android:text="更多"
+                        android:textColor="#999999"
+                        android:textSize="12sp"
                         android:textStyle="bold" />
 
 
@@ -411,7 +461,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:text="用户评价"
-                        android:textColor="@color/black"
+                        android:textColor="#333333"
                         android:textSize="16sp" />
                 </LinearLayout>
 
@@ -423,7 +473,7 @@
                     android:layout_marginTop="10dp"
                     android:text="王奶奶:"
                     android:textColor="@color/txt_gary"
-                    android:textSize="12sp" />
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/userEvaluateContent"
@@ -435,8 +485,9 @@
                     android:maxLines="3"
                     android:paddingLeft="12dp"
                     android:paddingRight="12dp"
+                    android:textSize="14sp"
                     android:text="上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一上海六一"
-                    android:textColor="@color/black" />
+                    android:textColor="#666666" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -454,8 +505,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:layout_marginRight="12dp"
-                        android:text="查看更多"
-                        android:textColor="@color/black"
+                        android:text="更多"
+                        android:textColor="#999999"
                         android:textSize="14sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -484,7 +535,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:text="医生服务"
-                    android:textColor="@color/black"
+                    android:textColor="#333333"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -527,6 +578,7 @@
                 android:id="@+id/homeTools"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:visibility="gone"
                 android:gravity="center">
 
                 <ImageView
@@ -539,6 +591,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:textSize="16sp"
+                    android:background="#333333"
                     android:text="工具箱" />
 
                 <View
@@ -554,6 +608,7 @@
             </LinearLayout>
 
             <RelativeLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:descendantFocusability="blocksDescendants">

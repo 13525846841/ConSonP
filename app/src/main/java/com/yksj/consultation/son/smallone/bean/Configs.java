@@ -10,18 +10,18 @@ public class Configs {
 //    public static String SOCKET_IP = "www.61120.cn";
 //    public static String WEB_IP = "https://www.61120.cn";
 
-//    public static int SOCKET_PORT = 8014;//Socket端口
-//    public static String SOCKET_IP = "61120.vip";
-//    public static String WEB_IP = "https://61120.vip";
+    public static int SOCKET_PORT = 8014;//Socket端口
+    public static String SOCKET_IP = "61120.vip";
+    public static String WEB_IP = "https://61120.vip";
     //六一测试
 //    public static int SOCKET_PORT = 8015;//Socket端口
 //    public static String SOCKET_IP = "61.jiansion.com";
 //    public static String WEB_IP = "https://61.jiansion.com";
 
-////    本地测试
-    public static int SOCKET_PORT = 8014;//Socket端口
-    public static String SOCKET_IP = "192.168.1.110";
-    public static String WEB_IP = "http://192.168.1.110:8080";
+//    本地测试
+//    public static int SOCKET_PORT = 8014;//Socket端口
+//   public static String SOCKET_IP = "192.168.1.161";
+//    public static String WEB_IP = "http://192.168.1.161:9090";
 
 //    public static String WEB_IP = "https://192.168.1.108:8443";
 

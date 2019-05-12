@@ -144,6 +144,10 @@ public class HealthLectureHomeActivity extends Activity implements View.OnClickL
                 Gson gson = new Gson();
                 HealthLectureVideoEntity videoEntity = gson.fromJson(response, HealthLectureVideoEntity.class);
                 result = videoEntity.getResult();
+                if (result.getCOURSE_NAME().length()>10){
+                    String title=result.getCOURSE_NAME().substring(0,15);
+                    tvTitle.setText(title+"...");
+                }else
                 tvTitle.setText(result.getCOURSE_NAME());
                 docName.setText(result.getCOURSE_UP_NAME());
                 wenZJS.setText(result.getCOURSE_DESC());

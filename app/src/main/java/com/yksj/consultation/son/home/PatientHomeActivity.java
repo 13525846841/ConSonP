@@ -1,6 +1,5 @@
 package com.yksj.consultation.son.home;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -13,14 +12,9 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
 import com.netease.nimlib.sdk.AbortableFuture;
 import com.netease.nimlib.sdk.RequestCallback;
 import com.netease.nimlib.sdk.auth.LoginInfo;
@@ -36,20 +30,16 @@ import com.yksj.consultation.son.consultation.avchat.AVChatProfile;
 import com.yksj.consultation.son.consultation.avchat.cache.DemoCache;
 import com.yksj.consultation.son.consultation.avchat.common.NimUIKit;
 import com.yksj.consultation.son.consultation.bean.MyEvent;
-import com.yksj.consultation.son.consultation.bean.NewsClass;
-import com.yksj.consultation.son.consultation.main.AtyConsultMain;
 import com.yksj.consultation.son.consultation.main.AtyPersonCenter;
 import com.yksj.consultation.son.consultation.main.HomePageActivity;
 import com.yksj.consultation.son.consultation.news.AtyNewsCenter;
 import com.yksj.consultation.son.consultation.news.SixOneActivity;
-import com.yksj.consultation.son.doctor.ExpertMainUI;
 import com.yksj.consultation.son.listener.OnRecyclerClickListener;
 import com.yksj.consultation.son.login.UserLoginActivity;
 import com.yksj.consultation.son.message.MessageNotifyActivity;
 import com.yksj.consultation.son.setting.SettingPhoneBound;
 import com.yksj.healthtalk.entity.DynamicMessageListEntity;
 import com.yksj.healthtalk.entity.PatientHomeEntity;
-import com.yksj.healthtalk.net.http.HResultCallback;
 import com.yksj.healthtalk.net.http.HttpRestClient;
 import com.yksj.healthtalk.net.http.OkHttpClientManager;
 import com.yksj.healthtalk.net.socket.LoginServiceManeger;
@@ -58,14 +48,10 @@ import com.yksj.healthtalk.utils.SharePreUtils;
 import com.yksj.healthtalk.utils.TimeUtil;
 import com.yksj.healthtalk.utils.ToastUtil;
 
-import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.universalimageloader.utils.L;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -76,8 +62,7 @@ import de.greenrobot.event.EventBus;
 //新首页 之前首页是AtyConsultMain
 public class PatientHomeActivity extends FragmentActivity implements OnRecyclerClickListener, View.OnClickListener, SwipeRefreshLayout.OnRefreshListener {
     private List<PatientHomeEntity.SowingListBean> imgUrl;
-    private List<PatientHomeEntity.AllNewsBean> newsUrl;
-    private List<PatientHomeEntity.AllNewsBean> newUrl;
+    private List<DynamicMessageListEntity> newsUrl;
     private PatientHomeAdapter patientHomeAdapter;
     private RecyclerView homeRecycler;
     private SwipeRefreshLayout swipeRefresh;
@@ -105,7 +90,6 @@ public class PatientHomeActivity extends FragmentActivity implements OnRecyclerC
         swipeRefresh.setProgressViewEndTarget(true,400);
         swipeRefresh.setColorSchemeColors(Color.parseColor("#37a6a2"));
         swipeRefresh.setRefreshing(true);
-        newUrl=new ArrayList<>();
         imgUrl=new ArrayList<>();
         newsUrl=new ArrayList<>();
         homeRecycler = (RecyclerView) findViewById(R.id.homeRecycler);
@@ -123,7 +107,7 @@ public class PatientHomeActivity extends FragmentActivity implements OnRecyclerC
     public void onRecyclerItemClickListener(int position, View itemView, int type) {
         Intent intent = new Intent(PatientHomeActivity.this, DAtyConslutDynMes.class);
         intent.putExtra("conId", HTalkApplication.APP_CONSULTATION_CENTERID);
-        intent.putExtra("infoId", newsUrl.get(position).getINFO_ID()+"");
+        intent.putExtra("infoId", newsUrl.get(position).getInfoId()+"");
         intent.putExtra("title", "热点新闻");
         startActivity(intent);
     }
@@ -158,20 +142,39 @@ public class PatientHomeActivity extends FragmentActivity implements OnRecyclerC
         HttpRestClient.OKHttpNewsCenter(map, new OkHttpClientManager.ResultCallback<String>() {
             @Override
             public void onError(Request request, Exception e) {
-
             }
-
             @Override
             public void onResponse(String response) {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
-                    String string = jsonObject.optString("news");
-                    JSONObject obj = new JSONObject(string);
-                    JSONArray array = obj.getJSONArray("artList");
-                   Log.e("qqqqqqqqqqqq", "onResponse: "+array.length() );
+                    JSONObject news = jsonObject.optJSONObject("news");
+                    JSONArray children = news.getJSONArray("children");
+                    JSONObject o=children.getJSONObject(0);
+                    JSONArray artList = o.getJSONArray("artList");
+                    for (int i = 0; i < artList.length(); i++) {
+                        DynamicMessageListEntity entity=new DynamicMessageListEntity();
+                        JSONObject jsonObject1 = artList.getJSONObject(i);
+                        entity.setConsultationCenterId(jsonObject1.optInt("CONSULTATION_CENTER_ID"));
+                        entity.setCustomerId(jsonObject1.optInt("CUSTOMER_ID"));
+                        entity.setInfoId(jsonObject1.optInt("INFO_ID"));
+                        entity.setInfoPicture(jsonObject1.optString("INFO_PICTURE"));
+                        String time = TimeUtil.formatTime(jsonObject1.optString("PUBLISH_TIME"));
+                        entity.setPublishTime(time);
+                        entity.setStatusTime(jsonObject1.optString("STATUS_TIME"));
+                        entity.setInfoStaus(jsonObject1.optString("INFO_STATUS"));
+                        entity.setInfoName(jsonObject1.optString("INFO_NAME"));
+                        entity.setColorchage(0);
+                        newsUrl.add(entity);
+                        if(newsUrl.size()==3){
+                            break;
+                        }
+                    }
+
+                    swipeRefresh.setRefreshing(false);
+                    homeRecycler.setAdapter(patientHomeAdapter);
+                    homeRecycler.setEnabled(true);
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    Log.e("qqqqqqqqqqqq", "onResponse: "+e.toString() );
                 }
             }
 

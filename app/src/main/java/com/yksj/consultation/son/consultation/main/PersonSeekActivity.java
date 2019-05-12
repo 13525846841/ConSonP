@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.squareup.okhttp.Request;
 import com.yksj.consultation.adapter.PersonSeekAdapter;
@@ -57,6 +58,12 @@ public class PersonSeekActivity  extends BaseFragmentActivity implements View.On
         mRefreshableView = (PullToRefreshListView) findViewById(R.id.pull_refresh_listview);
         mListView = mRefreshableView.getRefreshableView();
         mAdapter = new PersonSeekAdapter(this);
+        mAdapter.setOnDeleteClickListener(new PersonSeekAdapter.onDeleteClickListener() {
+            @Override
+            public void onDeleteClickListener(int position) {
+                deletePerson(position);
+            }
+        });
         mListView.setAdapter(mAdapter);
         mRefreshableView.setOnRefreshListener(this);
         mListView.setOnItemClickListener(this);
@@ -64,6 +71,38 @@ public class PersonSeekActivity  extends BaseFragmentActivity implements View.On
         mEmptyView = findViewById(R.id.empty_view_famous);
         customerId = LoginServiceManeger.instance().getLoginUserId();
 
+    }
+
+    private void deletePerson(int position) {
+        String personId = list.get(position).optString("PERSON_ID");
+        final Map<String,String> map=new HashMap<>();
+        map.put("op", "deleteVisitingPersonById");
+        map.put("person_id", personId);
+        HttpRestClient.OKHttDeletePersonSeek(map, new HResultCallback<String>(this) {
+            @Override
+            public void onError(Request request, Exception e) {
+                super.onError(request, e);
+            }
+
+            @Override
+            public void onResponse(String response) {
+                super.onResponse(response);
+                list.remove(response);
+                mAdapter.addAll(list);
+            }
+
+            @Override
+            public void onBefore(Request request) {
+                super.onBefore(request);
+                mRefreshableView.setRefreshing();
+            }
+
+            @Override
+            public void onAfter() {
+                mRefreshableView.setRefreshing();
+                super.onAfter();
+            }
+        }, this);
     }
 
     @Override

@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <corners android:radius="5dp"/>
-    <solid android:color="#ffffff"/>
-    <size android:height="50dp" android:width="100dp"/>
-    <stroke android:color="#50b2b0" android:width="1dp"/>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 边框颜色值 -->
+    <item>
+        <shape>
+            <solid android:color="#41b8b6"/>
+        </shape>
+    </item>
+    <!-- 主体背景颜色值 -->
+    <item android:bottom="2dp">
+        <shape>
+            <solid android:color="#ffffff"/>
 
-</shape>
+        </shape>
+    </item>
+</layer-list>

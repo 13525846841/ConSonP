@@ -39,7 +39,6 @@ public class PhoneCallStateObserver {
     }
 
     public void onCallStateChanged(String state) {
-        Log.i(TAG, "onCallStateChanged, now state =" + state);
 
         stateEnum = PhoneCallStateEnum.IDLE;
         if (TelephonyManager.EXTRA_STATE_IDLE.equals(state)) {

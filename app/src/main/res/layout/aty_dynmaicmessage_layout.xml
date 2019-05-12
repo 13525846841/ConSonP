@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
-    android:id="@+id/ll_main"
     android:orientation="vertical">
 
     <include
@@ -17,11 +17,11 @@
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:orientation="vertical"
             android:paddingLeft="8dp"
-            android:paddingRight="8dp"
-            android:focusable="true"
-            android:focusableInTouchMode="true">
+            android:paddingRight="8dp">
 
 
             <LinearLayout
@@ -42,7 +42,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:textColor="#898989"
-                    android:textSize="15sp"/>
+                    android:textSize="15sp" />
 
                 <LinearLayout
                     android:id="@+id/news_count_images"
@@ -78,10 +78,10 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="15dp"
                 android:layout_marginTop="5dp"
-                android:visibility="gone"
                 android:background="@drawable/ig_good_bg"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone">
 
                 <RadioButton
                     android:id="@+id/good_action"
@@ -98,8 +98,10 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ll_hide"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:visibility="gone">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -139,18 +141,19 @@
                 android:id="@+id/edit_commont"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
                 android:layout_marginLeft="4dp"
                 android:layout_marginRight="14dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:padding="8dp"
-                android:textSize="14sp"
-                android:singleLine="true"
-                android:imeOptions="actionSearch"
                 android:background="@drawable/shape_edittext_search"
                 android:drawablePadding="15dp"
                 android:focusableInTouchMode="false"
-                android:hint="评论"/>
+                android:hint="评论"
+                android:imeOptions="actionSearch"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:visibility="gone" />
 
         </LinearLayout>
     </ScrollView>

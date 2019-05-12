@@ -18,7 +18,7 @@
     <color name="image_bg">#dbdcdc</color>
     <color name="info_text">#738994</color>
     <color name="knowlege_detail_group">#112933</color>
-    <color name="white">#FFFFFF</color>
+    <color name="white">#ffffff</color>
     <color name="doctor_info_hint">#b5b5b5</color>
     <color name="dark_black">#535d73</color>
     <color name="refresh_bottom_color">#b1b3b4</color>
@@ -117,7 +117,7 @@
     <color name="item_title_disabled">#ff888888</color>
     <color name="radiogroup_bg_gray">#ffCCCCCC</color>
     <color name="radiobutton_light_gray">#ffF2F2F2</color>
-    <color name="gray_text">#ff969696</color>
+    <color name="gray_text">#989898</color>
     <color name="red_text">#fff97f6a</color>
 
     <!--服务日历颜色  -->
@@ -125,7 +125,7 @@
     <color name="calader_color_today">#27c4bd</color>
     <color name="calader_color_write">#ffffffff</color>
     <!--头部颜色  -->
-    <color name="color_blue">#41b8b6</color>
+    <color name="color_blue">#27c4bd</color>
     <color name="color_grey_text">#ffB1B1B1</color>
     <!-- 灰色背景 -->
     <color name="color_gray_bg">#EAEEF6</color>

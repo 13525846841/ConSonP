@@ -5,7 +5,7 @@
     android:background="@color/transparent"
     android:layout_height="match_parent">
 
-    <GridView
+    <ListView
         android:id="@+id/common_dis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,7 +14,7 @@
         android:gravity="center_horizontal"
         android:listSelector="@color/white"
         android:numColumns="2">
-    </GridView>
+    </ListView>
 
     <include
         android:id="@+id/empty_view_common"

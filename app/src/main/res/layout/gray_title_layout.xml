@@ -70,10 +70,10 @@
             android:background="@drawable/shape_edittext_search"
             android:drawableLeft="@drawable/ig_search_grey"
             android:drawablePadding="6dp"
-            android:hint="@string/main_title_search_hint"
-            android:maxLines="1"
             android:ellipsize="end"
+            android:hint="@string/main_title_search_hint"
             android:imeOptions="actionSearch"
+            android:maxLines="1"
             android:padding="8dp"
             android:singleLine="true"
             android:textSize="14sp" />
@@ -91,6 +91,7 @@
         <Button
             android:id="@+id/title_right"
             style="@style/title_btn_style"
+            android:layout_height="match_parent"
             android:layout_marginRight="10dp"
             android:background="@null"
             android:paddingLeft="3dp"
@@ -165,7 +166,7 @@
         <ImageView
             android:id="@+id/iv_share"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="6dp"

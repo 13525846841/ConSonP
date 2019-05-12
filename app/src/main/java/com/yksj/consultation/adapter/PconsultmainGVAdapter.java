@@ -81,7 +81,7 @@ public class PconsultmainGVAdapter extends BaseAdapter {
         viewHolder.tv.setText(mDatas.get(pos).name);
         //图片展示
        // String url= HTalkApplication.getHttpUrls().URL_QUERYHEADIMAGE_NEW+mDatas.get(pos).iconRes;
-        Picasso.with(context).load(mDatas.get(pos).iconRes).placeholder(R.drawable.waterfall_default).into(viewHolder.iv);
+        Picasso.with(context).load("https://www.61120.vip/DuoMeiHealth/HeadDownLoadServlet.do?path="+mDatas.get(pos).iconRes).placeholder(R.drawable.waterfall_default).into(viewHolder.iv);
       //  Picasso.with(context).load(url).placeholder(R.drawable.waterfall_default).into(viewHolder.iv);
       //  viewHolder.iv.setImageResource(Integer.parseInt(String.valueOf(mDatas.get(pos).iconRes)));
         return convertView;

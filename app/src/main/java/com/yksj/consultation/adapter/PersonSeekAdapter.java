@@ -19,6 +19,15 @@ public class PersonSeekAdapter extends SimpleBaseAdapter<JSONObject>{
         this.context = context;
     }
 
+    public interface onDeleteClickListener{
+        void onDeleteClickListener(int position);
+    }
+    private onDeleteClickListener onDeleteClickListener;
+
+    public void setOnDeleteClickListener(PersonSeekAdapter.onDeleteClickListener onDeleteClickListener) {
+        this.onDeleteClickListener = onDeleteClickListener;
+    }
+
     @Override
     public int getCount() {
         return datas.size();
@@ -31,7 +40,7 @@ public class PersonSeekAdapter extends SimpleBaseAdapter<JSONObject>{
     }
 
     @Override
-    public View getItemView(int position, View convertView, ViewHolder holder) {
+    public View getItemView(final int position, View convertView, ViewHolder holder) {
 
         TextView custName = holder.getView(R.id.name);
         TextView cusSex = holder.getView(R.id.sex);
@@ -40,6 +49,7 @@ public class PersonSeekAdapter extends SimpleBaseAdapter<JSONObject>{
         TextView phone = holder.getView(R.id.phone);
         TextView idCard = holder.getView(R.id.id_card);
         TextView allergy = holder.getView(R.id.allergy);
+        TextView txtDelete=holder.getView(R.id.txt_delete);
 
 
         if (HStringUtil.isEmpty(datas.get(position).optString("PERSON_NAME"))){
@@ -82,7 +92,14 @@ public class PersonSeekAdapter extends SimpleBaseAdapter<JSONObject>{
         }else {
             allergy.setText("过敏史: "+datas.get(position).optString("PERSON_ALLERGY"));
         }
-
+        txtDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              if(onDeleteClickListener!=null){
+                  onDeleteClickListener.onDeleteClickListener(position);
+              }
+            }
+        });
 
         return convertView;
     }

@@ -26,6 +26,7 @@ import com.yksj.consultation.son.listener.OnRecyclerClickListener;
 import com.yksj.consultation.son.login.UserLoginActivity;
 import com.yksj.consultation.son.smallone.bean.Configs;
 import com.yksj.consultation.son.views.HomeBannerView;
+import com.yksj.healthtalk.entity.DynamicMessageListEntity;
 import com.yksj.healthtalk.entity.PatientHomeEntity;
 import com.yksj.healthtalk.net.socket.LoginServiceManeger;
 import com.yksj.healthtalk.utils.TimeUtil;
@@ -88,13 +89,14 @@ public class PatientHomeAdapter extends RecyclerView.Adapter<PatientHomeAdapter.
         }else {
             List newsList = dataList.get(1);
             if (newsList.size()==0)return;
-            PatientHomeEntity.AllNewsBean allNewsBean= (PatientHomeEntity.AllNewsBean) newsList.get(position-1);
-            Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(allNewsBean.getINFO_PICTURE()))
+            DynamicMessageListEntity entity= (DynamicMessageListEntity) newsList.get(position-1);
+            Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(entity.getInfoPicture()))
                     .placeholder(R.drawable.waterfall_default).dontAnimate()
                     .error(R.drawable.waterfall_default)
                     .centerCrop().into(holder.imgNews);
-            holder.tvNewsTitle.setText(allNewsBean.getINFO_NAME());
-            holder.tvNewsTime.setText(TimeUtil.getTimeStr8(allNewsBean.getPUBLISH_TIME()));
+            holder.tvNewsTitle.setText(entity.getInfoName());
+//            holder.tvNewsTime.setText(TimeUtil.getTimeStr8(entity.getPublishTime()));
+            holder.tvNewsTime.setText(entity.getPublishTime());
             holder.tvNewsMore.setOnClickListener(this);
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

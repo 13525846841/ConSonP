@@ -1,5 +1,6 @@
 package com.yksj.consultation.son.site;
 
+import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -123,4 +124,6 @@ public class SiteCommentListActivity extends BaseListActivity implements PullToR
     public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
         initData();
     }
+
+
 }

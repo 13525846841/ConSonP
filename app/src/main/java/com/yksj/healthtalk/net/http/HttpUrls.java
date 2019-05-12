@@ -23,8 +23,8 @@ public class HttpUrls {
      * 根据经纬度查询地址详情
      */
 //	public final String GOOLE_MAP_GECODE = "http://maps.googleapis.com/maps/api/geocode/json";
-    public final String GOOLE_MAP_GECODE = "http://maps.google.cn/maps/api/geocode/json";
-
+//    public final String GOOLE_MAP_GECODE = "http://maps.google.cn/maps/api/geocode/json";
+    public final String GOOLE_MAP_GECODE = "http://api.map.baidu.com/geocoder";
 
     public final String URL_FRIENDEXACTSEARCH;
 
@@ -707,6 +707,7 @@ public class HttpUrls {
     public final String COMMONURL2;//查询医生信息  和  工作站成员
     public final String COMMONURL3;//工作站咨询
     public final String PERSONSEEKCOMMONURL;//就诊人
+    public final String DELETEPERSON;//删除就诊人
     public final String FINDSITECOMMENT;//查询集团评价
 
     public final String GOODSSERVLET;//商城接口
@@ -1200,6 +1201,7 @@ public class HttpUrls {
         FINDSITECOMMENT = WEB_ROOT + "/DuoMeiHealth//see.do?op=findSiteComment";
 
         PERSONSEEKCOMMONURL = WEB_ROOT + "/DuoMeiHealth/see.do";
+        DELETEPERSON=WEB_ROOT + "/DuoMeiHealth/see.do";
         GOODSSERVLET = WEB_ROOT + "/DuoMeiHealth/goodsServlet";
         SAVEPATIENTCASESERVLEt = WEB_ROOT + "/DuoMeiHealth/SavePatientCaseServlet";
         PATIENT_HOME = WEB_ROOT + "/DuoMeiHealth/see.do?op=findAllNews";

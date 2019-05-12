@@ -29,7 +29,7 @@
         android:layout_toRightOf="@+id/imHead"
         android:layout_width="wrap_content"
         android:maxLines="2"
-        android:textColor="@color/black"
+        android:textColor="#333333"
         android:textSize="16sp"
         android:ellipsize="end"
         android:text="儿科大讲堂－－小儿冬季腹泻的误区与治疗儿科大讲堂－－小儿冬季腹泻的误区与治疗季腹泻的误区与治疗"
@@ -40,11 +40,11 @@
         android:id="@+id/docName"
         android:layout_width="wrap_content"
         android:text="崔点点"
-        android:textSize="14sp"
+        android:textSize="13sp"
         android:layout_toRightOf="@+id/imHead"
         android:layout_below="@+id/title"
         android:layout_marginTop="5dp"
-        android:textColor="#858585"
+        android:textColor="#8e8e8e"
         android:layout_height="wrap_content" />
 <LinearLayout
     android:gravity="center_vertical"
@@ -55,11 +55,11 @@
         android:id="@+id/time"
         android:layout_width="wrap_content"
         android:text="2018-10-10"
-        android:textSize="14sp"
+        android:textSize="13sp"
         android:layout_toRightOf="@+id/imHead"
         android:layout_below="@+id/docName"
         android:layout_marginTop="5dp"
-        android:textColor="#858585"
+        android:textColor="#8e8e8e"
         android:layout_height="wrap_content" />
 
     <TextView
@@ -67,11 +67,11 @@
         android:id="@+id/priceStatus"
         android:layout_width="wrap_content"
         android:text="付费"
-        android:textSize="14sp"
+        android:textSize="13sp"
         android:layout_toRightOf="@+id/time"
         android:layout_below="@+id/docName"
         android:layout_marginTop="5dp"
-        android:textColor="@color/red"
+        android:textColor="#ee5458"
         android:layout_height="wrap_content" />
 </LinearLayout>
 

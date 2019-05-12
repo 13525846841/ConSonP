@@ -40,6 +40,8 @@ public class DisplyContentPicActivity extends BaseFragmentActivity {
         initView();
     }
 
+
+
     private void initView() {
         initTitle();
         setTitle("图片展示");

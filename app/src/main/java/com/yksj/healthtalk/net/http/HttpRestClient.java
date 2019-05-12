@@ -588,9 +588,14 @@ public class HttpRestClient {
     public static void doHttpQueryMapAddress(String latitude, String longitude,
                                              AsyncHttpResponseHandler handler) {
         RequestParams params = new RequestParams();
-        params.put("latlng", longitude + "," + latitude);
-        params.put("sensor", "true");
-        params.put("language", "zh-CN");
+//        params.put("latlng", longitude + "," + latitude);
+//        params.put("language", "zh-CN");
+//        params.put("sensor", "true_or_false" );
+//        params.put("address","北京");
+        params.put("output","json");
+        params.put("location",longitude + "," + latitude);
+        params.put("key","3PuO3RubLS9VKCrgj1Q49y7j");
+
         mAsyncHttpClient.get(mHttpUrls.GOOLE_MAP_GECODE, params, handler);
     }
 
@@ -2687,6 +2692,7 @@ public static void doGetclassroomServlet(List<BasicNameValuePair> params, OkHttp
         OkHttpClientManager.postAsyn(mHttpUrls.DOCTORNEWSCENTER, map, callback, tag);
     }
 
+
     /************新首页接口******************/
     public static void OKHttpNewsPatientHome(Map<String, String> map, OkHttpClientManager.ResultCallback callback, Object tag) {
         OkHttpClientManager.postAsyn(mHttpUrls.PATIENT_HOME, map, callback, tag);
@@ -2850,6 +2856,9 @@ public static void doGetclassroomServlet(List<BasicNameValuePair> params, OkHttp
      */
     public static void OKHttPersonSeek(Map<String, String> map, OkHttpClientManager.ResultCallback callback, Object tag) {
         OkHttpClientManager.postAsyn(mHttpUrls.PERSONSEEKCOMMONURL, map, callback, tag);
+    }
+    public static void OKHttDeletePersonSeek(Map<String, String> map, OkHttpClientManager.ResultCallback callback, Object tag) {
+        OkHttpClientManager.postAsyn(mHttpUrls.DELETEPERSON, map, callback, tag);
     }
     /**
      * 病历管理 统一的连网方法

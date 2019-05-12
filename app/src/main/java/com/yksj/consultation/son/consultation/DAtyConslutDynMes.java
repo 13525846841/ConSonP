@@ -99,6 +99,7 @@ import cn.sharesdk.wechat.moments.WechatMoments;
 public class DAtyConslutDynMes extends BaseFragmentActivity implements OnClickListener,
         OnRefreshListener<ListView>, OnItemClickListener, OnCheckedChangeListener, PlatformActionListener {
     private View headView;
+    private LinearLayout llHide;
     private TextView mNewTitle;
     private TextView mNewTimes;// 动态消息时间
     //private TextView mNewContent;
@@ -206,6 +207,7 @@ public class DAtyConslutDynMes extends BaseFragmentActivity implements OnClickLi
         mConnentNum = (TextView) findViewById(R.id.totalCommentTxt);
 
         edit_commont = (EditText) findViewById(R.id.edit_commont);
+        llHide=(LinearLayout) findViewById(R.id.ll_hide);
         //点击editveiw时，不弹出输入键盘
         InputMethodManager imm = (InputMethodManager) getSystemService(this.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(edit_commont.getWindowToken(), 0);
@@ -563,6 +565,8 @@ public class DAtyConslutDynMes extends BaseFragmentActivity implements OnClickLi
                         if (jsonObject.has("result")) {
                             JSONArray array = jsonObject.getJSONArray("result");
                             contentObject = array.getJSONObject(0);
+                            llHide.setVisibility(View.VISIBLE);
+                            edit_commont.setVisibility(View.VISIBLE);
                             onParseData();//适配数据
                         }
                     } else {

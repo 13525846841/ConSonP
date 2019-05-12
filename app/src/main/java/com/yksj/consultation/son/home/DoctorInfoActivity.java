@@ -75,6 +75,7 @@ public class DoctorInfoActivity extends Activity implements View.OnClickListener
     private TextView chiefDoctor;
     private TextView hospitalDepartment;
     private TextView doctorInfoHospital;
+    private TextView doctorGood;
     private List<DoctorInfoEntity.ResultBean.SiteDescBean> siteDescList=new ArrayList<>();
     private List<DoctorInfoEntity.ResultBean.SiteServiceBean> siteServiceList=new ArrayList<>();//工作站服务
     private List<DoctorInfoEntity.ResultBean.DoctorServiceBean> doctorServiceList=new ArrayList<>();//医生服务
@@ -93,13 +94,14 @@ public class DoctorInfoActivity extends Activity implements View.OnClickListener
     //弹出分享窗口
     PopupWindow mPopupWindow;
     private String customer_id_a = LoginServiceManeger.instance().getLoginUserId();
-    private ImageView imAttention;
+    private ImageView imAttention ,viewById;
     private DoctorInfoToolsAdapter toolsAdapter;
     private int site_id;
     private TextView tipTv;
     private String errTips = "加载失败，点击重试";
     private TextView moreEvaluate;
     private LinearLayout lineWork;
+    private String good;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,7 +113,7 @@ public class DoctorInfoActivity extends Activity implements View.OnClickListener
 
     private void initView() {
         customer_id = getIntent().getIntExtra("customer_id",-1);
-        Log.i("ggg", "initView: " +customer_id);
+        good = getIntent().getStringExtra("good");
         site_id = getIntent().getIntExtra(SITE_ID,-1);
         ImageView back= (ImageView) findViewById(R.id.title_back);
         back.setOnClickListener(this);
@@ -122,6 +124,8 @@ public class DoctorInfoActivity extends Activity implements View.OnClickListener
         chiefDoctor = (TextView) findViewById(R.id.chiefDoctor);
         hospitalDepartment = (TextView) findViewById(R.id.hospital_department);
         doctorInfoHospital = (TextView) findViewById(R.id.doctor_info_hospital);
+        doctorGood = (TextView) findViewById(R.id.doctorGood);
+
         tipTv = (TextView) findViewById(R.id.tipTv);
         tipTv.setOnClickListener(this);
         LinearLayout QRLine= (LinearLayout) findViewById(R.id.QRLine);
@@ -132,7 +136,8 @@ public class DoctorInfoActivity extends Activity implements View.OnClickListener
         LectureHallLine.setOnClickListener(this);
         LinearLayout wordLinear= (LinearLayout) findViewById(R.id.wordLinear);
         wordLinear.setOnClickListener(this);
-        findViewById(R.id.docShare).setOnClickListener(this);
+         viewById = (ImageView) findViewById(R.id.docShare);
+        viewById .setOnClickListener(this);
         imAttention = (ImageView) findViewById(R.id.docAttention);
         imAttention.setOnClickListener(this);
         RecyclerView worksRecycler= (RecyclerView) findViewById(R.id.worksRecycler);
@@ -288,7 +293,6 @@ public class DoctorInfoActivity extends Activity implements View.OnClickListener
             @Override
             public void onResponse(String response) {
                 if (response==null)return;
-                Log.i("ggg", "onResponse: "+response);
                 Gson gson = new Gson();
                 DoctorInfoEntity doctorInfoEntity = gson.fromJson(response, DoctorInfoEntity.class);
                 if (doctorInfoEntity.getCode().equals("0")) {
@@ -296,6 +300,7 @@ public class DoctorInfoActivity extends Activity implements View.OnClickListener
                     return;
                 }
                 result = doctorInfoEntity.getResult();
+
                 qrCodeUrl=result.getQrCodeUrl();
                 homeTitle.setText(result.getDOCTOR_REAL_NAME()+"医生主页");
                 Glide.with(DoctorInfoActivity.this).load(ImageLoader.getInstance().getDownPathUri(result.getICON_DOCTOR_PICTURE()))
@@ -311,6 +316,7 @@ public class DoctorInfoActivity extends Activity implements View.OnClickListener
                 }
                 introduceAdapter.notifyDataSetChanged();
                 doctorIntroduction.setText(result.getINTRODUCTION());
+                doctorGood.setText(good);
                 if (doctorIntroduction.getLineCount()<3){
                     doctorIntroductionMore.setVisibility(View.GONE);
                 }else {
@@ -320,7 +326,7 @@ public class DoctorInfoActivity extends Activity implements View.OnClickListener
                 DoctorInfoEntity.ResultBean.EvaluateBean evaluate = result.getEvaluate();
                 if (evaluate!=null){
                     userEvaluateName.setText(evaluate.getREAL_NAME());
-                    userEvaluateContent.setText(evaluate.getNOTE());
+                    userEvaluateContent.setText(evaluate.getEVALUATE_CONTENT());
                 }else {
                     userEvaluateName.setVisibility(View.GONE);
                     userEvaluateContent.setText("暂无评价");
@@ -345,6 +351,8 @@ public class DoctorInfoActivity extends Activity implements View.OnClickListener
                     imAttention.setSelected(false);
                 }
                 tipTv.setVisibility(View.GONE);
+                imAttention.setVisibility(View.VISIBLE);
+                viewById.setVisibility(View.VISIBLE);
             }
         }, this);
 
@@ -370,7 +378,7 @@ public class DoctorInfoActivity extends Activity implements View.OnClickListener
             DoctorInfoEntity.ResultBean.DoctorServiceBean doctorServiceBean = doctorServiceList.get(position);
             if (doctorServiceBean.getSERVICE_TYPE_ID() == 3) {//门诊预约
                 Intent intent2 = new Intent(DoctorInfoActivity.this, BuyServiceListFromPatientActivity.class);
-                intent2.putExtra("consultId", "");
+                intent2.putExtra("doctor_id", result.getCUSTOMER_ID());//医生ID.putExtra("consultId", "");
                 intent2.putExtra(BuyServiceListFromPatientActivity.DOCTOR_NAME, result.getDOCTOR_REAL_NAME());
                 intent2.putExtra(BuyServiceListFromPatientActivity.DOCTOR_ID, result.getCUSTOMER_ID());//医生ID
                 intent2.putExtra("type", 3);
@@ -479,9 +487,10 @@ public class DoctorInfoActivity extends Activity implements View.OnClickListener
         sp.setShareType(Platform.SHARE_WEBPAGE);//非常重要：一定要设置分享属性
         sp.setTitle(getString(R.string.string_share_title)); //分享标题
         sp.setText(getString(R.string.string_share_content)); //分享文本
+
 //        sp.setImageUrl("http://7sby7r.com1.z0.glb.clouddn.com/CYSJ_02.jpg");//网络图片rul
 //        sp.setImageData(getBitmapFromUri(uri));
-        sp.setUrl(Configs.WEB_IP+"/DuoMeiHealth/DO.action?op=doctor&Doctor_ID=" + result.getCUSTOMER_ID()+"&Site_ID="+site_id);   //网友点进链接后，可以看到分享的详情
+        sp.setUrl(Configs.WEB_IP+"/DuoMeiHealth/site/index.html#/YSxinxi/" + result.getCUSTOMER_ID()+"?Site_ID="+site_id);   //网友点进链接后，可以看到分享的详情
         //  sp.setUrl(HTalkApplication.getHttpUrls().HTML + "/shopstroe.html?" + "doctor_id=" + doctor_id + "?customer_id=" + customer_id);   //网友点进链接后，可以看到分享的详情
         //3、非常重要：获取平台对象
         Platform wechat = ShareSDK.getPlatform(WechatMoments.NAME);
@@ -491,7 +500,7 @@ public class DoctorInfoActivity extends Activity implements View.OnClickListener
     }
 
     /**
-     * 微信分享
+     * 微信分享Type
      */
     private void sendWX() {
         //2、设置分享内容
@@ -499,9 +508,10 @@ public class DoctorInfoActivity extends Activity implements View.OnClickListener
         sp.setShareType(Platform.SHARE_WEBPAGE);//非常重要：一定要设置分享属性
         sp.setTitle(getString(R.string.string_share_title)); //分享标题
         sp.setText(getString(R.string.string_share_content)); //分享文本
+
 //        sp.setImageData(getBitmapFromUri(uri));
         // sp.setUrl(HTalkApplication.getHttpUrls().HTML + "/shopstroe.html?" + "doctor_id=" + doctor_id + "?customer_id=" + customer_id);   //网友点进链接后，可以看到分享的详情
-        sp.setUrl(Configs.WEB_IP+"/DuoMeiHealth/DO.action?op=doctor&Doctor_ID=" + result.getCUSTOMER_ID()+"&Site_ID="+site_id);   //网友点进链接后，可以看到分享的详情
+        sp.setUrl(Configs.WEB_IP+"/DuoMeiHealth/site/index.html#/YSxinxi/"+ result.getCUSTOMER_ID()+"?Site_ID="+site_id);   //网友点进链接后，可以看到分享的详情
 //        Log.i("kkk", "https://www.61120.cn/DuoMeiHealth/DO.action?op=doctor&Doctor_ID=" + result.getCUSTOMER_ID()+"&Site_ID="+site_id);
         //3、非常重要：获取平台对象
         Platform wechatms = ShareSDK.getPlatform(Wechat.NAME);

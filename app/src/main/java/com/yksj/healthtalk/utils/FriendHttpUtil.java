@@ -165,8 +165,6 @@ public class FriendHttpUtil {
     /**
      * @param context
      * @param content
-     * @param type
-     * @param sourceType
      * @param friendType 好友类型
      * @return
      */
@@ -224,7 +222,6 @@ public class FriendHttpUtil {
     /**
      * 针对六一健康的关注与取消关注医生
      *
-     * @param userId
      * @param entity
      * @param type   1-收藏好友 0-取消收藏好友  Y
      *               2-加入黑名单  3-移除黑名单  B

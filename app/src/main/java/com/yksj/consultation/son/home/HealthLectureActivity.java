@@ -23,6 +23,7 @@ import com.yksj.healthtalk.net.http.OkHttpClientManager;
 
 import org.apache.http.message.BasicNameValuePair;
 import org.handmark.pulltorefresh.library.PullToRefreshBase;
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,12 +34,13 @@ public class HealthLectureActivity extends Activity implements AdapterView.OnIte
     private ListView mListView;
     private List<HealthLectureWorksEntity.ResultBean> mList = new ArrayList<>();
     private HealthLectureAdapter mAdapter;
-    private Button sortAll, sortNew, sortHot, sortKepu, sortXueshu, sortRenwen, zansortAll, sortZannei, sortZanwai, priceSortAll, sortFufei, sortMianfei;
+    private Button  zansortAll, sortZannei, sortZanwai, priceSortAll, sortFufei, sortMianfei;
     private String lectureType;//doctor 医生主页点击进来  works  工作站点击进来  all首页点进来
     private LinearLayout lineZan, linePrice,lineAll;
     private String site_id,customer_id;
     private int pageNum=1;
-    private String sortType="4";   //1-科普 2-学术 3-人文 4-最新 5-最热
+    private String sortType="4";//1-科普 2-学术 3-人文 4-最新 5-最热
+    private TextView sortAll,sortNew,sortHot,sortXueshu,sortRenwen,sortKepu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,17 +56,17 @@ public class HealthLectureActivity extends Activity implements AdapterView.OnIte
         TextView title = (TextView) findViewById(R.id.title_lable);
         title.setText("健康讲堂");
         findViewById(R.id.title_back).setOnClickListener(this);
-        sortAll = (Button) findViewById(R.id.sortAll);
+        sortAll = (TextView) findViewById(R.id.sortAll);
         sortAll.setOnClickListener(this);
-        sortNew = (Button) findViewById(R.id.sortNew);
+        sortNew = (TextView) findViewById(R.id.sortNew);
         sortNew.setOnClickListener(this);
-        sortHot = (Button) findViewById(R.id.sortHot);
+        sortHot = (TextView) findViewById(R.id.sortHot);
         sortHot.setOnClickListener(this);
-        sortKepu = (Button) findViewById(R.id.sortKepu);
+        sortKepu = (TextView) findViewById(R.id.sortKepu);
         sortKepu.setOnClickListener(this);
-        sortXueshu = (Button) findViewById(R.id.sortXueshu);
+        sortXueshu = (TextView) findViewById(R.id.sortXueshu);
         sortXueshu.setOnClickListener(this);
-        sortRenwen = (Button) findViewById(R.id.sortRenwen);
+        sortRenwen = (TextView) findViewById(R.id.sortRenwen);
         sortRenwen.setOnClickListener(this);
         zansortAll = (Button) findViewById(R.id.zansortAll);
         zansortAll.setOnClickListener(this);
@@ -234,32 +236,32 @@ public class HealthLectureActivity extends Activity implements AdapterView.OnIte
                 setSortBtnbg(sortAll);
                 break;
             case R.id.sortNew:
-                setSortBtnbg(sortNew);
                 sortType="4";
+                setSortBtnbg(sortNew);
                 mList.clear();
                 loadData();
                 break;
             case R.id.sortHot:
-                setSortBtnbg(sortHot);
                 sortType="5";
+                setSortBtnbg(sortHot);
                 mList.clear();
                 loadData();
                 break;
             case R.id.sortKepu:
-                setSortBtnbg(sortKepu);
                 sortType="1";
+                setSortBtnbg(sortKepu);
                 mList.clear();
                 loadData();
                 break;
             case R.id.sortXueshu:
-                setSortBtnbg(sortXueshu);
                 sortType="2";
+                setSortBtnbg(sortXueshu);
                 mList.clear();
                 loadData();
                 break;
             case R.id.sortRenwen:
-                setSortBtnbg(sortRenwen);
                 sortType="3";
+                setSortBtnbg(sortRenwen);
                 mList.clear();
                 loadData();
                 break;
@@ -284,21 +286,28 @@ public class HealthLectureActivity extends Activity implements AdapterView.OnIte
         }
     }
 
-    private void setSortBtnbg(Button btn) {
-        sortAll.setBackgroundResource(R.drawable.btn_green_line_bg);
-        sortAll.setTextColor(Color.parseColor("#000000"));
-        sortNew.setBackgroundResource(R.drawable.btn_green_line_bg);
-        sortNew.setTextColor(Color.parseColor("#000000"));
-        sortHot.setBackgroundResource(R.drawable.btn_green_line_bg);
-        sortHot.setTextColor(Color.parseColor("#000000"));
-        sortKepu.setBackgroundResource(R.drawable.btn_green_line_bg);
-        sortKepu.setTextColor(Color.parseColor("#000000"));
-        sortXueshu.setBackgroundResource(R.drawable.btn_green_line_bg);
-        sortXueshu.setTextColor(Color.parseColor("#000000"));
-        sortRenwen.setBackgroundResource(R.drawable.btn_green_line_bg);
-        sortRenwen.setTextColor(Color.parseColor("#000000"));
-        btn.setBackgroundResource(R.drawable.btn_green_bg);
-        btn.setTextColor(Color.parseColor("#ffffff"));
+    private void setSortBtnbg(TextView btn) {
+        sortNew.setBackgroundResource(sortType.equals("4")?R.drawable.btn_green_line_bg:0);
+        sortNew.setTextColor(sortType.equals("4")?Color.parseColor("#41b8b6"):Color.parseColor("#989898"));
+        sortHot.setBackgroundResource(sortType.equals("5")?R.drawable.btn_green_line_bg:0);
+        sortHot.setTextColor(sortType.equals("5")?Color.parseColor("#41b8b6"):Color.parseColor("#989898"));
+        sortKepu.setBackgroundResource(sortType.equals("1")?R.drawable.btn_green_line_bg:0);
+        sortKepu.setTextColor(sortType.equals("1")?Color.parseColor("#41b8b6"):Color.parseColor("#989898"));
+        sortXueshu.setBackgroundResource(sortType.equals("2")?R.drawable.btn_green_line_bg:0);
+        sortXueshu.setTextColor(sortType.equals("2")?Color.parseColor("#41b8b6"):Color.parseColor("#989898"));
+        sortRenwen.setBackgroundResource(sortType.equals("3")?R.drawable.btn_green_line_bg:0);
+        sortRenwen.setTextColor(sortType.equals("3")?Color.parseColor("#41b8b6"):Color.parseColor("#989898"));
+//        sortAll.setBackgroundResource(sortType.equals("4")?R.drawable.btn_green_line_bg:0);
+//        sortAll.setTextColor(sortType.equals("4")?Color.parseColor("#989898"):Color.parseColor("#41b8b6"));//        sortHot.setBackgroundResource(R.drawable.btn_green_line_bg);
+//        sortHot.setTextColor(Color.parseColor("#000000"));
+//        sortKepu.setBackgroundResource(R.drawable.btn_green_line_bg);
+//        sortKepu.setTextColor(Color.parseColor("#000000"));
+//        sortXueshu.setBackgroundResource(R.drawable.btn_green_line_bg);
+//        sortXueshu.setTextColor(Color.parseColor("#000000"));
+//        sortRenwen.setBackgroundResource(R.drawable.btn_green_line_bg);
+//        sortRenwen.setTextColor(Color.parseColor("#000000"));
+//        btn.setBackgroundResource(R.drawable.btn_green_bg);
+//        btn.setTextColor(Color.parseColor("#ffffff"));
     }
 
     private void setZanSortBtnbg(Button btn) {

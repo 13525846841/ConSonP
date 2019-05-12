@@ -2,11 +2,13 @@ package com.yksj.consultation.son.consultation.news;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ListView;
 
 import com.squareup.okhttp.Request;
 import com.yksj.consultation.adapter.CommondisAdapter;
@@ -36,7 +38,7 @@ import java.util.Map;
  * 六一百科常见疾病界面
  */
 public class Commondis extends RootFragment implements AdapterView.OnItemClickListener {
-    private GridView mGv;
+    private ListView mGv;
     public CommondisAdapter adapter;
     private List<JSONObject> mList = null;
     public String class_id ="107";
@@ -50,7 +52,7 @@ public class Commondis extends RootFragment implements AdapterView.OnItemClickLi
 
     private void initView(View view) {
         mEmptyView = view.findViewById(R.id.empty_view_common);
-        mGv = (GridView) view.findViewById(R.id.common_dis);
+        mGv = (ListView) view.findViewById(R.id.common_dis);
         adapter = new CommondisAdapter(getActivity());
         mGv.setAdapter(adapter);
         mGv.setOnItemClickListener(this);

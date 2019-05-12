@@ -103,7 +103,7 @@ public class ServicePayMainUi extends BaseFragmentActivity implements OnClickLis
 
     public static final String DOCTOR_ID = "doctor_id";
     public static final String DOCTOR_NAME = "doctor_name";
-    private String doctorId = "";
+    private int doctorId ;
     private String doctorName = "";
 
 
@@ -155,12 +155,8 @@ public class ServicePayMainUi extends BaseFragmentActivity implements OnClickLis
         consultId = getIntent().getStringExtra("consultationId");
         type = getIntent().getIntExtra("Type", 0);
 
-        if (getIntent().hasExtra(DOCTOR_ID)) {
-            doctorId = getIntent().getStringExtra(DOCTOR_ID);
-        }
-        if (getIntent().hasExtra(DOCTOR_NAME)) {
+            doctorId = getIntent().getIntExtra(DOCTOR_ID,0);
             doctorName = getIntent().getStringExtra(DOCTOR_NAME);
-        }
         if (intent.hasExtra("mesg")) {
             mesg = (TickMesg) intent.getSerializableExtra("mesg");
             privice = Integer.parseInt(mesg.getSERVICE_PRICE());
@@ -627,10 +623,10 @@ public class ServicePayMainUi extends BaseFragmentActivity implements OnClickLis
             return null;
         }
         RequestParams params = new RequestParams();
-        params.put("DOCTORID", doctorId);
+        params.put("DOCTORID", doctorId+"");
         switch (type) {
             case 0://支付宝
-                params.put("Type", "MedicallyRegistered");
+                params.put("Type", "MedicallyRegistered330");
                 break;
             case 1://微信
                 params.put("Type", "wx");
@@ -664,6 +660,7 @@ public class ServicePayMainUi extends BaseFragmentActivity implements OnClickLis
 //				params.put("SERVICE_PLACE", json.optString("SERVICE_PLACE"));//地点
         }
         params.put("CUSTOMER_ID", LoginServiceManeger.instance().getLoginEntity().getId());
+        params.put("VALID_MARK","60");
         return url = params.toString();
 
     }
@@ -676,7 +673,7 @@ public class ServicePayMainUi extends BaseFragmentActivity implements OnClickLis
     public String getParams() {
         RequestParams params = new RequestParams();
         params.put("Type", "MedicallyRegistered");
-        params.put("DOCTORID", doctorId);
+        params.put("DOCTORID", doctorId+"");
 //		params.put("SELECTDATE", null);
         params.put("CUSTOMER_ID", SmartFoxClient.getLoginUserId());
         params.put("SERVICE_ITEM_ID", SERVICE_ITEM_ID);

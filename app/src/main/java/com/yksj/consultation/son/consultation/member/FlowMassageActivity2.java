@@ -520,7 +520,7 @@ public class FlowMassageActivity2 extends BaseFragmentActivity implements View.O
             json.put("ALLERGY", allergyText);//过敏史描述
             json.put("MAINILLNESS", mainIllness);//主诉
             json.put("PATIENTID", customerid);//患者id
-            json.put("PATIENTTEL_PHONE", pPhoneText);//患者手机
+            json.put("BEFORE_PATIENTTEL_PHONE", pPhoneText);//患者手机
             if (locationCode == null | "".equals(locationCode) | "null".equals(locationCode)) {
                 ToastUtil.showToastPanl("请填写患者位置");
                 return;

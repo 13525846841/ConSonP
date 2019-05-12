@@ -37,7 +37,7 @@ public class SixOneActivity extends BaseFragmentActivity implements View.OnClick
 
     private ViewPager mViewPager;
     private RadioGroup mRadioGroup;//页签
-    private RadioButton common,famous,classroom;
+    private RadioButton common,famous,hospital,classroom;
     private List<JSONObject> mmList = null;
     private List<JSONObject> mmList2 = null;
     private List<JSONObject> mmList3 = null;
@@ -68,10 +68,6 @@ public class SixOneActivity extends BaseFragmentActivity implements View.OnClick
         initTitle();
         titleTextV.setText("六一百科");
         titleLeftBtn.setVisibility(View.VISIBLE);
-//        titleRightBtn.setVisibility(View.VISIBLE);
-//        titleRightBtn.setText("健康树");
-//        titleRightBtn.setOnClickListener(this);
-
         mRadioGroup = (RadioGroup) findViewById(R.id.six_one);
         titleLeftBtn.setOnClickListener(this);
 
@@ -85,13 +81,14 @@ public class SixOneActivity extends BaseFragmentActivity implements View.OnClick
         mRadioGroup.setOnCheckedChangeListener(this);
 
         common = (RadioButton) findViewById(R.id.my_planing);
+        hospital=(RadioButton)findViewById(R.id.fro_medicine) ;
         famous = (RadioButton) findViewById(R.id.famous_doctor_hospital);
         classroom = (RadioButton) findViewById(R.id.doctor_teach);
-
+        common.setTextColor(getResources().getColor(R.color.color_blue));
         common.setOnClickListener(this);
         famous.setOnClickListener(this);
         classroom.setOnClickListener(this);
-
+        hospital.setOnClickListener(this);
 //        commonCheck = (CheckBox) findViewById(R.id.iv_planing);
 //        famousCheck = (CheckBox) findViewById(R.id.iv_famous_doctor_hospital);
 //        findViewById(R.id.iv_planing).setOnClickListener(this);
@@ -128,17 +125,17 @@ public class SixOneActivity extends BaseFragmentActivity implements View.OnClick
         mList.add(waitFragment);
         mAdpater.onBoundFragment(mList);
         //医学前沿
-//        Fragment doneFragment0 = new FroMedicine();
-//        mList.add(doneFragment0);
-//        mAdpater.onBoundFragment(mList);
+        Fragment doneFragment0 = new FroMedicine();
+        mList.add(doneFragment0);
+        mAdpater.onBoundFragment(mList);
         // 名医名院
         doneFragment1 = new Famousdochos();
         mList.add(doneFragment1);
         mAdpater.onBoundFragment(mList);
         // 名医讲堂
-//        doneFragment2 = new DocTeach();
-//        mList.add(doneFragment2);
-//        mAdpater.onBoundFragment(mList);
+        doneFragment2 = new DocTeach();
+        mList.add(doneFragment2);
+        mAdpater.onBoundFragment(mList);
         //显示第一页
         mViewPager.setCurrentItem(0, false);
     }
@@ -430,13 +427,7 @@ public class SixOneActivity extends BaseFragmentActivity implements View.OnClick
     public void onPageSelected(int position) {
       //  mRadioGroup.check(mRadioGroup.getChildAt(position).getId());
 
-        if (0==position){
-            common.setTextColor(getResources().getColor(R.color.color_blue));
-            famous.setTextColor(getResources().getColor(R.color.gray_text));
-        }else if (1==position){
-            famous.setTextColor(getResources().getColor(R.color.color_blue));
-            common.setTextColor(getResources().getColor(R.color.gray_text));
-        }
+        setBackGroud(position);
 
 //        RadioButton mButton = (RadioButton) mRadioGroup.getChildAt(position);
 //      //  mButton.setChecked(true);
@@ -450,6 +441,20 @@ public class SixOneActivity extends BaseFragmentActivity implements View.OnClick
 //        }
 //            mButton.setChecked(ischeck);
 
+    }
+
+    private void setBackGroud(int position) {
+//        if (0==position){
+//            common.setTextColor(getResources().getColor(R.color.color_blue));
+//            famous.setTextColor(getResources().getColor(R.color.gray_text));
+//        }else if (1==position){
+//            famous.setTextColor(getResources().getColor(R.color.color_blue));
+//            common.setTextColor(getResources().getColor(R.color.gray_text));
+//        }
+        common.setTextColor(position==0?getResources().getColor(R.color.color_blue):getResources().getColor(R.color.gray_text));
+        hospital.setTextColor(position==1?getResources().getColor(R.color.color_blue):getResources().getColor(R.color.gray_text));
+        famous.setTextColor(position==2?getResources().getColor(R.color.color_blue):getResources().getColor(R.color.gray_text));
+        classroom.setTextColor(position==3?getResources().getColor(R.color.color_blue):getResources().getColor(R.color.gray_text));
     }
 
     @Override

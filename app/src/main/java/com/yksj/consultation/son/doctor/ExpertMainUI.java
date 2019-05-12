@@ -267,7 +267,7 @@ public class ExpertMainUI extends BaseFragmentActivity implements View.OnClickLi
 
         Intent intent = new Intent(this, DoctorInfoActivity.class);
         intent.putExtra("customer_id",Integer.valueOf(mAdapter.datas.get(position - 1).CUSTOMER_ID));
-        Log.i("ggg", "onItemClick:    "+mAdapter.datas.get(position - 1).CUSTOMER_ID+"sdfsdfs    "+mAdapter.datas.get(position - 1).getDOCTOR_SITE_ID());
+        intent.putExtra("good",mAdapter.datas.get(position-1).getDOCTOR_SPECIALLY());
         if (mAdapter.datas.get(position - 1).getDOCTOR_SITE_ID()!=null) {
             intent.putExtra(DoctorInfoActivity.SITE_ID,Integer.valueOf(mAdapter.datas.get(position - 1).getDOCTOR_SITE_ID()));
         }

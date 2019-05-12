@@ -79,7 +79,6 @@ public class PermissionUtils {
             return;
         }
 
-        Log.i(TAG, "requestPermission requestCode:" + requestCode);
         if (requestCode < 0 || requestCode >= requestPermissions.length) {
             Log.w(TAG, "requestPermission illegal requestCode:" + requestCode);
             return;

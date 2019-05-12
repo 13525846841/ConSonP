@@ -1,6 +1,7 @@
 package com.yksj.consultation.adapter;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -39,9 +40,12 @@ public class EvaluationAdapter extends SimpleBaseAdapter<EvaluationEntity.Result
         Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(resultBean.getBIG_ICON_BACKGROUND()))
                 .error(R.drawable.default_head_patient).placeholder(R.drawable.default_head_patient).dontAnimate()
                 .into(header);
-        nickName.setText(resultBean.getCUSTOMER_NAME());
+        if(!TextUtils.isEmpty(resultBean.getCUSTOMER_NAME())){
+            nickName.setText(resultBean.getCUSTOMER_NAME());
+        }
+
         time.setText(TimeUtil.getFormatDate(resultBean.getEVALUATE_TIME()));
-        content.setText(resultBean.getNOTE());
+        content.setText(resultBean.getEVALUATE_CONTENT());
         return convertView;
     }
 }

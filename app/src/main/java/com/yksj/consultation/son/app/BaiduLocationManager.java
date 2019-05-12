@@ -17,7 +17,7 @@ public class BaiduLocationManager {
 	private static BaiduLocationManager manager;
 	private LocationClient mLocationClient;
 	private MyLocationListener mLocationListener;
-	public LocationListenerCallBack callBack;
+	public static LocationListenerCallBack callBack;
 
 	public static void init(Context context) {
 		BaiduLocationManager.context = context;

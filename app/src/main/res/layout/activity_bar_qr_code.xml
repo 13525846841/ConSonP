@@ -10,11 +10,11 @@
     <include layout="@layout/gray_title_layout" />
 
     <ImageView
-        android:visibility="gone"
         android:id="@+id/QRShare"
         android:layout_width="40dp"
         android:src="@drawable/share2"
         android:padding="5dp"
+        android:visibility="gone"
         android:layout_gravity="end|center_vertical"
         android:layout_marginRight="12dp"
         android:layout_height="40dp" />

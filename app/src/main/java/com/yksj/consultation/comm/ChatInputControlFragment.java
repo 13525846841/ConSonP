@@ -9,6 +9,7 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.location.Geocoder;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -19,6 +20,7 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -40,6 +42,9 @@ import android.widget.PopupWindow.OnDismissListener;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 
+import com.baidu.location.BDLocation;
+import com.baidu.location.LocationClient;
+import com.baidu.location.LocationClientOption;
 import com.dmsj.newask.http.LodingFragmentDialog;
 import com.netease.nimlib.sdk.avchat.constant.AVChatType;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
@@ -51,6 +56,7 @@ import com.yksj.consultation.son.R;
 import com.yksj.consultation.son.app.AppTools;
 import com.yksj.consultation.son.app.BaiduLocationManager;
 import com.yksj.consultation.son.chatting.ChatActivity;
+import com.yksj.consultation.son.chatting.ChatMapActivity;
 import com.yksj.consultation.son.chatting.QuickReplyChattingActivity;
 import com.yksj.consultation.son.consultation.avchat.team.Container;
 import com.yksj.consultation.son.consultation.avchat.team.ModuleProxy;
@@ -86,8 +92,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
-
 /**
  * 聊天控制区域
  *
@@ -99,7 +105,6 @@ public class ChatInputControlFragment extends Fragment implements OnClickListene
     public final static int REQUEST_CAMERA_CODE = 2000;//相机
     public final static int REQUEST_FILE_CODE = 2001;//相册
     private static final int RECODE_FLAG = 1000;
-
     EditText mEditText;
     TextView mNumbTxtV;
     VUMeterView mChatVm;
@@ -130,8 +135,11 @@ public class ChatInputControlFragment extends Fragment implements OnClickListene
         onShowResultDialog(R.string.request_location_fail);
     }
 
+
+
     @Override
     public void locationListenerCallBack(final double longitude, final double latitude) {
+
         HttpRestClient.doHttpQueryMapAddress(String.valueOf(longitude), String.valueOf(latitude), new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, JSONObject response) {
@@ -139,9 +147,8 @@ public class ChatInputControlFragment extends Fragment implements OnClickListene
                 try {
                     String state = response.getString("status");
                     if ("OK".equalsIgnoreCase(state)) {
-                        JSONArray jsonArray2 = response.getJSONArray("results");
-                        response = jsonArray2.getJSONObject(0);
-                        String locationAddrs = response.getString("formatted_address");
+                        JSONObject result = response.getJSONObject("result");
+                        String locationAddrs = result.getString("formatted_address");
                         onSendLocationMessage(String.valueOf(longitude), String.valueOf(latitude), locationAddrs);
                     }
                 } catch (JSONException e) {
@@ -154,8 +161,21 @@ public class ChatInputControlFragment extends Fragment implements OnClickListene
                 onDialogDismisss();
             }
         });
+
+
+
     }
 
+//        public class MyLocationListener extends BDAbstractLocationListener {
+//        @Override
+//        public void onReceiveLocation(BDLocation location){
+//            //此处的BDLocation为定位结果信息类，通过它的各种get方法可获取定位相关的全部结果
+//            //以下只列举部分获取位置描述信息相关的结果
+//            //更多结果信息获取说明，请参照类参考中BDLocation类中的说明
+//
+//            String locationDescribe = location.getLocationDescribe();    //获取位置描述信息
+//        }
+//    }
     @Override
     public boolean sendMessage(IMMessage msg) {
         return false;
@@ -219,6 +239,8 @@ public class ChatInputControlFragment extends Fragment implements OnClickListene
         mChatFaceParse = FaceParse.getChatFaceParse(activity);
         quickReplyChattingAdapter = new QuickReplyChattingAdapter(getActivity(), 1);
         super.onAttach(activity);
+
+
     }
 
     @Override
@@ -670,19 +692,19 @@ public class ChatInputControlFragment extends Fragment implements OnClickListene
      */
     private void showPayDialog() {
         DoubleBtnFragmentDialog.showDefault(getFragmentManager(),
-                "对不起！您需要购买该医生的服务才能与医生进行对话，也可以到该医生的公告板给医生留言",
-                "知道了",
-                "去购买",
-                new OnDilaogClickListener() {
-                    @Override
-                    public void onDismiss(DialogFragment fragment) {
-                    }
+                                            "对不起！您需要购买该医生的服务才能与医生进行对话，也可以到该医生的公告板给医生留言",
+                                            "知道了",
+                                            "去购买",
+                                            new OnDilaogClickListener() {
+                                                @Override
+                                                public void onDismiss(DialogFragment fragment) {
+                                                }
 
-                    //去购买
-                    @Override
-                    public void onClick(DialogFragment fragment, View v) {
-                    }
-                });
+                                                //去购买
+                                                @Override
+                                                public void onClick(DialogFragment fragment, View v) {
+                                                }
+                                            });
     }
 
     /**
@@ -931,7 +953,7 @@ public class ChatInputControlFragment extends Fragment implements OnClickListene
     public String getImageUrlByAlbum(Uri uri) {
         String[] imageItems = {MediaColumns.DATA};
         Cursor cursor = context.getContentResolver().query(uri, imageItems,
-                null, null, null);
+                                                           null, null, null);
 //		Cursor cursor = getActivity().managedQuery(uri, imageItems, null, null, null);
         if (cursor != null) {
             cursor.moveToFirst();

@@ -100,13 +100,13 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:layout_weight="1"
-                    android:textSize="14sp"
                     android:button="@null"
                     android:checked="true"
                     android:drawablePadding="2dp"
                     android:drawableRight="@drawable/pop_arrows_index_down"
-                    android:text="常见疾病"
-                    android:textColor="@color/tab_color_blue"/>
+                    android:text="热门疾病"
+                    android:textColor="#989898"
+                    android:textSize="14sp"/>
 
                 <RadioButton
                     android:id="@+id/fro_medicine"
@@ -114,12 +114,11 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:layout_weight="1"
-                    android:textSize="14sp"
                     android:button="@null"
                     android:drawablePadding="2dp"
                     android:text="医学前沿"
-                    android:visibility="gone"
-                    android:textColor="@color/tab_color_blue"/>
+                    android:textColor="#989898"
+                    android:textSize="14sp"/>
                 <!--<LinearLayout-->
                     <!--android:layout_width="0dp"-->
                     <!--android:layout_height="match_parent"-->
@@ -162,27 +161,25 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:layout_weight="1"
-                    android:textSize="14sp"
                     android:button="@null"
                     android:paddingRight="20dp"
                     android:drawablePadding="2dp"
-                    android:drawableRight="@drawable/pop_arrows_index_down"
                     android:text="名医名院"
-                    android:textColor="@color/tab_color_blue"/>
+                    android:textColor="#989898"
+                    android:textSize="14sp"/>
                 <RadioButton
                     android:id="@+id/doctor_teach"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:layout_weight="1"
-                    android:textSize="14sp"
                     android:button="@null"
                     android:paddingRight="20dp"
                     android:drawablePadding="2dp"
                     android:text="名医讲堂"
-                    android:visibility="gone"
                     android:drawableRight="@drawable/navigationbar_drawable"
-                    android:textColor="@color/tab_color_blue"/>
+                    android:textColor="#989898"
+                    android:textSize="14sp"/>
             </RadioGroup>
             <!--<ImageView-->
                 <!--android:layout_width="wrap_content"-->

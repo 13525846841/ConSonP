@@ -197,6 +197,8 @@ public class GuiDeUitwoActivity extends BaseFragmentActivity {
 
     }
 
+
+
     private boolean left = false;
     private boolean right = false;
     private boolean isScrolling = false;

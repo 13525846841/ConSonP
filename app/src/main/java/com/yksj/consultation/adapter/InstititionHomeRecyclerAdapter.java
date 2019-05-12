@@ -2,6 +2,7 @@ package com.yksj.consultation.adapter;
 
 import android.content.Context;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -36,7 +37,7 @@ public class InstititionHomeRecyclerAdapter extends BaseRecyclerAdapter<Institut
         TextView addressTv = (TextView) holder.itemView.findViewById(R.id.addressTv);
         InstitutionHomeEntity.ResultBean resultBean = list.get(position);
         Glide.with(context).load(ImageLoader.getInstance().getDownPathUri(resultBean.getUNIT_PIC1())).error(R.drawable.waterfall_default).placeholder(R.drawable.waterfall_default)
-                .dontAnimate().into(topImg);
+             .dontAnimate().into(topImg);
         titleTv.setText(resultBean.getUNIT_NAME());
         switch (resultBean.getCLASS_TYPE()) {
             case "1":
@@ -52,6 +53,13 @@ public class InstititionHomeRecyclerAdapter extends BaseRecyclerAdapter<Institut
                 typeTv.setText("兴趣中心");
                 break;
         }
-        addressTv.setText(resultBean.getADDRESS());
+        try {
+            String address = resultBean.getADDRESS().substring(0, 6);
+            addressTv.setText(address+"...");
+        }catch (Exception e){
+        }
+
+
+
     }
 }

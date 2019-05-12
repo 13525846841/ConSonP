@@ -1,195 +1,227 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:orientation="vertical"
     tools:context="com.yksj.consultation.son.home.HealthLectureActivity">
 
-    <include layout="@layout/title_layout"/>
+    <include layout="@layout/title_layout" />
+
     <LinearLayout
         android:id="@+id/lineAll"
-        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
-        android:layout_height="35dp">
-        <Button
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp">
+
+        <TextView
             android:id="@+id/sortAll"
-            android:background="@drawable/btn_green_line_bg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_width="0dp"
             android:layout_weight="1"
+            android:textColor="#989898"
+            android:gravity="center"
             android:text="全部"
-            android:layout_height="match_parent" />
-        <Button
+            android:textSize="15dp" />
+
+        <TextView
             android:id="@+id/sortNew"
-            android:background="@drawable/btn_green_line_bg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_width="0dp"
             android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#989898"
             android:text="最新"
-            android:layout_height="match_parent" />
-        <Button
+            android:textSize="15dp" />
+
+        <TextView
             android:id="@+id/sortHot"
-            android:background="@drawable/btn_green_line_bg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_width="0dp"
             android:layout_weight="1"
+            android:textColor="#989898"
+            android:gravity="center"
             android:text="最热"
-            android:layout_height="match_parent" />
-        <Button
+            android:textSize="15dp" />
+
+        <TextView
             android:id="@+id/sortKepu"
-            android:background="@drawable/btn_green_line_bg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_width="0dp"
             android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#989898"
             android:text="科普类"
-            android:layout_height="match_parent" />
-        <Button
+            android:textSize="15dp" />
+
+        <TextView
             android:id="@+id/sortXueshu"
-            android:background="@drawable/btn_green_line_bg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_width="0dp"
             android:layout_weight="1"
+            android:gravity="center"
             android:text="学术类"
-            android:layout_height="match_parent" />
-        <Button
+            android:textColor="#989898"
+            android:textSize="15dp" />
+
+        <TextView
             android:id="@+id/sortRenwen"
-            android:background="@drawable/btn_green_line_bg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_width="0dp"
             android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#989898"
             android:text="人文类"
-            android:layout_height="match_parent" />
+            android:textSize="15dp" />
     </LinearLayout>
 
     <LinearLayout
-        android:visibility="gone"
         android:id="@+id/lineZan"
-        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
-        android:layout_height="35dp">
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone">
+
         <Button
             android:id="@+id/zansortAll"
-            android:background="@drawable/btn_green_line_bg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_width="0dp"
             android:layout_weight="1"
-            android:text="全部"
-            android:layout_height="match_parent" />
+            android:background="@drawable/btn_green_line_bg"
+            android:text="全部" />
+
         <Button
             android:id="@+id/sortZannei"
-            android:background="@drawable/btn_green_line_bg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_width="0dp"
             android:layout_weight="1"
-            android:text="站内"
-            android:layout_height="match_parent" />
+            android:background="@drawable/btn_green_line_bg"
+            android:text="站内" />
+
         <Button
             android:id="@+id/sortZanwai"
-            android:background="@drawable/btn_green_line_bg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_width="0dp"
             android:layout_weight="1"
-            android:text="站外"
-            android:layout_height="match_parent" />
-    <View
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="match_parent" />
-    <View
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="match_parent" />
-    <View
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="match_parent" />
+            android:background="@drawable/btn_green_line_bg"
+            android:text="站外" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1" />
     </LinearLayout>
 
     <LinearLayout
-        android:visibility="gone"
         android:id="@+id/linePrice"
-        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
-        android:layout_height="35dp">
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone">
+
         <Button
             android:id="@+id/priceSortAll"
-            android:background="@drawable/btn_green_line_bg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_width="0dp"
             android:layout_weight="1"
-            android:text="全部"
-            android:layout_height="match_parent" />
+            android:background="@drawable/btn_green_line_bg"
+            android:text="全部" />
+
         <Button
             android:id="@+id/sortFufei"
-            android:background="@drawable/btn_green_line_bg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_width="0dp"
             android:layout_weight="1"
-            android:text="付费"
-            android:layout_height="match_parent" />
+            android:background="@drawable/btn_green_line_bg"
+            android:text="付费" />
+
         <Button
             android:id="@+id/sortMianfei"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
             android:background="@drawable/btn_green_line_bg"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:text="免费"
-            android:layout_height="match_parent" />
+            android:text="免费" />
+
         <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" />
+            android:layout_weight="1" />
+
         <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" />
+            android:layout_weight="1" />
+
         <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" />
+            android:layout_weight="1" />
     </LinearLayout>
-    <org.handmark.pulltorefresh.library.PullToRefreshListView
-        android:layout_below="@+id/sort"
-        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+
+    <org.handmark.pulltorefresh.library.PullToRefreshListView xmlns:ptr="http://schemas.android.com/apk/res-auto"
         android:id="@+id/healthPulllist"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:horizontalSpacing="2dp"
+        android:layout_below="@+id/sort"
         android:divider="@color/color_text_gray"
         android:dividerHeight="0.5dp"
+        android:horizontalSpacing="2dp"
         android:scrollbars="none"
-        ptr:ptrMode="both" >
+        ptr:ptrMode="both">
 
     </org.handmark.pulltorefresh.library.PullToRefreshListView>
 
     <include
         android:id="@+id/load_faile_layout"
-        android:visibility="gone"
-        layout="@layout/loading_fail_data_null"/></LinearLayout>
+        layout="@layout/loading_fail_data_null"
+        android:visibility="gone" />
+</LinearLayout>
