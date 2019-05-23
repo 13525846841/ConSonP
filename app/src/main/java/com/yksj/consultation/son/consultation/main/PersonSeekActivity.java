@@ -73,7 +73,7 @@ public class PersonSeekActivity  extends BaseFragmentActivity implements View.On
 
     }
 
-    private void deletePerson(int position) {
+    private void deletePerson(final int position) {
         String personId = list.get(position).optString("PERSON_ID");
         final Map<String,String> map=new HashMap<>();
         map.put("op", "deleteVisitingPersonById");
@@ -87,8 +87,7 @@ public class PersonSeekActivity  extends BaseFragmentActivity implements View.On
             @Override
             public void onResponse(String response) {
                 super.onResponse(response);
-                list.remove(response);
-                mAdapter.addAll(list);
+               initData();
             }
 
             @Override

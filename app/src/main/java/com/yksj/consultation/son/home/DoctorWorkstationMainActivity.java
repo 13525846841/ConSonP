@@ -168,6 +168,7 @@ public class DoctorWorkstationMainActivity extends Activity implements View.OnCl
         memberRecycler = (RecyclerView) findViewById(R.id.memberRecycler);
         Button zixunBtn= (Button) findViewById(R.id.zixunBtn);//点击咨询
         zixunBtn.setOnClickListener(this);
+        zixunBtn.setVisibility(View.GONE);
     }
 
     private void loadVpBanner(ViewPager workBannerVp, LinearLayout vpDotLinear) {
