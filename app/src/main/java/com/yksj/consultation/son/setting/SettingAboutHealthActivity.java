@@ -81,10 +81,10 @@ public class SettingAboutHealthActivity extends BaseFragmentActivity implements 
                 updateApp();
                 break;
             case R.id.setting_make://用户条款与隐私协议
-//                intent = new Intent(this, SettingWebUIActivity.class);
-//                intent.putExtra("title", "用户协议与隐私条款");
-//                intent.putExtra("url", HTalkApplication.getApplication().getUserAgentPath());
-//                startActivity(intent);
+                intent = new Intent(this, SettingWebUIActivity.class);
+                intent.putExtra("title", "用户协议与隐私条款");
+                intent.putExtra("url", HTalkApplication.getApplication().getUserAgentPath());
+                startActivity(intent);
 
 //			ToastUtil.showShort("当前为公测版本，请您下载正式版本。");
                 break;

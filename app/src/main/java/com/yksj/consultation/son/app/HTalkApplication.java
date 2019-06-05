@@ -292,14 +292,14 @@ public class HTalkApplication extends Application {
 //				+SmartControlClient.getControlClient().getUserId()+
 //				"&agreementType=Registered&system_version="+
 //				getAppVersionName();
-        return "http://www.yijiankangv.com/JumpPage/ETYY_Customer_Agreement_100.html";
+        return "https://61120.vip/DuoMeiHealth/html/11.html";
     }
 
     //用户条款和隐私协议http://220.194.46.204/JumpPage/Consultation_Agreement_Cus_1_430.html
     public String getDoctorUserAgentPath() {
 //		return HttpRestClient.getmHttpUrls().WEB_ROOT+"/DuoMeiHealth/UserAgreementServlet300?Type=queryAgreement&customerid="+SmartFoxClient.getLoginUserId()+"&agreementType=Registered&system_version="+
 //				getAppVersionName();
-        return "http://www.yijiankangv.com/JumpPage/ETYY_Customer_Agreement_100.html";
+        return "https://61120.vip/DuoMeiHealth/html/11.html";
     }
 
     //医生注册条款和隐私协议http://220.194.46.204/JumpPage/Consultation_Agreement_Doc_1_430.html
@@ -313,7 +313,7 @@ public class HTalkApplication extends Application {
     //功能介绍
     public String getFunctionIntroduction() {
 //		return "http://www.h-tlk.com/JumpPage/Health_Introduce_420.html";
-        return "http://yijiankangv.com/JumpPage/ETYY_Health_Introduce_Cus_100.html";
+        return "http://61120.vip/DuoMeiHealth/html/edition.jsp";
     }
 
     public synchronized NotificationManager getNotificationManager() {
